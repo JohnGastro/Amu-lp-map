@@ -1,0 +1,151 @@
+<!-- ============================================================
+     Google Map 連動スクリプト（JS のみ）
+
+     Webflow の Project Settings → Custom Code → Before </body> tag に貼る
+
+     【Webflow 側で必要な設定】
+     - 地図Div: ID = "google-map"（高さを指定すること）
+     - リストアイテム: class = "spot-item"
+       └ Custom Attributes:
+         data-lat = CMS緯度
+         data-lng = CMS経度
+         data-category = CMSカテゴリー
+       └ 中のデザインは自由（Webflowで好きに作ってOK）
+     - フィルターボタン: class = "category-button"
+       └ Custom Attribute: data-filter = "カテゴリー名" or "all"
+     ============================================================ -->
+
+<!-- Google Maps API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNjH8R3RgcnUz4iMHqcanw7WaBPR-id_k" async defer></script>
+
+<style>
+  /* 連動時のハイライト（Webflow側のスタイルを上書きしないよう最小限） */
+  .spot-item { cursor: pointer; transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s; }
+  .spot-item.is-active { border-color: #E85D75 !important; box-shadow: 0 4px 20px rgba(232,93,117,0.25) !important; transform: translateY(-2px); }
+  .spot-item.is-hidden { display: none !important; }
+  .category-button { cursor: pointer; transition: background-color 0.25s, color 0.25s; }
+  .category-button.is-active { background-color: #E85D75 !important; color: #fff !important; }
+</style>
+
+<script>
+var MAP_CONFIG = {
+  defaultCenter: { lat: 33.2820, lng: 131.4950 }, // 別府エリア
+  defaultZoom: 14,
+  markerSize: 44,
+  markerColor: '#E85D75',
+  activeColor: '#E85D75',
+};
+
+var map, markers = [], activeMarker = null, activeCard = null;
+
+var MAP_STYLES = [
+  { featureType:"all", elementType:"geometry", stylers:[{saturation:-80},{lightness:10}] },
+  { featureType:"road", elementType:"geometry", stylers:[{color:"#e0e0e0"}] },
+  { featureType:"water", elementType:"geometry", stylers:[{color:"#c9d6df"}] },
+  { featureType:"poi", elementType:"labels", stylers:[{visibility:"off"}] },
+  { featureType:"landscape", elementType:"geometry", stylers:[{color:"#f2f2f2"}] }
+];
+
+// --- 初期化待ち ---
+function waitForMapAndInit() {
+  if (!document.getElementById('google-map')) return;
+  if (typeof google === 'undefined' || typeof google.maps === 'undefined') {
+    setTimeout(waitForMapAndInit, 300); return;
+  }
+  if (map) return;
+  initMap();
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', waitForMapAndInit);
+} else { waitForMapAndInit(); }
+
+// --- メイン初期化 ---
+function initMap() {
+  map = new google.maps.Map(document.getElementById('google-map'), {
+    center: MAP_CONFIG.defaultCenter, zoom: MAP_CONFIG.defaultZoom,
+    styles: MAP_STYLES, mapTypeControl: false, streetViewControl: false, fullscreenControl: false,
+  });
+
+  document.querySelectorAll('.spot-item').forEach(function(card, i) {
+    var lat = parseFloat(card.getAttribute('data-lat'));
+    var lng = parseFloat(card.getAttribute('data-lng'));
+    var category = card.getAttribute('data-category') || '';
+    var name = card.querySelector('.spot-name')
+      ? card.querySelector('.spot-name').textContent.trim()
+      : card.textContent.trim().split('\n')[0]; // .spot-name がなければ最初のテキストを使用
+    if (isNaN(lat) || isNaN(lng)) return;
+
+    var marker = new google.maps.Marker({
+      position: { lat: lat, lng: lng }, map: map, title: name,
+      icon: { url: createCircleMarker(MAP_CONFIG.markerSize, MAP_CONFIG.markerColor),
+              scaledSize: new google.maps.Size(MAP_CONFIG.markerSize, MAP_CONFIG.markerSize),
+              anchor: new google.maps.Point(MAP_CONFIG.markerSize/2, MAP_CONFIG.markerSize/2) },
+    });
+
+    var md = { marker:marker, card:card, name:name, category:category, lat:lat, lng:lng, index:i };
+    markers.push(md);
+    marker.addListener('click', function() { activateSpot(md); });
+    card.addEventListener('click', function() { activateSpot(md); });
+  });
+
+  if (markers.length > 0) {
+    var bounds = new google.maps.LatLngBounds();
+    markers.forEach(function(m) { bounds.extend(m.marker.getPosition()); });
+    map.fitBounds(bounds, { padding: 50 });
+  }
+  setupFilters();
+}
+
+// --- スポット選択 ---
+function activateSpot(md) {
+  if (activeCard) activeCard.classList.remove('is-active');
+  markers.forEach(function(m) {
+    m.marker.setIcon({ url: createCircleMarker(MAP_CONFIG.markerSize, MAP_CONFIG.markerColor),
+      scaledSize: new google.maps.Size(MAP_CONFIG.markerSize, MAP_CONFIG.markerSize),
+      anchor: new google.maps.Point(MAP_CONFIG.markerSize/2, MAP_CONFIG.markerSize/2) });
+    m.marker.setZIndex(1);
+  });
+  md.card.classList.add('is-active');
+  activeCard = md.card;
+  md.card.scrollIntoView({ behavior:'smooth', block:'center' });
+  var s = MAP_CONFIG.markerSize + 10;
+  md.marker.setIcon({ url: createCircleMarker(s, MAP_CONFIG.activeColor),
+    scaledSize: new google.maps.Size(s,s), anchor: new google.maps.Point(s/2,s/2) });
+  md.marker.setZIndex(999);
+  map.panTo({ lat:md.lat, lng:md.lng });
+  map.setZoom(Math.max(map.getZoom(), 15));
+}
+
+// --- フィルター ---
+function setupFilters() {
+  var btns = document.querySelectorAll('.category-button');
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var f = this.getAttribute('data-filter');
+      btns.forEach(function(b) { b.classList.remove('is-active'); });
+      this.classList.add('is-active');
+      var bounds = new google.maps.LatLngBounds();
+      var count = 0;
+      markers.forEach(function(m) {
+        var show = (f === 'all') || (m.category === f);
+        m.marker.setMap(show ? map : null);
+        m.card.classList.toggle('is-hidden', !show);
+        if (show) { bounds.extend(m.marker.getPosition()); count++; }
+      });
+      if (count > 0) map.fitBounds(bounds, { padding: 50 });
+      if (activeCard) { activeCard.classList.remove('is-active'); activeCard = null; }
+    });
+  });
+}
+
+// --- 丸マーカー生成 ---
+function createCircleMarker(size, color) {
+  var c = document.createElement('canvas'); c.width = size*2; c.height = size*2;
+  var x = c.getContext('2d'), cn = size, r = size-4;
+  x.shadowColor='rgba(0,0,0,0.25)'; x.shadowBlur=8; x.shadowOffsetY=2;
+  x.beginPath(); x.arc(cn,cn,r,0,Math.PI*2); x.fillStyle='#fff'; x.fill();
+  x.shadowColor='transparent';
+  x.beginPath(); x.arc(cn,cn,r-4,0,Math.PI*2); x.fillStyle=color; x.fill();
+  return c.toDataURL();
+}
+</script>

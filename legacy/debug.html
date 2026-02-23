@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map × CMS連動 デバッグページ</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f5f5; }
+
+    /* --- レイアウト --- */
+    .section-map {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .category-button {
+      padding: 8px 20px;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      background: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .category-button:hover { background: #f0f0f0; }
+    .category-button.is-active {
+      background-color: #E85D75 !important;
+      color: #fff !important;
+      border-color: #E85D75 !important;
+    }
+
+    .map-and-list {
+      display: flex;
+      gap: 20px;
+      height: 600px;
+    }
+    #google-map {
+      flex: 1;
+      min-height: 100%;
+      border-radius: 12px;
+      background: #e0e0e0;
+    }
+    .spot-list {
+      width: 360px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-right: 4px;
+    }
+
+    /* --- カード --- */
+    .spot-item {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      cursor: pointer;
+      transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+      border: 2px solid transparent;
+    }
+    .spot-item:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      transform: translateY(-2px);
+    }
+    .spot-item.is-active {
+      border-color: #E85D75;
+      box-shadow: 0 4px 20px rgba(232,93,117,0.25);
+      transform: translateY(-2px);
+    }
+    .spot-item.is-hidden { display: none !important; }
+    .spot-name { font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+    .spot-category-label { font-size: 12px; color: #888; }
+    .lat, .lng, .category { display: none; } /* CMS隠しフィールド */
+
+    /* --- APIキー未設定時の案内 --- */
+    .api-key-notice {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: #664d03;
+    }
+    .api-key-notice code {
+      background: #fff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="section-map">
+
+  <!-- 案内 -->
+  <div class="api-key-notice" id="apiNotice">
+    ⚠ Google Maps APIキーが未設定です。このファイルの末尾にある
+    <code>YOUR_API_KEY</code> を自分のAPIキーに置き換えてください。
+    キーがなくてもUIの動作（カードのハイライト・フィルター）は確認できます。
+  </div>
+
+  <!-- フィルターボタン -->
+  <div class="filter-bar">
+    <div class="category-button is-active" data-filter="all">すべて</div>
+    <div class="category-button" data-filter="カフェ">カフェ</div>
+    <div class="category-button" data-filter="レストラン">レストラン</div>
+    <div class="category-button" data-filter="ショップ">ショップ</div>
+  </div>
+
+  <!-- 地図 + リスト -->
+  <div class="map-and-list">
+    <div id="google-map"></div>
+
+    <div class="spot-list">
+      <!-- ===== モックデータ（Webflow では CMS Collection List に置き換え） ===== -->
+      <div class="spot-item">
+        <div class="spot-name">天神カフェ</div>
+        <div class="spot-category-label">カフェ</div>
+        <div class="lat">33.5902</div>
+        <div class="lng">130.3984</div>
+        <div class="category">カフェ</div>
+      </div>
+
+      <div class="spot-item">
+        <div class="spot-name">博多レストラン</div>
+        <div class="spot-category-label">レストラン</div>
+        <div class="lat">33.5890</div>
+        <div class="lng">130.4010</div>
+        <div class="category">レストラン</div>
+      </div>
+
+      <div class="spot-item">
+        <div class="spot-name">中洲ショップ</div>
+        <div class="spot-category-label">ショップ</div>
+        <div class="lat">33.5920</div>
+        <div class="lng">130.4050</div>
+        <div class="category">ショップ</div>
+      </div>
+
+      <div class="spot-item">
+        <div class="spot-name">薬院カフェ</div>
+        <div class="spot-category-label">カフェ</div>
+        <div class="lat">33.5830</div>
+        <div class="lng">130.3960</div>
+        <div class="category">カフェ</div>
+      </div>
+
+      <div class="spot-item">
+        <div class="spot-name">大名レストラン</div>
+        <div class="spot-category-label">レストラン</div>
+        <div class="lat">33.5875</div>
+        <div class="lng">130.3940</div>
+        <div class="category">レストラン</div>
+      </div>
+
+      <div class="spot-item">
+        <div class="spot-name">警固ショップ</div>
+        <div class="spot-category-label">ショップ</div>
+        <div class="lat">33.5860</div>
+        <div class="lng">130.4000</div>
+        <div class="category">ショップ</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ここから本体スクリプト（webflow-map-embed.html と同じ内容） ===== -->
+
+<!-- ★★★ "YOUR_API_KEY" を自分のAPIキーに置き換えてください ★★★ -->
+<script>
+// ★★★ ここにAPIキーを入れてください ★★★
+var API_KEY = 'AIzaSyCNjH8R3RgcnUz4iMHqcanw7WaBPR-id_k';
+
+// APIキーがあれば地図を読み込む
+document.getElementById('apiNotice').style.display = 'none';
+var s = document.createElement('script');
+s.src = 'https://maps.googleapis.com/maps/api/js?key=' + API_KEY + '&callback=initMap';
+s.async = true;
+s.defer = true;
+s.onerror = function() {
+  document.getElementById('apiNotice').style.display = 'block';
+  document.getElementById('google-map').innerHTML =
+    '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#999;font-size:14px;text-align:center;padding:20px;">' +
+    'Google Maps の読み込みに失敗しました。APIキーを確認してください。</div>';
+  initFallback();
+};
+document.body.appendChild(s);
+</script>
+
+<script>
+// ============================================================
+//  設定値
+// ============================================================
+var MAP_CONFIG = {
+  defaultCenter: { lat: 33.5902, lng: 130.4017 },
+  hotelCoords: { lat: 33.5902, lng: 130.4017 },
+  defaultZoom: 15,
+  markerSize: 44,
+  markerColor: '#E85D75',
+  activeColor: '#E85D75',
+  adaptiveNearDistanceMeters: 1200,
+  adaptiveZoomStep: 0.8,
+  adaptiveZoomMax: 18,
+  filterFitMaxDistanceMeters: 1200,
+};
+
+var map;
+var markers = [];
+var activeMarker = null;
+var activeCard = null;
+var lastSelectionZoom = null;
+var nearStreak = 0;
+
+function distanceMeters(lat1, lng1, lat2, lng2) {
+  var toRad = Math.PI / 180;
+  var dLat = (lat2 - lat1) * toRad;
+  var dLng = (lng2 - lng1) * toRad;
+  var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+          Math.cos(lat1 * toRad) * Math.cos(lat2 * toRad) *
+          Math.sin(dLng / 2) * Math.sin(dLng / 2);
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return 6371000 * c;
+}
+
+// ============================================================
+//  地図スタイル（グレースケール・モダン）
+// ============================================================
+var MAP_STYLES = [
+  { featureType:"all", elementType:"geometry", stylers:[{saturation:-80},{lightness:10}] },
+  { featureType:"all", elementType:"labels.text.fill", stylers:[{color:"#555555"}] },
+  { featureType:"all", elementType:"labels.text.stroke", stylers:[{color:"#ffffff"},{lightness:20}] },
+  { featureType:"road", elementType:"geometry", stylers:[{color:"#e0e0e0"}] },
+  { featureType:"road.highway", elementType:"geometry", stylers:[{color:"#dadada"}] },
+  { featureType:"water", elementType:"geometry", stylers:[{color:"#c9d6df"}] },
+  { featureType:"poi", elementType:"geometry", stylers:[{color:"#e8e8e8"}] },
+  { featureType:"poi", elementType:"labels", stylers:[{visibility:"off"}] },
+  { featureType:"transit", elementType:"geometry", stylers:[{color:"#ddd"}] },
+  { featureType:"landscape", elementType:"geometry", stylers:[{color:"#f2f2f2"}] }
+];
+
+// ============================================================
+//  メイン初期化（Google Maps あり）
+// ============================================================
+function initMap() {
+  map = new google.maps.Map(document.getElementById('google-map'), {
+    center: MAP_CONFIG.defaultCenter,
+    zoom: MAP_CONFIG.defaultZoom,
+    styles: MAP_STYLES,
+    disableDefaultUI: false,
+    zoomControl: true,
+    mapTypeControl: false,
+    streetViewControl: false,
+    fullscreenControl: false,
+  });
+
+  buildMarkers(true);
+  setupCategoryFilters();
+}
+
+// ============================================================
+//  フォールバック初期化（APIキーなし＝UIだけテスト）
+// ============================================================
+function initFallback() {
+  buildMarkers(false);
+  setupCategoryFilters();
+}
+
+// ============================================================
+//  CMS リストからマーカー＆イベントを構築
+// ============================================================
+function buildMarkers(useMap) {
+  var spotItems = document.querySelectorAll('.spot-item');
+
+  spotItems.forEach(function(card, index) {
+    var name     = card.querySelector('.spot-name')  ? card.querySelector('.spot-name').textContent.trim()  : '名称未設定';
+    var lat      = parseFloat(card.querySelector('.lat')  ? card.querySelector('.lat').textContent.trim()  : 0);
+    var lng      = parseFloat(card.querySelector('.lng')  ? card.querySelector('.lng').textContent.trim()  : 0);
+    var category = card.querySelector('.category')   ? card.querySelector('.category').textContent.trim() : '';
+    var imgEl    = card.querySelector('.spot-image img') || card.querySelector('img.spot-image');
+    var imgSrc   = imgEl ? imgEl.src : '';
+
+    if (isNaN(lat) || isNaN(lng) || (lat === 0 && lng === 0)) return;
+
+    card.setAttribute('data-category', category);
+    card.setAttribute('data-index', index);
+
+    var marker = null;
+
+    if (useMap) {
+      var markerIcon;
+      if (imgSrc) {
+        markerIcon = {
+          url: createCircleMarkerWithImage(imgSrc, MAP_CONFIG.markerSize, '#ffffff'),
+          scaledSize: new google.maps.Size(MAP_CONFIG.markerSize, MAP_CONFIG.markerSize),
+          anchor: new google.maps.Point(MAP_CONFIG.markerSize / 2, MAP_CONFIG.markerSize / 2),
+        };
+      } else {
+        markerIcon = {
+          url: createCircleMarker(MAP_CONFIG.markerSize, MAP_CONFIG.markerColor),
+          scaledSize: new google.maps.Size(MAP_CONFIG.markerSize, MAP_CONFIG.markerSize),
+          anchor: new google.maps.Point(MAP_CONFIG.markerSize / 2, MAP_CONFIG.markerSize / 2),
+        };
+      }
+
+      marker = new google.maps.Marker({
+        position: { lat: lat, lng: lng },
+        map: map,
+        title: name,
+        icon: markerIcon,
+        optimized: false,
+      });
+    }
+
+    var markerData = {
+      marker: marker,
+      card: card,
+      name: name,
+      category: category,
+      lat: lat,
+      lng: lng,
+      imgSrc: imgSrc,
+      index: index,
+    };
+    markers.push(markerData);
+
+    if (marker) {
+      marker.addListener('click', function() { activateSpot(markerData); });
+    }
+    card.addEventListener('click', function() { activateSpot(markerData); });
+  });
+
+  if (useMap && markers.length > 0) {
+    var bounds = new google.maps.LatLngBounds();
+    markers.forEach(function(m) { bounds.extend(m.marker.getPosition()); });
+    map.fitBounds(bounds, { padding: 50 });
+  }
+}
+
+// ============================================================
+//  スポットをアクティブにする
+// ============================================================
+function activateSpot(markerData) {
+  var prevActive = activeMarker;
+  if (activeCard) activeCard.classList.remove('is-active');
+  markers.forEach(function(m) { if (m.marker) resetMarkerStyle(m); });
+
+  markerData.card.classList.add('is-active');
+  activeCard = markerData.card;
+  markerData.card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  if (markerData.marker) {
+    highlightMarker(markerData);
+
+    var currentZoom = map.getZoom();
+    if (lastSelectionZoom !== null && currentZoom < lastSelectionZoom) {
+      nearStreak = 0;
+      prevActive = null;
+    }
+
+    map.panTo({ lat: markerData.lat, lng: markerData.lng });
+
+    if (prevActive && prevActive.marker) {
+      var d = distanceMeters(prevActive.lat, prevActive.lng, markerData.lat, markerData.lng);
+      if (d <= MAP_CONFIG.adaptiveNearDistanceMeters) {
+        nearStreak += 1;
+      } else {
+        nearStreak = 1;
+        var optimizeBounds = new google.maps.LatLngBounds();
+        optimizeBounds.extend(prevActive.marker.getPosition());
+        optimizeBounds.extend(markerData.marker.getPosition());
+        map.fitBounds(optimizeBounds, { padding: 90 });
+      }
+    } else {
+      nearStreak = 1;
+    }
+
+    if (nearStreak >= 2) {
+      var hotelBounds = new google.maps.LatLngBounds();
+      hotelBounds.extend(MAP_CONFIG.hotelCoords);
+      hotelBounds.extend({ lat: markerData.lat, lng: markerData.lng });
+      map.fitBounds(hotelBounds, { padding: 90 });
+      var zoomAfterFit = map.getZoom();
+      if (typeof zoomAfterFit === 'number') {
+        map.setZoom(Math.min(zoomAfterFit, MAP_CONFIG.adaptiveZoomMax));
+      }
+    }
+
+    if (nearStreak < 2) {
+      var z = map.getZoom();
+      if (typeof z === 'number') {
+        if (z > MAP_CONFIG.adaptiveZoomMax) map.setZoom(MAP_CONFIG.adaptiveZoomMax);
+        if (z < 13) map.setZoom(13);
+      }
+    }
+  }
+  activeMarker = markerData;
+  lastSelectionZoom = map && typeof map.getZoom === 'function' ? map.getZoom() : null;
+
+  console.log('[DEBUG] activateSpot:', markerData.name, markerData.category, '(' + markerData.lat + ', ' + markerData.lng + ')');
+}
+
+// ============================================================
+//  マーカー強調 / リセット
+// ============================================================
+function highlightMarker(markerData) {
+  var size = MAP_CONFIG.markerSize + 10;
+  var icon;
+  if (markerData.imgSrc) {
+    icon = { url: createCircleMarkerWithImage(markerData.imgSrc, size, MAP_CONFIG.activeColor), scaledSize: new google.maps.Size(size, size), anchor: new google.maps.Point(size / 2, size / 2) };
+  } else {
+    icon = { url: createCircleMarker(size, MAP_CONFIG.activeColor), scaledSize: new google.maps.Size(size, size), anchor: new google.maps.Point(size / 2, size / 2) };
+  }
+  markerData.marker.setIcon(icon);
+  markerData.marker.setZIndex(999);
+}
+
+function resetMarkerStyle(markerData) {
+  var size = MAP_CONFIG.markerSize;
+  var icon;
+  if (markerData.imgSrc) {
+    icon = { url: createCircleMarkerWithImage(markerData.imgSrc, size, '#ffffff'), scaledSize: new google.maps.Size(size, size), anchor: new google.maps.Point(size / 2, size / 2) };
+  } else {
+    icon = { url: createCircleMarker(size, MAP_CONFIG.markerColor), scaledSize: new google.maps.Size(size, size), anchor: new google.maps.Point(size / 2, size / 2) };
+  }
+  markerData.marker.setIcon(icon);
+  markerData.marker.setZIndex(1);
+}
+
+// ============================================================
+//  カスタムマーカー生成（Canvas）
+// ============================================================
+function createCircleMarker(size, color) {
+  var canvas = document.createElement('canvas');
+  canvas.width = size * 2; canvas.height = size * 2;
+  var ctx = canvas.getContext('2d');
+  var center = size, radius = size - 4;
+  ctx.shadowColor = 'rgba(0,0,0,0.25)'; ctx.shadowBlur = 8; ctx.shadowOffsetY = 2;
+  ctx.beginPath(); ctx.arc(center, center, radius, 0, Math.PI * 2); ctx.fillStyle = '#ffffff'; ctx.fill();
+  ctx.shadowColor = 'transparent';
+  ctx.beginPath(); ctx.arc(center, center, radius - 4, 0, Math.PI * 2); ctx.fillStyle = color; ctx.fill();
+  return canvas.toDataURL();
+}
+
+function createCircleMarkerWithImage(imgSrc, size, borderColor) {
+  var canvas = document.createElement('canvas');
+  canvas.width = size * 2; canvas.height = size * 2;
+  var ctx = canvas.getContext('2d');
+  var center = size, radius = size - 4;
+  ctx.shadowColor = 'rgba(0,0,0,0.25)'; ctx.shadowBlur = 8; ctx.shadowOffsetY = 2;
+  ctx.beginPath(); ctx.arc(center, center, radius, 0, Math.PI * 2); ctx.fillStyle = borderColor; ctx.fill();
+  ctx.shadowColor = 'transparent';
+  ctx.beginPath(); ctx.arc(center, center, radius - 4, 0, Math.PI * 2); ctx.fillStyle = '#ddd'; ctx.fill();
+  var dataUrl = canvas.toDataURL();
+
+  var img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = function() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.shadowColor = 'rgba(0,0,0,0.25)'; ctx.shadowBlur = 8; ctx.shadowOffsetY = 2;
+    ctx.beginPath(); ctx.arc(center, center, radius, 0, Math.PI * 2); ctx.fillStyle = borderColor; ctx.fill();
+    ctx.shadowColor = 'transparent';
+    ctx.beginPath(); ctx.arc(center, center, radius - 4, 0, Math.PI * 2); ctx.closePath(); ctx.clip();
+    var drawSize = (radius - 4) * 2;
+    var sx = 0, sy = 0, sw = img.width, sh = img.height;
+    if (img.width / img.height > 1) { sx = (img.width - img.height) / 2; sw = img.height; }
+    else { sy = (img.height - img.width) / 2; sh = img.width; }
+    ctx.drawImage(img, sx, sy, sw, sh, center - (radius - 4), center - (radius - 4), drawSize, drawSize);
+    markers.forEach(function(m) {
+      if (m.imgSrc === imgSrc && activeMarker !== m && m.marker) {
+        m.marker.setIcon({ url: canvas.toDataURL(), scaledSize: new google.maps.Size(size, size), anchor: new google.maps.Point(size / 2, size / 2) });
+      }
+    });
+  };
+  img.src = imgSrc;
+  return dataUrl;
+}
+
+// ============================================================
+//  カテゴリーフィルター
+// ============================================================
+function setupCategoryFilters() {
+  var buttons = document.querySelectorAll('.category-button');
+
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var filterValue = this.getAttribute('data-filter');
+      buttons.forEach(function(b) { b.classList.remove('is-active'); });
+      this.classList.add('is-active');
+
+      var bounds = (map) ? new google.maps.LatLngBounds() : null;
+      var visibleCount = 0;
+      var fitPointCount = 0;
+
+      markers.forEach(function(m) {
+        var isVisible = (filterValue === 'all') || (m.category === filterValue);
+        if (isVisible) {
+          if (m.marker) m.marker.setMap(map);
+          m.card.classList.remove('is-hidden');
+          if (bounds && m.marker) {
+            var dHotel = distanceMeters(MAP_CONFIG.hotelCoords.lat, MAP_CONFIG.hotelCoords.lng, m.lat, m.lng);
+            if (dHotel <= MAP_CONFIG.filterFitMaxDistanceMeters) {
+              bounds.extend(m.marker.getPosition());
+              fitPointCount++;
+            }
+          }
+          visibleCount++;
+        } else {
+          if (m.marker) m.marker.setMap(null);
+          m.card.classList.add('is-hidden');
+        }
+      });
+
+      if (map && bounds && fitPointCount > 0) map.fitBounds(bounds, { padding: 50 });
+      if (activeCard) { activeCard.classList.remove('is-active'); activeCard = null; }
+      activeMarker = null;
+      nearStreak = 0;
+      lastSelectionZoom = map && typeof map.getZoom === 'function' ? map.getZoom() : null;
+
+      console.log('[DEBUG] filter:', filterValue, '→', visibleCount, '件表示');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

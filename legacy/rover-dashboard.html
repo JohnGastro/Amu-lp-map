@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rover Dashboard</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols (Icons) -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:wght@100&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Variables for Dark Theme */
+    :root {
+      --background: #111111;
+      --foreground: #FFFFFF;
+      --card: #1A1A1A;
+      --card-foreground: #FFFFFF;
+      --primary: #FF8400;
+      --primary-foreground: #111111;
+      --secondary: #2E2E2E;
+      --secondary-foreground: #FFFFFF;
+      --muted: #2E2E2E;
+      --muted-foreground: #B8B9B6;
+      --accent: #111111;
+      --accent-foreground: #F2F3F0;
+      --border: #2E2E2E;
+      --input: #2E2E2E;
+      --ring: #666666;
+      --sidebar: #18181b;
+      --sidebar-accent: #2a2a30;
+      --sidebar-accent-foreground: #fafafa;
+      --sidebar-border: #ffffff1a;
+      --sidebar-foreground: #fafafa;
+      --color-success: #222924;
+      --color-success-foreground: #B6FFCE;
+      --color-warning: #291C0F;
+      --color-warning-foreground: #FF8400;
+      --color-info: #222229;
+      --color-info-foreground: #B2B2FF;
+      --color-error: #24100B;
+      --color-error-foreground: #FF5C33;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Geist', sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .font-primary {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .font-secondary {
+      font-family: 'Geist', sans-serif;
+    }
+
+    .material-symbols-sharp {
+      font-family: 'Material Symbols Sharp';
+      font-weight: 100;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom Scrollbar for Dark Theme */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--sidebar);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--sidebar-accent);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--muted-foreground);
+    }
+  </style>
+</head>
+<body class="h-full">
+  <div class="flex h-full w-full">
+    <!-- Sidebar -->
+    <aside class="w-[280px] h-full flex flex-col" style="background-color: var(--sidebar); border-right: 1px solid var(--sidebar-border);">
+      <!-- Sidebar Header -->
+      <div class="h-[88px] flex items-center justify-center px-8 py-6" style="border-bottom: 1px solid var(--sidebar-border);">
+        <div class="flex items-center gap-2">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L2 9L16 16L30 9L16 2Z" fill="var(--primary)"/>
+            <path d="M2 16L16 23L30 16" stroke="var(--primary)" stroke-width="2"/>
+            <path d="M2 23L16 30L30 23" stroke="var(--primary)" stroke-width="2"/>
+          </svg>
+          <span class="font-primary text-lg font-bold" style="color: var(--primary);">ROVER HQ</span>
+        </div>
+      </div>
+
+      <!-- Sidebar Content -->
+      <div class="flex-1 overflow-y-auto px-4 py-6">
+        <!-- Management Section -->
+        <div class="mb-6">
+          <div class="px-4 py-4">
+            <span class="font-primary text-sm" style="color: var(--sidebar-foreground);">Management</span>
+          </div>
+
+          <!-- Active Navigation Item -->
+          <div class="flex items-center gap-4 px-4 py-3 rounded-full mb-2" style="background-color: var(--sidebar-accent);">
+            <span class="material-symbols-sharp" style="color: var(--sidebar-accent-foreground); font-size: 24px;">dashboard</span>
+            <span class="font-secondary text-base" style="color: var(--sidebar-accent-foreground);">Dashboard</span>
+          </div>
+
+          <!-- Navigation Items -->
+          <div class="flex items-center gap-4 px-4 py-3 rounded-full mb-2 cursor-pointer hover:bg-[var(--sidebar-accent)]">
+            <span class="material-symbols-sharp" style="color: var(--sidebar-foreground); font-size: 24px;">directions_car</span>
+            <span class="font-secondary text-base" style="color: var(--sidebar-foreground);">Fleet</span>
+          </div>
+
+          <div class="flex items-center gap-4 px-4 py-3 rounded-full mb-2 cursor-pointer hover:bg-[var(--sidebar-accent)]">
+            <span class="material-symbols-sharp" style="color: var(--sidebar-foreground); font-size: 24px;">calendar_today</span>
+            <span class="font-secondary text-base" style="color: var(--sidebar-foreground);">Bookings</span>
+          </div>
+
+          <div class="flex items-center gap-4 px-4 py-3 rounded-full mb-2 cursor-pointer hover:bg-[var(--sidebar-accent)]">
+            <span class="material-symbols-sharp" style="color: var(--sidebar-foreground); font-size: 24px;">explore</span>
+            <span class="font-secondary text-base" style="color: var(--sidebar-foreground);">Missions</span>
+          </div>
+        </div>
+
+        <!-- Operations Section -->
+        <div>
+          <div class="px-4 py-4">
+            <span class="font-primary text-sm" style="color: var(--sidebar-foreground);">Operations</span>
+          </div>
+
+          <div class="flex items-center gap-4 px-4 py-3 rounded-full mb-2 cursor-pointer hover:bg-[var(--sidebar-accent)]">
+            <span class="material-symbols-sharp" style="color: var(--sidebar-foreground); font-size: 24px;">build</span>
+            <span class="font-secondary text-base" style="color: var(--sidebar-foreground);">Maintenance</span>
+          </div>
+
+          <div class="flex items-center gap-4 px-4 py-3 rounded-full mb-2 cursor-pointer hover:bg-[var(--sidebar-accent)]">
+            <span class="material-symbols-sharp" style="color: var(--sidebar-foreground); font-size: 24px;">bar_chart</span>
+            <span class="font-secondary text-base" style="color: var(--sidebar-foreground);">Analytics</span>
+          </div>
+
+          <div class="flex items-center gap-4 px-4 py-3 rounded-full mb-2 cursor-pointer hover:bg-[var(--sidebar-accent)]">
+            <span class="material-symbols-sharp" style="color: var(--sidebar-foreground); font-size: 24px;">settings</span>
+            <span class="font-secondary text-base" style="color: var(--sidebar-foreground);">Settings</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Footer -->
+      <div class="flex items-center gap-2 px-8 py-6">
+        <div class="flex-1">
+          <div class="font-secondary text-base font-medium mb-1" style="color: var(--sidebar-accent-foreground);">Commander Rex</div>
+          <div class="font-secondary text-base" style="color: var(--sidebar-foreground);">rex@roverhq.io</div>
+        </div>
+        <span class="material-symbols-sharp" style="color: var(--sidebar-foreground); font-size: 24px;">keyboard_arrow_down</span>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 h-full overflow-y-auto px-10 py-8">
+      <!-- Page Header -->
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h1 class="font-primary text-2xl font-bold mb-1" style="color: var(--foreground);">Rover Dashboard</h1>
+          <p class="font-secondary text-sm" style="color: var(--muted-foreground);">Manage your fleet and track rover availability</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="flex items-center gap-2 px-4 py-2 rounded-full border" style="background-color: var(--background); border-color: var(--border); color: var(--foreground);">
+            <span class="font-primary text-sm font-medium">Search Rovers</span>
+          </button>
+          <button class="flex items-center gap-2 px-4 py-2 rounded-full" style="background-color: var(--primary); color: var(--primary-foreground);">
+            <span class="font-primary text-sm font-medium">Add Rover</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <!-- Card 1: Total Rovers -->
+        <div class="rounded-lg p-6 border" style="background-color: var(--card); border-color: var(--border);">
+          <div class="font-secondary text-sm mb-2" style="color: var(--muted-foreground);">Total Rovers</div>
+          <div class="flex items-end gap-2">
+            <div class="font-primary text-[32px] font-bold" style="color: var(--foreground);">24</div>
+            <div class="font-secondary text-xs mb-1" style="color: var(--color-success-foreground);">+3 this month</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Available Now -->
+        <div class="rounded-lg p-6 border" style="background-color: var(--card); border-color: var(--border);">
+          <div class="font-secondary text-sm mb-2" style="color: var(--muted-foreground);">Available Now</div>
+          <div class="flex items-end gap-2">
+            <div class="font-primary text-[32px] font-bold" style="color: var(--foreground);">18</div>
+            <div class="font-secondary text-xs mb-1" style="color: var(--color-info-foreground);">75% fleet</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Active Rentals -->
+        <div class="rounded-lg p-6 border" style="background-color: var(--card); border-color: var(--border);">
+          <div class="font-secondary text-sm mb-2" style="color: var(--muted-foreground);">Active Rentals</div>
+          <div class="flex items-end gap-2">
+            <div class="font-primary text-[32px] font-bold" style="color: var(--foreground);">6</div>
+            <div class="font-secondary text-xs mb-1" style="color: var(--color-warning-foreground);">on mission</div>
+          </div>
+        </div>
+
+        <!-- Card 4: Revenue -->
+        <div class="rounded-lg p-6 border" style="background-color: var(--card); border-color: var(--border);">
+          <div class="font-secondary text-sm mb-2" style="color: var(--muted-foreground);">Revenue</div>
+          <div class="flex items-end gap-2">
+            <div class="font-primary text-[32px] font-bold" style="color: var(--foreground);">$48.2K</div>
+            <div class="font-secondary text-xs mb-1" style="color: var(--color-success-foreground);">+12.5%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Table -->
+      <div class="rounded-lg overflow-hidden">
+        <!-- Table Header -->
+        <div class="flex items-center justify-between px-4 py-3" style="background-color: var(--card); border-bottom: 1px solid var(--border);">
+          <div class="flex items-center gap-4">
+            <input type="text" placeholder="Search rovers…" class="px-4 py-2 rounded-full border font-secondary text-sm" style="background-color: var(--background); border-color: var(--input); color: var(--muted-foreground); width: 274px;">
+            <button class="px-4 py-2 rounded-full border font-primary text-sm font-medium" style="background-color: var(--background); border-color: var(--border); color: var(--foreground);">Export</button>
+          </div>
+        </div>
+
+        <!-- Table Content -->
+        <div class="overflow-x-auto">
+          <table class="w-full" style="background-color: var(--card);">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <th class="px-3 py-3 text-left font-primary text-sm font-normal" style="color: var(--muted-foreground); width: 200px;">Rover Name</th>
+                <th class="px-3 py-3 text-left font-primary text-sm font-normal" style="color: var(--muted-foreground);">Model</th>
+                <th class="px-3 py-3 text-left font-primary text-sm font-normal" style="color: var(--muted-foreground); width: 120px;">Status</th>
+                <th class="px-3 py-3 text-left font-primary text-sm font-normal" style="color: var(--muted-foreground); width: 120px;">Location</th>
+                <th class="px-3 py-3 text-left font-primary text-sm font-normal" style="color: var(--muted-foreground); width: 100px;">Rate/Day</th>
+                <th class="px-3 py-3 text-left font-primary text-sm font-normal" style="color: var(--muted-foreground); width: 100px;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Row 1 -->
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm font-medium" style="color: var(--foreground);">Pathfinder X1</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm" style="color: var(--muted-foreground);">Explorer MK-IV</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full font-primary text-sm" style="background-color: var(--color-success); color: var(--color-success-foreground);">Available</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm" style="color: var(--muted-foreground);">Olympus Base</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-primary text-sm font-medium" style="color: var(--foreground);">$1,200</span>
+                </td>
+                <td class="px-3 py-3">
+                  <button class="px-4 py-2 rounded-full font-primary text-xs font-medium" style="background-color: var(--primary); color: var(--primary-foreground);">Rent</button>
+                </td>
+              </tr>
+
+              <!-- Row 2 -->
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm font-medium" style="color: var(--foreground);">Dune Runner S3</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm" style="color: var(--muted-foreground);">Terrain Scout Pro</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full font-primary text-sm" style="background-color: var(--color-success); color: var(--color-success-foreground);">Available</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm" style="color: var(--muted-foreground);">Valles Depot</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-primary text-sm font-medium" style="color: var(--foreground);">$980</span>
+                </td>
+                <td class="px-3 py-3">
+                  <button class="px-4 py-2 rounded-full font-primary text-xs font-medium" style="background-color: var(--primary); color: var(--primary-foreground);">Rent</button>
+                </td>
+              </tr>
+
+              <!-- Row 3 -->
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm font-medium" style="color: var(--foreground);">Red Hawk V2</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm" style="color: var(--muted-foreground);">Heavy Cargo XL</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full font-primary text-sm" style="background-color: var(--color-warning); color: var(--color-warning-foreground);">On Mission</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm" style="color: var(--muted-foreground);">Hellas Basin</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-primary text-sm font-medium" style="color: var(--foreground);">$2,400</span>
+                </td>
+                <td class="px-3 py-3">
+                  <button class="px-4 py-2 rounded-full border font-primary text-xs font-medium" style="background-color: var(--background); border-color: var(--border); color: var(--foreground);">View</button>
+                </td>
+              </tr>
+
+              <!-- Row 4 -->
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm font-medium" style="color: var(--foreground);">Nomad LT</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm" style="color: var(--muted-foreground);">Recon Lite II</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full font-primary text-sm" style="background-color: var(--color-success); color: var(--color-success-foreground);">Available</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm" style="color: var(--muted-foreground);">Arcadia Hub</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-primary text-sm font-medium" style="color: var(--foreground);">$750</span>
+                </td>
+                <td class="px-3 py-3">
+                  <button class="px-4 py-2 rounded-full font-primary text-xs font-medium" style="background-color: var(--primary); color: var(--primary-foreground);">Rent</button>
+                </td>
+              </tr>
+
+              <!-- Row 5 -->
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm font-medium" style="color: var(--foreground);">Titan Hauler</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm" style="color: var(--muted-foreground);">Heavy Cargo XL</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full font-primary text-sm" style="background-color: var(--secondary); color: var(--secondary-foreground);">Maintenance</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm" style="color: var(--muted-foreground);">Olympus Base</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-primary text-sm font-medium" style="color: var(--foreground);">$2,400</span>
+                </td>
+                <td class="px-3 py-3">
+                  <button class="px-4 py-2 rounded-full border font-primary text-xs font-medium" style="background-color: var(--background); border-color: var(--border); color: var(--foreground);">View</button>
+                </td>
+              </tr>
+
+              <!-- Row 6 -->
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm font-medium" style="color: var(--foreground);">Storm Chaser</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm" style="color: var(--muted-foreground);">Explorer MK-IV</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full font-primary text-sm" style="background-color: var(--color-success); color: var(--color-success-foreground);">Available</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-secondary text-sm" style="color: var(--muted-foreground);">Gale Crater</span>
+                </td>
+                <td class="px-3 py-3">
+                  <span class="font-primary text-sm font-medium" style="color: var(--foreground);">$1,100</span>
+                </td>
+                <td class="px-3 py-3">
+                  <button class="px-4 py-2 rounded-full font-primary text-xs font-medium" style="background-color: var(--primary); color: var(--primary-foreground);">Rent</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Table Footer -->
+        <div class="flex items-center justify-between px-4 py-3" style="background-color: var(--card); border-top: 1px solid var(--border);">
+          <span class="font-secondary text-sm" style="color: var(--muted-foreground);">Showing 6 rovers</span>
+          <div class="flex items-center gap-2">
+            <button class="px-3 py-1 rounded font-secondary text-sm" style="background-color: var(--muted); color: var(--muted-foreground);">Previous</button>
+            <button class="px-3 py-1 rounded font-secondary text-sm" style="background-color: var(--primary); color: var(--primary-foreground);">1</button>
+            <button class="px-3 py-1 rounded font-secondary text-sm" style="background-color: var(--muted); color: var(--muted-foreground);">2</button>
+            <button class="px-3 py-1 rounded font-secondary text-sm" style="background-color: var(--muted); color: var(--muted-foreground);">Next</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

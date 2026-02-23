@@ -1,0 +1,2397 @@
+<meta charset="UTF-8">
+
+<style>
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #access-beppu-app {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    background: #d9d9d9;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.75);
+    font-family: "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+  }
+
+  #access-beppu-app * {
+    box-sizing: border-box;
+  }
+
+  .ab-shell {
+    position: relative;
+    width: min(100%, 1440px);
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    background: #d9d9d9;
+  }
+
+  .ab-heading {
+    position: absolute;
+    left: 60px;
+    top: 144px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 4;
+  }
+
+  .ab-heading-mark {
+    width: 13px;
+    height: 13px;
+    border-radius: 2.5px;
+    background: #393939;
+  }
+
+  .ab-heading-text {
+    font-family: "Palatino Sans LT Pro", "Palatino", "Times New Roman", serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.14px;
+    color: #222;
+  }
+
+  .ab-filters {
+    position: absolute;
+    right: 60px;
+    top: 140px;
+    width: 639px;
+    display: grid;
+    gap: 18px;
+    z-index: 4;
+    justify-items: center;
+  }
+
+  .ab-question {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    color: rgba(33, 33, 33, 0.75);
+    line-height: 2.1;
+    text-align: center;
+    width: 100%;
+  }
+
+  .ab-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  #ab-main-categories {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 14px;
+    justify-content: center;
+  }
+
+  #ab-sub-categories {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .ab-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    white-space: nowrap;
+  }
+
+  .ab-chip-emoji {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0;
+    font-variant-emoji: emoji;
+    margin-right: 1px;
+  }
+
+  .ab-chip-text {
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  .ab-chip-row.sub {
+    gap: 8px;
+  }
+
+  .ab-chip {
+    border: none;
+    border-radius: 2px;
+    background: #c9c9c9;
+    color: rgba(33, 33, 33, 0.55);
+    padding: 4px 22px;
+    min-height: 28px;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 1;
+    cursor: pointer;
+    width: auto;
+    flex: 0 0 auto;
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    transition:
+      transform 320ms cubic-bezier(0.22, 0, 0.09, 0.99),
+      box-shadow 320ms cubic-bezier(0.22, 0, 0.09, 0.99),
+      color 320ms cubic-bezier(0.22, 0, 0.09, 0.99);
+  }
+
+  .ab-chip.is-active {
+    background: #c9c9c9;
+    color: #d9d9d9;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  }
+
+  .ab-chip.is-active::after {
+    transform: scaleY(1);
+  }
+
+  .ab-chip::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #b6b6b6;
+    transform: scaleY(0);
+    transform-origin: bottom center;
+    transition: transform 300ms cubic-bezier(0.22, 0, 0.09, 0.99);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .ab-chip::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #2f2f2f;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform 320ms cubic-bezier(0.22, 0, 0.09, 0.99);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .ab-chip:hover:not(.is-active) {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  }
+
+  .ab-chip:hover:not(.is-active)::before {
+    transform: scaleY(1);
+  }
+
+  .ab-chip:active {
+    transform: translateY(0) scale(0.985);
+  }
+
+  .ab-chip-emoji,
+  .ab-chip-text {
+    position: relative;
+    z-index: 1;
+  }
+
+  .ab-chip-emoji {
+    transition: transform 320ms cubic-bezier(0.22, 0, 0.09, 0.99), filter 320ms cubic-bezier(0.22, 0, 0.09, 0.99);
+  }
+
+  .ab-chip:hover:not(.is-active) .ab-chip-emoji {
+    transform: translateY(-1px) scale(1.08);
+    filter: saturate(1.04);
+  }
+
+  .ab-chip.is-active:hover .ab-chip-emoji {
+    transform: none;
+    filter: none;
+  }
+
+  .ab-content {
+    position: relative;
+    --panel-height: 484px;
+    display: grid;
+    grid-template-columns: 650px minmax(0, 639px);
+    column-gap: 31px;
+    align-items: start;
+  }
+
+  .ab-padding-wrapper {
+    position: absolute;
+    inset: 0;
+    padding: 232px 60px 0 60px;
+  }
+
+  .ab-map-col {
+    height: var(--panel-height);
+    min-height: 0;
+  }
+
+  .ab-brand-block {
+    display: grid;
+    gap: 8px;
+    width: 650px;
+    margin-bottom: 12px;
+  }
+
+  .ab-meta-line {
+    font-family: "Palatino Sans LT Pro", "Palatino", serif;
+    font-size: 15px;
+    letter-spacing: 0.9px;
+    color: #868686;
+    line-height: 1.2;
+  }
+
+  .ab-meta-chips {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .ab-meta-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 12px;
+    border-radius: 2px;
+    background: #cfcfcf;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    color: rgba(0, 0, 0, 0.75);
+    line-height: 1.2;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ab-map-wrap {
+    position: relative;
+    border-radius: 3.5px;
+    overflow: hidden;
+    background: #5d5d5d;
+    height: var(--panel-height);
+    min-height: 0;
+  }
+
+  #beppu-map {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ab-nearby-chip {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    z-index: 4;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 999px;
+    padding: 6px 12px;
+    color: #3c3c3c;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+  }
+
+  #beppu-route-chip {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    z-index: 4;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #333;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+    transform: translateY(2px);
+    transition: transform 0.26s ease, box-shadow 0.26s ease, background-color 0.26s ease;
+  }
+
+  #beppu-route-chip.has-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    min-width: 240px;
+    transform: translateY(0);
+  }
+
+  .beppu-route-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.3;
+  }
+
+  #beppu-route-chip.is-fallback {
+    color: #8a2d2d;
+  }
+
+  .beppu-route-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.96);
+    color: #1f1f1f;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    font-size: 11px;
+    line-height: 1;
+    white-space: nowrap;
+    pointer-events: none;
+    animation: beppuBadgeIn 320ms cubic-bezier(0.2, 0.9, 0.25, 1) both;
+  }
+
+  .beppu-place-preview {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 6px;
+    max-width: 320px;
+    padding: 5px 7px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    transform: none;
+    pointer-events: none;
+  }
+
+  .beppu-place-preview--in-chip {
+    position: static;
+    z-index: auto;
+    max-width: 100%;
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0.06);
+    background: rgba(255, 255, 255, 0.94);
+    animation: beppuPreviewIn 280ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .beppu-place-preview__thumb {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: #d9d9d9;
+  }
+
+  .beppu-place-preview__name {
+    font-family: "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    color: #1f1f1f;
+    line-height: 1.2;
+    flex: 1 1 auto;
+    min-width: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .beppu-place-preview__status {
+    font-size: 11px;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .beppu-place-preview__status.is-open {
+    color: #17813e;
+    font-weight: 600;
+  }
+
+  .beppu-place-preview__status.is-closed {
+    color: #9a2d2d;
+    font-weight: 400;
+  }
+
+  .beppu-place-preview__status.is-unknown {
+    color: #666;
+  }
+
+  .ab-map-fallback {
+    background: #5d5d5d;
+    position: relative;
+  }
+
+  .ab-map-fallback .ab-map-mock {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .ab-map-fallback .ab-map-mock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 22% 38%, rgba(217, 217, 217, 0.16), transparent 24%),
+      radial-gradient(circle at 66% 35%, rgba(217, 217, 217, 0.12), transparent 22%),
+      linear-gradient(155deg, #666 0%, #5d5d5d 100%);
+  }
+
+  .ab-map-fallback .ab-map-mock__route {
+    position: absolute;
+    left: 250px;
+    top: 120px;
+    width: 220px;
+    height: 190px;
+    border-left: 3px solid #d9d9d9;
+    border-bottom: 3px solid #d9d9d9;
+    border-right: 3px solid #d9d9d9;
+    border-radius: 0 0 40px 40px;
+    opacity: 0.9;
+  }
+
+  .ab-map-fallback .ab-map-mock__poi {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: #d9d9d9;
+  }
+
+  .ab-map-fallback .ab-map-mock__poi.p1 { left: 285px; top: 132px; }
+  .ab-map-fallback .ab-map-mock__poi.p2 { left: 480px; top: 108px; }
+  .ab-map-fallback .ab-map-mock__poi.p3 { left: 260px; top: 286px; }
+
+  .ab-map-fallback .ab-map-mock__msg {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 12px;
+    letter-spacing: 0.3px;
+  }
+
+  .gm-style .gm-err-container {
+    display: none !important;
+  }
+
+  .ab-list-col {
+    min-height: 0;
+    height: var(--panel-height);
+    padding-top: 0;
+    overflow: hidden;
+  }
+
+  #beppu-list {
+    height: var(--panel-height);
+    border-radius: 3.5px;
+    overflow: auto;
+    background: transparent;
+    padding-right: 7px;
+    transition: transform 450ms cubic-bezier(0.22, 0, 0.09, 0.99);
+    will-change: transform;
+  }
+
+  .ab-shell.is-modal-open #beppu-list {
+    transform: translateX(-112%);
+  }
+
+  #beppu-list::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  #beppu-list::-webkit-scrollbar-thumb {
+    background: #9d9d9d;
+    border-radius: 15px;
+  }
+
+  .spot-item {
+    width: 100%;
+    height: 134px;
+    min-height: 134px;
+    display: grid;
+    grid-template-columns: 209px 1fr;
+    background: #d4d4d4;
+    border: 1px solid #adadad;
+    border-radius: 3.5px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 15px;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, outline-color 0.22s ease;
+  }
+
+  .spot-item.is-hidden {
+    display: none;
+  }
+
+  .spot-item.is-active {
+    outline-color: #333333;
+    transform: none;
+    box-shadow: none;
+    animation: spotActiveInkIn 260ms cubic-bezier(0.22, 0, 0.09, 0.99) both;
+  }
+
+  .spot-item:hover:not(.is-active),
+  .spot-item.is-hover:not(.is-active) {
+    background: #c7c7c7;
+    border-color: #9f9f9f;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .spot-thumb-wrap {
+    width: 209px;
+    height: 134px;
+    overflow: hidden;
+    background: #5d5d5d;
+    border-radius: 3.5px 0 0 3.5px;
+  }
+
+  .spot-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .spot-body {
+    padding: 14px 16px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 6px;
+    height: 134px;
+    overflow: hidden;
+  }
+
+  .spot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .spot-name {
+    margin: 0;
+    font-family: "A P-OTF A1Gothic Std Regular", "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--spot-name-size, 22px);
+    letter-spacing: 2.27px;
+    color: rgba(0, 0, 0, 0.75);
+    line-height: 1.2;
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+  }
+
+  .spot-subtitle {
+    margin: 0;
+    font-family: "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.1px;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+  }
+
+  .spot-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .spot-open-status {
+    margin: 0;
+    font-family: "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.9px;
+    line-height: 1.4;
+    white-space: nowrap;
+    color: rgba(0, 0, 0, 0.45);
+    flex-shrink: 0;
+  }
+
+  .spot-open-status.is-open { color: #17813e; }
+  .spot-open-status.is-closed { color: #9a2d2d; }
+  .spot-open-status.is-unknown { color: rgba(0, 0, 0, 0.45); }
+
+  .spot-description {
+    margin: 0;
+    font-family: "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    color: rgba(0, 0, 0, 0.75);
+    line-height: 1.7;
+    min-height: 44px;
+    max-height: 44px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .spot-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid #b9b9b9;
+    display: grid;
+    place-items: center;
+    color: #5d5d5d;
+    font-size: 15px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.08);
+    transition: background-color 450ms cubic-bezier(0.22, 0, 0.09, 0.99), border-color 450ms cubic-bezier(0.22, 0, 0.09, 0.99), color 450ms cubic-bezier(0.22, 0, 0.09, 0.99), box-shadow 450ms cubic-bezier(0.22, 0, 0.09, 0.99), transform 450ms cubic-bezier(0.22, 0, 0.09, 0.99);
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 0;
+  }
+
+  .spot-arrow-icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: currentColor;
+    -webkit-mask-image: url("./assets/images/icon-arrow.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-image: url("./assets/images/icon-arrow.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+    transition: transform 450ms cubic-bezier(0.22, 0, 0.09, 0.99);
+  }
+
+  .spot-arrow:hover {
+    background: #9a9a9a;
+    border-color: #8f8f8f;
+    color: #ffffff;
+    transform: scale(1.18);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22);
+  }
+
+  .spot-arrow:hover .spot-arrow-icon {
+    transform: rotate(45deg);
+  }
+
+  .ab-modal-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 6;
+    background: transparent;
+    opacity: 1;
+    pointer-events: none;
+    transition: none;
+  }
+
+  .ab-shop-modal {
+    position: absolute;
+    top: 232px;
+    right: 60px;
+    transform: translateX(calc(100% + 60px));
+    width: 660px;
+    height: 500px;
+    background: #d4d4d4;
+    border: 1px solid #adadad;
+    border-radius: 12px;
+    box-shadow: none;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    cursor: auto;
+    will-change: transform;
+    transition: transform 450ms cubic-bezier(0.22, 0, 0.09, 0.99), opacity 450ms ease;
+  }
+
+  .ab-modal-overlay.is-open .ab-shop-modal {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .ab-modal-overlay.is-open {
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  .ab-shop-modal__header {
+    width: 100%;
+    padding: 8px 32px 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .ab-shop-modal__live-status {
+    margin: 20px 32px 0 32px;
+    font-family: "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.45);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ab-shop-modal__live-status.is-open { color: #17813e; }
+  .ab-shop-modal__live-status.is-closed { color: #9a2d2d; }
+  .ab-shop-modal__live-status.is-unknown { color: rgba(0, 0, 0, 0.45); }
+
+  .ab-shop-modal__title {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 22.65px;
+    line-height: 1.2;
+    letter-spacing: 2.27px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ab-shop-modal__close {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid #b9b9b9;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    color: #5d5d5d;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: background-color 450ms cubic-bezier(0.22, 0, 0.09, 0.99), border-color 450ms cubic-bezier(0.22, 0, 0.09, 0.99), color 450ms cubic-bezier(0.22, 0, 0.09, 0.99), box-shadow 450ms cubic-bezier(0.22, 0, 0.09, 0.99), transform 450ms cubic-bezier(0.22, 0, 0.09, 0.99);
+  }
+
+  .ab-shop-modal__close-icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: currentColor;
+    -webkit-mask-image: url("./assets/images/icon-close.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-image: url("./assets/images/icon-close.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+    transition: transform 450ms cubic-bezier(0.22, 0, 0.09, 0.99);
+  }
+
+  .ab-shop-modal__close:hover {
+    background: #9a9a9a;
+    border-color: #8f8f8f;
+    color: #ffffff;
+    transform: scale(1.18);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22);
+  }
+
+  .ab-shop-modal__close:hover .ab-shop-modal__close-icon {
+    transform: rotate(90deg);
+  }
+
+  .ab-shop-modal__genre {
+    margin: 8px 32px 0 32px;
+    font-size: 11px;
+    line-height: 1.6;
+    letter-spacing: 1.1px;
+    color: rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ab-shop-modal__photos {
+    margin: 14px 0 0 0;
+    padding: 0 29px;
+    display: grid;
+    grid-template-columns: 338px 212px;
+    gap: 8px;
+    height: 214px;
+  }
+
+  .ab-shop-modal__main-photo {
+    width: 338px;
+    height: 214px;
+    border-radius: 4px;
+    object-fit: cover;
+    background: #5d5d5d;
+    opacity: 0;
+    transition: opacity 450ms ease;
+  }
+
+  .ab-shop-modal__sub-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 102px);
+    grid-auto-rows: 66px;
+    gap: 8px;
+  }
+
+  .ab-shop-modal__sub-photo {
+    width: 102px;
+    height: 66px;
+    border-radius: 4px;
+    object-fit: cover;
+    background: #5d5d5d;
+    opacity: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    transform: none;
+    cursor: pointer;
+    transition: opacity 450ms ease;
+  }
+
+  .ab-shop-modal__sub-photo:hover,
+  .ab-shop-modal__sub-photo:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    transform: none;
+    filter: none;
+  }
+
+  .ab-shop-modal__sub-photo.is-selected {
+    border: none;
+    outline: none;
+    box-shadow: inset 0 0 0 1px #2f2f2f;
+  }
+
+  .ab-shop-modal__main-photo.is-loaded,
+  .ab-shop-modal__sub-photo.is-loaded {
+    opacity: 1;
+  }
+
+  .ab-shop-modal__body {
+    margin-top: 16px;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 342px 1fr;
+    gap: 42px;
+  }
+
+  .ab-shop-modal__desc {
+    margin: 0;
+    width: 342px;
+    font-size: 13px;
+    line-height: 1.7;
+    letter-spacing: 1.3px;
+    color: rgba(0, 0, 0, 0.75);
+    max-height: 132px;
+    overflow: auto;
+  }
+
+  .ab-shop-modal__info {
+    min-width: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    letter-spacing: 1.3px;
+    color: rgba(0, 0, 0, 0.75);
+    display: grid;
+    gap: 8px;
+  }
+
+  .ab-shop-modal__row {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 12px;
+  }
+
+  .ab-shop-modal__row-label {
+    white-space: nowrap;
+  }
+
+  .ab-shop-modal__row-value {
+    text-align: left;
+    white-space: pre-line;
+    word-break: break-word;
+  }
+
+  .beppu-marker {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: auto;
+    transition: opacity 0.24s ease, filter 0.24s ease;
+  }
+
+  .beppu-marker__dot {
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #d9d9d9;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+    will-change: transform, box-shadow;
+  }
+
+  .beppu-marker__icon {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  .beppu-marker__label {
+    display: none;
+  }
+
+  .beppu-marker--hotel .beppu-marker__dot,
+  .beppu-marker--station .beppu-marker__dot {
+    width: 38px;
+    height: 38px;
+    border-width: 3px;
+    background: #d9d9d9;
+  }
+
+  .beppu-marker--hotel .beppu-marker__dot {
+    background: #fff;
+  }
+
+  .beppu-marker__hotel-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .beppu-marker__station-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .beppu-marker--place .beppu-marker__dot {
+    width: 26px;
+    height: 26px;
+    background: #fff;
+  }
+
+  .beppu-marker--hotel .beppu-marker__label,
+  .beppu-marker--station .beppu-marker__label {
+    display: inline-block;
+    margin-top: 4px;
+    padding: 2px 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .beppu-marker--place .beppu-marker__label {
+    display: none;
+  }
+
+  .beppu-marker.is-active .beppu-marker__dot {
+    transform: scale(1.38);
+    box-shadow: 0 0 0 8px rgba(255, 183, 77, 0.32);
+    background: #ffb74d;
+    animation: beppuPulse 1800ms ease-out infinite;
+  }
+
+  .beppu-marker--place.is-active .beppu-marker__dot {
+    background: #ff9f1c;
+  }
+
+  .beppu-marker.is-pop .beppu-marker__dot {
+    animation: beppuPop 420ms cubic-bezier(0.2, 0.9, 0.22, 1) both;
+  }
+
+  .beppu-marker.is-dim {
+    opacity: 0.55;
+    filter: saturate(0.8);
+  }
+
+  .beppu-marker.is-hover-preview {
+    opacity: 1;
+    filter: saturate(0.9);
+  }
+
+  .beppu-marker.is-route-focus .beppu-marker__dot {
+    background: #ff9f1c;
+    box-shadow: 0 0 0 8px rgba(255, 159, 28, 0.25);
+  }
+
+  @keyframes beppuPulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 159, 28, 0.36); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 159, 28, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 159, 28, 0); }
+  }
+
+  @keyframes beppuPop {
+    0% { transform: scale(0.75); }
+    60% { transform: scale(1.18); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes beppuPreviewIn {
+    0% { opacity: 0; transform: translateY(4px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes beppuBadgeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes spotActiveInkIn {
+    0% { outline-color: rgba(51, 51, 51, 0); }
+    100% { outline-color: #333333; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ab-chip,
+    .ab-chip-emoji,
+    .ab-chip::before,
+    .ab-chip::after {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+
+  @media (max-width: 980px) {
+    .ab-shell {
+      border-radius: 20px 20px 0 0;
+    }
+
+    .ab-heading {
+      left: 20px;
+      top: 24px;
+    }
+
+    .ab-heading-mark {
+      width: 12px;
+      height: 12px;
+    }
+
+    .ab-filters {
+      left: 20px;
+      right: 20px;
+      top: 60px;
+      width: auto;
+      gap: 12px;
+    }
+
+    .ab-chip-row {
+      gap: 10px;
+    }
+
+    .ab-chip-row.sub {
+      gap: 6px;
+    }
+
+    #ab-main-categories,
+    #ab-sub-categories {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .ab-chip {
+      font-size: 13px;
+      letter-spacing: 1.2px;
+      min-height: 28px;
+      width: auto;
+    }
+
+    .ab-content {
+      --panel-height: auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      row-gap: 12px;
+      overflow: auto;
+    }
+
+    .ab-padding-wrapper {
+      padding: 172px 20px 20px 20px;
+    }
+
+    .ab-map-col {
+      height: auto;
+    }
+
+    .ab-brand-block {
+      width: 100%;
+      order: 1;
+      gap: 6px;
+      margin-bottom: 0;
+    }
+
+    .ab-meta-line {
+      font-size: 10px;
+      letter-spacing: 0.3px;
+    }
+
+    .ab-meta-chips {
+      display: flex;
+      gap: 8px;
+    }
+
+    .ab-meta-chip {
+      font-size: 8px;
+      gap: 4px;
+      padding: 1px 6px;
+      min-height: 14px;
+      letter-spacing: 0.6px;
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+    }
+
+    .ab-map-wrap {
+      order: 2;
+      min-height: 276px;
+      height: 276px;
+    }
+
+    #beppu-list {
+      height: auto;
+      max-height: none;
+      overflow: visible;
+      padding-right: 0;
+      transform: none !important;
+      transition: none;
+    }
+
+    .ab-list-col {
+      height: auto;
+      padding-top: 0;
+      overflow: visible;
+    }
+
+    .spot-item {
+      min-height: 86px;
+      height: 86px;
+      grid-template-columns: 62px 1fr;
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      border-bottom: 1px solid #c9c9c9;
+      margin-bottom: 0;
+      background: transparent;
+      padding: 0;
+    }
+
+    .spot-item:first-child {
+      border-top: 1px solid #c9c9c9;
+    }
+
+    .spot-thumb-wrap {
+      width: 62px;
+      height: 62px;
+      margin: 12px 0 12px 10px;
+      border: 1px solid #adadad;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
+    }
+
+    .spot-body {
+      padding: 12px 10px;
+      gap: 4px;
+      min-height: 86px;
+    }
+
+    .spot-header {
+      align-items: flex-start;
+    }
+
+    .spot-name {
+      font-size: var(--spot-name-size, 20px);
+      letter-spacing: 0.2px;
+      line-height: 1.2;
+      margin-top: 0;
+      width: auto;
+      height: auto;
+      transform: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: clip;
+    }
+
+    .spot-meta {
+      gap: 6px;
+    }
+
+    .spot-subtitle {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.8px;
+    }
+
+    .spot-open-status {
+      font-size: 9px;
+      letter-spacing: 0.6px;
+    }
+
+    .spot-description {
+      font-size: 9.5px;
+      letter-spacing: 0.09px;
+      line-height: 1.4;
+      min-height: 28px;
+      max-height: 28px;
+      color: rgba(33, 33, 33, 0.7);
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+
+    .spot-arrow {
+      width: 40px;
+      height: 40px;
+      margin-left: 6px;
+    }
+
+    .ab-shop-modal {
+      right: 10px;
+      left: 10px;
+      width: auto;
+      height: auto;
+      max-height: calc(100% - 20px);
+      top: 10px;
+      transform: translateY(120%);
+      border-radius: 10px;
+    }
+
+    .ab-modal-overlay.is-open .ab-shop-modal {
+      transform: translateY(0);
+    }
+
+    .ab-shop-modal__header {
+      padding: 8px 16px 0 16px;
+    }
+
+    .ab-shop-modal__live-status {
+      margin: 14px 16px 0 16px;
+      font-size: 11px;
+      letter-spacing: 0.6px;
+    }
+
+    .ab-shop-modal__title {
+      font-size: 18px;
+      letter-spacing: 0.8px;
+    }
+
+    .ab-shop-modal__genre {
+      margin: 6px 16px 0 16px;
+      letter-spacing: 0.6px;
+    }
+
+    .ab-shop-modal__photos {
+      padding: 0 16px;
+      margin-top: 10px;
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
+    .ab-shop-modal__main-photo {
+      width: 100%;
+      height: 180px;
+    }
+
+    .ab-shop-modal__sub-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-auto-rows: 56px;
+    }
+
+    .ab-shop-modal__sub-photo {
+      width: 100%;
+      height: 56px;
+    }
+
+    .ab-shop-modal__body {
+      margin-top: 12px;
+      padding: 0 16px 16px 16px;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .ab-shop-modal__desc {
+      width: 100%;
+      max-height: 88px;
+      font-size: 12px;
+      letter-spacing: 0.6px;
+    }
+  }
+</style>
+
+<div id="access-beppu-app">
+  <div class="ab-shell" id="ab-shell">
+    <header class="ab-heading">
+      <span class="ab-heading-mark"></span>
+      <span class="ab-heading-text">Access &amp; Beppu</span>
+    </header>
+
+    <section class="ab-filters">
+      <div class="ab-question">どんな場所をお探しですか？</div>
+      <div class="ab-chip-row" id="ab-main-categories"></div>
+      <div class="ab-chip-row sub" id="ab-sub-categories"></div>
+    </section>
+
+    <div class="ab-padding-wrapper">
+      <div class="ab-brand-block">
+        <div class="ab-meta-line">To Amu Hotel</div>
+        <div class="ab-meta-chips">
+          <div class="ab-meta-chip">🚗 東九州自動車道「別府IC」より車で15分</div>
+          <div class="ab-meta-chip">🚉 JR日豊本線「別府駅」東口より徒歩8分</div>
+        </div>
+      </div>
+
+      <main class="ab-content">
+        <section class="ab-map-col">
+          <div class="ab-map-wrap">
+            <div id="beppu-map"></div>
+            <div class="ab-nearby-chip">徒歩圏に飲食店多数</div>
+            <div id="beppu-route-chip">
+              <span class="beppu-route-line">
+                <span>🚶</span>
+                <span data-route-summary>店舗を選択するとルートを表示します。</span>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section class="ab-list-col">
+          <div id="beppu-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="ab-modal-overlay" id="ab-shop-modal-overlay" aria-hidden="true">
+      <aside class="ab-shop-modal" id="ab-shop-modal" role="dialog" aria-modal="true" aria-label="店舗詳細">
+        <p class="ab-shop-modal__live-status is-unknown" id="ab-shop-modal-live-status">営業時間情報なし</p>
+        <header class="ab-shop-modal__header">
+          <h3 class="ab-shop-modal__title" id="ab-shop-modal-title">店舗名</h3>
+          <button type="button" class="ab-shop-modal__close" id="ab-shop-modal-close" aria-label="閉じる">
+            <span class="ab-shop-modal__close-icon" aria-hidden="true"></span>
+          </button>
+        </header>
+        <p class="ab-shop-modal__genre" id="ab-shop-modal-genre">カテゴリ</p>
+        <div class="ab-shop-modal__photos">
+          <img class="ab-shop-modal__main-photo" id="ab-shop-modal-main-photo" alt="">
+          <div class="ab-shop-modal__sub-grid" id="ab-shop-modal-sub-grid"></div>
+        </div>
+        <div class="ab-shop-modal__body">
+          <p class="ab-shop-modal__desc" id="ab-shop-modal-description"></p>
+          <div class="ab-shop-modal__info">
+            <div class="ab-shop-modal__row">
+              <span class="ab-shop-modal__row-label">定休日</span>
+              <span class="ab-shop-modal__row-value" id="ab-shop-modal-closed">情報なし</span>
+            </div>
+            <div class="ab-shop-modal__row">
+              <span class="ab-shop-modal__row-label">営業時間</span>
+              <span class="ab-shop-modal__row-value" id="ab-shop-modal-hours">情報なし</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+  <script>
+    window.BEPPU_TZ_OFFSET_MINUTES = 540;
+    window.GOOGLE_MAP_ID = 'c9289c731e6bc6c03d298152';
+  </script>
+          <script src="./assets/js/access-beppu-map.js?v=22"></script>
+<script>
+  (function () {
+    var CATEGORY_EMOJI_BY_KEY = {
+      '昼食': '🍙',
+      '朝食': '🍳',
+      '夕食': '🍽',
+      'お酒': '🍶',
+      '喫茶': '☕',
+      'お買いもの': '🛍️',
+      '散歩': '🚶',
+      '駐車場': '🅿️',
+      '温泉': '♨️',
+      'カレー': '🍛',
+      'ラーメン': '🍜',
+    };
+
+    function getCategoryEmoji(category, name, description) {
+      var text = String((category || '') + ' ' + (name || '') + ' ' + (description || '')).toLowerCase();
+      if (text.indexOf('お酒') >= 0 || text.indexOf('酒') >= 0 || text.indexOf('izakaya') >= 0 || text.indexOf('bar') >= 0 || text.indexOf('ワイン') >= 0 || text.indexOf('beer') >= 0 || text.indexOf('sake') >= 0) return '🍶';
+      if (text.indexOf('カレー') >= 0 || text.indexOf('curry') >= 0) return '🍛';
+      if (text.indexOf('ラーメン') >= 0 || text.indexOf('ramen') >= 0 || text.indexOf('そば') >= 0 || text.indexOf('うどん') >= 0) return '🍜';
+      if (category === 'ラーメン' || category === 'カレー') return CATEGORY_EMOJI_BY_KEY[category];
+      return CATEGORY_EMOJI_BY_KEY[category] || '🍎';
+    }
+
+    var MAIN_CATEGORIES = [
+      { key: '昼食', label: '昼食', emoji: '🍙' },
+      { key: '朝食', label: '朝食', emoji: '🍳' },
+      { key: '夕食', label: '夕食', emoji: '🍽️' },
+      { key: 'お酒', label: 'お酒', emoji: '🍶' },
+      { key: '喫茶', label: '喫茶', emoji: '☕️' }
+    ];
+
+    var SUB_CATEGORIES = [
+      { key: 'お買いもの', label: 'お買いもの', emoji: '🛍️' },
+      { key: '散歩', label: '散歩', emoji: '🚶' },
+      { key: '駐車場', label: '駐車場', emoji: '🅿️' },
+      { key: '温泉', label: '温泉', emoji: '♨️' }
+    ];
+
+    /** @type {import('./assets/js/access-beppu-map').PageState} */
+    var state = {
+      activeCategory: '',
+      activeSubcategory: '',
+      selectedPlaceId: null,
+      mobile: window.matchMedia('(max-width: 980px)').matches
+    };
+    var shouldAutoFitFilters = false;
+
+    var fallbackPlaces = [
+      {
+        id: 'tsuchium',
+        name: 'tsuchium',
+        slug: 'tsuchium',
+        subtitle: '昼食',
+        category: '昼食',
+        subcategory: '散歩',
+        lat: 33.27904,
+        lng: 131.50515,
+        thumbnail: 'https://source.unsplash.com/featured/640x420/?japanese+restaurant&sig=tsuchium',
+        description: '別府駅・ホテルから徒歩圏内の昼食スポット。',
+        emojiTag: getCategoryEmoji('昼食', 'tsuchium', '別府駅・ホテルから徒歩圏内の昼食スポット。'),
+      },
+      {
+        id: 'taco-nargo',
+        name: 'TACO NARGO',
+        slug: 'taco-nargo',
+        subtitle: '夕食',
+        category: '夕食',
+        subcategory: '散歩',
+        lat: 33.27745,
+        lng: 131.5019,
+        thumbnail: 'https://source.unsplash.com/featured/640x420/?mexican+restaurant&sig=taco-nargo',
+        description: '別府駅・ホテルから徒歩圏内の夕食スポット。',
+        emojiTag: getCategoryEmoji('夕食', 'TACO NARGO', '別府駅・ホテルから徒歩圏内の夕食スポット。'),
+      },
+      {
+        id: 'narry-cary',
+        name: 'Narry-Cary',
+        slug: 'narry-cary',
+        subtitle: '朝食',
+        category: '朝食',
+        subcategory: '散歩',
+        lat: 33.28002,
+        lng: 131.5023,
+        thumbnail: 'https://source.unsplash.com/featured/640x420/?curry+restaurant&sig=narry-cary',
+        description: '別府駅・ホテルから徒歩圏内の朝食・軽食スポット。',
+        emojiTag: getCategoryEmoji('朝食', 'Narry-Cary', '別府駅・ホテルから徒歩圏内の朝食・軽食スポット。'),
+      },
+      {
+        id: 'tsuchium-2',
+        name: 'tsuchium',
+        slug: 'tsuchium-2',
+        subtitle: '喫茶',
+        category: '喫茶',
+        subcategory: 'お買いもの',
+        lat: 33.27863,
+        lng: 131.5064,
+        thumbnail: 'https://source.unsplash.com/featured/640x420/?coffee+shop&sig=tsuchium-2',
+        description: '別府駅・ホテルから徒歩圏内の喫茶スポット。',
+        emojiTag: getCategoryEmoji('喫茶', 'tsuchium', '別府駅・ホテルから徒歩圏内の喫茶スポット。'),
+      }
+    ];
+
+    var app = document.getElementById('access-beppu-app');
+    var shellEl = document.getElementById('ab-shell');
+    var mapElement = document.getElementById('beppu-map');
+    var listElement = document.getElementById('beppu-list');
+    var routeChipElement = document.getElementById('beppu-route-chip');
+    var mainCategoryEl = document.getElementById('ab-main-categories');
+    var subCategoryEl = document.getElementById('ab-sub-categories');
+    var HOTEL_COORDS = { lat: 33.2785833, lng: 131.5030278, name: 'Amu' };
+    var STATION_COORDS = { lat: 33.2793000, lng: 131.5003073, name: '別府駅' };
+
+    window.__BEPPU_HOTEL_COORDS = HOTEL_COORDS;
+    window.__BEPPU_STATION_COORDS = STATION_COORDS;
+
+    var places = [];
+    var mapModule = null;
+    var modalOverlayEl = document.getElementById('ab-shop-modal-overlay');
+    var modalEl = document.getElementById('ab-shop-modal');
+    var modalCloseEl = document.getElementById('ab-shop-modal-close');
+    var modalTitleEl = document.getElementById('ab-shop-modal-title');
+    var modalGenreEl = document.getElementById('ab-shop-modal-genre');
+    var modalMainPhotoEl = document.getElementById('ab-shop-modal-main-photo');
+    var modalSubGridEl = document.getElementById('ab-shop-modal-sub-grid');
+    var modalDescEl = document.getElementById('ab-shop-modal-description');
+    var modalClosedEl = document.getElementById('ab-shop-modal-closed');
+    var modalHoursEl = document.getElementById('ab-shop-modal-hours');
+    var modalLiveStatusEl = document.getElementById('ab-shop-modal-live-status');
+    var modalPlaceId = null;
+    var modalPinnedMainPhotoUrl = '';
+
+    function syncDesktopModalFrame() {
+      if (!modalEl || !listElement || !shellEl) return;
+      if (window.matchMedia('(max-width: 980px)').matches) {
+        modalEl.style.removeProperty('top');
+        modalEl.style.removeProperty('height');
+        modalEl.style.removeProperty('width');
+        return;
+      }
+      var shellRect = shellEl.getBoundingClientRect();
+      var listRect = listElement.getBoundingClientRect();
+      modalEl.style.top = (listRect.top - shellRect.top) + 'px';
+      modalEl.style.height = listRect.height + 'px';
+      modalEl.style.width = listRect.width + 'px';
+    }
+
+    function setMapFallback(message) {
+      mapElement.classList.add('ab-map-fallback');
+      mapElement.innerHTML = [
+        '<div class=\"ab-map-mock\">',
+        '<div class=\"ab-map-mock__route\"></div>',
+        '<div class=\"ab-map-mock__poi p1\"></div>',
+        '<div class=\"ab-map-mock__poi p2\"></div>',
+        '<div class=\"ab-map-mock__poi p3\"></div>',
+        '<div class=\"ab-map-mock__msg\">' + (message || '地図取得に失敗したためモック表示中') + '</div>',
+        '</div>'
+      ].join('');
+      routeChipElement.classList.add('is-fallback');
+    }
+
+    function createChip(item, activeKey, onClick) {
+      var button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'ab-chip' + (item.key === activeKey ? ' is-active' : '');
+      button.innerHTML = '';
+      if (item.emoji) {
+        var e = document.createElement('span');
+        e.className = 'ab-chip-emoji';
+        e.textContent = item.emoji;
+        button.appendChild(e);
+      }
+      var t = document.createElement('span');
+      t.className = 'ab-chip-text';
+      t.textContent = item.label;
+      button.appendChild(t);
+      button.dataset.key = item.key;
+      button.addEventListener('click', function () { onClick(item.key); });
+      return button;
+    }
+
+    function formatClockText(input) {
+      var text = String(input || '').trim();
+      if (!text) return '';
+      var parts = text.split(':');
+      if (parts.length < 2) return text;
+      var hh = Number(parts[0]);
+      var mm = Number(parts[1]);
+      if (!Number.isFinite(hh) || !Number.isFinite(mm)) return text;
+      return String(hh) + ':' + String(mm).padStart(2, '0');
+    }
+
+    function parseBusinessHoursJson(value) {
+      var raw = String(value || '').trim();
+      if (!raw || raw[0] !== '{') return null;
+      try {
+        var parsed = JSON.parse(raw);
+        return parsed && typeof parsed === 'object' ? parsed : null;
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function formatBusinessHoursSummary(hoursJson) {
+      var days = ['月', '火', '水', '木', '金', '土', '日'];
+      if (!hoursJson) {
+        return { closedText: '情報なし', hoursText: '情報なし' };
+      }
+
+      var closedDays = [];
+      var groupedByLine = {};
+      var groupedOrder = [];
+      days.forEach(function (dayKey) {
+        var periods = Array.isArray(hoursJson[dayKey]) ? hoursJson[dayKey] : [];
+        if (!periods.length) {
+          closedDays.push(dayKey + '曜');
+          return;
+        }
+        var line = periods.map(function (period) {
+          var openText = formatClockText(period && period.open);
+          var closeText = formatClockText(period && period.close);
+          if (!openText || !closeText) return '';
+          return openText + '~' + closeText;
+        }).filter(Boolean).join(' / ');
+        if (line) {
+          if (!groupedByLine[line]) {
+            groupedByLine[line] = [];
+            groupedOrder.push(line);
+          }
+          groupedByLine[line].push(dayKey);
+        }
+      });
+
+      var hoursLines = groupedOrder.map(function (line) {
+        return groupedByLine[line].join('・') + ' ' + line;
+      });
+
+      return {
+        closedText: closedDays.length ? closedDays.join(' / ') : 'なし',
+        hoursText: hoursLines.length ? hoursLines.join('\n') : '情報なし'
+      };
+    }
+
+    function buildModalSubPhotos(place) {
+      var list = [];
+      var primary = place.thumbnail || pickImageFromCsv(place.name, place.category);
+      for (var i = 0; i < 6; i += 1) {
+        var seed = buildImageSeed(String(place.id || place.slug || place.name) + ':modal:' + i);
+        list.push(primary || ('https://picsum.photos/seed/modal-' + encodeURIComponent(seed) + '/300/200'));
+      }
+      return list;
+    }
+
+    function getPlaceById(placeId) {
+      for (var i = 0; i < places.length; i += 1) {
+        if (places[i].id === placeId) return places[i];
+      }
+      return null;
+    }
+
+    function readCardStatusMeta(placeId) {
+      var fallback = { text: '営業時間情報なし', state: 'is-unknown' };
+      if (!placeId) return fallback;
+
+      var card = null;
+      var cards = listElement.querySelectorAll('.spot-item');
+      cards.forEach(function (el) {
+        if (!card && el.dataset.placeId === String(placeId)) card = el;
+      });
+      if (!card) return fallback;
+
+      var statusEl = card.querySelector('.spot-open-status');
+      if (!statusEl) return fallback;
+      var text = String(statusEl.textContent || '').trim() || fallback.text;
+      var state = statusEl.classList.contains('is-open')
+        ? 'is-open'
+        : (statusEl.classList.contains('is-closed') ? 'is-closed' : 'is-unknown');
+      return { text: text, state: state };
+    }
+
+    function renderModalLiveStatus(placeId) {
+      if (!modalLiveStatusEl) return;
+      var meta = readCardStatusMeta(placeId);
+      modalLiveStatusEl.textContent = meta.text;
+      modalLiveStatusEl.classList.remove('is-open', 'is-closed', 'is-unknown');
+      modalLiveStatusEl.classList.add(meta.state);
+    }
+
+    function markSelectedSubPhoto(selectedUrl) {
+      if (!modalSubGridEl) return;
+      var thumbs = modalSubGridEl.querySelectorAll('.ab-shop-modal__sub-photo');
+      thumbs.forEach(function (thumb) {
+        thumb.classList.toggle('is-selected', String(thumb.dataset.photoUrl || '') === String(selectedUrl || ''));
+      });
+    }
+
+    function setModalMainPhoto(url, place, fallbackKey) {
+      if (!modalMainPhotoEl) return;
+      var nextUrl = String(url || '').trim();
+      if (!nextUrl) {
+        nextUrl = buildPhotoFallback(place && place.category, place && place.name);
+      }
+      modalMainPhotoEl.classList.remove('is-loaded');
+      modalMainPhotoEl.onload = function () {
+        modalMainPhotoEl.classList.add('is-loaded');
+      };
+      modalMainPhotoEl.onerror = function () {
+        modalMainPhotoEl.onerror = null;
+        modalMainPhotoEl.src = buildPhotoFallback(place && place.category, fallbackKey || (place && place.name));
+      };
+      modalMainPhotoEl.src = nextUrl;
+      modalMainPhotoEl.alt = (place && place.name) || '';
+    }
+
+    function renderShopModal(place) {
+      if (!place) return;
+      modalPlaceId = place.id;
+      modalTitleEl.textContent = place.name || '店舗名';
+      modalGenreEl.textContent = place.subtitle || place.category || 'カテゴリ情報なし';
+      modalDescEl.textContent = place.description || '説明はありません。';
+      renderModalLiveStatus(place.id);
+
+      var hoursSummary = formatBusinessHoursSummary(parseBusinessHoursJson(place.businessHours));
+      modalClosedEl.textContent = hoursSummary.closedText;
+      modalHoursEl.textContent = hoursSummary.hoursText;
+
+      var main = place.thumbnail || pickImageFromCsv(place.name, place.category);
+      modalPinnedMainPhotoUrl = main;
+      setModalMainPhoto(modalPinnedMainPhotoUrl, place, place.name);
+
+      modalSubGridEl.innerHTML = '';
+      buildModalSubPhotos(place).forEach(function (url, index) {
+        var sub = document.createElement('img');
+        sub.className = 'ab-shop-modal__sub-photo';
+        sub.tabIndex = 0;
+        sub.dataset.photoUrl = String(url || '');
+        sub.onload = function () {
+          sub.classList.add('is-loaded');
+        };
+        sub.src = url;
+        sub.alt = (place.name || '店舗') + ' サブ写真 ' + (index + 1);
+        sub.onerror = function () {
+          sub.onerror = null;
+          sub.src = buildPhotoFallback(place.category, (place.name || 'spot') + '-' + index);
+          sub.dataset.photoUrl = sub.src;
+        };
+        sub.addEventListener('mouseenter', function () {
+          setModalMainPhoto(sub.dataset.photoUrl || sub.src, place, (place.name || 'spot') + '-hover-' + index);
+        });
+        sub.addEventListener('mouseleave', function () {
+          setModalMainPhoto(modalPinnedMainPhotoUrl, place, place.name);
+        });
+        sub.addEventListener('focus', function () {
+          setModalMainPhoto(sub.dataset.photoUrl || sub.src, place, (place.name || 'spot') + '-focus-' + index);
+        });
+        sub.addEventListener('blur', function () {
+          setModalMainPhoto(modalPinnedMainPhotoUrl, place, place.name);
+        });
+        sub.addEventListener('click', function () {
+          modalPinnedMainPhotoUrl = sub.dataset.photoUrl || sub.src;
+          markSelectedSubPhoto(modalPinnedMainPhotoUrl);
+          setModalMainPhoto(modalPinnedMainPhotoUrl, place, (place.name || 'spot') + '-pin-' + index);
+        });
+        modalSubGridEl.appendChild(sub);
+      });
+      markSelectedSubPhoto(modalPinnedMainPhotoUrl);
+    }
+
+    function refreshOpenModalStatus() {
+      if (!modalPlaceId || !modalOverlayEl || !modalOverlayEl.classList.contains('is-open')) return;
+      renderModalLiveStatus(modalPlaceId);
+    }
+
+    function openShopModal(placeId) {
+      var place = getPlaceById(placeId);
+      if (!place || !modalOverlayEl) return;
+      renderShopModal(place);
+      syncDesktopModalFrame();
+      if (shellEl) shellEl.classList.add('is-modal-open');
+      modalOverlayEl.classList.add('is-open');
+      modalOverlayEl.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeShopModal() {
+      if (!modalOverlayEl) return;
+      modalOverlayEl.classList.remove('is-open');
+      modalOverlayEl.setAttribute('aria-hidden', 'true');
+      if (shellEl) shellEl.classList.remove('is-modal-open');
+      modalPlaceId = null;
+    }
+
+    function fitSpotNameToSingleLine(nameEl) {
+      if (!nameEl) return;
+      nameEl.style.removeProperty('--spot-name-size');
+      var computed = window.getComputedStyle(nameEl);
+      var maxSize = parseFloat(computed.fontSize) || 22;
+      var minSize = 12;
+      var size = maxSize;
+      nameEl.style.setProperty('--spot-name-size', size + 'px');
+      while (nameEl.scrollWidth > nameEl.clientWidth && size > minSize) {
+        size -= 0.5;
+        nameEl.style.setProperty('--spot-name-size', size + 'px');
+      }
+    }
+
+    function renderChips() {
+      mainCategoryEl.innerHTML = '';
+      subCategoryEl.innerHTML = '';
+
+      MAIN_CATEGORIES.forEach(function (item) {
+        mainCategoryEl.appendChild(createChip(item, state.activeCategory, function (key) {
+          state.activeCategory = key;
+          state.activeSubcategory = '';
+          shouldAutoFitFilters = true;
+          applyFilters({ autoFit: true });
+          renderChips();
+        }));
+      });
+
+      SUB_CATEGORIES.forEach(function (item) {
+        subCategoryEl.appendChild(createChip(item, state.activeSubcategory, function (key) {
+          var nextSub = state.activeSubcategory === key ? '' : key;
+          state.activeSubcategory = nextSub;
+          // Keep filter selection mutually exclusive across main/sub groups.
+          if (nextSub) {
+            state.activeCategory = '';
+          }
+          shouldAutoFitFilters = true;
+          applyFilters({ autoFit: true });
+          renderChips();
+        }));
+      });
+    }
+
+    function createCard(place) {
+      var item = document.createElement('article');
+      item.className = 'spot-item';
+      item.dataset.placeId = place.id;
+      item.dataset.slug = place.slug;
+      item.dataset.category = place.category;
+      item.dataset.subcategory = place.subcategory || '';
+      item.dataset.lat = String(place.lat);
+      item.dataset.lng = String(place.lng);
+
+      var thumbWrap = document.createElement('div');
+      thumbWrap.className = 'spot-thumb-wrap';
+      var img = document.createElement('img');
+      img.className = 'spot-thumb';
+      img.src = place.thumbnail || pickImageFromCsv(place.name, place.category);
+      img.alt = place.name;
+      img.onerror = function () {
+        img.onerror = null;
+        img.src = buildPhotoFallback(place.category, place.name);
+      };
+      thumbWrap.appendChild(img);
+
+      var body = document.createElement('div');
+      body.className = 'spot-body';
+
+      var header = document.createElement('div');
+      header.className = 'spot-header';
+
+      var name = document.createElement('h3');
+      name.className = 'spot-name';
+      name.textContent = place.name;
+
+      var arrow = document.createElement('button');
+      arrow.type = 'button';
+      arrow.className = 'spot-arrow';
+      arrow.setAttribute('aria-label', '店舗詳細を表示');
+      var arrowIcon = document.createElement('span');
+      arrowIcon.className = 'spot-arrow-icon';
+      arrow.appendChild(arrowIcon);
+      arrow.addEventListener('click', function () {
+        openShopModal(place.id);
+      });
+
+      header.appendChild(name);
+      header.appendChild(arrow);
+
+      var meta = document.createElement('div');
+      meta.className = 'spot-meta';
+
+      var subtitle = document.createElement('p');
+      subtitle.className = 'spot-subtitle';
+      subtitle.textContent = place.subtitle || place.category || '昼食';
+
+      var openStatus = document.createElement('p');
+      openStatus.className = 'spot-open-status is-unknown';
+      openStatus.textContent = '営業時間情報なし';
+
+      meta.appendChild(subtitle);
+      meta.appendChild(openStatus);
+
+      var desc = document.createElement('p');
+      desc.className = 'spot-description';
+      desc.textContent = place.description || '別府駅・ホテルから徒歩圏内のおすすめスポット。';
+
+      body.appendChild(header);
+      body.appendChild(meta);
+      body.appendChild(desc);
+
+      item.appendChild(thumbWrap);
+      item.appendChild(body);
+
+      item.addEventListener('mouseenter', function () {
+        if (state.mobile) return;
+        item.classList.add('is-hover');
+        if (mapModule && typeof mapModule.previewPlaceRoute === 'function') {
+          mapModule.previewPlaceRoute(place.id);
+        }
+      });
+
+      item.addEventListener('mouseleave', function () {
+        if (state.mobile) return;
+        item.classList.remove('is-hover');
+        if (mapModule && typeof mapModule.clearPreviewRoute === 'function') {
+          mapModule.clearPreviewRoute();
+        }
+      });
+
+      return item;
+    }
+
+    function buildList() {
+      listElement.innerHTML = '';
+      places.forEach(function (place) {
+        var card = createCard(place);
+        place.cardElement = card;
+        listElement.appendChild(card);
+        var nameEl = card.querySelector('.spot-name');
+        fitSpotNameToSingleLine(nameEl);
+      });
+    }
+
+    function refitAllSpotNames() {
+      var names = listElement.querySelectorAll('.spot-name');
+      names.forEach(function (nameEl) {
+        fitSpotNameToSingleLine(nameEl);
+      });
+    }
+
+    function getVisiblePlaces() {
+      return places.filter(function (place) {
+        var hitMain = state.activeCategory === '' || place.category === state.activeCategory;
+        var hitSub = state.activeSubcategory === '' || place.subcategory === state.activeSubcategory;
+        return hitMain && hitSub;
+      });
+    }
+
+    function applyCardVisibility(visibleIds) {
+      var visibleSet = new Set(visibleIds || []);
+      places.forEach(function (place) {
+        if (!place.cardElement) return;
+        place.cardElement.classList.toggle('is-hidden', !visibleSet.has(place.id));
+      });
+    }
+
+    function applyFilters(options) {
+      var opts = options || {};
+      var visiblePlaces = getVisiblePlaces();
+      var visibleIds = visiblePlaces.map(function (p) { return p.id; });
+      if (mapModule && mapModule.setPlaceVisibility) {
+        mapModule.setPlaceVisibility(visibleIds);
+        if (opts.autoFit && typeof mapModule.fitToPlaceIds === 'function' && (shouldAutoFitFilters || opts.forceFit)) {
+          mapModule.fitToPlaceIds(visibleIds, {
+            minZoom: 13,
+            maxZoom: 18,
+            padding: 56,
+            maxDistanceFromHotelMeters: 1200,
+          });
+          shouldAutoFitFilters = false;
+        }
+        return;
+      }
+      applyCardVisibility(visibleIds);
+    }
+
+    function normalizeCmsFields(cmsPlaces) {
+      return cmsPlaces.map(function (item) {
+        var category = normalizeCategoryUi(item.category, '昼食');
+        var description = item.description || item.comment || item['コメント'] || item['コメント（店舗）'] || '';
+        var text = String(description || '');
+        return {
+          id: item.id,
+          name: item.name,
+          slug: item.slug,
+          subtitle: category || '昼食',
+          category: category,
+          subcategory: normalizeCategoryUi(item.subcategory, ''),
+          lat: item.lat,
+          lng: item.lng,
+          thumbnail: item.thumbnail,
+          emojiTag: getCategoryEmoji(category, item.name, text),
+          description: String(description).trim()
+        };
+      });
+    }
+
+    function normalizeCategoryUi(value, fallback) {
+      if (typeof fallback === 'undefined') {
+        fallback = '';
+      }
+      var raw = String(value || '').toLowerCase();
+      if (raw === 'all' || raw === 'すべて') return '';
+      if (raw === 'lunch' || raw === 'lunches' || raw === 'lunch ' || raw === '昼食') return '昼食';
+      if (raw === 'breakfast' || raw === 'morning' || raw === '朝食') return '朝食';
+      if (raw === 'dinner' || raw === '夜' || raw === '夕食') return '夕食';
+      if (raw === 'drinks' || raw === 'alcohol' || raw === '酒' || raw === 'bar' || raw === 'izakaya' || raw === 'お酒') return 'お酒';
+      if (raw === 'cafe' || raw === 'coffee' || raw === 'コーヒー' || raw === '喫茶') return '喫茶';
+      if (raw === 'shopping' || raw === '買い物' || raw === 'store' || raw === 'shop' || raw === 'retail' || raw === 'お買いもの') return 'お買いもの';
+      if (raw === 'walk' || raw === 'walkable' || raw === 'walk ' || raw === '散歩') return '散歩';
+      if (raw === 'parking' || raw === '駐車場') return '駐車場';
+      if (raw === 'onsen' || raw === '温泉') return '温泉';
+      return fallback;
+    }
+
+    function parseCsv(text) {
+      var input = String(text || '').replace(/^\uFEFF/, '');
+      var rows = [];
+      var row = [];
+      var cell = '';
+      var inQuotes = false;
+
+      for (var i = 0; i < input.length; i += 1) {
+        var ch = input[i];
+        var next = input[i + 1];
+
+        if (ch === '"') {
+          if (inQuotes && next === '"') {
+            cell += '"';
+            i += 1;
+          } else {
+            inQuotes = !inQuotes;
+          }
+          continue;
+        }
+
+        if (!inQuotes && ch === ',') {
+          row.push(cell);
+          cell = '';
+          continue;
+        }
+
+        if (!inQuotes && (ch === '\n' || ch === '\r')) {
+          if (ch === '\r' && next === '\n') i += 1;
+          row.push(cell);
+          cell = '';
+          if (row.some(function (v) { return String(v).trim() !== ''; })) {
+            rows.push(row);
+          }
+          row = [];
+          continue;
+        }
+
+        cell += ch;
+      }
+
+      if (cell.length || row.length) {
+        row.push(cell);
+        if (row.some(function (v) { return String(v).trim() !== ''; })) {
+          rows.push(row);
+        }
+      }
+
+      if (!rows.length) return [];
+      var headers = rows[0].map(function (h) { return String(h || '').trim(); });
+      var records = [];
+      for (var r = 1; r < rows.length; r += 1) {
+        var values = rows[r];
+        var obj = {};
+        for (var c = 0; c < headers.length; c += 1) {
+          obj[headers[c]] = values[c] != null ? String(values[c]).trim() : '';
+        }
+        records.push(obj);
+      }
+      return records;
+    }
+
+    function inferCategoryFromCsv(rawCategory, placeName) {
+      var text = String(rawCategory || '').toLowerCase() + ' ' + String(placeName || '').toLowerCase();
+
+      if (text.indexOf('お酒') >= 0 || text.indexOf('酒') >= 0 || text.indexOf('bar') >= 0 || text.indexOf('liquor') >= 0 || text.indexOf('izakaya') >= 0 || text.indexOf('ワイン') >= 0 || text.indexOf('ビール') >= 0) return 'お酒';
+      if (text.indexOf('喫茶') >= 0 || text.indexOf('coffee') >= 0 || text.indexOf('カフェ') >= 0 || text.indexOf('珈琲') >= 0) return '喫茶';
+      if (text.indexOf('朝食') >= 0 || text.indexOf('breakfast') >= 0 || text.indexOf('morning') >= 0 || text.indexOf('モーニング') >= 0) return '朝食';
+      if (text.indexOf('夕食') >= 0 || text.indexOf('dinner') >= 0 || text.indexOf('夜') >= 0) return '夕食';
+      if (text.indexOf('ラーメン') >= 0 || text.indexOf('ramen') >= 0 || text.indexOf('そば') >= 0 || text.indexOf('うどん') >= 0) return '昼食';
+
+      if (text.indexOf('restaurant') >= 0 || text.indexOf('食堂') >= 0 || text.indexOf('居酒屋') >= 0 || text.indexOf('食事') >= 0 || text.indexOf('食') >= 0) return '昼食';
+      return '昼食';
+    }
+
+    function inferSubcategoryFromCsv(rawCategory, placeName, description) {
+      var text = String(rawCategory || '') + ' ' + String(placeName || '') + ' ' + String(description || '');
+      text = text.toLowerCase();
+
+      if (text.indexOf('store') >= 0 || text.indexOf('shop') >= 0 || text.indexOf('コンビニ') >= 0 || text.indexOf('ショップ') >= 0 || text.indexOf('百貨店') >= 0 || text.indexOf('home_goods_store') >= 0 || text.indexOf('shopping') >= 0 || text.indexOf('retail') >= 0 || text.indexOf('スーパー') >= 0 || text.indexOf('買い物') >= 0 || text.indexOf('お買いもの') >= 0) return 'お買いもの';
+      if (text.indexOf('park') >= 0 || text.indexOf('駐車') >= 0 || text.indexOf('parking') >= 0) return '駐車場';
+      if (text.indexOf('walk') >= 0 || text.indexOf('散歩') >= 0 || text.indexOf('周辺') >= 0) return '散歩';
+      if (text.indexOf('onsen') >= 0 || text.indexOf('温泉') >= 0) return '温泉';
+      return '';
+    }
+
+    function mapCategoryTagByKeyword(placeName, category) {
+      var combined = String(placeName || '') + ' ' + String(category || '');
+      if (combined.match(/カレー|curry/)) return 'curry';
+      if (combined.match(/ラーメン|ramen/)) return 'ramen';
+      if (combined.match(/寿司|sushi/)) return 'sushi';
+      if (combined.match(/定食|そば|うどん|そば/)) return 'noodle';
+      if (combined.match(/バイキング|イタリアン|italian|パスタ/)) return 'pasta';
+      if (combined.match(/ピザ|pizza/)) return 'pizza';
+      if (combined.match(/カフェ|喫茶|coffee|珈琲/)) return 'coffee';
+      if (combined.match(/バー|酒|ワイン|beer|sake|izakaya|居酒屋/)) return 'bar';
+      return category;
+    }
+
+    function buildImageSeed(source) {
+      var seed = 0;
+      var input = String(source || '');
+      for (var i = 0; i < input.length; i += 1) {
+        seed = (seed * 31 + input.charCodeAt(i)) % 2147483647;
+      }
+      return String(seed);
+    }
+
+    function buildPhotoFallback(category, name) {
+      var seed = buildImageSeed(String(category || '') + ':' + String(name || ''));
+      return 'https://picsum.photos/seed/beppu-' + encodeURIComponent(seed) + '/640/420';
+    }
+
+    function pickImageFromCsv(name, category) {
+      var tag = mapCategoryTagByKeyword(name, category);
+      var queryByTag = {
+        curry: 'curry,japanese curry,restaurant',
+        ramen: 'ramen,japanese noodle shop,restaurant',
+        sushi: 'sushi,restaurant,japan',
+        noodle: 'japanese noodles,restaurant',
+        pasta: 'italian pasta,restaurant',
+        pizza: 'italian pizza,restaurant',
+        coffee: 'coffee shop,coffee cup,cafe',
+        bar: 'bar,restaurant,night',
+        '昼食': 'japanese lunch,food',
+        '朝食': 'breakfast,japan,meal',
+        '夕食': 'dinner,japan,restaurant',
+        'お酒': 'japanese bar,restaurant,drink',
+        '喫茶': 'coffee shop,cafe',
+        'お買いもの': 'shopping,store,shop',
+        散歩: 'japan city street,walkway',
+        駐車場: 'parking lot,car',
+        温泉: 'onsen,hot spring',
+        その他: 'beppu,restaurant,street',
+      };
+      var query = queryByTag[tag] || queryByTag[category] || 'beppu,restaurant';
+      return 'https://source.unsplash.com/featured/640x420/?' + encodeURIComponent(query) + '&sig=' + encodeURIComponent(buildImageSeed(name + category));
+    }
+
+    function pickDescriptionFromRow(row, name) {
+      var candidates = [
+        row['コメント'],
+        row['レビュー要約文'],
+        row['メモ'],
+        row['コメント（店舗）'],
+        row['comment']
+      ];
+      for (var i = 0; i < candidates.length; i += 1) {
+        var value = String(candidates[i] || '').trim();
+        if (value) return value;
+      }
+      return '別府駅・ホテルから徒歩圏内のおすすめスポット。';
+    }
+
+    function mapCsvRowsToPlaces(rows) {
+      var places = [];
+      rows.forEach(function (row, idx) {
+        var lat = Number(row['緯度_detail'] || row['緯度']);
+        var lng = Number(row['経度_detail'] || row['経度']);
+        if (!Number.isFinite(lat) || !Number.isFinite(lng)) return;
+
+        var name = String(row['タイトル'] || '').trim();
+        if (!name) return;
+
+        var slug = String(row['URL内スラッグ'] || '').trim() || ('csv-' + idx);
+        var placeId = String(row['place_id'] || '').trim() || slug;
+        var rawCategory = row['タグ'] || row['カテゴリ'] || row['カテゴリ '];
+        var category = inferCategoryFromCsv(rawCategory, name);
+        var desc = pickDescriptionFromRow(row, name);
+        var subtitle = normalizeCategoryUi(category);
+        var thumbnail = pickImageFromCsv(name, category);
+        var subcategory = inferSubcategoryFromCsv(rawCategory, name, desc);
+        var emojiTag = getCategoryEmoji(category, name, desc);
+        var businessHours = String(row['営業時間'] || '').trim();
+        var businessHoursText = String(row['営業時間_曜日'] || '').trim();
+
+        places.push({
+          id: placeId,
+          name: name,
+          slug: slug,
+          subtitle: subtitle,
+          category: category,
+          subcategory: subcategory,
+          lat: lat,
+          lng: lng,
+          tags: category,
+          emojiTag: emojiTag,
+          thumbnail: thumbnail,
+          description: desc || '別府駅・ホテルから徒歩圏内のおすすめスポット。',
+          businessHours: businessHours || undefined,
+          businessHoursText: businessHoursText || undefined
+        });
+      });
+      return places;
+    }
+
+    async function loadDebugCsvPlaces() {
+      var rawPaths = [
+        window.DEBUG_CSV_PATH,
+        'data/beppu-restaurants.csv',
+        
+        
+        
+        
+        
+        
+      ].filter(function (path) { return path; });
+
+      var preferredPaths = [];
+      rawPaths.forEach(function (path) {
+        preferredPaths.push(path);
+        try {
+          var encoded = encodeURI(path);
+          if (encoded !== path) preferredPaths.push(encoded);
+        } catch (error) {
+          preferredPaths.push(path);
+        }
+      });
+
+      for (var i = 0; i < preferredPaths.length; i += 1) {
+        var path = preferredPaths[i];
+        try {
+          var response = await fetch(path, { cache: 'no-store' });
+          if (!response.ok) continue;
+          var text = await response.text();
+          var rows = parseCsv(text);
+          var mapped = mapCsvRowsToPlaces(rows);
+          if (mapped.length) return mapped;
+        } catch (error) {
+          console.warn('[AccessBeppu] CSV load failed:', path, error);
+        }
+      }
+      return [];
+    }
+
+    async function initialize() {
+      renderChips();
+
+      var csvPlaces = await loadDebugCsvPlaces();
+      var cmsPlaces = [];
+      if (window.__WEBFLOW_CMS_RESPONSE) {
+        cmsPlaces = mapWebflowCmsItemsToPlaces(window.__WEBFLOW_CMS_RESPONSE);
+      }
+
+      places = csvPlaces.length
+        ? csvPlaces
+        : (cmsPlaces.length ? normalizeCmsFields(cmsPlaces) : fallbackPlaces);
+      console.info('[AccessBeppu] places source:', csvPlaces.length ? 'csv' : (cmsPlaces.length ? 'cms' : 'fallback'), 'count=', places.length);
+      buildList();
+      syncDesktopModalFrame();
+      window.addEventListener('resize', function () {
+        refitAllSpotNames();
+        syncDesktopModalFrame();
+      });
+      if (modalCloseEl) {
+        modalCloseEl.addEventListener('click', closeShopModal);
+      }
+      if (modalOverlayEl) {
+        modalOverlayEl.addEventListener('click', function (event) {
+          if (event.target !== modalOverlayEl) return;
+
+          var clickX = event.clientX;
+          var clickY = event.clientY;
+          closeShopModal();
+
+          // Let the overlay close first, then forward the same click to the underlying UI.
+          window.setTimeout(function () {
+            var target = document.elementFromPoint(clickX, clickY);
+            if (!target) return;
+            if (modalOverlayEl && (target === modalOverlayEl || modalOverlayEl.contains(target))) return;
+            target.dispatchEvent(new MouseEvent('click', {
+              bubbles: true,
+              cancelable: true,
+              view: window,
+              clientX: clickX,
+              clientY: clickY
+            }));
+          }, 0);
+        });
+      }
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') closeShopModal();
+      });
+      window.setInterval(refreshOpenModalStatus, 30000);
+
+      var apiKey = window.GOOGLE_MAPS_API_KEY || 'AIzaSyCNjH8R3RgcnUz4iMHqcanw7WaBPR-id_k';
+      var forceMock = window.FORCE_MAP_MOCK === true;
+      if (forceMock) {
+        setMapFallback('');
+        return;
+      }
+      if (!apiKey) {
+        setMapFallback('Google Maps APIキーが未設定です');
+        return;
+      }
+
+      window.gm_authFailure = function () {
+        setMapFallback('Google Maps認証エラー（モック表示）');
+      };
+
+      window.initAccessBeppuMap = async function () {
+        try {
+          mapModule = new BeppuMapModule({
+            mapElement: mapElement,
+            listElement: listElement,
+            routeChipElement: routeChipElement,
+            places: places,
+            hotel: HOTEL_COORDS,
+            station: STATION_COORDS,
+            zoom: 16.5,
+            routeFitMaxZoom: 17,
+            routeFitSkipRatio: 0.85,
+            adaptiveNearDistanceMeters: 1200,
+            adaptiveZoomStep: 0.8,
+            adaptiveZoomMax: 18,
+            defaultTimezoneOffsetMinutes: 540,
+            fallbackMessage: '徒歩ルートを取得できませんでした。しばらくしてから再度お試しください。',
+            onPlaceSelected: function (id) { state.selectedPlaceId = id; }
+          });
+
+          await mapModule.init();
+          applyFilters();
+        } catch (error) {
+          routeChipElement.textContent = '地図の読み込みに失敗しました。APIキーとドメイン設定を確認してください。';
+          routeChipElement.classList.add('is-fallback');
+          console.error('[AccessBeppu] init failed', error);
+        }
+      };
+
+      var script = document.createElement('script');
+      script.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(apiKey) + '&v=weekly&libraries=marker,places&loading=async&callback=initAccessBeppuMap';
+      script.async = true;
+      script.defer = true;
+      script.onerror = function () {
+        setMapFallback('地図の取得に失敗しました（ネットワークまたはAPI制限）');
+      };
+      document.head.appendChild(script);
+    }
+
+    if (app) initialize();
+  })();
+</script>
