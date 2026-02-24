@@ -656,6 +656,7 @@
    * @property {number=} adaptiveZoomMax
    * @property {number=} walkToDriveThresholdMinutes
    * @property {number=} defaultTimezoneOffsetMinutes
+   * @property {boolean=} enablePlacesOpenStatus
    * @property {string=} idleRouteMessage
    * @property {string=} fallbackMessage
    * @property {(placeId:string|null)=>void=} onPlaceSelected
@@ -709,6 +710,9 @@
     this._openStatusCache = new Map();
     this._openStatusTimerId = null;
     this._openStatusIntervalId = null;
+    this._openStatusPlacesDisabled = false;
+    this._openStatusPlacesDisabledReason = '';
+    this._enablePlacesOpenStatus = options.enablePlacesOpenStatus === true;
     this._markerBaseZIndexById = new Map();
     this._disablePlaceCollisionCulling = options.disablePlaceCollisionCulling !== false;
 
@@ -822,7 +826,7 @@
     mapOptions.mapId = global.GOOGLE_MAP_ID || 'DEMO_MAP_ID';
 
     this.map = new mapsLib.Map(this.options.mapElement, mapOptions);
-    if (google.maps.places && google.maps.places.PlacesService) {
+    if (this._enablePlacesOpenStatus && google.maps.places && google.maps.places.PlacesService) {
       this.placesService = new google.maps.places.PlacesService(this.map);
     }
 
@@ -924,6 +928,9 @@
     if (csvStatus) {
       return Promise.resolve(resolveAndCache(csvStatus));
     }
+    if (this._openStatusPlacesDisabled) {
+      return Promise.resolve(resolveAndCache({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' }));
+    }
     if (!this.placesService) return Promise.resolve(resolveAndCache({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' }));
 
     return new Promise(function (resolve) {
@@ -931,7 +938,19 @@
         resolve(resolveAndCache(status));
       };
 
+      var disablePlacesStatusLookup = function (reason) {
+        if (self._openStatusPlacesDisabled) return;
+        self._openStatusPlacesDisabled = true;
+        self._openStatusPlacesDisabledReason = String(reason || '');
+        if (typeof console !== 'undefined' && console && typeof console.warn === 'function') {
+          console.warn('[access-beppu-map] Places open-status lookup disabled:', self._openStatusPlacesDisabledReason);
+        }
+      };
+
       var handleDetails = function (details, detailsStatus) {
+        if (detailsStatus === 'REQUEST_DENIED' || detailsStatus === 'OVER_QUERY_LIMIT' || detailsStatus === 'INVALID_REQUEST') {
+          disablePlacesStatusLookup(detailsStatus);
+        }
         if (detailsStatus !== google.maps.places.PlacesServiceStatus.OK || !details) {
           finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
           return;
@@ -957,39 +976,66 @@
 
       var inferredPlaceId = place.placeId || (/^ChIJ/.test(String(place.id || '')) ? String(place.id) : '');
       if (inferredPlaceId && /^ChIJ/.test(String(inferredPlaceId))) {
-        self.placesService.getDetails(
+        try {
+          self.placesService.getDetails(
             {
               placeId: String(inferredPlaceId),
               fields: ['opening_hours', 'utc_offset_minutes'],
             },
             handleDetails
           );
+        } catch (error) {
+          disablePlacesStatusLookup(error && error.message ? error.message : 'getDetails failed');
+          finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+        }
         return;
       }
 
-      self.placesService.findPlaceFromQuery(
-        {
-          query: place.name + ' 別府',
-          fields: ['place_id'],
-          locationBias: {
-            radius: 500,
-            center: { lat: place.lat, lng: place.lng },
-          },
-        },
-        function (results, findStatus) {
-          if (findStatus !== google.maps.places.PlacesServiceStatus.OK || !results || !results[0] || !results[0].place_id) {
-            finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
-            return;
+      var name = String(place.name || '').trim();
+      if (!name) {
+        finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+        return;
+      }
+      var hasValidCoords = Number.isFinite(place.lat) && Number.isFinite(place.lng);
+      var queryRequest = {
+        query: name + ' 別府',
+        fields: ['place_id'],
+      };
+      if (hasValidCoords) {
+        queryRequest.locationBias = {
+          radius: 500,
+          center: { lat: place.lat, lng: place.lng },
+        };
+      }
+      try {
+        self.placesService.findPlaceFromQuery(
+          queryRequest,
+          function (results, findStatus) {
+            if (findStatus === 'REQUEST_DENIED' || findStatus === 'OVER_QUERY_LIMIT' || findStatus === 'INVALID_REQUEST') {
+              disablePlacesStatusLookup(findStatus);
+            }
+            if (findStatus !== google.maps.places.PlacesServiceStatus.OK || !results || !results[0] || !results[0].place_id) {
+              finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+              return;
+            }
+            try {
+              self.placesService.getDetails(
+                {
+                  placeId: results[0].place_id,
+                  fields: ['opening_hours', 'utc_offset_minutes'],
+                },
+                handleDetails
+              );
+            } catch (error) {
+              disablePlacesStatusLookup(error && error.message ? error.message : 'getDetails failed');
+              finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+            }
           }
-          self.placesService.getDetails(
-            {
-              placeId: results[0].place_id,
-              fields: ['opening_hours', 'utc_offset_minutes'],
-            },
-            handleDetails
-          );
-        }
-      );
+        );
+      } catch (error) {
+        disablePlacesStatusLookup(error && error.message ? error.message : 'findPlaceFromQuery failed');
+        finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+      }
     });
   };
 

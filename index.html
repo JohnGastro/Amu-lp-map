@@ -66,7 +66,8 @@
     position: absolute;
     right: 60px;
     top: 140px;
-    width: 639px;
+    width: calc(50% - 76px);
+    max-width: 639px;
     display: grid;
     gap: 18px;
     z-index: 4;
@@ -220,7 +221,7 @@
     position: relative;
     --panel-height: 484px;
     display: grid;
-    grid-template-columns: 650px minmax(0, 639px);
+    grid-template-columns: 650fr 639fr;
     column-gap: 31px;
     align-items: start;
   }
@@ -239,7 +240,8 @@
   .ab-brand-block {
     display: grid;
     gap: 8px;
-    width: 650px;
+    width: calc((100% - 31px) * 0.5043);
+    max-width: 650px;
     margin-bottom: 12px;
   }
 
@@ -255,6 +257,10 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
+  }
+
+  .ab-meta-chip-short {
+    display: none;
   }
 
   .ab-meta-chip {
@@ -715,6 +721,7 @@
     right: 60px;
     transform: translateX(calc(100% + 60px));
     width: 660px;
+    max-width: calc(100% - 120px);
     height: 500px;
     background: #d4d4d4;
     border: 1px solid #adadad;
@@ -1109,7 +1116,13 @@
       right: 20px;
       top: 60px;
       width: auto;
+      max-width: none;
       gap: 12px;
+      justify-items: start;
+    }
+
+    .ab-question {
+      text-align: left;
     }
 
     .ab-chip-row {
@@ -1138,11 +1151,21 @@
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
       row-gap: 12px;
-      overflow: auto;
+      flex: 1 1 0;
+      min-height: 0;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .ab-content::-webkit-scrollbar {
+      display: none;
     }
 
     .ab-padding-wrapper {
       padding: 172px 20px 20px 20px;
+      display: flex;
+      flex-direction: column;
     }
 
     .ab-map-col {
@@ -1150,9 +1173,11 @@
     }
 
     .ab-brand-block {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       width: 100%;
-      order: 1;
-      gap: 6px;
+      gap: 8px;
       margin-bottom: 0;
     }
 
@@ -1162,8 +1187,7 @@
     }
 
     .ab-meta-chips {
-      display: flex;
-      gap: 8px;
+      display: contents;
     }
 
     .ab-meta-chip {
@@ -1172,9 +1196,17 @@
       padding: 1px 6px;
       min-height: 14px;
       letter-spacing: 0.6px;
-      white-space: normal;
-      overflow: visible;
-      text-overflow: clip;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .ab-meta-chip-long {
+      display: none;
+    }
+
+    .ab-meta-chip-short {
+      display: inline;
     }
 
     .ab-map-wrap {
@@ -1229,6 +1261,7 @@
     .spot-body {
       padding: 12px 10px;
       gap: 4px;
+      height: 86px;
       min-height: 86px;
     }
 
@@ -1290,6 +1323,7 @@
       right: 10px;
       left: 10px;
       width: auto;
+      max-width: none;
       height: auto;
       max-height: calc(100% - 20px);
       top: 10px;
@@ -1378,8 +1412,8 @@
       <div class="ab-brand-block">
         <div class="ab-meta-line">To Amu Hotel</div>
         <div class="ab-meta-chips">
-          <div class="ab-meta-chip">🚗 東九州自動車道「別府IC」より車で15分</div>
-          <div class="ab-meta-chip">🚉 JR日豊本線「別府駅」東口より徒歩8分</div>
+          <div class="ab-meta-chip"><span class="ab-meta-chip-long">🚗 東九州自動車道「別府IC」より車で15分</span><span class="ab-meta-chip-short">🚗 別府IC 15分</span></div>
+          <div class="ab-meta-chip"><span class="ab-meta-chip-long">🚉 JR日豊本線「別府駅」東口より徒歩8分</span><span class="ab-meta-chip-short">🚉 別府駅 8分</span></div>
         </div>
       </div>
 
