@@ -713,6 +713,12 @@
     this._openStatusPlacesDisabled = false;
     this._openStatusPlacesDisabledReason = '';
     this._enablePlacesOpenStatus = options.enablePlacesOpenStatus === true;
+    this._isEmbeddedInIframe = false;
+    try {
+      this._isEmbeddedInIframe = global.self !== global.top;
+    } catch (error) {
+      this._isEmbeddedInIframe = true;
+    }
     this._markerBaseZIndexById = new Map();
     this._disablePlaceCollisionCulling = options.disablePlaceCollisionCulling !== false;
 
@@ -779,6 +785,42 @@
     });
   };
 
+  BeppuMapModule.prototype.setEmbeddedMapInteraction = function setEmbeddedMapInteraction(enabled) {
+    if (!this.map || !this._isEmbeddedInIframe) return;
+    if (enabled) {
+      this.map.setOptions({
+        gestureHandling: 'greedy',
+        scrollwheel: true,
+        draggable: true,
+      });
+      return;
+    }
+    this.map.setOptions({
+      gestureHandling: 'none',
+      scrollwheel: false,
+      draggable: false,
+    });
+  };
+
+  BeppuMapModule.prototype.bindEmbeddedHoverInteraction = function bindEmbeddedHoverInteraction() {
+    if (!this._isEmbeddedInIframe || !this.options || !this.options.mapElement) return;
+    var canHover = false;
+    try {
+      canHover = !!(global.matchMedia && global.matchMedia('(hover: hover) and (pointer: fine)').matches);
+    } catch (error) {
+      canHover = false;
+    }
+    if (!canHover) return;
+    var mapEl = this.options.mapElement;
+    var self = this;
+    mapEl.addEventListener('mouseenter', function () {
+      self.setEmbeddedMapInteraction(true);
+    });
+    mapEl.addEventListener('mouseleave', function () {
+      self.setEmbeddedMapInteraction(false);
+    });
+  };
+
   BeppuMapModule.prototype.init = async function init() {
     var mapsLib = await google.maps.importLibrary('maps');
     var markerLib = await google.maps.importLibrary('marker');
@@ -793,7 +835,10 @@
       fullscreenControl: false,
       zoomControl: true,
       clickableIcons: false,
-      gestureHandling: 'cooperative',
+      // In iframe embeds, default to scroll-priority; hover will temporarily enable map interaction.
+      gestureHandling: this._isEmbeddedInIframe ? 'none' : 'cooperative',
+      scrollwheel: !this._isEmbeddedInIframe,
+      draggable: !this._isEmbeddedInIframe,
       styles: [
         // Base tone: soft, low-contrast grayscale to match page UI.
         { elementType: 'geometry', stylers: [{ color: '#f3f4f6' }] },
@@ -870,6 +915,7 @@
     });
 
     this.renderPlaces(this.options.places || [], AdvancedMarkerElement);
+    this.bindEmbeddedHoverInteraction();
     this.bindCardEvents();
     this.refreshOpenStatuses(true);
     this.startOpenStatusAutoRefresh();
