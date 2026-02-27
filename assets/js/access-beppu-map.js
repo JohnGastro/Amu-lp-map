@@ -792,18 +792,18 @@
       gestureHandling: 'cooperative',
       styles: [
         // Base tone: soft, low-contrast grayscale to match page UI.
-        { elementType: 'geometry', stylers: [{ color: '#f3f4f6' }] },
-        { elementType: 'labels.text.fill', stylers: [{ color: '#6b7280' }] },
-        { elementType: 'labels.text.stroke', stylers: [{ color: '#f3f4f6' }] },
+        { elementType: 'geometry', stylers: [{ color: '#d1cec5' }] },
+        { elementType: 'labels.text.fill', stylers: [{ color: '#c3bcb2' }] },
+        { elementType: 'labels.text.stroke', stylers: [{ color: '#d1cec5' }] },
 
         // Keep street names visible and readable.
-        { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#dfe3ea' }] },
-        { featureType: 'road.arterial', elementType: 'labels.text.fill', stylers: [{ color: '#616875' }] },
-        { featureType: 'road.local', elementType: 'labels.text.fill', stylers: [{ color: '#6b7280' }] },
+        { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#d1cec5' }] },
+        { featureType: 'road.arterial', elementType: 'labels.text.fill', stylers: [{ color: '#c3bcb2' }] },
+        { featureType: 'road.local', elementType: 'labels.text.fill', stylers: [{ color: '#c3bcb2' }] },
 
         // Water / landscape tuned to neutral palette.
-        { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#d8e1ea' }] },
-        { featureType: 'landscape', elementType: 'geometry', stylers: [{ color: '#f6f7f9' }] },
+        { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#c3bcb2' }] },
+        { featureType: 'landscape', elementType: 'geometry', stylers: [{ color: '#d1cec5' }] },
 
         // Hide POI entirely (icons + labels + geometry).
         { featureType: 'poi', stylers: [{ visibility: 'off' }] },
