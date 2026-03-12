@@ -2541,7 +2541,10 @@
             defaultTimezoneOffsetMinutes: 540,
             enablePlacesOpenStatus: enablePlacesOpenStatus,
             fallbackMessage: '徒歩ルートを取得できませんでした。しばらくしてから再度お試しください。',
-            onPlaceSelected: function (id) { state.selectedPlaceId = id; }
+            onPlaceSelected: function (id) {
+              state.selectedPlaceId = id;
+              if (id) openShopModal(id);
+            }
           });
 
           // Load static route data before init
