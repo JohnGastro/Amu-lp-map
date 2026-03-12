@@ -1,5 +1,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
 
 <style>
   html,
@@ -13,7 +14,6 @@
   #access-beppu-app {
     width: 100vw;
     height: 100vh;
-    min-height: 100vh;
     background: #c3bcb2;
     overflow: hidden;
     color: rgba(0, 0, 0, 0.75);
@@ -24,8 +24,11 @@
     box-sizing: border-box;
   }
 
+  /* mI3Mk root */
   .ab-shell {
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: min(100%, 1440px);
     height: 100%;
     margin: 0 auto;
@@ -34,14 +37,21 @@
     background: #c3bcb2;
   }
 
-  .ab-heading {
-    position: absolute;
-    left: 60px;
-    top: 144px;
+  /* dpk0J - ContentWrapper */
+  .ab-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 41px 62px 41px 62px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* f5fDO - SectionLabel */
+  .ab-section-label {
     display: flex;
     align-items: center;
-    gap: 8px;
-    z-index: 4;
+    gap: 7px;
+    padding-bottom: 86px;
   }
 
   .ab-heading-mark {
@@ -49,6 +59,7 @@
     height: 13px;
     border-radius: 2.5px;
     background: #c93400;
+    flex-shrink: 0;
   }
 
   .ab-heading-text {
@@ -58,47 +69,57 @@
     font-style: normal;
     letter-spacing: 0.14px;
     color: #292826;
+    line-height: 1;
   }
 
-  .ab-filters {
-    position: absolute;
-    right: 60px;
-    top: 140px;
-    width: calc(50% - 76px);
-    max-width: 639px;
-    display: grid;
-    gap: 18px;
-    z-index: 4;
-    justify-items: center;
+  /* KoIZR - HeaderRow: columns match VhY63 (650px + 1fr, gap 30px) */
+  .ab-header-row {
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+    padding-bottom: 23px;
+  }
+
+  /* Ad8F6 - LeftHeader: same width as YROsx (MapArea) */
+  .ab-left-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 650px;
+    flex-shrink: 0;
+  }
+
+  /* vRlcP - RightHeader: flex:1 matches JMIKB (ShopIntro) */
+  .ab-right-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
   }
 
   .ab-question {
     font-size: 14px;
     letter-spacing: 1.4px;
-    color: #292826;
-    line-height: 2.1;
+    color: #4d4b49;
+    line-height: 1.2;
     text-align: center;
-    width: 100%;
   }
 
   .ab-chip-row {
     display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
+    gap: 20px;
   }
 
   #ab-main-categories {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 14px;
-    justify-content: center;
+    gap: 20px;
   }
 
   #ab-sub-categories {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 8px;
-    justify-content: center;
+    gap: 20px;
   }
 
   .ab-chip {
@@ -129,8 +150,8 @@
 
   .ab-chip {
     border: none;
-    border-radius: 2px;
-    background: #bab2a8;
+    border-radius: 4px;
+    background: #b5aea3;
     color: #292826;
     padding: 4px 22px;
     min-height: 28px;
@@ -150,7 +171,7 @@
   }
 
   .ab-chip.is-active {
-    background: #292826;
+    background: #4d4b49;
     color: #edebe4;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
   }
@@ -163,7 +184,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: #bab2a8;
+    background: #b5aea3;
     transform: scaleY(0);
     transform-origin: bottom center;
     transition: transform 300ms cubic-bezier(0.22, 0, 0.09, 0.99);
@@ -175,7 +196,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: #292826;
+    background: #4d4b49;
     transform: scaleY(0);
     transform-origin: top center;
     transition: transform 320ms cubic-bezier(0.22, 0, 0.09, 0.99);
@@ -215,32 +236,24 @@
     filter: none;
   }
 
-  .ab-content {
-    position: relative;
-    --panel-height: 484px;
-    display: grid;
-    grid-template-columns: 650fr 639fr;
-    column-gap: 31px;
-    align-items: start;
-  }
-
-  .ab-padding-wrapper {
-    position: absolute;
-    inset: 0;
-    padding: 232px 60px 0 60px;
+  /* VhY63 - MainContent */
+  .ab-main-content {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
   }
 
   .ab-map-col {
-    height: var(--panel-height);
-    min-height: 0;
+    width: 650px;
+    flex-shrink: 0;
   }
 
-  .ab-brand-block {
-    display: grid;
-    gap: 8px;
-    width: calc((100% - 31px) * 0.5043);
-    max-width: 650px;
-    margin-bottom: 12px;
+  /* iHoRJ - AccessBadges */
+  .ab-meta-chips {
+    display: flex;
+    gap: 16px;
   }
 
   .ab-meta-line {
@@ -251,10 +264,20 @@
     line-height: 1.2;
   }
 
-  .ab-meta-chips {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+  .ab-meta-icon {
+    font-family: 'Material Symbols Rounded';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    color: #c93400;
   }
 
   .ab-meta-chip-short {
@@ -265,9 +288,9 @@
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    padding: 6px 12px;
-    border-radius: 2px;
-    background: #d1cec5;
+    padding: 5px 12px 5px 9px;
+    border-radius: 4px;
+    background: #b5aea3;
     color: #292826;
     font-size: 14px;
     letter-spacing: 1.4px;
@@ -282,9 +305,8 @@
     position: relative;
     border-radius: 3.5px;
     overflow: hidden;
-    background: #c3bcb2;
-    height: var(--panel-height);
-    min-height: 0;
+    background: #292826;
+    height: 100%;
   }
 
   #beppu-map {
@@ -492,15 +514,23 @@
     display: none !important;
   }
 
+  /* JMIKB - ShopIntro */
   .ab-list-col {
-    min-height: 0;
-    height: var(--panel-height);
-    padding-top: 0;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
+    border-radius: 3.5px;
   }
 
+  /* 3Hhbm - ShopList */
   #beppu-list {
-    height: var(--panel-height);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+    min-height: 0;
     border-radius: 3.5px;
     overflow: auto;
     background: transparent;
@@ -518,22 +548,22 @@
   }
 
   #beppu-list::-webkit-scrollbar-thumb {
-    background: #bab2a8;
+    background: #b5aea3;
     border-radius: 15px;
   }
 
+  /* Lb2v3 - ListItem */
   .spot-item {
     width: 100%;
     height: 134px;
     min-height: 134px;
-    display: grid;
-    grid-template-columns: 209px 1fr;
-    background: #d1cec5;
-    border: 1px solid #c3bcb2;
+    display: flex;
+    background: #d1cdc5;
+    border: 1px solid #b5aea3;
     border-radius: 3.5px;
     cursor: pointer;
     overflow: hidden;
-    margin-bottom: 15px;
+    flex-shrink: 0;
     outline: 2px solid transparent;
     outline-offset: -2px;
     transition: transform 0.22s ease, box-shadow 0.22s ease, outline-color 0.22s ease;
@@ -552,17 +582,19 @@
 
   .spot-item:hover:not(.is-active),
   .spot-item.is-hover:not(.is-active) {
-    background: #d1cec5;
-    border-color: #c3bcb2;
+    background: #d1cdc5;
+    border-color: #b5aea3;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
+  /* wAiPd - Thumbnail */
   .spot-thumb-wrap {
     width: 209px;
-    height: 134px;
+    height: 100%;
     overflow: hidden;
-    background: #c3bcb2;
+    background: #292826;
     border-radius: 3.5px 0 0 3.5px;
+    flex-shrink: 0;
   }
 
   .spot-thumb {
@@ -572,31 +604,43 @@
     display: block;
   }
 
+  /* UrNvj - ItemContent */
   .spot-body {
-    padding: 14px 16px;
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-    gap: 6px;
-    height: 134px;
+    padding: 13px 28px 13px 31px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
     overflow: hidden;
   }
 
+  /* TqbqN - TopRow */
   .spot-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
     min-width: 0;
   }
 
+  /* FgomF - TextBlock */
+  .spot-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+    flex: 1;
+  }
+
   .spot-name {
     margin: 0;
-    font-family: "A P-OTF A1Gothic Std Regular", "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+    font-family: "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: var(--spot-name-size, 22px);
-    letter-spacing: 2.27px;
-    color: rgba(0, 0, 0, 0.75);
+    font-size: var(--spot-name-size, 24px);
+    letter-spacing: 2.4px;
+    color: #292826;
     line-height: 1.2;
     flex: 1 1 auto;
     min-width: 0;
@@ -605,47 +649,36 @@
     text-overflow: clip;
   }
 
+  /* p9DEz - Divider */
+  .spot-divider {
+    width: 100%;
+    height: 1px;
+    background: #b5aea3;
+    flex-shrink: 0;
+  }
+
+  /* QVZxB - Genre */
   .spot-subtitle {
     margin: 0;
     font-family: "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
     font-size: 11px;
     letter-spacing: 1.1px;
-    color: rgba(0, 0, 0, 0.5);
-    line-height: 1.6;
-  }
-
-  .spot-meta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    min-width: 0;
+    color: #4d4b49;
+    line-height: 1;
   }
 
   .spot-open-status {
-    margin: 0;
-    font-family: "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.9px;
-    line-height: 1.4;
-    white-space: nowrap;
-    color: rgba(0, 0, 0, 0.45);
-    flex-shrink: 0;
+    display: none;
   }
 
-  .spot-open-status.is-open { color: #292826; }
-  .spot-open-status.is-closed { color: #4d4b49; }
-  .spot-open-status.is-unknown { color: rgba(0, 0, 0, 0.45); }
-
+  /* fpCXQ - Description */
   .spot-description {
     margin: 0;
     font-family: "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
     font-size: 13px;
     letter-spacing: 1.3px;
-    color: rgba(0, 0, 0, 0.75);
+    color: #4d4b49;
     line-height: 1.7;
-    min-height: 44px;
-    max-height: 44px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -715,8 +748,8 @@
 
   .ab-shop-modal {
     position: absolute;
-    top: 232px;
-    right: 60px;
+    top: 0;
+    right: 62px;
     transform: translateX(calc(100% + 60px));
     width: 660px;
     max-width: calc(100% - 120px);
@@ -1094,51 +1127,46 @@
     }
   }
 
-  /* Desktop responsive tuning (no mobile/tablet layout). */
+  /* Desktop responsive tuning */
   @media (max-width: 1280px) {
-    .ab-heading {
-      left: 32px;
-      top: 118px;
+    .ab-content-wrapper {
+      padding: 32px 32px 0 32px;
     }
 
-    .ab-filters {
-      right: 32px;
-      top: 112px;
-      width: min(52vw, 560px);
-      gap: 14px;
+    .ab-section-label {
+      padding-bottom: 48px;
     }
 
-    .ab-padding-wrapper {
-      padding: 204px 32px 0 32px;
+    .ab-main-content {
+      gap: 20px;
     }
 
-    .ab-content {
-      --panel-height: min(484px, calc(100vh - 260px));
-      grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
-      column-gap: 20px;
-    }
-
-    .ab-brand-block {
-      width: calc((100% - 20px) * 0.505);
-    }
-
-    .ab-meta-chips {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .spot-item {
-      grid-template-columns: minmax(170px, 34%) minmax(0, 1fr);
-    }
-
-    .spot-thumb-wrap {
+    .ab-map-col {
       width: auto;
+      flex: 1.02;
+    }
+
+    .ab-left-header {
+      width: auto;
+      flex: 1.02;
     }
 
     .ab-meta-chip {
       font-size: 12px;
       letter-spacing: 0.8px;
-      padding: 6px 9px;
+      padding: 5px 9px;
+    }
+
+    #ab-main-categories,
+    #ab-sub-categories {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 8px;
+      gap: 14px;
+    }
+
+    .ab-chip {
+      padding: 4px 16px;
     }
 
     .ab-shop-modal {
@@ -1175,74 +1203,40 @@
     .ab-shop-modal__desc {
       width: auto;
     }
-  }
 
-  @media (min-width: 1201px) and (max-width: 1439px) {
-    .ab-heading {
-      top: 102px;
-    }
-
-    .ab-filters {
-      left: calc(32px + ((100% - 64px - 20px) * 0.505) + 20px);
-      right: 32px;
-      top: 108px;
-      width: auto;
-      justify-items: center;
-      gap: 12px;
-    }
-
-    .ab-padding-wrapper {
-      padding-top: 174px;
-    }
-
-    #ab-main-categories,
-    #ab-sub-categories {
-      flex-wrap: wrap;
-      justify-content: center;
-      row-gap: 8px;
-    }
-
-    .ab-chip {
-      padding: 4px 16px;
-    }
   }
 
   @media (max-width: 1200px) {
-    .ab-heading {
-      left: 24px;
-      top: 62px;
+    .ab-content-wrapper {
+      padding: 24px 24px 0 24px;
     }
 
-    .ab-filters {
-      left: 24px;
-      right: 24px;
-      top: 128px;
+    .ab-section-label {
+      padding-bottom: 32px;
+    }
+
+    .ab-header-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .ab-right-header {
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .ab-main-content {
+      gap: 16px;
+    }
+
+    .ab-map-col {
       width: auto;
-      justify-items: center;
-    }
-
-    .ab-padding-wrapper {
-      padding: 222px 24px 0 24px;
-    }
-
-    .ab-content {
-      --panel-height: min(460px, calc(100vh - 246px));
-      column-gap: 16px;
-    }
-
-    .ab-brand-block {
-      width: calc((100% - 16px) * 0.505);
+      flex: 1;
     }
 
     .spot-name {
       letter-spacing: 1.4px;
-    }
-
-    #ab-main-categories,
-    #ab-sub-categories {
-      flex-wrap: wrap;
-      justify-content: center;
-      row-gap: 8px;
     }
 
     .ab-chip {
@@ -1252,35 +1246,76 @@
     .ab-meta-chip {
       font-size: 13px;
       letter-spacing: 1.1px;
-      padding: 6px 10px;
-    }
-  }
-
-  @media (min-width: 1101px) and (max-width: 1200px) {
-    .ab-meta-chips {
-      grid-template-columns: 1fr;
-      gap: 8px;
+      padding: 5px 10px;
     }
 
-    .ab-meta-chip {
-      font-size: 12px;
-      letter-spacing: 0.8px;
-    }
   }
 
   @media (max-width: 1100px) {
-    .ab-heading {
-      left: 24px;
-      top: 28px;
+    .ab-main-content {
+      flex-direction: column;
     }
 
-    .ab-filters {
-      left: 24px;
-      right: 24px;
-      top: 64px;
-      width: auto;
-      justify-items: center;
+    .ab-map-col {
+      width: 100%;
+      height: 360px;
+    }
+
+    .ab-list-col {
+      height: 400px;
+    }
+
+    .ab-meta-chips {
+      flex-direction: column;
       gap: 10px;
+    }
+  }
+
+  /* Mobile layout matching GwKIK */
+  @media (max-width: 980px) {
+    .ab-shell {
+      overflow-y: auto;
+    }
+
+    /* Flatten hierarchy: header-row & main-content children
+       become direct flex children of content-wrapper via display:contents,
+       so we can reorder: label → question+chips → map → meta+badges → list */
+    .ab-content-wrapper {
+      padding: 24px 20px 20px 20px;
+    }
+
+    .ab-header-row {
+      display: contents;
+    }
+
+    .ab-main-content {
+      display: contents;
+    }
+
+    .ab-section-label { order: 1; padding-bottom: 16px; }
+    .ab-right-header  { order: 2; align-items: center; gap: 10px; width: 100%; flex: none; }
+    .ab-map-col       { order: 3; flex: 0 0 310px; height: 310px; width: 100%; margin-top: 16px; }
+    .ab-left-header   { order: 4; flex-direction: column; gap: 7px; width: 100%; margin-top: 16px; }
+    .ab-list-col      { order: 5; flex: 1 1 0; min-height: 0; height: auto; width: 100%;
+                         -webkit-overflow-scrolling: touch; scrollbar-width: none; margin-top: 12px; }
+
+    .ab-heading-mark {
+      width: 12px;
+      height: 12px;
+    }
+
+    /* Chips - matching GwKIK: 13px, 1.69 spacing */
+    .ab-question {
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.2;
+      letter-spacing: 1.69px;
+    }
+
+    .ab-chip-row,
+    .ab-chip-row.sub {
+      gap: 14px;
+      justify-content: center;
     }
 
     #ab-main-categories,
@@ -1290,166 +1325,38 @@
     }
 
     .ab-chip {
-      padding: 4px 16px;
+      font-size: 13px;
+      letter-spacing: 1.69px;
+      min-height: 27px;
+      padding: 5px 14px;
     }
 
-    .ab-padding-wrapper {
-      padding-top: 194px;
+    /* Mobile pressed color: #292826 */
+    .ab-chip.is-active {
+      background: #292826;
     }
 
-    .ab-brand-block {
-      width: 100%;
+    .ab-chip::after {
+      background: #292826;
     }
 
-    .ab-meta-chips {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-  }
-
-  /* Mobile layout matching DH90D design */
-  @media (max-width: 980px) {
-    .ab-shell {
-      border-radius: 20px 20px 0 0;
-      display: flex;
-      flex-direction: column;
-      overflow-y: auto;
-    }
-
-    .ab-heading {
-      position: static;
-      margin: 24px 20px 0 20px;
-    }
-
-    .ab-heading-mark {
-      width: 12px;
-      height: 12px;
-    }
-
-    .ab-filters {
-      position: static;
-      left: auto;
-      right: auto;
-      top: auto;
-      width: auto;
-      max-width: none;
-      gap: 12px;
-      justify-items: start;
-      margin: 12px 20px 0 20px;
-    }
-
-    .ab-question {
-      text-align: left;
-      font-size: 15px;
-      line-height: 1.45;
-      letter-spacing: 0.2px;
-    }
-
-    .ab-chip-row {
-      gap: 12px;
-    }
-
-    .ab-chip-row.sub {
-      gap: 8px;
-    }
-
-    #ab-main-categories,
-    #ab-sub-categories {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .ab-chip {
-      font-size: 15px;
-      letter-spacing: 0.4px;
-      min-height: 36px;
-      padding: 7px 12px;
-      width: auto;
-    }
-
-    .ab-content {
-      --panel-height: auto;
-      display: flex !important;
-      flex-direction: column !important;
-      grid-template-columns: none !important;
-      column-gap: 0 !important;
-      gap: 12px;
-      flex: 1 1 0;
-      min-height: 0;
-      overflow: hidden;
-      align-items: stretch;
-    }
-
-    .ab-padding-wrapper {
-      position: static;
-      padding: 12px 20px 20px 20px;
-      display: flex;
-      flex-direction: column;
-      flex: 1 1 0;
-      min-height: 0;
-      overflow: hidden;
-    }
-
-    .ab-map-col {
-      flex: 0 0 276px;
-      height: 276px;
-      max-height: 276px;
-      min-height: 276px;
-      width: 100%;
-    }
-
-    .ab-brand-block {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      width: 100%;
-      max-width: none;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
+    /* Meta + badges - matching GwKIK: full-width stacked */
     .ab-meta-line {
-      font-size: 12px;
-      letter-spacing: 0.4px;
+      font-family: "Palatino Sans LT Pro", "Palatino", serif;
+      font-size: 15px;
+      letter-spacing: 0.9px;
     }
 
     .ab-meta-chips {
-      display: contents;
+      flex-direction: column;
+      gap: 7px;
     }
 
     .ab-meta-chip {
-      font-size: 11px;
-      gap: 6px;
-      padding: 3px 8px;
-      min-height: 22px;
-      letter-spacing: 0.3px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .ab-meta-chip-long {
-      display: none;
-    }
-
-    .ab-meta-chip-short {
-      display: inline;
-    }
-
-    .ab-map-wrap {
-      height: 100%;
-    }
-
-    .ab-list-col {
-      flex: 1 1 0;
-      min-height: 0;
-      height: auto;
-      padding-top: 0;
-      overflow-y: visible;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      width: 100%;
+      font-size: 13px;
+      gap: 7px;
+      padding: 5px 12px 5px 7px;
+      letter-spacing: 1.69px;
     }
 
     .ab-list-col::-webkit-scrollbar {
@@ -1458,7 +1365,6 @@
 
     #beppu-list {
       height: auto;
-      max-height: 312px;
       overflow-y: auto;
       padding-right: 0;
       transform: none !important;
@@ -1469,15 +1375,11 @@
     .spot-item {
       min-height: 104px;
       height: 104px;
-      grid-template-columns: 74px 1fr;
       border-radius: 0;
-      border-left: none;
-      border-right: none;
-      border-top: none;
+      border: none;
       border-bottom: 1px solid #c9c9c9;
-      margin-bottom: 0;
       background: transparent;
-      padding: 0;
+      flex-shrink: 0;
     }
 
     .spot-item:first-child {
@@ -1488,49 +1390,27 @@
       width: 74px;
       height: 74px;
       margin: 15px 0 15px 10px;
-      border: 1px solid #c3bcb2;
       border-radius: 4px;
-      overflow: hidden;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
     }
 
     .spot-body {
       padding: 13px 10px;
       gap: 6px;
-      height: 104px;
-      min-height: 104px;
-    }
-
-    .spot-header {
-      align-items: flex-start;
     }
 
     .spot-name {
       font-size: var(--spot-name-size, 22px);
       letter-spacing: 0.2px;
       line-height: 1.2;
-      margin-top: 0;
-      width: auto;
-      height: auto;
-      transform: none;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: clip;
     }
 
-    .spot-meta {
-      gap: 6px;
-    }
-
     .spot-subtitle {
-      display: block;
       font-size: 12px;
       letter-spacing: 0.5px;
-    }
-
-    .spot-open-status {
-      font-size: 11px;
-      letter-spacing: 0.4px;
     }
 
     .spot-description {
@@ -1626,32 +1506,35 @@
       font-size: 12px;
       letter-spacing: 0.6px;
     }
+
   }
 </style>
 
 <div id="access-beppu-app">
   <div class="ab-shell" id="ab-shell">
-    <header class="ab-heading">
-      <span class="ab-heading-mark"></span>
-      <span class="ab-heading-text">Access &amp; Beppu</span>
-    </header>
+    <div class="ab-content-wrapper">
+      <header class="ab-section-label">
+        <span class="ab-heading-mark"></span>
+        <span class="ab-heading-text">Access &amp; Beppu</span>
+      </header>
 
-    <section class="ab-filters">
-      <div class="ab-question">どんな場所をお探しですか？</div>
-      <div class="ab-chip-row" id="ab-main-categories"></div>
-      <div class="ab-chip-row sub" id="ab-sub-categories"></div>
-    </section>
-
-    <div class="ab-padding-wrapper">
-      <div class="ab-brand-block">
-        <div class="ab-meta-line">To Amu Hotel</div>
-        <div class="ab-meta-chips">
-          <div class="ab-meta-chip"><span class="ab-meta-chip-long">🚗 東九州自動車道「別府IC」より車で15分</span><span class="ab-meta-chip-short">🚗 別府IC 15分</span></div>
-          <div class="ab-meta-chip"><span class="ab-meta-chip-long">🚉 JR日豊本線「別府駅」東口より徒歩8分</span><span class="ab-meta-chip-short">🚉 別府駅 8分</span></div>
+      <div class="ab-header-row">
+        <div class="ab-left-header">
+          <div class="ab-meta-line">Amu Hotelまで</div>
+          <div class="ab-meta-chips">
+            <div class="ab-meta-chip"><span class="ab-meta-icon">directions_car</span><span class="ab-meta-chip-long">東九州自動車道「別府IC」より車で15分</span><span class="ab-meta-chip-short">別府IC 15分</span></div>
+            <div class="ab-meta-chip"><span class="ab-meta-icon">train</span><span class="ab-meta-chip-long">JR日豊本線「別府駅」東口より徒歩8分</span><span class="ab-meta-chip-short">別府駅 8分</span></div>
+          </div>
         </div>
+
+        <section class="ab-right-header">
+          <div class="ab-question">どんな場所をお探しですか？</div>
+          <div class="ab-chip-row" id="ab-main-categories"></div>
+          <div class="ab-chip-row sub" id="ab-sub-categories"></div>
+        </section>
       </div>
 
-      <main class="ab-content">
+      <main class="ab-main-content">
         <section class="ab-map-col">
           <div class="ab-map-wrap">
             <div id="beppu-map"></div>
@@ -1668,6 +1551,7 @@
           <div id="beppu-list"></div>
         </section>
       </main>
+
     </div>
 
     <div class="ab-modal-overlay" id="ab-shop-modal-overlay" aria-hidden="true">
@@ -1733,18 +1617,18 @@
     }
 
     var MAIN_CATEGORIES = [
-      { key: '昼食', label: '昼食', emoji: '🍙' },
-      { key: '朝食', label: '朝食', emoji: '🍳' },
-      { key: '夕食', label: '夕食', emoji: '🍽️' },
-      { key: 'お酒', label: 'お酒', emoji: '🍶' },
-      { key: '喫茶', label: '喫茶', emoji: '☕️' }
+      { key: '朝食', label: '朝食' },
+      { key: '昼食', label: '昼食' },
+      { key: '夕食', label: '夕食' },
+      { key: 'お酒', label: 'お酒' },
+      { key: '喫茶', label: '喫茶' }
     ];
 
     var SUB_CATEGORIES = [
-      { key: 'お買いもの', label: 'お買いもの', emoji: '🛍️' },
-      { key: '散歩', label: '散歩', emoji: '🚶' },
-      { key: '駐車場', label: '駐車場', emoji: '🅿️' },
-      { key: '温泉', label: '温泉', emoji: '♨️' }
+      { key: 'お買いもの', label: 'お買いもの' },
+      { key: '散歩', label: '散歩' },
+      { key: '温泉', label: '温泉' },
+      { key: '駐車場', label: '駐車場' }
     ];
 
     /** @type {import('./assets/js/access-beppu-map').PageState} */
@@ -2152,6 +2036,7 @@
       item.dataset.lat = String(place.lat);
       item.dataset.lng = String(place.lng);
 
+      // wAiPd - Thumbnail
       var thumbWrap = document.createElement('div');
       thumbWrap.className = 'spot-thumb-wrap';
       var img = document.createElement('img');
@@ -2164,16 +2049,36 @@
       };
       thumbWrap.appendChild(img);
 
+      // UrNvj - ItemContent
       var body = document.createElement('div');
       body.className = 'spot-body';
 
+      // TqbqN - TopRow
       var header = document.createElement('div');
       header.className = 'spot-header';
+
+      // FgomF - TextBlock
+      var textBlock = document.createElement('div');
+      textBlock.className = 'spot-text-block';
 
       var name = document.createElement('h3');
       name.className = 'spot-name';
       name.textContent = place.name;
 
+      // p9DEz - Divider
+      var divider = document.createElement('div');
+      divider.className = 'spot-divider';
+
+      // QVZxB - Genre
+      var subtitle = document.createElement('p');
+      subtitle.className = 'spot-subtitle';
+      subtitle.textContent = place.subtitle || place.category || '昼食';
+
+      textBlock.appendChild(name);
+      textBlock.appendChild(divider);
+      textBlock.appendChild(subtitle);
+
+      // LEYWI - ArrowButton
       var arrow = document.createElement('button');
       arrow.type = 'button';
       arrow.className = 'spot-arrow';
@@ -2185,30 +2090,22 @@
         openShopModal(place.id);
       });
 
-      header.appendChild(name);
+      header.appendChild(textBlock);
       header.appendChild(arrow);
 
-      var meta = document.createElement('div');
-      meta.className = 'spot-meta';
-
-      var subtitle = document.createElement('p');
-      subtitle.className = 'spot-subtitle';
-      subtitle.textContent = place.subtitle || place.category || '昼食';
-
-      var openStatus = document.createElement('p');
-      openStatus.className = 'spot-open-status is-unknown';
-      openStatus.textContent = '営業時間情報なし';
-
-      meta.appendChild(subtitle);
-      meta.appendChild(openStatus);
-
+      // fpCXQ - Description
       var desc = document.createElement('p');
       desc.className = 'spot-description';
       desc.textContent = place.description || '別府駅・ホテルから徒歩圏内のおすすめスポット。';
 
+      // Hidden open-status for JS modal functionality
+      var openStatus = document.createElement('p');
+      openStatus.className = 'spot-open-status is-unknown';
+      openStatus.textContent = '営業時間情報なし';
+
       body.appendChild(header);
-      body.appendChild(meta);
       body.appendChild(desc);
+      body.appendChild(openStatus);
 
       item.appendChild(thumbWrap);
       item.appendChild(body);
@@ -2610,7 +2507,8 @@
       });
       window.setInterval(refreshOpenModalStatus, 30000);
 
-      var apiKey = window.GOOGLE_MAPS_API_KEY || 'AIzaSyCNjH8R3RgcnUz4iMHqcanw7WaBPR-id_k';
+      var apiKey = window.GOOGLE_MAPS_API_KEY || '';
+      var enablePlacesOpenStatus = window.ENABLE_PLACES_OPEN_STATUS === true;
       var forceMock = window.FORCE_MAP_MOCK === true;
       if (forceMock) {
         setMapFallback('');
@@ -2641,9 +2539,21 @@
             adaptiveZoomStep: 0.8,
             adaptiveZoomMax: 18,
             defaultTimezoneOffsetMinutes: 540,
+            enablePlacesOpenStatus: enablePlacesOpenStatus,
             fallbackMessage: '徒歩ルートを取得できませんでした。しばらくしてから再度お試しください。',
             onPlaceSelected: function (id) { state.selectedPlaceId = id; }
           });
+
+          // Load static route data before init
+          try {
+            var routesResp = await fetch('data/routes.json');
+            if (routesResp.ok) {
+              var routesData = await routesResp.json();
+              mapModule.setStaticRoutes(routesData);
+            }
+          } catch (e) {
+            console.warn('[AccessBeppu] Could not load static routes, will use live API:', e.message);
+          }
 
           await mapModule.init();
           applyFilters();
@@ -2655,7 +2565,9 @@
       };
 
       var script = document.createElement('script');
-      script.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(apiKey) + '&v=weekly&libraries=marker,places&loading=async&callback=initAccessBeppuMap';
+      script.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(apiKey) + '&v=weekly&libraries='
+        + encodeURIComponent(enablePlacesOpenStatus ? 'marker,places' : 'marker')
+        + '&loading=async&callback=initAccessBeppuMap';
       script.async = true;
       script.defer = true;
       script.onerror = function () {

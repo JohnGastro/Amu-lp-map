@@ -707,6 +707,8 @@
       strokeWeight: 4,
       zIndex: 80,
     };
+    this._staticRoutes = null;
+    this.mainRoutePolyline = null;
     this._openStatusCache = new Map();
     this._openStatusTimerId = null;
     this._openStatusIntervalId = null;
@@ -900,6 +902,16 @@
       map: null,
     });
 
+    this.mainRoutePolyline = new google.maps.Polyline({
+      strokeColor: this._routePolylineActive.strokeColor,
+      strokeOpacity: this._routePolylineActive.strokeOpacity,
+      strokeWeight: this._routePolylineActive.strokeWeight,
+      zIndex: this._routePolylineActive.zIndex,
+      geodesic: true,
+      clickable: false,
+      map: null,
+    });
+
     this.stationMarker = new AdvancedMarkerElement({
       map: this.map,
       position: { lat: this.station.lat, lng: this.station.lng },
@@ -921,8 +933,45 @@
     this.startOpenStatusAutoRefresh();
 
     this.directionsRenderer.set('directions', null);
+    if (this.mainRoutePolyline) { this.mainRoutePolyline.setPath([]); this.mainRoutePolyline.setMap(null); }
     this.clearRouteBadge();
     updateRouteChip(this.routeChipElement, idleRouteSummary(this.idleRouteMessage));
+  };
+
+  /**
+   * Set pre-computed static route data (from routes.json).
+   * @param {Object} routesData - { routes: { shopId: { path, duration, distance, mode, bounds } } }
+   */
+  BeppuMapModule.prototype.setStaticRoutes = function setStaticRoutes(routesData) {
+    this._staticRoutes = (routesData && routesData.routes) ? routesData.routes : null;
+  };
+
+  /**
+   * Look up a static route for a given place.
+   * Matches by place slug/id, then verifies coordinates haven't drifted.
+   */
+  BeppuMapModule.prototype._getStaticRoute = function _getStaticRoute(origin) {
+    if (!this._staticRoutes) return null;
+    // Try matching by place id (which is the slug)
+    var place = null;
+    this.placeById.forEach(function (p) {
+      if (Math.abs(p.lat - origin.lat) < 0.0001 && Math.abs(p.lng - origin.lng) < 0.0001) {
+        place = p;
+      }
+    });
+    if (!place) return null;
+
+    var route = this._staticRoutes[place.slug] || this._staticRoutes[place.id] || null;
+    if (!route || !route.path || !route.path.length) return null;
+
+    // Verify coordinates match (in case shop moved)
+    if (route.origin &&
+        (Math.abs(route.origin.lat - origin.lat) > 0.001 ||
+         Math.abs(route.origin.lng - origin.lng) > 0.001)) {
+      return null; // Coordinates changed, need fresh API call
+    }
+
+    return route;
   };
 
   BeppuMapModule.prototype.setRouteBadge = function setRouteBadge(position, durationText, travelMode) {
@@ -1370,6 +1419,7 @@
     }
 
     this.directionsRenderer.set('directions', null);
+    if (this.mainRoutePolyline) { this.mainRoutePolyline.setPath([]); this.mainRoutePolyline.setMap(null); }
     this.clearRouteBadge();
     updateRouteChip(this.routeChipElement, idleRouteSummary(this.idleRouteMessage));
     this.applyActiveMarkerPriority(null);
@@ -1559,6 +1609,46 @@
     var self = this;
     var requestId = ++this._routeRequestId;
 
+    // --- Try static route data first ---
+    var cached = this._getStaticRoute(origin);
+    if (cached) {
+      return new Promise(function (resolve) {
+        if (requestId !== self._routeRequestId || (targetPlaceId && self.activePlaceId !== targetPlaceId)) {
+          resolve({ ignored: true });
+          return;
+        }
+        var duration = formatDurationJa(cached.duration);
+        var distance = formatDistanceJa(cached.distance);
+        var mode = cached.mode || 'WALKING';
+        var modeLabel = mode === 'DRIVING' ? '\u8eca\u3067' : '\u5f92\u6b69';
+
+        // Draw using polyline instead of DirectionsRenderer
+        self.directionsRenderer.set('directions', null);
+        if (self.mainRoutePolyline) {
+          self.mainRoutePolyline.setPath(cached.path);
+          self.mainRoutePolyline.setMap(self.map);
+        }
+
+        var midIdx = Math.floor((cached.path.length - 1) / 2);
+        var midpoint = cached.path[midIdx] || null;
+        self.setRouteBadge(midpoint, duration, mode);
+
+        var routeBounds = null;
+        if (cached.bounds && cached.bounds.northeast && cached.bounds.southwest) {
+          routeBounds = new google.maps.LatLngBounds(
+            cached.bounds.southwest,
+            cached.bounds.northeast
+          );
+        }
+
+        resolve({
+          summary: buildRouteSummary(origin.name, destination.name, duration, distance, modeLabel),
+          routeBounds: routeBounds,
+        });
+      });
+    }
+
+    // --- Fallback: live Directions API ---
     return new Promise(function (resolve) {
       var isStaleRequest = function isStaleRequest() {
         if (requestId !== self._routeRequestId) return true;
@@ -1579,6 +1669,7 @@
         var distance = leg.distance && typeof leg.distance.value === 'number'
           ? formatDistanceJa(leg.distance.value)
           : '--';
+        if (self.mainRoutePolyline) { self.mainRoutePolyline.setPath([]); self.mainRoutePolyline.setMap(null); }
         self.directionsRenderer.setDirections(resolvedResult);
         self.setRouteBadge(getRouteMidpoint(route), duration, mode);
         resolve({
@@ -1653,6 +1744,25 @@
     var self = this;
     var requestId = ++this._hoverRouteRequestId;
 
+    // --- Try static route data first ---
+    var cached = this._getStaticRoute(origin);
+    if (cached && cached.path && cached.path.length) {
+      return new Promise(function (resolve) {
+        if (requestId !== self._hoverRouteRequestId || !targetPlaceId || self._hoverPreviewPlaceId !== targetPlaceId) {
+          resolve({ ignored: true });
+          return;
+        }
+        if (!self.previewRoutePolyline) {
+          resolve({ ignored: true });
+          return;
+        }
+        self.previewRoutePolyline.setPath(cached.path);
+        self.previewRoutePolyline.setMap(self.map);
+        resolve({ ok: true });
+      });
+    }
+
+    // --- Fallback: live Directions API ---
     return new Promise(function (resolve) {
       var isStaleRequest = function isStaleRequest() {
         if (requestId !== self._hoverRouteRequestId) return true;
