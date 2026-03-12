@@ -46,6 +46,13 @@ jobs:
             echo "No routes.json generated, skipping commit"
           fi
 
+      # Inject API key into HTML for client-side Google Maps
+      - name: Inject Maps API key
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        run: |
+          sed -i "s|var apiKey = window.GOOGLE_MAPS_API_KEY || '';|var apiKey = window.GOOGLE_MAPS_API_KEY || '${GOOGLE_MAPS_API_KEY}';|" public/access-beppu-map.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
