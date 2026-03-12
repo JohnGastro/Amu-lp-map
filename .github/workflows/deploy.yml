@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '0 21 * * *'  # 毎日6:00 JST (21:00 UTC)
   workflow_dispatch:
 
 permissions:
@@ -33,18 +35,20 @@ jobs:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
         run: node scripts/generate-routes.js
 
-      # Commit updated routes.json back to repo (cache for next run)
-      - name: Commit routes.json if changed
+      # Refresh business hours from Places API (daily)
+      - name: Refresh business hours
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        run: node scripts/refresh-hours.js
+
+      # Commit updated data files back to repo (cache for next run)
+      - name: Commit data files if changed
         run: |
-          if [ -f public/data/routes.json ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add public/data/routes.json
-            git diff --cached --quiet || git commit -m "chore: update routes.json [skip ci]"
-            git push || true
-          else
-            echo "No routes.json generated, skipping commit"
-          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/routes.json public/data/hours.json
+          git diff --cached --quiet || git commit -m "chore: update routes/hours data [skip ci]"
+          git push || true
 
       # Inject API key into HTML for client-side Google Maps
       - name: Inject Maps API key

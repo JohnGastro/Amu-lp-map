@@ -450,6 +450,47 @@
     return source;
   }
 
+  function parseBusinessHoursText(text) {
+    if (!text || typeof text !== 'string') return null;
+    var dayMap = { '月曜日': '月', '火曜日': '火', '水曜日': '水', '木曜日': '木', '金曜日': '金', '土曜日': '土', '日曜日': '日' };
+    var result = {};
+    var segments = text.split('|');
+    var hasAny = false;
+    segments.forEach(function (seg) {
+      var trimmed = seg.trim();
+      if (!trimmed) return;
+      var colonIdx = trimmed.indexOf(':');
+      if (colonIdx < 0) colonIdx = trimmed.indexOf('：');
+      if (colonIdx < 0) return;
+      var dayPart = trimmed.substring(0, colonIdx).trim();
+      var timePart = trimmed.substring(colonIdx + 1).trim();
+      var dayKey = dayMap[dayPart];
+      if (!dayKey) return;
+      if (timePart === '定休日' || timePart === '休業' || timePart === '休み') {
+        result[dayKey] = [];
+        hasAny = true;
+        return;
+      }
+      var periods = [];
+      var timeRanges = timePart.split(',');
+      timeRanges.forEach(function (range) {
+        range = range.trim();
+        var match = range.match(/(\d{1,2})時(\d{2})分[～〜\-](\d{1,2})時(\d{2})分/);
+        if (match) {
+          periods.push({
+            open: match[1] + ':' + match[2],
+            close: match[3] + ':' + match[4]
+          });
+        }
+      });
+      if (periods.length > 0) {
+        result[dayKey] = periods;
+        hasAny = true;
+      }
+    });
+    return hasAny ? result : null;
+  }
+
   function getOpenStatusFromBusinessHours(hoursMap, fallbackOffsetMinutes) {
     var map = parseBusinessHoursMap(hoursMap);
     if (!map) return null;
@@ -1020,6 +1061,12 @@
     };
 
     var csvStatus = getOpenStatusFromBusinessHours(place.businessHours, self._defaultTimezoneOffsetMinutes);
+    if (!csvStatus && place.businessHoursText) {
+      var parsedText = parseBusinessHoursText(place.businessHoursText);
+      if (parsedText) {
+        csvStatus = getOpenStatusFromBusinessHours(parsedText, self._defaultTimezoneOffsetMinutes);
+      }
+    }
     if (csvStatus) {
       return Promise.resolve(resolveAndCache(csvStatus));
     }
