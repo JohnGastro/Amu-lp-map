@@ -239,9 +239,9 @@ function coordKey(shop) {
 // --- Main ---
 async function main() {
   if (!API_KEY && !DRY_RUN) {
-    console.error('Error: GOOGLE_MAPS_API_KEY environment variable is required.');
-    console.error('Usage: GOOGLE_MAPS_API_KEY=xxx node scripts/generate-routes.js');
-    process.exit(1);
+    console.warn('Warning: GOOGLE_MAPS_API_KEY not set. Skipping route generation.');
+    console.warn('Set it with: GOOGLE_MAPS_API_KEY=xxx node scripts/generate-routes.js');
+    process.exit(0);
   }
 
   // Load CSV
