@@ -1657,7 +1657,7 @@
     var requestId = ++this._routeRequestId;
 
     // --- Try static route data first ---
-    var cached = this._getStaticRoute(origin);
+    var cached = this._getStaticRoute(destination);
     if (cached) {
       return new Promise(function (resolve) {
         if (requestId !== self._routeRequestId || (targetPlaceId && self.activePlaceId !== targetPlaceId)) {
@@ -1792,7 +1792,7 @@
     var requestId = ++this._hoverRouteRequestId;
 
     // --- Try static route data first ---
-    var cached = this._getStaticRoute(origin);
+    var cached = this._getStaticRoute(destination);
     if (cached && cached.path && cached.path.length) {
       return new Promise(function (resolve) {
         if (requestId !== self._hoverRouteRequestId || !targetPlaceId || self._hoverPreviewPlaceId !== targetPlaceId) {
