@@ -1650,7 +1650,7 @@
         subcategory: '散歩',
         lat: 33.27904,
         lng: 131.50515,
-        thumbnail: 'https://source.unsplash.com/featured/640x420/?japanese+restaurant&sig=tsuchium',
+        thumbnail: '',
         description: '別府駅・ホテルから徒歩圏内の昼食スポット。',
         emojiTag: getCategoryEmoji('昼食', 'tsuchium', '別府駅・ホテルから徒歩圏内の昼食スポット。'),
       },
@@ -1663,7 +1663,7 @@
         subcategory: '散歩',
         lat: 33.27745,
         lng: 131.5019,
-        thumbnail: 'https://source.unsplash.com/featured/640x420/?mexican+restaurant&sig=taco-nargo',
+        thumbnail: '',
         description: '別府駅・ホテルから徒歩圏内の夕食スポット。',
         emojiTag: getCategoryEmoji('夕食', 'TACO NARGO', '別府駅・ホテルから徒歩圏内の夕食スポット。'),
       },
@@ -1676,7 +1676,7 @@
         subcategory: '散歩',
         lat: 33.28002,
         lng: 131.5023,
-        thumbnail: 'https://source.unsplash.com/featured/640x420/?curry+restaurant&sig=narry-cary',
+        thumbnail: '',
         description: '別府駅・ホテルから徒歩圏内の朝食・軽食スポット。',
         emojiTag: getCategoryEmoji('朝食', 'Narry-Cary', '別府駅・ホテルから徒歩圏内の朝食・軽食スポット。'),
       },
@@ -1689,7 +1689,7 @@
         subcategory: 'お買いもの',
         lat: 33.27863,
         lng: 131.5064,
-        thumbnail: 'https://source.unsplash.com/featured/640x420/?coffee+shop&sig=tsuchium-2',
+        thumbnail: '',
         description: '別府駅・ホテルから徒歩圏内の喫茶スポット。',
         emojiTag: getCategoryEmoji('喫茶', 'tsuchium', '別府駅・ホテルから徒歩圏内の喫茶スポット。'),
       }
@@ -1878,7 +1878,7 @@
       var primary = place.thumbnail || pickImageFromCsv(place.name, place.category);
       for (var i = 0; i < 6; i += 1) {
         var seed = buildImageSeed(String(place.id || place.slug || place.name) + ':modal:' + i);
-        list.push(primary || ('https://picsum.photos/seed/modal-' + encodeURIComponent(seed) + '/300/200'));
+        list.push(primary || '');
       }
       return list;
     }
@@ -2374,7 +2374,7 @@
 
     function buildPhotoFallback(category, name) {
       var seed = buildImageSeed(String(category || '') + ':' + String(name || ''));
-      return 'https://picsum.photos/seed/beppu-' + encodeURIComponent(seed) + '/640/420';
+      return '';
     }
 
     function pickImageFromCsv(name, category) {
@@ -2400,7 +2400,7 @@
         その他: 'beppu,restaurant,street',
       };
       var query = queryByTag[tag] || queryByTag[category] || 'beppu,restaurant';
-      return 'https://source.unsplash.com/featured/640x420/?' + encodeURIComponent(query) + '&sig=' + encodeURIComponent(buildImageSeed(name + category));
+      return '';
     }
 
     function pickDescriptionFromRow(row, name) {
