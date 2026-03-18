@@ -933,6 +933,10 @@
     opacity: 1;
   }
 
+  .ab-shop-modal__route {
+    display: none;
+  }
+
   .ab-shop-modal__actions {
     display: none;
   }
@@ -1463,7 +1467,7 @@
     }
 
     #beppu-route-chip {
-      display: none;
+      display: none !important;
     }
 
     .ab-map-wrap {
@@ -1572,6 +1576,15 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 400ms cubic-bezier(0.22, 0, 0.09, 0.99);
+    }
+
+    .ab-shop-modal__route {
+      margin: 0;
+      padding: 0 14px;
+      font-size: 11px;
+      letter-spacing: 0.4px;
+      color: rgba(0, 0, 0, 0.55);
+      line-height: 1.4;
     }
 
     .ab-shop-modal__actions {
@@ -1686,6 +1699,7 @@
                     </div>
                   </div>
                 </div>
+                <p class="ab-shop-modal__route" id="ab-shop-modal-route"></p>
                 <div class="ab-shop-modal__actions">
                   <button type="button" class="ab-shop-modal__action-btn" id="ab-shop-modal-detail-btn">もっと見る</button>
                   <a class="ab-shop-modal__action-btn" id="ab-shop-modal-gmap-btn" href="#" target="_blank" rel="noopener noreferrer">Google Map</a>
@@ -1841,6 +1855,7 @@
     var modalLiveStatusEl = document.getElementById('ab-shop-modal-live-status');
     var modalDetailBtn = document.getElementById('ab-shop-modal-detail-btn');
     var modalGmapBtn = document.getElementById('ab-shop-modal-gmap-btn');
+    var modalRouteEl = document.getElementById('ab-shop-modal-route');
     var modalPlaceId = null;
     var modalPinnedMainPhotoUrl = '';
 
@@ -2079,6 +2094,16 @@
       var hoursSummary = formatBusinessHoursSummary(parsedHours);
       modalClosedEl.textContent = hoursSummary.closedText;
       modalHoursEl.textContent = hoursSummary.hoursText;
+
+      // Set route info
+      if (modalRouteEl) {
+        var dx = (place.lat - HOTEL_COORDS.lat) * 111320;
+        var dy = (place.lng - HOTEL_COORDS.lng) * 111320 * Math.cos(place.lat * Math.PI / 180);
+        var straightDist = Math.sqrt(dx * dx + dy * dy);
+        var walkDist = Math.round(straightDist * 1.4);
+        var walkMin = Math.max(1, Math.round(walkDist / 80));
+        modalRouteEl.textContent = '🚶 Amuから徒歩 約' + walkMin + '分（' + walkDist + 'm）';
+      }
 
       // Set Google Map link
       if (modalGmapBtn) {
