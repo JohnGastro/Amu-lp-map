@@ -1462,6 +1462,15 @@
       display: none;
     }
 
+    #beppu-route-chip {
+      display: none;
+    }
+
+    .ab-map-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
     .ab-modal-overlay {
       position: absolute;
       inset: 0;
@@ -1650,6 +1659,39 @@
                 <span data-route-summary>店舗を選択するとルートを表示します。</span>
               </span>
             </div>
+            <div class="ab-modal-overlay" id="ab-shop-modal-overlay" aria-hidden="true">
+              <aside class="ab-shop-modal" id="ab-shop-modal" role="dialog" aria-modal="true" aria-label="店舗詳細">
+                <p class="ab-shop-modal__live-status is-unknown" id="ab-shop-modal-live-status">営業時間情報なし</p>
+                <header class="ab-shop-modal__header">
+                  <h3 class="ab-shop-modal__title" id="ab-shop-modal-title">店舗名</h3>
+                  <button type="button" class="ab-shop-modal__close" id="ab-shop-modal-close" aria-label="閉じる">
+                    <span class="ab-shop-modal__close-icon" aria-hidden="true"></span>
+                  </button>
+                </header>
+                <p class="ab-shop-modal__genre" id="ab-shop-modal-genre">カテゴリ</p>
+                <div class="ab-shop-modal__photos">
+                  <img class="ab-shop-modal__main-photo" id="ab-shop-modal-main-photo" alt="">
+                  <div class="ab-shop-modal__sub-grid" id="ab-shop-modal-sub-grid"></div>
+                </div>
+                <div class="ab-shop-modal__body">
+                  <p class="ab-shop-modal__desc" id="ab-shop-modal-description"></p>
+                  <div class="ab-shop-modal__info">
+                    <div class="ab-shop-modal__row">
+                      <span class="ab-shop-modal__row-label">定休日</span>
+                      <span class="ab-shop-modal__row-value" id="ab-shop-modal-closed">情報なし</span>
+                    </div>
+                    <div class="ab-shop-modal__row">
+                      <span class="ab-shop-modal__row-label">営業時間</span>
+                      <span class="ab-shop-modal__row-value" id="ab-shop-modal-hours">情報なし</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="ab-shop-modal__actions">
+                  <button type="button" class="ab-shop-modal__action-btn" id="ab-shop-modal-detail-btn">もっと見る</button>
+                  <a class="ab-shop-modal__action-btn" id="ab-shop-modal-gmap-btn" href="#" target="_blank" rel="noopener noreferrer">Google Map</a>
+                </div>
+              </aside>
+            </div>
           </div>
         </section>
 
@@ -1658,40 +1700,6 @@
         </section>
       </main>
 
-    </div>
-
-    <div class="ab-modal-overlay" id="ab-shop-modal-overlay" aria-hidden="true">
-      <aside class="ab-shop-modal" id="ab-shop-modal" role="dialog" aria-modal="true" aria-label="店舗詳細">
-        <p class="ab-shop-modal__live-status is-unknown" id="ab-shop-modal-live-status">営業時間情報なし</p>
-        <header class="ab-shop-modal__header">
-          <h3 class="ab-shop-modal__title" id="ab-shop-modal-title">店舗名</h3>
-          <button type="button" class="ab-shop-modal__close" id="ab-shop-modal-close" aria-label="閉じる">
-            <span class="ab-shop-modal__close-icon" aria-hidden="true"></span>
-          </button>
-        </header>
-        <p class="ab-shop-modal__genre" id="ab-shop-modal-genre">カテゴリ</p>
-        <div class="ab-shop-modal__photos">
-          <img class="ab-shop-modal__main-photo" id="ab-shop-modal-main-photo" alt="">
-          <div class="ab-shop-modal__sub-grid" id="ab-shop-modal-sub-grid"></div>
-        </div>
-        <div class="ab-shop-modal__body">
-          <p class="ab-shop-modal__desc" id="ab-shop-modal-description"></p>
-          <div class="ab-shop-modal__info">
-            <div class="ab-shop-modal__row">
-              <span class="ab-shop-modal__row-label">定休日</span>
-              <span class="ab-shop-modal__row-value" id="ab-shop-modal-closed">情報なし</span>
-            </div>
-            <div class="ab-shop-modal__row">
-              <span class="ab-shop-modal__row-label">営業時間</span>
-              <span class="ab-shop-modal__row-value" id="ab-shop-modal-hours">情報なし</span>
-            </div>
-          </div>
-        </div>
-        <div class="ab-shop-modal__actions">
-          <button type="button" class="ab-shop-modal__action-btn" id="ab-shop-modal-detail-btn">もっと見る</button>
-          <a class="ab-shop-modal__action-btn" id="ab-shop-modal-gmap-btn" href="#" target="_blank" rel="noopener noreferrer">Google Map</a>
-        </div>
-      </aside>
     </div>
   </div>
 </div>
