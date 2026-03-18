@@ -1472,13 +1472,15 @@
 
     .ab-map-wrap {
       position: relative;
-      overflow: hidden;
+      overflow: visible;
     }
 
     .ab-modal-overlay {
       position: absolute;
-      inset: 0;
-      z-index: 6;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
       pointer-events: none;
       background: transparent;
     }
