@@ -1309,7 +1309,7 @@
     .ab-section-label { order: 1; padding-bottom: 16px; }
     .ab-left-header   { order: 2; flex-direction: column; gap: 7px; width: 100%; margin-top: 0; margin-bottom: 20px; }
     .ab-right-header  { order: 3; align-items: center; gap: 10px; width: 100%; flex: none; }
-    .ab-map-col       { order: 4; flex: 0 0 55svh; height: 55svh; width: 100%; margin-top: 16px; }
+    .ab-map-col       { order: 4; flex: 0 0 40svh; height: 40svh; width: 100%; margin-top: 16px; }
     .ab-list-col      { order: 5; flex: none; min-height: 0; height: auto; width: 100%;
                          -webkit-overflow-scrolling: touch; scrollbar-width: none; margin-top: 4px; }
 
@@ -1509,52 +1509,45 @@
       transform: translateY(0);
     }
 
-    .ab-shop-modal__header {
-      padding: 8px 14px 0 14px;
+    .ab-shop-modal__live-status {
+      display: inline;
+      margin: 0;
+      font-size: 10px;
+      letter-spacing: 0.4px;
     }
 
-    .ab-shop-modal__live-status {
-      margin: 8px 14px 0 14px;
-      font-size: 11px;
-      letter-spacing: 0.6px;
+    .ab-shop-modal__header {
+      padding: 10px 12px 0 12px;
+      gap: 8px;
     }
 
     .ab-shop-modal__title {
-      font-size: 15px;
-      letter-spacing: 0.6px;
+      font-size: 14px;
+      letter-spacing: 0.4px;
     }
 
-    .ab-shop-modal__genre {
-      margin: 2px 14px 0 14px;
-      font-size: 11px;
-      letter-spacing: 0.6px;
+    .ab-shop-modal__close {
+      width: 32px;
+      height: 32px;
     }
 
+    .ab-shop-modal__genre { display: none; }
     .ab-shop-modal__photos { display: none; }
-
-    .ab-shop-modal__body {
-      margin-top: 0;
-      padding: 0;
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-
-    .ab-shop-modal__desc { display: none; }
-    .ab-shop-modal__info { display: none; }
+    .ab-shop-modal__body { display: none; }
 
     .ab-shop-modal__route {
       margin: 0;
-      padding: 4px 14px 0;
+      padding: 2px 12px 0;
       font-size: 11px;
-      letter-spacing: 0.4px;
-      color: rgba(0, 0, 0, 0.55);
-      line-height: 1.4;
+      letter-spacing: 0.3px;
+      color: rgba(0, 0, 0, 0.5);
+      line-height: 1.3;
     }
 
     .ab-shop-modal__actions {
       display: flex;
       gap: 8px;
-      padding: 8px 14px 10px 14px;
+      padding: 8px 12px 10px 12px;
     }
 
     .ab-shop-modal__action-btn {
@@ -1562,28 +1555,54 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      padding: 8px 10px;
-      border-radius: 8px;
+      gap: 4px;
+      padding: 7px 8px;
+      border-radius: 6px;
       border: 1px solid #c93400;
       background: transparent;
       color: #c93400;
-      font-size: 12px;
+      font-size: 11px;
       font-family: inherit;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.6px;
       text-decoration: none;
       cursor: pointer;
-      transition: background 0.2s ease;
     }
 
     .ab-shop-modal__action-btn:active {
       background: rgba(201, 52, 0, 0.08);
     }
 
-    /* Expanded state */
+    /* Expanded state — slides up smoothly */
+    .ab-shop-modal.is-expanded {
+      max-height: 90%;
+    }
+
+    .ab-shop-modal.is-expanded .ab-shop-modal__genre {
+      display: block;
+      margin: 2px 12px 0 12px;
+      font-size: 11px;
+    }
+
+    .ab-shop-modal.is-expanded .ab-shop-modal__body {
+      display: block;
+      margin-top: 6px;
+      padding: 0 12px 4px 12px;
+    }
+
+    .ab-shop-modal.is-expanded .ab-shop-modal__desc {
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      line-height: 1.6;
+    }
+
+    .ab-shop-modal.is-expanded .ab-shop-modal__info {
+      margin-top: 6px;
+      font-size: 12px;
+    }
+
     .ab-shop-modal.is-expanded .ab-shop-modal__photos {
       display: grid;
-      padding: 0 14px;
+      padding: 0 12px;
       margin-top: 8px;
       grid-template-columns: 1fr;
       height: auto;
@@ -1592,35 +1611,20 @@
     .ab-shop-modal.is-expanded .ab-shop-modal__main-photo {
       width: 100%;
       height: 160px;
+      border-radius: 6px;
     }
 
     .ab-shop-modal.is-expanded .ab-shop-modal__sub-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       grid-auto-rows: 50px;
+      margin-top: 4px;
+      gap: 4px;
     }
 
     .ab-shop-modal.is-expanded .ab-shop-modal__sub-photo {
       width: 100%;
       height: 50px;
-    }
-
-    .ab-shop-modal.is-expanded .ab-shop-modal__desc {
-      display: block;
-      width: 100%;
-      font-size: 12px;
-      letter-spacing: 0.6px;
-      padding: 0 14px;
-      margin-top: 8px;
-    }
-
-    .ab-shop-modal.is-expanded .ab-shop-modal__info {
-      display: block;
-      padding: 0 14px;
-      margin-top: 4px;
-    }
-
-    .ab-shop-modal.is-expanded .ab-shop-modal__body {
-      padding-bottom: 4px;
+      border-radius: 4px;
     }
 
   }
