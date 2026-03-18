@@ -1312,7 +1312,22 @@
     var listElement = self.options.listElement;
 
     if (listElement && !self._listDelegateBound) {
-      var delegateHandler = function delegateHandler(event) {
+      var touchStartX = 0;
+      var touchStartY = 0;
+      var TAP_THRESHOLD = 10;
+
+      listElement.addEventListener('touchstart', function (event) {
+        var touch = event.touches[0];
+        touchStartX = touch.clientX;
+        touchStartY = touch.clientY;
+      }, { passive: true });
+
+      var touchEndHandler = function touchEndHandler(event) {
+        var touch = event.changedTouches[0];
+        var dx = touch.clientX - touchStartX;
+        var dy = touch.clientY - touchStartY;
+        if (dx * dx + dy * dy > TAP_THRESHOLD * TAP_THRESHOLD) return;
+
         var target = event.target;
         if (!(target instanceof Element)) return;
 
@@ -1326,10 +1341,23 @@
         self.selectPlace(placeId);
       };
 
-      listElement.addEventListener('click', delegateHandler);
-      listElement.addEventListener('touchend', delegateHandler, { passive: false });
+      var clickHandler = function clickHandler(event) {
+        var target = event.target;
+        if (!(target instanceof Element)) return;
+
+        var card = target.closest('.spot-item');
+        if (!card || !listElement.contains(card)) return;
+
+        var placeId = card.getAttribute('data-place-id');
+        if (!placeId) return;
+
+        event.preventDefault();
+        self.selectPlace(placeId);
+      };
+
+      listElement.addEventListener('click', clickHandler);
+      listElement.addEventListener('touchend', touchEndHandler, { passive: false });
       self._listDelegateBound = true;
-      self._listDelegateHandler = delegateHandler;
     }
 
   };
