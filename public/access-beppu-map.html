@@ -1309,9 +1309,10 @@
     .ab-section-label { order: 1; padding-bottom: 16px; }
     .ab-left-header   { order: 2; flex-direction: column; gap: 7px; width: 100%; margin-top: 0; margin-bottom: 20px; }
     .ab-right-header  { order: 3; align-items: center; gap: 10px; width: 100%; flex: none; }
-    .ab-map-col       { order: 4; flex: 0 0 40svh; height: 40svh; width: 100%; margin-top: 16px; }
+    .ab-map-col       { order: 4; flex: 0 0 50svh; height: 50svh; width: 100%; margin-top: 16px; }
     .ab-list-col      { order: 5; flex: none; min-height: 0; height: auto; width: 100%;
-                         -webkit-overflow-scrolling: touch; scrollbar-width: none; margin-top: 4px; }
+                         -webkit-overflow-scrolling: touch; scrollbar-width: none;
+                         position: relative; z-index: 5; margin-top: -12.5svh; }
 
     .ab-heading-mark {
       width: 12px;
@@ -1384,7 +1385,7 @@
       max-height: none;
       overflow-x: auto;
       overflow-y: hidden;
-      padding: 0 20px 12px 20px;
+      padding: 0 16px 8px 16px;
       transform: none !important;
       transition: none;
       will-change: auto;
@@ -1498,11 +1499,11 @@
       width: 100%;
       max-width: none;
       height: auto;
-      max-height: 85%;
+      max-height: 25%;
       overflow-y: auto;
-      border-radius: 12px 12px 0 0;
+      border-radius: 10px 10px 0 0;
       transform: translateY(100%);
-      transition: transform 350ms cubic-bezier(0.22, 0, 0.09, 0.99), opacity 350ms ease;
+      transition: transform 350ms cubic-bezier(0.22, 0, 0.09, 0.99), opacity 350ms ease, max-height 400ms cubic-bezier(0.22, 0, 0.09, 0.99);
     }
 
     .ab-modal-overlay.is-open .ab-shop-modal {
@@ -1574,7 +1575,7 @@
 
     /* Expanded state — slides up smoothly */
     .ab-shop-modal.is-expanded {
-      max-height: 90%;
+      max-height: 85%;
     }
 
     .ab-shop-modal.is-expanded .ab-shop-modal__genre {
