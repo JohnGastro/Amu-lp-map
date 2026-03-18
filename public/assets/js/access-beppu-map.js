@@ -1279,6 +1279,7 @@
         position: { lat: place.lat, lng: place.lng },
         title: place.name,
         content: markerNode,
+        gmpClickable: true,
         zIndex: Math.max(1, 100000 - Math.round(distanceMeters(self.hotel.lat, self.hotel.lng, place.lat, place.lng))),
       };
       if (collisionBehavior) {
