@@ -1278,8 +1278,8 @@
   /* Mobile layout matching GwKIK */
   @media (max-width: 980px) {
     #access-beppu-app {
-      height: 150svh;
-      overflow-y: auto;
+      height: auto;
+      overflow: visible;
     }
 
     .ab-shell {
@@ -1307,7 +1307,7 @@
     .ab-right-header  { order: 3; align-items: center; gap: 10px; width: 100%; flex: none; }
     .ab-map-col       { order: 4; flex: 0 0 310px; height: 310px; width: 100%; margin-top: 16px; }
     .ab-list-col      { order: 5; flex: none; min-height: 0; height: auto; width: 100%;
-                         -webkit-overflow-scrolling: touch; scrollbar-width: none; margin-top: 0; }
+                         -webkit-overflow-scrolling: touch; scrollbar-width: none; margin-top: 4px; }
 
     .ab-heading-mark {
       width: 12px;
