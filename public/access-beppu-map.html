@@ -1277,8 +1277,14 @@
 
   /* Mobile layout matching GwKIK */
   @media (max-width: 980px) {
+    #access-beppu-app {
+      height: 150vh;
+      overflow: visible;
+    }
+
     .ab-shell {
       overflow-y: auto;
+      height: auto;
     }
 
     /* Flatten hierarchy: header-row & main-content children
@@ -1369,6 +1375,7 @@
 
     #beppu-list {
       height: auto;
+      max-height: 420px;
       overflow-y: auto;
       padding-right: 0;
       transform: none !important;
