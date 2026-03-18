@@ -1309,7 +1309,7 @@
     .ab-section-label { order: 1; padding-bottom: 16px; }
     .ab-left-header   { order: 2; flex-direction: column; gap: 7px; width: 100%; margin-top: 0; margin-bottom: 20px; }
     .ab-right-header  { order: 3; align-items: center; gap: 10px; width: 100%; flex: none; }
-    .ab-map-col       { order: 4; flex: 0 0 310px; height: 310px; width: 100%; margin-top: 16px; }
+    .ab-map-col       { order: 4; flex: 0 0 55svh; height: 55svh; width: 100%; margin-top: 16px; }
     .ab-list-col      { order: 5; flex: none; min-height: 0; height: auto; width: 100%;
                          -webkit-overflow-scrolling: touch; scrollbar-width: none; margin-top: 4px; }
 
@@ -1472,15 +1472,16 @@
 
     .ab-map-wrap {
       position: relative;
-      overflow: visible;
+      overflow: hidden;
+      border-radius: 12px;
     }
 
     .ab-modal-overlay {
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       right: 0;
-      z-index: 100;
+      z-index: 6;
       pointer-events: none;
       background: transparent;
     }
@@ -1491,15 +1492,16 @@
 
     .ab-shop-modal {
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       right: 0;
       width: 100%;
       max-width: none;
       height: auto;
-      max-height: none;
-      border-radius: 0 0 10px 10px;
-      transform: translateY(-100%);
+      max-height: 85%;
+      overflow-y: auto;
+      border-radius: 12px 12px 0 0;
+      transform: translateY(100%);
       transition: transform 350ms cubic-bezier(0.22, 0, 0.09, 0.99), opacity 350ms ease;
     }
 
@@ -1508,81 +1510,41 @@
     }
 
     .ab-shop-modal__header {
-      padding: 10px 14px 0 14px;
+      padding: 8px 14px 0 14px;
     }
 
     .ab-shop-modal__live-status {
-      margin: 10px 14px 0 14px;
+      margin: 8px 14px 0 14px;
       font-size: 11px;
       letter-spacing: 0.6px;
     }
 
     .ab-shop-modal__title {
-      font-size: 16px;
-      letter-spacing: 0.8px;
+      font-size: 15px;
+      letter-spacing: 0.6px;
     }
 
     .ab-shop-modal__genre {
-      margin: 4px 14px 0 14px;
+      margin: 2px 14px 0 14px;
       font-size: 11px;
       letter-spacing: 0.6px;
     }
 
-    .ab-shop-modal__photos {
-      display: grid;
-      padding: 0 14px;
-      margin-top: 10px;
-      grid-template-columns: 1fr;
-      height: auto;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 400ms cubic-bezier(0.22, 0, 0.09, 0.99), margin 400ms ease;
-      margin-top: 0;
-    }
-
-    .ab-shop-modal__main-photo {
-      width: 100%;
-      height: 180px;
-    }
-
-    .ab-shop-modal__sub-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-auto-rows: 56px;
-    }
-
-    .ab-shop-modal__sub-photo {
-      width: 100%;
-      height: 56px;
-    }
+    .ab-shop-modal__photos { display: none; }
 
     .ab-shop-modal__body {
-      margin-top: 8px;
-      padding: 0 14px 0 14px;
+      margin-top: 0;
+      padding: 0;
       grid-template-columns: 1fr;
-      gap: 8px;
+      gap: 0;
     }
 
-    .ab-shop-modal__desc {
-      width: 100%;
-      max-height: 40px;
-      font-size: 12px;
-      letter-spacing: 0.6px;
-      -webkit-line-clamp: 2;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      transition: max-height 400ms cubic-bezier(0.22, 0, 0.09, 0.99);
-    }
-
-    .ab-shop-modal__info {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 400ms cubic-bezier(0.22, 0, 0.09, 0.99);
-    }
+    .ab-shop-modal__desc { display: none; }
+    .ab-shop-modal__info { display: none; }
 
     .ab-shop-modal__route {
       margin: 0;
-      padding: 0 14px;
+      padding: 4px 14px 0;
       font-size: 11px;
       letter-spacing: 0.4px;
       color: rgba(0, 0, 0, 0.55);
@@ -1592,7 +1554,7 @@
     .ab-shop-modal__actions {
       display: flex;
       gap: 8px;
-      padding: 8px 14px 12px 14px;
+      padding: 8px 14px 10px 14px;
     }
 
     .ab-shop-modal__action-btn {
@@ -1601,7 +1563,7 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      padding: 9px 12px;
+      padding: 8px 10px;
       border-radius: 8px;
       border: 1px solid #c93400;
       background: transparent;
@@ -1618,19 +1580,43 @@
       background: rgba(201, 52, 0, 0.08);
     }
 
-    /* Expanded state — animate open */
+    /* Expanded state */
     .ab-shop-modal.is-expanded .ab-shop-modal__photos {
-      max-height: 300px;
-      margin-top: 10px;
+      display: grid;
+      padding: 0 14px;
+      margin-top: 8px;
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
+    .ab-shop-modal.is-expanded .ab-shop-modal__main-photo {
+      width: 100%;
+      height: 160px;
+    }
+
+    .ab-shop-modal.is-expanded .ab-shop-modal__sub-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-auto-rows: 50px;
+    }
+
+    .ab-shop-modal.is-expanded .ab-shop-modal__sub-photo {
+      width: 100%;
+      height: 50px;
     }
 
     .ab-shop-modal.is-expanded .ab-shop-modal__desc {
-      max-height: 200px;
-      -webkit-line-clamp: unset;
+      display: block;
+      width: 100%;
+      font-size: 12px;
+      letter-spacing: 0.6px;
+      padding: 0 14px;
+      margin-top: 8px;
     }
 
     .ab-shop-modal.is-expanded .ab-shop-modal__info {
-      max-height: 200px;
+      display: block;
+      padding: 0 14px;
+      margin-top: 4px;
     }
 
     .ab-shop-modal.is-expanded .ab-shop-modal__body {
