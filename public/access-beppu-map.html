@@ -1507,13 +1507,12 @@
       width: auto;
       height: auto;
       max-width: none;
-      max-height: var(--modal-compact-h, 120px);
+      max-height: none;
       overflow: hidden;
       border-radius: 10px 10px 0 0;
       transform: translateY(calc(100% + 20px));
       transition: transform 350ms cubic-bezier(0.22, 0, 0.09, 0.99),
-                  top 350ms cubic-bezier(0.22, 0, 0.09, 0.99),
-                  max-height 300ms cubic-bezier(0.22, 0, 0.09, 0.99);
+                  top 350ms cubic-bezier(0.22, 0, 0.09, 0.99);
     }
 
     .ab-modal-overlay.is-open .ab-shop-modal {
@@ -1597,13 +1596,11 @@
     /* Extending: grow downward */
     .ab-shop-modal.is-extending {
       z-index: 51;
-      max-height: 100svh;
     }
 
     /* Fully expanded: content visible */
     .ab-shop-modal.is-expanded {
       z-index: 51;
-      max-height: 100svh;
       overflow-y: auto;
     }
 
@@ -2799,16 +2796,10 @@
             // Step 2: z-index on top + extend down
             modalOverlayEl.classList.add('is-modal-expanded');
             modalEl.classList.add('is-elevating');
-            // Trigger extend-down in next frame
+            // Modal already stretches to bottom, so just elevate and expand
             requestAnimationFrame(function () {
               modalEl.classList.add('is-extending');
-              // Step 3: after extend-down, show content
-              function onExtendEnd(e2) {
-                if (e2.propertyName !== 'max-height') return;
-                modalEl.removeEventListener('transitionend', onExtendEnd);
-                modalEl.classList.add('is-expanded');
-              }
-              modalEl.addEventListener('transitionend', onExtendEnd);
+              modalEl.classList.add('is-expanded');
             });
           }
           modalEl.addEventListener('transitionend', onSlideEnd);
