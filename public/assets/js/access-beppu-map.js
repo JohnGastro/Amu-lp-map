@@ -1365,11 +1365,15 @@
 
   BeppuMapModule.prototype.fitBoundsToPoints = function fitBoundsToPoints(bounds, padding, minZoom, maxZoom) {
     if (!this.map || !bounds || bounds.isEmpty()) return;
+    var bottomPad = padding;
+    if (window.innerWidth <= 980) {
+      bottomPad = padding + Math.round(window.innerHeight * 0.45);
+    }
     this.map.fitBounds(bounds, {
       left: padding,
       right: padding,
       top: padding,
-      bottom: padding,
+      bottom: bottomPad,
     });
 
     var zoom = this.map.getZoom();
