@@ -1516,8 +1516,8 @@
                   max-height 300ms cubic-bezier(0.22, 0, 0.09, 0.99);
     }
 
-    /* Background fill: always extends to screen bottom behind cards */
-    .ab-modal-overlay.is-open .ab-shop-modal::after {
+    /* Background fill: extends to screen bottom, behind cards (z-index 4) */
+    .ab-modal-overlay.is-open::after {
       content: '';
       position: fixed;
       top: var(--modal-top, 65svh);
@@ -1526,7 +1526,8 @@
       right: 16px;
       background: #d1cec5;
       border-radius: 10px 10px 0 0;
-      z-index: -1;
+      z-index: 4;
+      pointer-events: none;
     }
 
     .ab-modal-overlay.is-open .ab-shop-modal {
@@ -2236,6 +2237,7 @@
       modalEl.style.setProperty('--modal-top', top + 'px');
       modalEl.style.setProperty('--modal-compact-h', compact + 'px');
       modalEl.dataset.compactTop = top;
+      if (modalOverlayEl) modalOverlayEl.style.setProperty('--modal-top', top + 'px');
     }
 
     function openShopModal(placeId) {
