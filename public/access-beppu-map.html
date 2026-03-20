@@ -1098,11 +1098,12 @@
     box-shadow: 0 0 0 8px rgba(255, 159, 28, 0.25);
   }
 
-  /* Zoomed-out: shrink place markers to small dots */
+  /* Zoomed-out: shrink place markers to tiny dots */
   .beppu-marker.is-small .beppu-marker__dot {
-    width: 10px;
-    height: 10px;
-    border-width: 1.5px;
+    width: 8px;
+    height: 8px;
+    border-width: 1px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   }
   .beppu-marker.is-small .beppu-marker__icon {
     display: none;
@@ -1112,14 +1113,14 @@
   }
   .beppu-marker--hotel.is-small .beppu-marker__dot,
   .beppu-marker--station.is-small .beppu-marker__dot {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     border-width: 2px;
   }
   .beppu-marker--hotel.is-small .beppu-marker__hotel-icon,
   .beppu-marker--station.is-small .beppu-marker__station-icon {
-    width: 14px;
-    height: 14px;
+    width: 11px;
+    height: 11px;
   }
   .beppu-marker--hotel.is-small .beppu-marker__label,
   .beppu-marker--station.is-small .beppu-marker__label {
