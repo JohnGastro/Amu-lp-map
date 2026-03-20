@@ -1555,10 +1555,14 @@
       max-height: var(--modal-compact-h, 120px);
       overflow: hidden;
       border-radius: 10px 10px 0 0;
-      transform: translateY(calc(100% + 20px));
+      transform: translateY(100svh);
       transition: transform 350ms cubic-bezier(0.22, 0, 0.09, 0.99),
                   top 350ms cubic-bezier(0.22, 0, 0.09, 0.99),
                   max-height 300ms cubic-bezier(0.22, 0, 0.09, 0.99);
+    }
+
+    .ab-shop-modal {
+      background: #c3bcb2;
     }
 
     /* Background fill: extends to screen bottom, behind cards (z-index 4) */
@@ -1569,7 +1573,7 @@
       bottom: 0;
       left: 16px;
       right: 16px;
-      background: #d1cec5;
+      background: #c3bcb2;
       border-radius: 10px 10px 0 0;
       z-index: -1;
       pointer-events: none;
