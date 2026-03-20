@@ -970,6 +970,25 @@
     this.renderPlaces(this.options.places || [], AdvancedMarkerElement);
     this.bindEmbeddedHoverInteraction();
     this.bindCardEvents();
+
+    // Shrink markers when zoomed out
+    var self = this;
+    var ZOOM_THRESHOLD = 15;
+    this.map.addListener('zoom_changed', function () {
+      var zoom = self.map.getZoom();
+      var isSmall = zoom < ZOOM_THRESHOLD;
+      self.placeMarkers.forEach(function (marker) {
+        if (marker.content instanceof HTMLElement) {
+          marker.content.classList.toggle('is-small', isSmall);
+        }
+      });
+      if (self.hotelMarker && self.hotelMarker.content instanceof HTMLElement) {
+        self.hotelMarker.content.classList.toggle('is-small', isSmall);
+      }
+      if (self.stationMarker && self.stationMarker.content instanceof HTMLElement) {
+        self.stationMarker.content.classList.toggle('is-small', isSmall);
+      }
+    });
     this.refreshOpenStatuses(true);
     this.startOpenStatusAutoRefresh();
 

@@ -1098,6 +1098,34 @@
     box-shadow: 0 0 0 8px rgba(255, 159, 28, 0.25);
   }
 
+  /* Zoomed-out: shrink place markers to small dots */
+  .beppu-marker.is-small .beppu-marker__dot {
+    width: 10px;
+    height: 10px;
+    border-width: 1.5px;
+  }
+  .beppu-marker.is-small .beppu-marker__icon {
+    display: none;
+  }
+  .beppu-marker.is-small .beppu-marker__label {
+    display: none !important;
+  }
+  .beppu-marker--hotel.is-small .beppu-marker__dot,
+  .beppu-marker--station.is-small .beppu-marker__dot {
+    width: 22px;
+    height: 22px;
+    border-width: 2px;
+  }
+  .beppu-marker--hotel.is-small .beppu-marker__hotel-icon,
+  .beppu-marker--station.is-small .beppu-marker__station-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .beppu-marker--hotel.is-small .beppu-marker__label,
+  .beppu-marker--station.is-small .beppu-marker__label {
+    display: none !important;
+  }
+
   @keyframes beppuPulse {
     0% { box-shadow: 0 0 0 0 rgba(255, 159, 28, 0.36); }
     70% { box-shadow: 0 0 0 10px rgba(255, 159, 28, 0); }
@@ -1494,11 +1522,16 @@
     }
 
     .ab-modal-overlay.is-open {
+      pointer-events: none;
+    }
+
+    .ab-modal-overlay.is-open .ab-shop-modal {
       pointer-events: auto;
     }
 
     .ab-modal-overlay.is-modal-expanded {
       z-index: 50;
+      pointer-events: auto;
     }
 
     /* Modal stretches from --modal-top to bottom of screen.
@@ -1782,7 +1815,7 @@
     window.BEPPU_TZ_OFFSET_MINUTES = 540;
     window.GOOGLE_MAP_ID = 'c9289c731e6bc6c03d298152';
   </script>
-          <script src="./assets/js/access-beppu-map.js?v=28"></script>
+          <script src="./assets/js/access-beppu-map.js?v=29"></script>
 <script>
   (function () {
     var CATEGORY_EMOJI_BY_KEY = {
@@ -2787,6 +2820,12 @@
         }
       } catch (e) {
         console.warn('[AccessBeppu] Could not load hours.json:', e.message);
+      }
+
+      // Shuffle places so card order is random on each load
+      for (var i = places.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = places[i]; places[i] = places[j]; places[j] = tmp;
       }
 
       buildList();
