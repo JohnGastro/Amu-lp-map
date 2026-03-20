@@ -2837,6 +2837,34 @@
 
       buildList();
       syncDesktopModalFrame();
+
+      // Mobile: auto-select leftmost card on scroll snap
+      if (window.innerWidth <= 980 && listElement) {
+        var scrollTimer = null;
+        var lastSnapPlaceId = null;
+        listElement.addEventListener('scroll', function () {
+          if (scrollTimer) clearTimeout(scrollTimer);
+          scrollTimer = setTimeout(function () {
+            var cards = listElement.querySelectorAll('.spot-item:not(.is-hidden)');
+            var listRect = listElement.getBoundingClientRect();
+            var closest = null;
+            var closestDist = Infinity;
+            cards.forEach(function (card) {
+              var r = card.getBoundingClientRect();
+              var dist = Math.abs(r.left - listRect.left - 16);
+              if (dist < closestDist) { closestDist = dist; closest = card; }
+            });
+            if (closest) {
+              var placeId = closest.getAttribute('data-place-id');
+              if (placeId && placeId !== lastSnapPlaceId && mapModule) {
+                lastSnapPlaceId = placeId;
+                mapModule.selectPlace(placeId);
+              }
+            }
+          }, 120);
+        }, { passive: true });
+      }
+
       window.addEventListener('resize', function () {
         refitAllSpotNames();
         syncDesktopModalFrame();
