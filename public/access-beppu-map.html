@@ -1098,7 +1098,11 @@
     box-shadow: 0 0 0 8px rgba(255, 159, 28, 0.25);
   }
 
-  /* Zoomed-out: shrink place markers to tiny dots */
+  /* Zoomed-out: shrink place markers to tiny dots with tappable hit area */
+  .beppu-marker.is-small {
+    padding: 18px;
+    margin: -18px;
+  }
   .beppu-marker.is-small .beppu-marker__dot {
     width: 8px;
     height: 8px;
