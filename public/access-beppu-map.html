@@ -2114,12 +2114,18 @@
 
     function buildModalSubPhotos(place) {
       var list = [];
+      // Prefer Google Places photos from places.json when available
+      if (place.photos && place.photos.length) {
+        for (var i = 0; i < place.photos.length; i += 1) {
+          var p = place.photos[i];
+          if (p && p.url) list.push(p.url);
+        }
+      }
       var primary = place.thumbnail || pickImageFromCsv(place.name, place.category);
-      for (var i = 0; i < 6; i += 1) {
-        var seed = buildImageSeed(String(place.id || place.slug || place.name) + ':modal:' + i);
+      while (list.length < 6) {
         list.push(primary || '');
       }
-      return list;
+      return list.slice(0, 6);
     }
 
     function getPlaceById(placeId) {
@@ -2831,6 +2837,33 @@
         }
       } catch (e) {
         console.warn('[AccessBeppu] Could not load hours.json:', e.message);
+      }
+
+      // Load places.json and enrich with Google Places photos / median rating / Amu-toned caption
+      try {
+        var placesResp = await fetch('data/places.json');
+        if (placesResp.ok) {
+          var placesData = await placesResp.json();
+          var placesShops = placesData.shops || {};
+          var placesEnriched = 0;
+          places.forEach(function (place) {
+            var entry = placesShops[place.id] || placesShops[place.slug];
+            if (!entry) return;
+            placesEnriched++;
+            if (entry.photos && entry.photos.length) {
+              if (!place.thumbnail) place.thumbnail = entry.photos[0].url;
+              place.photos = entry.photos;
+            }
+            if (entry.caption) place.description = entry.caption;
+            if (entry.rating != null) place.googleRating = entry.rating;
+            if (entry.ratingCount != null) place.googleRatingCount = entry.ratingCount;
+            if (entry.ratingMedian != null) place.ratingMedian = entry.ratingMedian;
+            if (entry.editorialSummary) place.editorialSummary = entry.editorialSummary;
+          });
+          console.info('[AccessBeppu] places.json: enriched', placesEnriched, 'places');
+        }
+      } catch (e) {
+        console.warn('[AccessBeppu] Could not load places.json:', e.message);
       }
 
       // Shuffle places so card order is random on each load

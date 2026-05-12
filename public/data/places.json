@@ -1,0 +1,1474 @@
+{
+  "generated": "2026-05-12T11:31:32.193Z",
+  "captionModel": "claude-opus-4-7",
+  "shops": {
+    "%E5%A4%A7%E7%94%B0%E5%92%96%E5%96%B1%EF%BC%88%E3%81%8A%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%8A%E3%83%BC%EF%BC%89": {
+      "placeId": "ChIJ8Y_tolanRjURaPzQB3g6f1k",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMYhduNZ2GtyLZld58If5KF6Yij6t7AkD3o8i9-WbpyH800_9IYVt21vEaACLG7vY_x0yV4dXQ9y-6QxY3o-alfDYAtFSxEIcnz3KzYF1AVEI1cHouY904_f8-l6C6iwGK8rO7IFhcMxVORPA=s1600-w1600",
+          "width": 3464,
+          "height": 4618,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105150634200975764251\">ぱるちーさん</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPZXlo7XouJyFcaxfW4M7WbL2tOJwTgn8ud2osDqsQgSNcqiD_98IiYgId1CVRB9tmZi8hLSS1eYbhLM6u67yamUQzPpHegELvDADjRyngqJhRmsvAGZeZEgNQP8G0B6kLDiS69-hzUbYs7z79DlfVDdg=s1600-w1600",
+          "width": 4096,
+          "height": 3072,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109606932459609038570\">Kazuki Yajima</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMTvKQj9Af5UZREzvl5C1umQpeThpZE7k8--SWUjQfIjs1KxKBDT6m5auDBLK5rH4yJJNfhDFruXzRqesNYPDOEsjU51HQwWW6XkAtxtufQOiV5fCNGCRcTie_FNlIkyuAhbal-5W-6x0qhLiAxCVgo8w=s1600-w1600",
+          "width": 3024,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109061760451515327480\">後藤伸也</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPotqd91M6_AXJ61cEGSuYQfG9yTdgjIuzbkXau1UrhSFLtoxx-cQPbYHz0oEc9yMIvokhhFrSuhLjRgXOxOOkYAxVtmpjy3oIJGKjJ3BPKPpZMH5kztyk9aosZRx7iMU5MkjCTFJ3sFtmebA=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117118293506841765606\">株式会社</a>"
+        }
+      ],
+      "rating": 4.8,
+      "ratingCount": 59,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "無水チキンカレーが軸で、注文に迷いが出にくい構成。\nスパイスと黒胡椒の輪郭がはっきり寄りで、香りが残りやすい。\nカウンター中心の小規模店で、営業日と席数は事前確認が安心。\nサイズ展開があり、量を合わせて選びやすい運用。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:25:09.295Z",
+      "lastChecked": "2026-05-12T11:25:09.296Z"
+    },
+    "EEL.BISTRO": {
+      "placeId": "ChIJbwFiLgCnRjURHGSwTPJDOrQ",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqG6z_Nq7pajQLInvGPdvdLOHGw8MPIzpqlWHApBKCXkp-TEu1_NiQv65mWgSKd7QkH01c1_6vqQF_W35UOT3sKmfCDeONbLcJs=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102119354106831591835\">EEL.BISTRO</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqFQ6Z3qDX5aMWbImim333lOL03mIBD3ZBsuysmDlGomQnns6omqtrkQS_iftjMuRu8YNVleT0q8yx0St_sHJ1sZuXGahn43u3k=s1600-w828",
+          "width": 828,
+          "height": 1792,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102119354106831591835\">EEL.BISTRO</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOAAvzZ5-HUHLnzKzwuFOO4ORnhH2dDFo7hGRm8BC5a52a64hHocSCIGGFG5OdC81zh-5OY-AdFzdpSdpNWCaImsB9BrjukmHspPX5XwKFZU4OQqyanPiSDy9aPG_wKANZGQneLrjy3tNjBDDQ=s1600-w1600",
+          "width": 2268,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107864493811530478577\">shus ta</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOqr32cT9go2a7CypkOYZVw4FlSSYvvH8JiPacuYlHBIXAedc718TFUSih_QmKScgodNZevDgGCSPvYI-bibBEsW3r5YbldPGtdth6o0rWKaBA8etnfL5c7NTg4q_pJd3Lzsc5Waf0TP1KlpA=s1600-w1600",
+          "width": 2268,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107864493811530478577\">shus ta</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPX0vVA5dRGZdy0R3GiZOVfOO5kIqEzP7AJk1EX9-xys2ZDik2BARDa17Q7K_B8L1doo_rraM40ntLHZ6ra_gh-wEYjfmZTAG_ty4wP7JQa2GmOp0_iBmLMw8GK7FxNs1mr6k--rwydpcbcjcDCfzd1zQ=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100491637080512922620\">とよひろ</a>"
+        }
+      ],
+      "rating": 3.2,
+      "ratingCount": 5,
+      "ratingMedian": 3,
+      "editorialSummary": null,
+      "caption": "ナチュラルワインの品揃えに寄せた構成で、グラスでも数種から選びやすい。カウンター6〜7席のみで、店主との距離が近めの作り。料理はワインに合わせる小皿寄りなので、軽くつまむ使い方が向く。静かに飲みたい層や、ワインを軸にしたい夜に合わせやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:25:19.442Z",
+      "lastChecked": "2026-05-12T11:25:19.442Z"
+    },
+    "%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%90%E3%82%B5%E3%83%A9+%E3%83%8A%E3%83%81%E3%83%A5%E3%83%A9%E3%83%AB%E3%83%AF%E3%82%A4%E3%83%B3%E9%A3%9F%E5%A0%82": {
+      "placeId": "ChIJwxJgBgCnRjURqd-dcfA-gxk",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqGqVE4GDfhVY5SrAr55Vq17TBCpxhu9En1nvd-iAjA5ph2aeea5StrCXKGbtDuSEIZMJbxLQRimii673YZuxlj38g9-qYa6dQ=s1600-w1600",
+          "width": 2880,
+          "height": 4087,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111698812735232514533\">ニューバサラ ナチュラルワイン食堂</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqE_hzzfK-UvrFmNogDUvVUSoD9o1nSioLYf8cblc7PyQca0KABWnu1IupKjGVFuMgLJ2lqK0HLA8m9KU94WkScNZw89TujDVw=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111698812735232514533\">ニューバサラ ナチュラルワイン食堂</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqFH5ZEETM3XzR0zyTe6j4Wq4GF3seRYO8C_3jlEBA1nJgio7L1NYDLZgImJxoTkqDBc8VzEPuoVVWm7lS2uN__cK2yK8CkjKg=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111698812735232514533\">ニューバサラ ナチュラルワイン食堂</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPG3Et3F03o_1_EW0QL99_hdV_GW6FcjwxYspM8GfqR1_C0ekxYFbTRRhIRjZL1q1pa_UZIuyk4qPOWd898e88eb7_jgNZo06HB_5Yx5ocDNRbYkFkP5J3oogA9h8_512uFaf_mniW42B7OWhI2C7Lelg=s1600-w1600",
+          "width": 4080,
+          "height": 3072,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110685271441553506514\">Tsutomu Suzuki</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNZJj0otFh6Rp0qmronbokeeb8bu70xNN1KZ6JAfCj845cYUaWxIePqjh88XJddcH9YCOuwtRZ_SH5liWA_Q9duwEEuCh9uGh3qjjgZWV9G3Mss7lw-Jdedv3J1cWurPwFQakINebi7dvX1_bxQcOGAaA=s1600-w1600",
+          "width": 4080,
+          "height": 3072,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110685271441553506514\">Tsutomu Suzuki</a>"
+        }
+      ],
+      "rating": 4.8,
+      "ratingCount": 14,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "古民家を改装した空間で、ナチュラルワインと季節の料理を合わせやすい店。黒板メニュー中心で、一人でも数品から頼みやすい構成。カウンターや立ち飲み席もあり、滞在スタイルを選びやすい。常連客で賑わう時間帯もあるので、ゆっくり過ごすなら予約寄りの利用が無難。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:25:30.501Z",
+      "lastChecked": "2026-05-12T11:25:30.501Z"
+    },
+    "%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89+%E3%82%B9%E3%83%86%E3%82%A2%E3%83%BC%E3%82%BA": {
+      "placeId": "ChIJj3BaxMKmRjUR5O5OZVrnvZQ",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMASTPDzFCGDY34v-8Qt-31BnsiPMabAl3OJ9WdKOH7lDwsVHUV3uyHiBT2IuBEm8vVlc4EiEFxQVMqPE-8Cw_rOm_cruCbSoFsjmJeiDXVBLdffpUjpMN7LeTXmOvZAyxH06SNPWTAVDqDJT7ECbAOTA=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105629154335165384310\">Ju-Yin Chen</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOqwzu4Egu7YauuPlmiobv0Q2CqUm2c_s2xm6MWihsyAE_iNufu2d0YuwszAIkC9u5M4nQszoOv8ADcNZE69FZAdtxvIoZu_R6dv1dWxsadZSBHv9xrlpkCjI_LWGab1p62PDOJAHCa-4FPFrdDaDLpvg=s1600-w1600",
+          "width": 4624,
+          "height": 3468,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111227817776547641534\">ひろきん</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNtctBcYDKN5G1rDEjWKx-l8Rity16nYjMTrVpW0DlXYEiVeuZ7XibYs3M-o-8hDE2tO1xlji5znM0IsaRV5FV6iHjnYevnMQqHHkRVEC_HTPwqIWmX_sCkcxFCcJAgeVW4h12tB9hI8LkGtg=s1600-w1600",
+          "width": 1836,
+          "height": 3264,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101891633737587215850\">Y S</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO2hYBy-pO4nebMMnEOlz0-sF9WLROF3zz8CaysBWwLu9vmfqxIwS9m-tjSvU9U2djAdGDhzXuSv9z6lr4qtAB8ZVN2Z5lr54CoTg_QEuas-n2KnDsRz1EGnuDxkusr6-FLyWiy4XoRQRupAIc=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115519923395071078025\">GG YY</a>"
+        }
+      ],
+      "rating": 4.7,
+      "ratingCount": 116,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "一杯ずつ丁寧に抽出するスタイルで、提供までは少し待ち寄り。テラス席があり、天気のいい日は外でゆっくり過ごしやすい。豆は週替わり、オーツミルク変更にも対応で、好みを合わせやすい。コーヒー以外のドリンクも揃い、同行者と来ても選びやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:25:39.765Z",
+      "lastChecked": "2026-05-12T11:25:39.765Z"
+    },
+    "Cafe+%E8%B1%86": {
+      "placeId": "ChIJQcF5OeymRjURK0fsU00wdsk",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqEpobY06IN0fCkUF1tR2d9Mpj1htrgJnUKkuJ1wCDVvIvfKb2HonPfnb8aPPWqEw5HkK2KwXmxMJOcy1fKiVBnVRi83bgWFj8I=s1600-w1600",
+          "width": 3024,
+          "height": 3440,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117675607918793447987\">Cafe 豆</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO1nDoHXolWZvQAi8kq178UZUssp-VK89pB5KoyW6it-TtzrqwY7L_exMoreCNevDi6-MhuBHkJkEYyxg98xmFDQlG_MzNt8i3dlanZOtkbNhcGCsnBgv581aCnbxxvF6bQQeJ7eKXrlfWEz9umhXHGzQ=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/104648988644283695086\">赤いみみ</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOYtchyvjtXA-pE3hE1g4elaIeRCOWEuLoGoM2yz6Oj_nkL7haS2PTajhnN-fUZ0-BO_BU70-XB9F0J8pqIyn6AG3yx4ZPNSomxCTroHB3dL1QGylQtMSG_e86RBeUPd--9ECsC_eX45xqd=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115030790793417710292\">cherry chu</a>"
+        }
+      ],
+      "rating": 4.7,
+      "ratingCount": 83,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "裏路地に入ると緑のある庭が広がり、滞在のテンポを落としやすい。焼きたてワッフルやチーズケーキ、中煎りコーヒーが選ばれやすい一軒。地域猫が外でくつろぐ景色もあり、雰囲気を楽しむ寄りの使い方が合う。駐車場は小さめで、支払いは現金とD払い、ワンドリンク制の点は事前に押さえておきたい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:25:49.336Z",
+      "lastChecked": "2026-05-12T11:25:49.336Z"
+    },
+    "33°16'42.9\"N 131°30'10.9\"E": {
+      "placeId": "ChIJf9zUL92mRjURmqeTKhXrnFk",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMfDSaQV90fR0FPmRgqHKqVGFupyUa2-8qWhUN69h8sOeliaBAF1OMCvoEdSYnBwHNEvfWkU8GrEBCzr53QOeWEi-417C69urC1S5bZyvzhwZTkq4GV0KFrmEmO5AF4u4yfkUXn0U5IGtBN=s1600-w1600",
+          "width": 4800,
+          "height": 2700,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/108745890395192198361\">Satoru Kono</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNZAcGe5RsDsbD83Hd0m0JxUx7PEJQ8ql2vFPlyizPbd2gfMrGWlpOmodmuohRb7KFcRIgVsZvn72uQmsxIhOW1ud2b-ESQQ4sw5N9oKhL2t1PMh8bqH62fLEWwtlYqQdSqlKi7NCDf55hiqg=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101459887106232646937\">MAN KIT NG</a>"
+        }
+      ],
+      "rating": 4.8,
+      "ratingCount": 4,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "商店街沿いに位置していて、立ち寄りやすい導線。料金は控えめで、短時間利用にも合わせやすい。口コミ数は少なめなので、満空状況は時間帯で変わりやすい。評価は高め寄りで、選択肢として確保しやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:26:00.209Z",
+      "lastChecked": "2026-05-12T11:26:00.209Z"
+    },
+    "TANNEL": {
+      "placeId": "ChIJLd8E91OnRjURySxguPNYrWc",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqGxo5niW7ndFKTLeRUe3KwxHaHc8wXS9VjNUIfB-L3oqXBNoXqwrQuHErKfSM6jvfxaMvSwrq7htOs7GmaJEWOhrSDHDBeCVls=s1600-w1600",
+          "width": 1707,
+          "height": 960,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118429129434477817088\">TANNEL</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqHo9iT37w-mq20dED85Qb5-l_pShdynTRJP3Z3q9UtpWkPmJWwCHaMGmNvL4eeh1pjvsl6Tp3WLYqC6P0cFL0haxNW-rFXwO5g=s1600-w1152",
+          "width": 1152,
+          "height": 2048,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118429129434477817088\">TANNEL</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNB3TlFDZ18FJGARr-7640_34UjpQ2XkCWeiwQENhRGjBhuiOhEhYqb6HjCLJcAocdR3Nj1IFFadxVrBhO-fR9IPovx7iMHLaUWCv3Ih89UKtozYyrkI3xji5p4pzzu2e3IbB6ggaPVX5N15A=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114088954045420619544\">roy t</a>"
+        }
+      ],
+      "rating": 4.8,
+      "ratingCount": 41,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "看板控えめの隠れ家寄りで、扉の先の体験が際立ちやすい。レコードと音響の存在感があり、ウイスキー中心の品揃えで選びやすい。常連の比率が高めの時間帯もあり、訪問タイミングで雰囲気が変わりやすい。お茶割りや〆の一杯、コーヒーやスイーツも揃い、使い分けしやすい構成。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:26:11.419Z",
+      "lastChecked": "2026-05-12T11:26:11.419Z"
+    },
+    "the+HELL": {
+      "placeId": "ChIJ3916qHunRjURfTxr8yZu1No",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMNnxLmkpuwzgcptyRniAMUo4MRPS1iwxWcb-LGv10pNxmcd2RC5Jp2qjtcT7idzYewfYyISPPreDUCRXcy-NmUiHY3K6zLAS2kaBDtQ0IRvWrmy7cNWu3IRTEPl8x9rplNtpvtDpH9F77Njd5X6Z-Xpw=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115163696904494968868\">Max Rozenberg</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOOS8tU_G3HWQRCOXqY3PBkv2TyrztbU2w-I4X4rwVyBZflhV30qpGCjIDYYMo250kqO7H1CUCE8zRBJvx1xywW_zoSpmoMuregkzGQ7CBUp5NPs7k-poYGgRSYEHi8Kxh-pWqaEdua2OyABbzraqnnew=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115163696904494968868\">Max Rozenberg</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNbk8QwpldrAuveHgQC3Oqtn9gOMhlq8yE-1lo60yIR8-3IBvHoxhkdJSsuakLdhg2G0AUmifNPemLShSKBHD_uW0ABzO74Lek1DOPrfmL1u8sNvit2QfmdkcxfXWT_oZticODyTLnNaFS0XxE=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103601320995167318988\">SUYOUNG AHN</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPKH0XMrvWXuw1lQwU-AXR8ssgUGDyUpGnWpLNujdeMiaPQg-m7sZ-czjjd_IJGCSjY1o-d3SBYs8CJd-Dxkwq-HWWSwhJcJsmpHgRC4-lGZDb7-oMkCs9w2OAwj8ZuAw9AUW-F8p4naHNO6A=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115300665015942465311\">Rosha The Great (Rosha)</a>"
+        }
+      ],
+      "rating": 4.7,
+      "ratingCount": 65,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "果実を漬け込んだカクテルがあり、選びやすい構成。音楽と照明のバランスが取れていて、長めの滞在でも疲れにくい寄り。レコードはディスプレイ中心なので、用途を合わせると体験のズレが出にくい。評価は高めで、雰囲気重視で使いやすい一軒。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:26:20.526Z",
+      "lastChecked": "2026-05-12T11:26:20.526Z"
+    },
+    "%E3%82%B1%E3%83%BC%E3%82%BA%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3": {
+      "placeId": "ChIJfYhLbrinRjURPfFZoZnvP4Y",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNL0wYtn4O4cOyXb0VlyR2TLXgDaBpThPuKuODkRZv5kHeNmZCWowXJ3IdWMvfefrBFIZwoDhig6QMRGHUrmPA7odS6Rhn159v2bRk7GYZr7wetjmWlQB5hmJKqw7__H0WiAX9SrwxuNJAO=s1600-w1600",
+          "width": 4128,
+          "height": 1908,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115702604437105143879\">dy ma (mady)</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMXCH0gxRdcW6oXkvsoElnXw9bJ5fj6siTn2qEdFFWGhO05Sc7etoiS9LZYILNM2kTHcJbGlO3lQ1WF_xmEWWfTc1bki5oEd7ejFZYB3wQo4CUmqjp3vUwRSaKiNph1_N4QzdqGY68WzWwK=s1600-w1600",
+          "width": 3088,
+          "height": 3088,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115702604437105143879\">dy ma (mady)</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNl-C00MU1Xce-oNZxj6bNBpnuwSjVmsvwN_5DZLv50hNhY0aPMF3hBJbAkkvgSjwXHQxt_KUFD4Qnvc3QRoYfmGS7N0QvEa7ACjNuKQLj_S2sR803SJ7hsfZcTcKUFRDYSnXjdB60T2ktSRJY=s1600-w1600",
+          "width": 3088,
+          "height": 3088,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115702604437105143879\">dy ma (mady)</a>"
+        }
+      ],
+      "rating": 4.7,
+      "ratingCount": 6,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "海鮮チヂミなど料理の評価が安定寄りで、頼みやすい。 価格帯は控えめで、軽く一杯の使い方にも合わせやすい。 サービス面の言及もあり、滞在の印象は穏やかに出やすい。 ビール銘柄の好みは分かれるので、事前に確認しておくと安心。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:26:29.716Z",
+      "lastChecked": "2026-05-12T11:26:29.716Z"
+    },
+    "%E8%89%B2%E5%BD%A9%E9%85%92%E5%A0%B4%E3%81%BA%E3%81%93%E3%81%BA%E3%81%93": {
+      "placeId": "ChIJ_Uc5PtGnRjURlfus4PSzwuU",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO9ZTatEi4QM27q1F82gslfN8aE9GAmOw8Eu-dQ4G2zXaUcLeJqL1slYlMsuRYRGcRPHDT0oT63DOwfoGocp7FP0E__01flYQj6nxwFfbcs9eTokkc-0y4FEN0q9_enNUwC2adjxeL1zei_=s1600-w1600",
+          "width": 3468,
+          "height": 4624,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111227817776547641534\">ひろきん</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMyyG5BH2UoSf_hY474kSkYXjaxVEYfVaGjdhSpVoCPAfkYem9NCUq3AyalRX_rkYW5ccLn3iU9MsRvKH_JKOO87tAnNQ2B1VCY1Jy8LwuGPT_o_AZisLCvb6cWYDwMF4L7bUvCUUaOSZzN986qteT1DQ=s1600-w1600",
+          "width": 1962,
+          "height": 1962,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105384182639352922438\">Tomomi TAIRA (TEQ)</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPPVJvqaDcBZwZ1yRUUXk9lbxfWsAJrd4bYMPInqH_1l53te2f0XDJukQM5QUB4UpQPxR2Op8gudIgAPbbPYQ4vlpEJfuK-GlK4I3X-8kqCm6IO0VbMBifq8MObptNTw5MlT9KUsh92pCLftyE=s1600-w1496",
+          "width": 1496,
+          "height": 842,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/108745890395192198361\">Satoru Kono</a>"
+        }
+      ],
+      "rating": 4.4,
+      "ratingCount": 5,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "おばんざいが日替わりで揃い、夜の使い回しがしやすい構成。深夜帯まで開いており、二次会・三次会の選択肢に入れやすい。場所はやや見つけにくく、落ち着いた利用になりやすい。品数は幅広めで、軽くつまむ流れにも寄せやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:26:39.493Z",
+      "lastChecked": "2026-05-12T11:26:39.493Z"
+    },
+    "%E3%82%B3%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%AA%E3%83%BC%E3%83%95%EF%BC%88%EF%BC%A3%EF%BD%8F%EF%BD%92%EF%BD%81%EF%BD%8C%EF%BC%B2%EF%BD%85%EF%BD%85%EF%BD%86%EF%BC%89": {
+      "placeId": "ChIJx5PWqMKmRjURZf6Nbkzl7G8",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOZMqAbR7pflRsxW0yKhymP0qIquXTXOSeSqeAhYdkLNfBlds3Kg5wDT-HmTFyrTXfiHrp2HVjiDaLJsACQ5LBzH8ZtBgAvJj_G7juRDh3trjLAv0zY6O0A3B83sfVG7jOKSFU-pu5r73ud8Hc_eL_VcQ=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115364382632838010153\">amuro t</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPUIXXgoiQ08N4eYU4fVRh5nkSn7Nb00GI1xd8RrwjJkyQI6m_a4-8qljgIktOWx847x-1-iramMaM9DXpNm36lOgWYrkC6x82SIsfg3WPBdQdMT4-A-3lbR6Um8LZ5zSRmfiMxN60m7mWi=s1600-w1600",
+          "width": 3024,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107790194306666161378\">L</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNd6X55-oPLN3wxaMFxHp1QtdIi050ZKtBeBcbixDf55RJtEq_np22satofXc5Fvyl1Y1iUXKi59eo5opzxfC7k1EUdrrCRTEl8sNqkPOM7M3XUyxWx2_hH_YLvQHCR6m3VeuioqMInYm1ysQ=s1600-w1600",
+          "width": 4608,
+          "height": 2592,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111760169430961089120\">3 senshi</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPuP7sNyxvayTVN04xcfLfTr5GpeidU11uNM-nC2NnMcWI68z4xjuwnpWiWjhxKgzEyJUB2Aeiq5IfNaEuGr9gdkGqZiY1yXyzC8I0ZAjEWC6K35etWhKjf3QbZAmTH4H-mdKUay1cBaXZ8ua0jF3EU=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115364382632838010153\">amuro t</a>"
+        }
+      ],
+      "rating": 4.6,
+      "ratingCount": 19,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "深夜帯まで開いていて、遅い時間の食事や一杯にも合わせやすい。料理は軽食から麺・カレーまで幅があり、選び方の自由が利く寄り。マスターとママの距離感がカウンター中心で、一人でも滞在しやすい。価格帯は控えめで、評価も安定寄り。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:26:49.213Z",
+      "lastChecked": "2026-05-12T11:26:49.213Z"
+    },
+    "%E6%98%A5%E3%81%86%E3%82%89%E3%82%89": {
+      "placeId": "ChIJGWwrt9ymRjURnDqxA3VQdZI",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOLtYaLsXSYBtRNeo4Oans_NTfTOPeG1qODa_dM8zeohcGIfsdY0MQvQeD_sNjEqe245_JjJNuoLJHfwLVxZIcUXMiktREHXkiUi2n4ALDF2soADRKU0UfOrO3X_qhCKKX08OSlCrKd5_pDUSE=s1600-w1600",
+          "width": 4000,
+          "height": 2252,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114473938994635590326\">Filippo Alimonda</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPhO10VMqFNQXf1GjZ7UTqhN9hGs8fd9JPi_FDWSmBQK-egI8acVGgSoaWXScVwAs4yS3kLwVo2dcFYPQGDtei-cHsHUHYvIf8LHqJK_qAbbDKCX3nNBT4H802ZbabPwt42kLbzGtKZTcPCYV-GS_EMww=s1600-w1600",
+          "width": 3182,
+          "height": 2386,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117135622266126009903\">マクロとチャチャ</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMYkzKK2yMYxUEeeKAQ8pM_CoJR-wnk4_hXxwOGGJ3liliOD083JIiNxA00PkGokaacB-U_Wtspg8eLvtdkXX-aRTPS0baCZcmiCoc1QXi7P1l6e_HK-bLzf891qsaxw9PXMGe6oKy-SncWan0=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107233847341951371337\">YH’s Donguri</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMup0i2guKkffoKl-xo5zMFZ4VL3F6IWtR_VJ0aTa0kFnZzXm68wWndYlv4KzbDnWOYMmmaH9SYZUyDnbyC0W_J1xIynlHmlpc_gJJAy6DURqZturx78PjkHhBgE9ahqD9tliqELfL6K4ED=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114075413333862240364\">섭섭지원군</a>"
+        }
+      ],
+      "rating": 4.4,
+      "ratingCount": 69,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "おまかせ中心で、その日の素材に寄った構成が出やすい。関アジや肉料理など、内容は来店時の仕入れ次第。落ち着いた距離感で、常連寄りの空気がある。予算感は事前にすり合わせておくと、見込みのズレが少なめ。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:26:58.307Z",
+      "lastChecked": "2026-05-12T11:26:58.307Z"
+    },
+    "%E8%82%B4%E9%B6%8F%E9%AD%9A+Miiima": {
+      "placeId": "ChIJgXEDcFCnRjURK29QOSch3Qw",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNSGi_E4wB2I3vIeQKikoIp1Jst_gMV-tFwEnVH43E_ZwwVfPlL8FYHHARAoeu9AodlhbYX78iBenrHaCY5Wo475q0JBKFYkTa-aryVDaHRoc0wue_eP86xK14t2bteu_90YS_HfRXae0Wf_kg=s1600-w1600",
+          "width": 3431,
+          "height": 2573,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106772999364862739202\">三盛二重亀甲剣花菱</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPPk7wkZOOQKuJRZYGiHhNTSi5UajnI6J6rUT5j-v8mtivJbCbuuZyz63MtT0997lgjKdrhtyGLrJRwTNTqNeHG3p2aqyQ5KBEHdPlHoC28Wbkm5V5ZTOd4SMRcNLWjTPmMp_qQMbv5NR5ddG7wxNFSrw=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109931833716076552444\">Yoshinori gourmet</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPOLFTBJqZdM7Qf1EQCB_ICbnKDjvjRAqcmf1Rbenoog9G0Op9tPath-zn7tZPQ5BZ0Nv-CC5dnw_FbUJpdVi58MWBI6lu4_8XC7PjRClFSucAYhpoazkLVS1x6uZnMaRaLSR0SXE--au-2d-q3AkBd0w=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107882603530977968416\">K SASA</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM1VSadr22BlEfeN-owwV3BeEhR7Oaq725n3Es2-ylSLHHr81LWU7GvUpwy8gM1SxUVki-3EdBppPMu7L3HG8WZuDBFAiyOqhYIwAA3PW7Ej59SpcnLcgfMv75ZWaix_HWUPWcMmibiLV7fqg=s1600-w1600",
+          "width": 4624,
+          "height": 3468,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111227817776547641534\">ひろきん</a>"
+        }
+      ],
+      "rating": 4.7,
+      "ratingCount": 85,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "手間をかけた一品が続き、満足感が出やすい構成。 刺身やとり天たるたるなど、推し寄りのメニューが揃う。 予約必須の傾向で、早めに枠を押さえると動きやすい。 接客の距離感が穏やかで、初訪でも滞在しやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:27:08.035Z",
+      "lastChecked": "2026-05-12T11:27:08.035Z"
+    },
+    "%E9%BB%92%E6%9C%A8": {
+      "placeId": "ChIJt0nXjocdRDURXkbE1BMBY8c",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNOBhXV--122m80nhafFTa2yJ1_deYzJpK5ep-wUmSZpS9BddhfGJI6U6T23heUpAeZA8gk4VLvoWi4ZrrkeFmcuXxg7pyjPGbnIA_cd0g0r7PkVHDgx49sajw6xEziyCsbCmdaenA1N_3g=s1600-w1600",
+          "width": 2532,
+          "height": 1702,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110446431326874381447\">明楽獅</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOpjEpsu3rxNn2fggPs5gKvSaGBWArlZUrSWzM5Ohi4wm6dkBofjrduqWcduaGov7LqP00H84duRzj5NoT2YUEZmJUC67ojkE7A_0dhK5LLVDvXlhEBmuhFn8Ut4FqRiilIuf4r0JS9qHN7Tzw=s1600-w1600",
+          "width": 2160,
+          "height": 2160,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114294506600016281644\">Michael Park (Nitroningen)</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMy1XsCuPkQwQ9MOOx0QSNYMNPlb5DTXeTRljZEkiRyttGwS-Ynpc7fjEr5MkZyzQmkYxOiwQNKJpASb-wnH4gQdwR4PATZ-mwoGzbovMs6OiIYcgkCi62ChsGQR2GV5Py2H6fSeegMxK-V0JHMq-HXiA=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114294506600016281644\">Michael Park (Nitroningen)</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMnhdgf1odXHGcL2KwW53mrOlUBJ9S6boj3y6Tl2KMzwH3vjT_VZmpyeldj5ykK7QBjxiE3m6CZZEVxFPeKCpoYRk9uQsLxq3gdnY5alXml9_eJqNNicA4rcJSdglk3VlJ2LeYaqioK-QobB6oY0SsD=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111452764313372531564\">s s</a>"
+        }
+      ],
+      "rating": 4.2,
+      "ratingCount": 120,
+      "ratingMedian": 4,
+      "editorialSummary": null,
+      "caption": "海鮮と地獄そばが軸で、用途を分けて使いやすい。寿司や定食はネタが丁寧で、価格帯も抑えめ。夫婦での営業のため、混雑時は提供に時間がかかりやすい。口コミは安定寄りで、事前に雰囲気をつかみやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:27:17.411Z",
+      "lastChecked": "2026-05-12T11:27:17.411Z"
+    },
+    "%E6%B5%AE%E7%BE%BD": {
+      "placeId": "ChIJV42HvatyQTURjVwznoDN4SM",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMYLS9VISTDtmAH4_O4ssYiSsABV7tHRhgQtzrbn1yLPkFrL7WdETrghFZvXNjO2OBwfCveM2Jj9Ww6HADg-Itg7O41g9aTtWYQnOoRcEBfFIMHF2Eqo5Yb5zTHu3Uf-QBXf2kSl9pEiByK=s1600-w1600",
+          "width": 2560,
+          "height": 1707,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109928673943322927644\">Shohei Mizuguchi</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPWgb8SAtaxyD0vJajzfopHrZY6jw_cZhGgvX4z4pztaOSazHj7ypYggo1q4uGgGIGQ0g73iYxsxTg9i4c36uCQNQ38pgSGeyFY1kibGMB7rb9IeR9JT0SfwriJGfdW6VbqWTmLV0RyFW1Iig=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101058120915403465478\">碇隆一郎</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNeev39p1UgjAZLnQH6YWdHwMvpOtduA57qMIh_r2LydYpGNZBcJY2R5FLl5CkxH5wUsSW_876nMszWEnE1i-ikl231hqOkmI-TubKQXilTO7DS1YAcItt-vjRJgTdNlhkvTj3jWMOl8jF3Qyo=s1600-w1600",
+          "width": 2700,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/108837135800698411989\">景山良司</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNrNTvNHzeLBqcFxSrWG3hCeZE9jgkO6152Ca6bSZaleP2h_ikkqUQgiyrxBJ0KwNJIdYbBhQnOow_MTAke8fPNPwoCLYdxmKAeSAc4jPaLRJOI-Rp_PLgWlAH3Ex_Y1G27yiJisqXWAx8qaHI=s1600-w1600",
+          "width": 2560,
+          "height": 1707,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109928673943322927644\">Shohei Mizuguchi</a>"
+        }
+      ],
+      "rating": null,
+      "ratingCount": null,
+      "ratingMedian": null,
+      "editorialSummary": null,
+      "caption": "川沿いの景色を眺めながら歩きやすい散歩コース。橋や水路の起伏が控えめで、足元が整いやすい。立ち寄りスポットが点在し、休憩を挟みながら進めやすい構成。所要時間は調整しやすく、滞在の合間にも組み込みやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:27:26.474Z",
+      "lastChecked": "2026-05-12T11:27:26.474Z"
+    },
+    "bamboo+bamboo": {
+      "placeId": "ChIJ1Rtx7MKmRjUR9uMvRwxcXMw",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO6mHlQRoYWRf83zpx-vhCgVGyug3s_A1ROLmn77tM9B3AoI7RFGv64r53hhYhwmssXvk1JoZaW8oIvLPPm02aCP0N_6COBchXgb0URWMVJdPqKtf-eSDobkuhLvKLDgVBeIQLA_tPLB0xgqyg=s1600-w1600",
+          "width": 2048,
+          "height": 2048,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102516450471973453179\">KUEIHUA GrukHimmelreich</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPVMgWdCqDoXT_HbumrCODUzIeElAbO92kTF8u4JxwEHR1c7h3DToqv_gOfnOyD4flwULB7UDRBl1ZSRzQErD8K4epTG4VRp3BMp6rMn-JAAIb2mrxutHM8K9mBKF42-fEszG8dednlYBC9rQ=s1600-w1600",
+          "width": 2160,
+          "height": 2160,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110539462425504329025\">sanae ak</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOoZlDvf5wte5iaSkqvFHC36vqeYs3AK052atZem4xwmWsCRQdwPFOOBY-2Y7HsxpR8ArQo1RCM6ulldPG2KHpFOlABS_JUYsD_4BXcsVDGhsSBiuB-JhTsr-n73jcZKyYIxHLAxjiueD8wOU4=s1600-w1600",
+          "width": 2160,
+          "height": 2160,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110539462425504329025\">sanae ak</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNvoqmSL6A91VKzxfD1vheqvni7zqlYjJzE1eNY0UM_7YDF0gXgOXx431p1NrW8Fy88Jr08wj3GWiTpw-01kvqrLZxw3J_f4tgO8jEyr_XtPj3ACukwVVZRhrS9AQI-lfTknWJgL7cFaEY4cryf5Y0oSg=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/104519327485842032451\">榴岡綾瀬</a>"
+        }
+      ],
+      "rating": 2.6,
+      "ratingCount": 38,
+      "ratingMedian": 1,
+      "editorialSummary": null,
+      "caption": "竹細工の品揃えで、別府らしさに触れやすい店構え。接客に関する口コミは賛否が分かれ、訪問時の相性が出やすい。商品に触れる前に一声かけると、行き違いを避けやすい。評価帯は広めで、期待値を絞ってから立ち寄る使い方が向く。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:27:36.097Z",
+      "lastChecked": "2026-05-12T11:27:36.097Z"
+    },
+    "SELECT+BEPPU": {
+      "placeId": "ChIJbUJT6sKmRjURWVAoCE00kDc",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqG7RfmmL409Li8L0wiS-RzqLO-BT2Cc0iJZvqd0g1ydw9L4dVmCEbx8XyfKc3Q-mmkIsnk4S4lNhMpEgHWgUM3_k_fzffCmHQ=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105184656253958295776\">SELECT BEPPU</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMtdCFcU0ITEi5eR-kILf3Ke-6RvijT7XfOczM8C5_A8e4c9ktaKneoK3QCG-3pRQB8vCjW4612gROyVNqfx8NJ4U-yzi-i2q63V_BUrAts9J0pbJeNj9yGsJ9xjq5LsytrrBw9-DxG-ij9evc=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115885725323461087908\">ddkinombe</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMo6rEfL7w3HB1la70gtU9cjAhUvM3A4_TsR6nLfAnGyj7_-o-1yqSY9BV68uS1ko_dDyavPJxiXb8hCdli7EXJ2O1PElt1bVNDTTu4zy3N9GG0aE8QD21d7O9tXG5MD2nqyKxRUVTm98GAhg=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/104118014681360204939\">高橋敦史</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMDvl16TZ_3ddAv1kBESF6iPUskttaLGIi5GNaHnH_A2d1UzBK5HWxlNbk0uWGjJWBeZA8wOQ5LigLr_UWEWjZl0ZlmzU_ufsjBKPP-JFhM7QlEA7ZnwBiRhgzgTKgy9T9zzd5xV-CZi_28=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115878840202630519936\">Yuna</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMDD1SUkQ95ODjKVXSuT2iI96-XKB9wepi72aK1d4mVnRK14wCPpI3AmoZeaBcdyxu_27Y2lUoB1wFb4pUqdBDwOFgUP1RkvW3o55gmsfJGuGRjsRamPhQzrt4k1ZTFjQGo3ckSPYb3pu4GTuo=s1600-w1600",
+          "width": 4608,
+          "height": 2592,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114717080003972609434\">bluejays 47</a>"
+        }
+      ],
+      "rating": 4.4,
+      "ratingCount": 62,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "古民家をリノベした空間に、地元作家の作品が並ぶ。竹細工や陶芸、アクセサリーなど、独自性のある品が見つけやすい。2階は展示スペースで、襖絵などを無料で鑑賞できる。お土産選びから自分用の一点まで、用途を広げて使いやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:27:45.374Z",
+      "lastChecked": "2026-05-12T11:27:45.374Z"
+    },
+    "SPICA": {
+      "placeId": "ChIJFTLnk8GmRjUROXWv8tsfbd8",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqEZvZfZFq8KcdsIKUXFSKZzr1wV1SqHEAoCSYnftP8qbSXUQjc7lNtCDVNBNcLbtYCEU_fFfUQjcOodP6VbLQl3gvcCFM8dpCM=s1600-w1600",
+          "width": 3024,
+          "height": 1702,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111536531436315211156\">SPICA</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN449dk4T2rASRBAfKQh0WZ4RT8gEkeTFZvzUzU9j7Tz_AcCJ4p2cnb0FXMR28V6kWMeBfwc3REYUuwxQkvyo4HJ11pt8fO0-eQsMNaNsOnGARAt3YqSfQMhrweAT3GzOde2bU2hkXL0Q3bpdg=s1600-w1460",
+          "width": 1460,
+          "height": 844,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114805536716294818475\">kao</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOPFT0jeCtrbtVAnjNt6bvxG2jbGPFANsU_oFls4dsvQw1lubGUT0NDF704Ro3MckfHrXXB46pX-felIq9qkgnZ_veQ1q3rLm7Ept4at8tpbAwm_5g3jNCr7RkgC7ER-h9Z6EfNp7D_P8tQ4g=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/108202593031105593992\">S A</a>"
+        }
+      ],
+      "rating": 4.2,
+      "ratingCount": 156,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "工芸作家の企画展や個性のある雑貨が並び、見て回りやすい構成。アンティークの什器を活かした空間で、滞在の流れもつくりやすい。価格はやや高めだが、贈り物や自分用の一点を選び寄りの使い方ができる。接客の距離感に触れる声もあり、目的を絞って訪れる方が合いやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:27:54.623Z",
+      "lastChecked": "2026-05-12T11:27:54.623Z"
+    },
+    "puno%EF%BC%88%E3%83%97%E3%83%8E%EF%BC%89": {
+      "placeId": "ChIJX7d3VeCnRjURXwx9_bbWa_c",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqEpVVFS9BS5WbDM8wX9FW950cgSIG81v2lKvu9efIANO3CeMpFcGjpd9ca-ikK77-Z4g79VRWQzHujBWOeTLNTzdnndz2r8qKo=s1600-w1600",
+          "width": 1984,
+          "height": 1984,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118273621781237038654\">puno（プノ）</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNvsFHaVmhid0KXrzIlAMKYRazwWnsB-zlNXFSrB5BzAUVyjLq5rnmcBNg_eCpPNGBn2aa51XEnipUvr9u0EG6-RmpOtuaD7gVPuLQc-_ScqRf0deDTJ013d677wsMV0b95HmY-jzTHdVyg26c=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115589979691760174586\">M D</a>"
+        }
+      ],
+      "rating": 5,
+      "ratingCount": 2,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "雑貨を中心に扱う、こぢんまりとした店構え。近隣店からの紹介で訪れる動線もあり、回遊の合間に寄りやすい。レビュー数は少なめなので、現地で雰囲気を掴むのが判断の軸になりやすい。評価は高め寄りで、土産探しや小物選びに使いやすい立ち位置。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:28:04.072Z",
+      "lastChecked": "2026-05-12T11:28:04.072Z"
+    },
+    "%E9%AE%A8%E4%B9%83%E5%AE%B6": {
+      "placeId": "ChIJ37SIttymRjURH4X7zhzYgUk",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNouRT3wItP5EOogGyIfSGvKx6icroRPJNZts3cTKeljFotg5t_8S_JXJ-_BFR4KeNnNW2ldM9E3nQmb_HuDMtmfVKorVs9L2wS3rczeaN4ml37ieHvNX1ZrH4FHlmezrqoBs6KS2Eik3fJU5EKJuiawQ=s1600-w1600",
+          "width": 4032,
+          "height": 2268,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102228924006252215677\">Liu Yizhe</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOxAW-La9ZQzWw4WTboVRlrvrceQPI5yxQKJ8UBeFRsshkA1tO_G8PGSRLQutKFEm3yBj0vAZCZkjiejy9jiuxVrll8Llqn1WrCeKuu5oTlzhcbX7ofcKyQ6P6SVrnr-o1gRPjNx-bNfv6Q9VW1_oJKNA=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107498595453655570440\">Hidehiro Fujio</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPrpkY9zpT5_FiSRf8LsoUI4BQ4WJRTbpK-FWtQSd72e0XIn4X_fS9KtRDy4ecNgsoQmqB-yQLlO8wAcf7ivkhCQN6MjaKGMyUCYrepek8UQa3n2l6t4qqb33TJdyCVofsWiphc7awzflrJj_c7TpPzrQ=s1600-w1600",
+          "width": 3024,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109042446935024946813\">まなちん（Tiktok「墓場のまなぶくん」）</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP1ZdQE48UUuyfm_Kme5IJBiVnVfuxi_k56CuBxqc2AzIH1EtZ6wNJ6vDSW6Qg62Fs3C7woRxbG1O_wgI0S5g4-rQUrL2BndQ8EjlbmQvpayM7isCdeeDdqFfwSjFEDMr4bF5_-YCE2_IMoQ-SXhw7OhQ=s1600-w1600",
+          "width": 4800,
+          "height": 2700,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102228924006252215677\">Liu Yizhe</a>"
+        }
+      ],
+      "rating": 4.4,
+      "ratingCount": 103,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "駅やバスセンターから近く、立ち寄りやすい立地。 刺身や寿司は鮮度寄りで、季節の魚に振りやすい構成。 カウンターでの単品注文が向きやすく、好みを伝えながら頼める。 価格はやや高めの帯で、酒と肴をゆっくり楽しむ使い方が合いやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:28:13.685Z",
+      "lastChecked": "2026-05-12T11:28:13.685Z"
+    },
+    "Pure+Wine+Bar+Enfer": {
+      "placeId": "ChIJVVV6U8OmRjURHNgci6HyleY",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqHqMBiyojmFG-boa-7eNWc2jFpVwrPeHHXYj-17Z56XXyt7ISLyyaAHGb2UCyoPHG52KVMN0uuZg4UvAVojrvZgMJ-raOB2o2U=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102678986506486536546\">Pure Wine Bar Enfer</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN4vuAhCsGCiHAZRE1UNDSQj0RMkCNncSJQ06X8JiyBDihkxvlwOGHuoS3dW8PcVJrgfZxwJhDdFf-8Ii6hc-QdIGQe7yom_ge0qqAJQoLtggdc_B1V_rGwSNLxv2jgpBHz1GQxiwGTQ0xeqA=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/113878520513695009401\">S</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNiWzpvaOBLaSiUX8bJxFQbmV29tCuDXgFRYqrYNpgzlGksvqfUgehsB5Sn1CD8MC5fjd758Tkil-KalAvtea-nHRRQRkZulP0b8WQP0AKWspl9jRVQyw9cyKpn7zOabPCxKLAlIGg-LCA5PWo=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102061007778780867578\">Bailey Eckert</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM7Lmr1bFuIK8Fh-y15bIlvNVynzRPSUdS_1_2SPAyyyUUzGWOuSMnmL-xmlISzSvTfyJkIJrItmYxC3q9siVPNXgDV9-Rd_gLeWapJ8-pdhrN2RkGKHEMyv2Ni50ByITra0Dk9SRTVcCH7xA=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101871653694116970562\">三浦崇志（八百屋んおいさん）</a>"
+        }
+      ],
+      "rating": 4.5,
+      "ratingCount": 50,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "ワインの提案は好みを伝える対話形式で、好き嫌いが分かれやすい構成。 竹瓦小路のレトロな空気に内外装が馴染み、滞在の落ち着きが出やすい。 メニュー表記がなく、グラスは継ぎ足し寄りなので、ペースは自分で区切りやすい。 価格帯はグラス1000〜2000円目安、会計の見通しは事前確認が無難。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:28:24.903Z",
+      "lastChecked": "2026-05-12T11:28:24.903Z"
+    },
+    "%E7%81%AB%E9%8D%8B%E3%81%AB%E3%81%97%E3%81%A0%2FHotpot+Nishida": {
+      "placeId": "ChIJLwbJ1DWnRjURKCUcdlTY3Ng",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqFqQcsL8StX2s1kDPabCBal832Wir2NtlMNphS1RbV0KlY_i-IdKTntq3LoX1IN8j88M2MFj0wgo4xPYzIa9iXVASNEgCLFglg=s1600-w1600",
+          "width": 4601,
+          "height": 3067,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110060176595569429416\">火鍋にしだ/Hotpot Nishida</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqHxDkWOgXrEJDRoHihJeLgogG3ZzIk5IVKhDyiihy25Iu92gAIV7cnexbG4SUNcMd2tXTVqYbxlF06yX-ZxqnYC-H0gOGlvJPw=s1600-w1600",
+          "width": 4704,
+          "height": 3136,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110060176595569429416\">火鍋にしだ/Hotpot Nishida</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMHCw7TGH-zStvOmBwa_RRGYqSFBuqIk4XTGKoOr23QZnpv8zK_JKA_GYMWl6ZtaH5ZYh80Pn7OSJF97gh7Cv4s362YIJaXrdKCGN42rJqYbSdDHe2SHmvqryvJoIpaqp9kjJA8NEHwYij3DVm_xEd-Xw=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111975665770736123390\">キルチョンヨンイ</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMDD3xxVpED3FbAWqpIJbNMUjJXZjRXQAE48SJs8W8lq5v8kG-mkQszNeMRXF_VG5SbRMQ5CEEgMz3pVpS9FaU6ePZuKogo_Ch5AJK4Xp2u2lonIGNcif-D6NsaNhNufe9qsjBCg_NujOl77W6uyIQLCw=s1600-w1108",
+          "width": 1108,
+          "height": 1477,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118066889422135579803\">Taka Taka</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPGHsAjmTixn20YxIppXC0GVRH30M8qKBnIeh05TfcCw8_BDD-vKGQrkb7tx7YkUN8EPIK7KbKcF6oVNCYkERpivdJD4gLhf_T7V4CRLw_NrbFeid5IYPS2jYkhIXWPSegGi-XKKow171uvcS4=s1600-w1600",
+          "width": 2448,
+          "height": 3264,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105755696394783043380\">Gug Byus</a>"
+        }
+      ],
+      "rating": 4.7,
+      "ratingCount": 109,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "スープの香りが穏やかで、辛味の調整がしやすい印象。 照明と内装が落ち着き寄りで、滞在の時間配分を組みやすい。 タレや具材の種類が多めで、好みに寄せた組み立てが出やすい。 予約済みでの来店が無難で、見込みのズレが少なめ。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:28:34.017Z",
+      "lastChecked": "2026-05-12T11:28:34.017Z"
+    },
+    "%E9%A3%9F%E5%A0%82%E3%83%88%E3%83%B3%E3%83%9C": {
+      "placeId": "ChIJ90gCx72nRjUR0y-TJMiF4Gk",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOHdaHL1TmsmzigwFOj_PD1JzL_Qnch1n7A6Z5ZG3E4A90V2tqARQEzez8HoDovimEfeB7wxcoTZR5_8TFt67M_byucLScPWkxhn9r9VTu6qPgSlSocAavekHUkJfD0d-vN75hqc_-de-vB7zEs87yYlg=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109497698336050858202\">温たま</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPJpchoTUnBxya_iGccZ4eLzQOI8TTwN3G2ygS1MDzgfq6rlmpOgi6HIUmM9raEU3eP8jT8qvdjfGvUEZn0WB_h_ajn0JHMsqejUSGBuNsLwBPHMOEvxHXKriQSdE3mLLXPZwg7Cj3Q05_iYz-xeXA9=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114184848976958437618\">渡辺丘士</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP32m0pVQWacMYIF-h7aizFSDi1I3VTafb1yINDU9bhALK6jRbG7dC9oq3PyVZLJ4k46EP47q_q3RQxLWvwjySOIqq6mEiC8_FjnmvDLlJ9ISMBRhCxlQ2VWmWnaJs3W4706RRQcGTpDrKGO6jiPhXIcQ=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103546119919776140184\">mia lee</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOOzDzT0Xqhm_idt0xH85NIFokmhLu5jh9zddkmHUpmzl1OgYBmVRDGRL4zJXJw7Xu8lY3r1z4Ns5XvWDlEeEeS4_psbIGQF6bkI7prXq2yy0VWtyuAm_ZDSraD79Z5QbGYGrmORqSBaV2X_HI8R2zh3Q=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115712465911991490850\">桜丼和寿</a>"
+        }
+      ],
+      "rating": 4.7,
+      "ratingCount": 26,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "食堂と名乗るが、実際は小粋な居酒屋寄り。コの字カウンターで、少人数でゆっくり過ごしやすい。刺身を中心に魚料理が厚めで、日本酒や焼酎と合わせやすい。支払いは現金のみなので、事前準備があると安心。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:28:42.941Z",
+      "lastChecked": "2026-05-12T11:28:42.941Z"
+    },
+    "BEPPU+HOSTEL+%EF%BC%86+CAFE+Ourschestra.%EF%BC%BB%E3%82%A6%E3%83%AB%E3%82%B9%E3%82%B1%E3%82%B9%E3%83%88%E3%83%A9%EF%BC%BD": {
+      "placeId": "ChIJ9UVh8sOnRjUR-1OftTmOFa4",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM1xW9cK0KnqB-i91juAv3i3elsjfExN-maCt3reyPGEzVZ8fqpzRFl7EUhgfCjf4ZJ-nnO4acVocryFodqlxIj-Q9aAjF82YVkqs3rn-tXfLihlm5SFYCLrg_pgojFS3NeUi_D7J_irERb8Q=s1600-w1600",
+          "width": 3264,
+          "height": 2448,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/116201432985324003696\">フードアナリスト赤松</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP4Kh59-AZITiyAS-HmLdFxTZiwe3lSDdVqbfJFemmQ_vL6OrSCmRTFwAJskqXIZZwF4KWFOZiE8zE_3WYoBF_CDwdqEjww0MGcTsV38K2tjiyodTcnl3WSIpFR7Kq0d_j0e0NTO4kfiGVhow=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117119805152386121623\">白石洋一（yoichi shiraishi）</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMT0D5xi58l9PkE1BiBdoxFSJXWlyMHGUeEUS_4b1Tfv17IxnlN0ufutr-k2NoYC65I7uGjpijFEb50Zt2DBkgDFF-oLeUTljSFRqHcKN9TTuaz1WonXNHa8QbxCb5aRk7DPBVBEhnBCWF0vOo=s1600-w1600",
+          "width": 4800,
+          "height": 2700,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109497698336050858202\">温たま</a>"
+        }
+      ],
+      "rating": 4,
+      "ratingCount": 76,
+      "ratingMedian": 4,
+      "editorialSummary": null,
+      "caption": "商店街沿いで夜まで人通りがあり、立ち寄りやすい立地。共有スペースは広めで、滞在の合間に使いやすい。BARの回遊もしやすく、夕食からお酒まで一連で動ける位置取り。レビューは設備面で評価が割れやすいので、利用前に用途を絞っておくと判断しやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:28:53.421Z",
+      "lastChecked": "2026-05-12T11:28:53.421Z"
+    },
+    "%E3%82%BF%E3%82%AD%E3%83%BC%E3%83%88": {
+      "placeId": "ChIJrXhFSaSnRjURIlIKVDt39Rc",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqFzSqNrfjUs5lz_FWarXlRCMp3tTJipYzG5QdYTZmhTq-Ddhi3D8VNIJuC9IQ_RuBKpzRkEKUtgtQr-vqTZXs2whU8SoEMwICA=s1600-w1440",
+          "width": 1440,
+          "height": 1920,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100955826191645873582\">Takito</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNz_WA1ZEhmvLBFZLMqJUg1f3snAfLjKOg5Qt1wmVD7nwKUxLmy5Top3-7fXUWip_3DRVvG0BytviO-iYZZGGk3T_rDG7sk95vLtUIPfLO1bBE0fuQf7WIs3NJE57zOgoKZdcbI4Ll-PvcE=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100452309360548278370\">SHO UMI</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPV9wEeJFBydLrQrH8-NxD6OXA_DnQk9oW150YcM0h3Xs3so_NxnpQEooxC_xh-6HOGbf4PhhDgkcpAedaNuqnHJdJbu7ZbIgGm15DsP2HObzcA3JJY2zjO_3KpJZdd5xFkv1CLiGL6b7Ezj38=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100452309360548278370\">SHO UMI</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO5At6Ekgju3neUfBUKyw7hmt4MQ0mhbRB32w98LrxS76h43Jeaea_Q8KHOTHVD6wkex6VyXbV5nJsyDuHXTtB3ES47uVUSHyL__5f65opGHWQePwBPQo_Hia_vby2Aq5DeBgDzLuDCgso1tAYE7sAj=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/116436226882507516445\">naman khator</a>"
+        }
+      ],
+      "rating": 4.6,
+      "ratingCount": 62,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "本場寄りのメキシカンで、スパイスの香りが立ちやすい。タコスはジューシー寄りで、辛さは控えめに調整しやすい。テキーラやマルガリータなど、飲み物の幅も取りやすい。留学生も集まる空気感で、賑やかさは出やすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:29:03.540Z",
+      "lastChecked": "2026-05-12T11:29:03.540Z"
+    },
+    "BESAME+MUCHO(%E3%83%99%E3%82%B5%E3%83%A1%E3%83%A0%E3%83%BC%E3%83%81%E3%83%A7)": {
+      "placeId": "ChIJuxT9woOnRjUR99uWyfi3Tho",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqGToaz5sifShNXtUkxfUtnUmPrGCkO1qvJuHXbh-PBYADAn8QNqLtkaZRw4Hawz83gmVK1V1nnx-_cGi39Mti0Y7bJJesTLpSc=s1600-w1600",
+          "width": 3000,
+          "height": 4000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114539472982476205829\">BESAME MUCHO(ベサメムーチョ)</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqGFcqNNPNGQZuftT9rDwSGN_nSRP9kVrsvcilw-P1h-fuND7UJyJwkTjz721plQTmiY2r2icOesicJ_WsPk9wf3HUHpcGGcCUk=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114539472982476205829\">BESAME MUCHO(ベサメムーチョ)</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqEFrH8aSJLFtO15k8iNYRf49AEr46t4TGK0JQsSIlGcKWbegxyyyRvzfvfpKSeYMRFm3ri2Q9lnJAZ8tvBDzEecqfyuGj1HCDY=s1600-w1600",
+          "width": 3000,
+          "height": 4000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114539472982476205829\">BESAME MUCHO(ベサメムーチョ)</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMDe24lW1r9mSQ4_uC-6p-dg6einuq9N64s4f8E9jySlWVt2YkKtpvL4yNbS2ZRb7j-OPKbYYNAdxAqlaJEjChBPtEjlqLL8Y0I-LZeGo0qJlxpInHd_ZW_Kdf80nclX2xxtm91OtfiSMIfs1rJ5pps=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101792303331571549182\">Yuki Uemura</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNWE3-69IUwLrhTp6sTwKew17qaamimmjUvZu-8EHwCeOs7TCKjbH5Ll-xhAtY82r8FBPlLy751olw621M2Qgi3e-kjEjwptp3DmtPALpcNOYV8qDQhcFhW-b1FjkMaLr_lswTI91rRfUPTBztXaaztLQ=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109615464410479342740\">piyo</a>"
+        }
+      ],
+      "rating": 5,
+      "ratingCount": 30,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "タコスを軸に、店主との会話も楽しみやすい小規模店。高架下付近で立ち寄りやすく、夜は酒寄りの使い方もしやすい。自家製のサガワコーラなど飲み物の選択肢もあり、用途を切り替えやすい。枚数で価格が変わる構成で、人数や食べ方に合わせて調整しやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:29:13.282Z",
+      "lastChecked": "2026-05-12T11:29:13.282Z"
+    },
+    "Beppu+Sake+Stand+%E5%B7%A1": {
+      "placeId": "ChIJjVIdQK-nRjURt-ZpU_xvUOc",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOR5zVoT4AyKlObBC4y77IaSRWm-SpL8Ie2mlx34JudxNzvNJwAjvbYs6GRITwS8EWerKdzept2c2N1d-pZYZ5G3FbL7pqWsyQNAJSZ1XvUVyI3KPr8YKsOMxSsX6IHHGxyfg6XjmZxoKlrCo8=s1600-w1600",
+          "width": 4032,
+          "height": 2268,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115881819993680755968\">Masa “明智” prime</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP-BMrXvFCCGL2z0KzQTwe9khrfWnzbGl3QO8bZcDFqz4U6BitAd_t8zcuEkv-ElRNOPJlwQL2g_YzfgKDQc0gWhk2bjMuVfSBxaRqX61MPUACS5Myu3Q-wvZUqOmjY4utRrXjJhuPK_iSNCQ=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102507114076500227643\">yk kim</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNxbjQUJIs4A5hlPK4yauHH08iLH5gWCwr_5tMJ83eRSfUW4IzXANDryuTeqQyXffBwO4YkSMlX3aYx_CwOfRaoVeDL4-i5o1TneInAHNSBFsH9VpaOgW-zO2So6FB9-RSDpSNWo_XFgvA8sIQ=s1600-w1600",
+          "width": 4000,
+          "height": 2252,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114860744445817369379\">Steve</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMILzpObWKmoCavKd70L_QNRLJqRuHyz1xBqghDFOIas2pTF5cuPWB2zSSWkvzAM4e-lt6NoTaxkOdorKrYk4DpvTqdU0KNRbnrtlu61TekI9LhWZzx5egPG60KCFK_cvj1WzyjjlacfqX6hQ=s1600-w1600",
+          "width": 3472,
+          "height": 4624,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117680394682585705283\">N-a06</a>"
+        }
+      ],
+      "rating": 4.3,
+      "ratingCount": 220,
+      "ratingMedian": 4,
+      "editorialSummary": null,
+      "caption": "クラフトビールと日本酒が軸で、ボトルワインも置く立ち飲み寄り。キムチ系のつまみが揃い、酒に合わせて選びやすい。店員が銘柄や食材の説明をしてくれるので、初見でも頼みやすい。常連の出入りが多く、活気のある時間帯に当たりやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:29:23.883Z",
+      "lastChecked": "2026-05-12T11:29:23.883Z"
+    },
+    "NOODLE+FACTORY+LIFE": {
+      "placeId": "ChIJN97BsB-nRjURVhK1RJoi03Y",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqG0XvuJlSn3mUeVBXI1ceyyE-smcDYPF9rlwGdjk1a3Fy7REy6L6ZNUDUndnbzpQdMJn6f-8r9AlZJlCIjumnwlQF3b-A-BCTw=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100419857400502536903\">NOODLE FACTORY LIFE</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM8IKSe03nmnYzjQLJZNDZWG4ddiEZMHQEEWkx_sZeQ0LXZo8LTPTnLkneFt8SAv-4pBMna4VHtyDTZluFNjY6Xd6PJ85WZ_QeSfgSgvRfP19oeHlvPIwfouLbfw9ca8AUudAjl6TtcAeuk0Dwq1Bsh=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109113132780836894119\">TANUTAT TAAY</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNKTOrdM8UJkEb_69v-To8g89M3ElcjJg0jhPkOBGSfC7EdGqMaxrq4MyrcrG59o96SedNFQh4wJRGsmgyBfiAk6pzjHcoitX1qRf76qbXkOojdWKJ8wTwIx10yof5nTD8APeFzWp_ADll_85zfLdUJUQ=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117492636897541542471\">김은경</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNEDFuPBtqJDeyHIVUQQ5v8G-LyqEWQXpEC-QVGxbt4KI2SUViKl_eNRYlZ7An9k_dPRqaWcVhx8wB0NcwVWbmYEpnEAIx88306A7tcSAY7rJVnItk4jZW1ergQqOy1z_ZAcen2dwjjsp-KNSwQ_yT7Eg=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117068352375087775385\">E</a>"
+        }
+      ],
+      "rating": 4,
+      "ratingCount": 633,
+      "ratingMedian": 3,
+      "editorialSummary": null,
+      "caption": "担々麺は黒胡椒で辛味を立てる構成で、後半まで飲み進めやすい。豚骨はクセ控えめで、あっさり寄りの仕上がり。麺の硬さは好みで指定しやすく、券売機は多言語対応。夜からの営業で、外国人客の比率が高めの落ち着いた空気感。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:29:32.677Z",
+      "lastChecked": "2026-05-12T11:29:32.677Z"
+    },
+    "%E5%8F%8B%E6%B0%B8%E3%83%91%E3%83%B3%E5%B1%8B": {
+      "placeId": "ChIJ9496tsOmRjURwXsXXKER6z8",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOs-tyhuTk21J20hprhkAGBLP7mk1Oa8tAw6BZKVncCRBS_zuYn4N2qH-Jaa8KMKpP5DPbcp2FC6LRQ3ZnThVAXvPFC-oGiCILZ7UqmKPeF2A72CZnRZLgkzxeRCUQWxxYfFRxbiqUoQOKnORHahfQIdQ=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103680459464423822444\">さかけん</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOPtMyn37qeu7HOwEB42xqQXvd8_DhrVIGWKX-xTHUEAL0uA1OQXCkEQI8DhgFEm6TcbAL78JNGT3ijjSPpDYDmcgpPD8k6XLvLmXOvzlZz_tjDjpM0lfjxbpcOVyk9PBmcmw4BSrz-jrfsfA=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109830556705488327066\">C.Y. 瀞</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMI4JRjMlNiYmOOtcQZx1tJTVzImnJqTVqwXq1sVDM8_KLOZyZrl2152TC--pkgY0uEa2QEeEIriPj01HVvwSpJPd_wzsqgsNTNBeBPYU2-NxtrzghoY-A2VOLci9MR_PENcYAD2b0U02nz4B15KmlA=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103158393281374859690\">新藤</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNndijesEBU_E38FwF2P10rjJ3HtcCieypdg2OM9d2hsWnnHB3SSLELFya_ODvhoXN4-KvLvSaLk4PQHSTmLhpFDluNod8kUlCA_i9MFDiSkRG1c-_kYm93evy7TpkLqtO2aK-_QQatq9tfADg_LKU4Tw=s1600-w1600",
+          "width": 2953,
+          "height": 3402,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/104962408151593490679\">muu</a>"
+        }
+      ],
+      "rating": 4.4,
+      "ratingCount": 2384,
+      "ratingMedian": 4,
+      "editorialSummary": null,
+      "caption": "焼きたてのアンパンは生地がやわらかく、香りも残りやすい。並びは出やすいが、注文票を書きながら待つ流れで回転は早めの寄り。小ぶりサイズで、種類を組み合わせて選びやすい。レビュー数も多く、混雑帯や売り切れの傾向を読み取りやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:29:42.202Z",
+      "lastChecked": "2026-05-12T11:29:42.202Z"
+    },
+    "TANE": {
+      "placeId": "ChIJl3vdtfunRjURTgEIEEhAOnE",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO1TM-BcrH1cE8Pxlkf-h7KhD3deoT0wz5nueuAI-16hYYCu0vzSHVK676sfMu9CwuzZbOntBNvk7Yb_NAYgRrK6_ItNM1r8q1-dAFfe7LMCQ5ibFoXXAaHSN6x08Yg2gllitEizHKdy-Y2PA=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117404597035066010771\">マグロ船長</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNkpsywLbWsSNmDPmOIirbbgqOgqk4XQ8ihvpUlk3V3vbQ8TnNAEZc9K4GFIfMdS02zOUehroAbYZn_cKLAh2sM2yRTQLxXeL2FKVY2juDkDlaOLWL5isSdgZIk3QWTbZI6WA0mjp_0KJp7qAa9lPEEVg=s1600-w1600",
+          "width": 3024,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115791780512938439838\">客野由美子</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN5uha7FWkYkbcZKXzoEwKLT8eWEeXZmXfz5Uj9GhNkedaRZDD0oXchFFiRmnoSau8Wvcm8pO0-R3GQQuvUbiez6ekdNzHTQxpuYrBeVqk-qGJ6ukL4hMv_2rCCCw678e8yZxH16afrFiH8tSptdUqe=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111472370376767632994\">Kiona Mayatsuma</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMOkcZ8Ulpp92mSdRtMNKS5jk8OA0LP1zlYfcXAZEPA7oP_tipOrmW_9DavayoBxxzaVjGBcKW5AhnXx3qZHe_n5rQEsN5b_fRA3HrVzbEdwa4SuCfAlHBeC2M_0__SGDeXB9nwbmH4Z_cM=s1600-w1600",
+          "width": 2772,
+          "height": 3695,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/113407644304538496404\">なかちん</a>"
+        }
+      ],
+      "rating": 4.6,
+      "ratingCount": 202,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "プレート形式の南インドカレーで、副菜とご飯の構成が見やすい。サンバルやラッサムなど一部はおかわりに対応しており、量を調整しやすい。日替わりで内容が変わるため、訪問ごとに違いが出やすい。人気店寄りで、待ち時間や予約の検討がしやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:29:51.199Z",
+      "lastChecked": "2026-05-12T11:29:51.199Z"
+    },
+    "TUMUGU+COFFEE+STAND": {
+      "placeId": "ChIJGX5BsRWnRjURKHhqjz9wKkQ",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqHtYW3KLzk8cynKUQmvtvQkzKF1Up7lEmktq3UYRoKa4AvAIIW33mAoW-mSKoxrtaJdctCjbiLkBy833-3S-uZfXKkYi0vKSiY=s1600-w1567",
+          "width": 1567,
+          "height": 1045,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117482090716374214450\">TUMUGU COFFEE STAND</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqGOLw19PgtYcQ8HlNSvrrV9v0rbCCeJZ-EAYyiuNCNYZU8OsFjV8Ee6PiAW2dEKe3OtAUrIbqqltZpGg4bF38bVzO4ZqaPoRxI=s1600-w1567",
+          "width": 1567,
+          "height": 1045,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117482090716374214450\">TUMUGU COFFEE STAND</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqEOlJf8lvSusU1w31u7DFUHOU7VjCJzvHY4PGtudHuGScZ15VKMpKI4aT8cOQItxjhdwL7dEcTLTS_kpi2KxvuSu_cNxSt29Ak=s1600-w1600",
+          "width": 3200,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117482090716374214450\">TUMUGU COFFEE STAND</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNr1G6sMXCipbMRdy-Dv2BPiEzq033vyJNGv-6TDmQ-diTqxSZzyVwJZ47OU1gyH9RTCzfT8aS2VZCo_xnlQ103fZC7HqeG5zWGFbBkL9BD77j28RPtXq-djy64lLntFZCtiDx6x1nwoKwY-pis80OH=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115642417954014392046\">Izac Ng</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMXr44sfeX1ZIlcda6_BLZXEAVDx90MhtIMWVj-A_n9qiKPer0uPm5mbDplmJO_wR4_eGuDOIfYMQltdvAyskTta7h252TNNqWzJAv5r1MysYVO6_aXbUc6GK7iiHNoKWSZWSryh5EMQ9-3WZIWHnJ3yQ=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/112811367864268581280\">Sergio Díaz Jiménez</a>"
+        }
+      ],
+      "rating": 4.9,
+      "ratingCount": 142,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "駅近の高架下にあり、朝の時間帯から立ち寄りやすい。シングルオリジンのコーヒーが軸で、目覚めの一杯に向きやすい。焼豚ドッグやプリンなど、軽食やスイーツも揃う構成。混み合う時間帯もあるので、滞在時間に余裕を持たせると使いやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:30:01.517Z",
+      "lastChecked": "2026-05-12T11:30:01.517Z"
+    },
+    "Othello+Specialty+Coffee+Roaster": {
+      "placeId": "ChIJqc8Md8OmRjURVOxuTJpyluc",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqEBBbCkRaOuI8xLyQ4hXTvzodfUYADab5QNCIek2H_CtcTart55kOPm7Ud8ZnyjSA3shNz6PTW14bk-4NewO35dS8C4WIN7n0k=s1600-w1600",
+          "width": 2448,
+          "height": 1378,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106670418962600286642\">Othello Specialty Coffee Roaster</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqHzryP00dFE8useoCcApF7kzehWgO-5ToeG60ElfefbxzbWIhIn40cbjWi0sk6ELEdOz4olb97ZXANKce1Kgrs8In9JS7AOIP8=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106670418962600286642\">Othello Specialty Coffee Roaster</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqEqpy1uUpjx9jQ4Do3MjwutXdq19Q96SWhHTx45i73FH7iw6AH1e92a_XzRM8yXP5qs8HmtJYtH6rTKsVdImGYRaktBqRZs4BU=s1600-w1440",
+          "width": 1440,
+          "height": 1800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106670418962600286642\">Othello Specialty Coffee Roaster</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPAX6Pb6DmSlvxjj2xgeflcOIy-PtGgEXgII_TzBi_LZfxkYkzlc16YUBwTbWQCLmP01TdgWTix7T0o9_eVLW4l8VwW4j6wmM2-RND60TVp-ChJbN2Yl_QXaTMaY1nU7aRhSyfC1gVk28vWI-A=s1600-w1536",
+          "width": 1536,
+          "height": 1536,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/113365136413663409432\">Josh T (Makinjosh)</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMWXk6cWMuPxYC2RR_Djy5jwkqDZ-HnmBirWV5IPWKqA72Xkpu12dCIwI8UyclQacbeK6cjBY7o7nryHLEaGBEPcfAQ5pzdVIiRpyEMby7R6jMR7UC57hzuhB8-R8eMeGvLucQ5WByWZYbkTew=s1600-w1536",
+          "width": 1536,
+          "height": 1536,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/113365136413663409432\">Josh T (Makinjosh)</a>"
+        }
+      ],
+      "rating": 4.4,
+      "ratingCount": 91,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "浅煎り中心の自家焙煎で、香り寄りの一杯が出やすい。テイクアウト主体で、豆や器の物販も並ぶ構成。駐車場が裏手にあり、車での立ち寄りもしやすい。提供メニューは絞られているので、目的を合わせて訪れると満足度が上がりやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:30:13.389Z",
+      "lastChecked": "2026-05-12T11:30:13.389Z"
+    },
+    "TACO+NARGO%EF%BC%88%E3%82%BF%E3%82%B3%E3%83%BB%E3%83%8A%E3%83%BC%E3%82%B4%EF%BC%89": {
+      "placeId": "ChIJ8UYJTwCnRjURaIUvLS0bYMM",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqElUuLSOM9kSXAMABFO5iZw63XW6Dvxw-JhN8UCr2cVvsD_-7CC-MW46dFAXoy5ugqsKJKaNluJry6IrOTmLP-6BSRPYhFc6Uk=s1600-w1600",
+          "width": 4526,
+          "height": 3395,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110340979166565542624\">TACO NARGO（タコ・ナーゴ）</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqEuKLnTXJKfIlALaKOjJnm-Cn2wwBoc5F4Nh2Vc5PN8nefIk6-YA54qwjefcljv6DRbPl7oO65S8UxyYPWHJePB4wYToasHKi0=s1600-w1600",
+          "width": 3599,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110340979166565542624\">TACO NARGO（タコ・ナーゴ）</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqHmsP2cYiAkIdIl8DXxjf5_qjl2kIUZSD0CaYOcbbUD7W9EkUQyig3OBEKmWdz9cTgDHYpRIS2doqTYPFDOt3j3oRJ6PvGVc3I=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110340979166565542624\">TACO NARGO（タコ・ナーゴ）</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPDNj3Nqbd9c9lKPlkJgXvQPG_WLO9O6EvHHPh-Ts_fdQZZYh8Cl28pwEFwRMM_cuoz69hTmWIDvWI56VPbV0E5orbajFM2mr4TxyCH4u9Xg6lUS-lK5o88udignNG0PKuJv5rhi_O2BRKrzg=s1600-w1600",
+          "width": 2000,
+          "height": 1500,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115354975863354094277\">ミッツェル</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOA290H3nmHyGsc8YN_i2-UEnI3afjzLENJWF3btaGB_r4mX_UbQ1uIuarYC0ApYf7jcVGGexi5OBknIu5Li5VdnD6tL6hozB5XU5gEddhso5scMV0hTXTT48Hut6BXckbYkdTW55x9qgFJ26zi9UKZ=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102103383759259159245\">田中一成</a>"
+        }
+      ],
+      "rating": 4.6,
+      "ratingCount": 63,
+      "ratingMedian": 4,
+      "editorialSummary": null,
+      "caption": "本格メキシカン寄りで、トルティーヤや自家製ソースの満足感が出やすい。タコスは3種盛りから入ると、味の傾向を比べやすい。中庭やテラス席もあり、夜の長居にも合わせやすい構成。評価は安定寄りで、ランチから夜の一杯まで使い分けやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:30:23.191Z",
+      "lastChecked": "2026-05-12T11:30:23.191Z"
+    },
+    "Bistro+le+jiu+%E6%85%88%E9%9B%A8": {
+      "placeId": "ChIJb0l6yz2nRjUR1sxl-25bEUA",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM4bgjWJvapqz5r5_0z9QTspK_DGCHBTVFjmRPCmOGnlqI0VHrMIHN1Y3XCyFxadZE9V8Jx8CuTt13DXK7pAHV4NRAe1NECYDwRzG4_y7fXMpkqc9I1leHXzcSE0TLhHkvbdet7uESjxmgEnAykLwGRUQ=s1600-w1600",
+          "width": 3072,
+          "height": 4080,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111202958880257781705\">yo ue</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOGyrW4gmFU5Nw3HLdnGx3IXPqHLOzKJi-oXQKEd82a6LilXkN8lcjrHh0Dt2tRZiWd2ZAvoyBUM1CnhvLLfELnZcTbhK6l4zfshUgIRpOvVmHFqkvK9lhFvzGjOOqyCHDK9WK3tf_0lC5z=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106763252797364767922\">り</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMv4wGeXD2kjDzhnUczSXlAiOF9-343PFDk4B8zeTktsQazmThryfjs0jVGodtd_RNTgRXo8f8GwytSuuFubaXOIJ6-65EzoGzO4Uw0QffpH9_YrfwdSkxng7OEqUj28RKb7yqochxOE3SJCz5ka8cl8g=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109953001625135702378\">My</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOkIluWgwekX1tr_EkLCNYOt5MtCYSnxYm0rHnzWWtCMtk7Ojwswcya0bvxDlqS7p6BFqTPF8rJnqjVo5PR4kN_6764RuJXyAmEtIX97JP35DIg8x_AL84PFu7LvXWIB782euiGJnwbnhF3_O0MbP-oWg=s1600-w1600",
+          "width": 3468,
+          "height": 4624,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111227817776547641534\">ひろきん</a>"
+        }
+      ],
+      "rating": 4.7,
+      "ratingCount": 65,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "カウンターのみのビストロで、シェフの所作を眺めながら過ごしやすい。前菜やフォカッチャ、スープまで含めて構成が整っており、コース全体の満足が出やすい。記念日や落ち着いた食事に向く距離感で、予約寄りの利用が安心。価格帯は手頃で、グラスワインや県産クラフトビールも選べる。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:30:33.050Z",
+      "lastChecked": "2026-05-12T11:30:33.050Z"
+    },
+    "%E5%96%AB%E8%8C%B6+%E3%81%AA%E3%81%A4%E3%82%81": {
+      "placeId": "ChIJSatcztymRjURHkF5GOR7bvs",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM1GDc28gHJgPEosJp18gVGl3p2TT3BpoDjRFlkuWLMnUv5NdZKn4uMRfaMuL2JcLPeDCYLVnj2MBlyK442o6DxlVG1IO5_Mh7HRUcf04o0nsQlKAdjYLaThE4Q73QA0zYQsY437wBzhIwy4oM=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102296768998733910346\">ピロ式</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPYQAKx84cYlMVmcYc2GWmxBDb-c8RdDRI5s3p_Wo3v20Rdmap2y-2Gx4qzz1MLNHvhibYKPgAgOC_MreWbCD0_Wyfc0QeaIQ54qlkFoez2MFozQ3-pzNgfelBmdzTtZFHAVtqkX4Y4unc3WwjCqga_Tg=s1600-w1600",
+          "width": 3024,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100268537275117230582\">meg</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNCPzchb6H5LqBGfK4TIcfBrPRf2fXztiX6NdmitPiB4KZ-qEe6rDuavVO9FHNQ8PwXBedEID1j7JHkz9xnH9Agp-rVDYyoHiYuJH6mhAqbfEZWp10zD7HrvAzXrYLGOX4sS05cBITtfQxdAg=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115053272193246203751\">NoMusic NoLife</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPEQSAewzixFYBKMjdRhKdnzHLGEfvtKVU8Wz7wXlLZv9RRv-YTUqkmdCfPtxhru-0ZZobbzN5OyoIucd74V9R_ajxrktK6BQqziwV0nsPsoup8h1QFEm6NV3BOE7caCsVthPkOnfodHIWZBA=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115053272193246203751\">NoMusic NoLife</a>"
+        }
+      ],
+      "rating": 4.3,
+      "ratingCount": 252,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "昭和38年創業の喫茶で、レトロな空間が滞在しやすい。自家焙煎のコーヒーやたまごサンド、トーストなどメニューの幅も取りやすい。営業開始は11時台でやや遅めに動き出す傾向。評価は安定寄りで、雰囲気込みで選びやすい一軒。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:30:42.592Z",
+      "lastChecked": "2026-05-12T11:30:42.592Z"
+    },
+    "%E5%A4%A2%E3%81%AE%E9%80%94%E4%B8%AD": {
+      "placeId": "ChIJq_DxRWOnRjURedD2aiuglco",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPvSb9FL-TmcLg40bkaLmXkdLHLeTfUEUiG2hFEKLnMRjx0vJtZpGZBKe64ZdPTSTdOhVlDCZ8ILST76LMBtXUhOdcAl6TtEwLyVNebngVzTPbP0G45JWi4aAhqAOFH0G34jXbhuelcJP3I3Pc=s1600-w1523",
+          "width": 1523,
+          "height": 856,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115321525962251125422\">夢の途中</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOtJSj3zDVgIdEUzjX627EE59LmmtYERO-rdp77YzvCcO2Iset7zxE1ZoPkh60OYotDWOShVfNFiBBBJNkHNHQiyVMFlRKZ7tISnl-yJPxx-qETMJbrymDyJrygu2r5HV8qYIxuiDGQy3g1NRbvxmGA=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100687924017163942456\">UTAN506</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOgIx05KoZHwC-HgWsBWmuH6YJC0bBPZX0nGHhMZPK8_ybSbcD_A1hX4mHisSOrR7NdD31WTzeac_kmSU37z61IxcESU2OvTCPkqkm8cwPB2UYmpCbH8GUVqnayPygmZHnxN7Ybhi-zrCop0A=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109958123730896589697\">深田高史</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN7X83xhY2v-Y9XUo-UiNau1e8tpHYMFGyoX9FEb8dry6bGXCUYwPTqSG4J1Faj7s9XakdFcWuAfH1AgHMkTtLHeRszkDTFHeerxtvmeHQ5hWCofg_Ws2gXX7Doi2BBaXrzKt_7EeWyULfSzw=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109958123730896589697\">深田高史</a>"
+        }
+      ],
+      "rating": 3.7,
+      "ratingCount": 374,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "二郎系の構成で、ボリュームと濃さが出やすい一杯。券売機方式で、コール前の流れが把握しやすい。麺量やトッピングで調整でき、初訪でも合わせ寄り。評価は高めで安定し、見込みのズレが少なめ。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:30:52.735Z",
+      "lastChecked": "2026-05-12T11:30:52.735Z"
+    },
+    "%E3%83%91%E3%82%AD%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%AB%E3%83%AC%E3%83%BC": {
+      "placeId": "ChIJ_ZV5Bz6nRjURjmVYbUbioRY",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqGJ2ADQvgpniSuhcdHF0B-olCoO0zR-O_4fCBKhShRUz_s0HE6vBGZ9DIAqD44AhzlyzZGKqh1xMT3OPbcG1RAfJ7aUuIhYQr8=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115489938266482640289\">Halal restaurant Pakistan Curry</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMu0KhV4J_420oe18wiqcqhJdZaDcb6E4p2prMbAIbNNWm3xZbEF9cCAhch1QDVQ3thlJkBkRBSqA9ZMaihM-QENrEn9p_TArpggduEkbBl6evGSLuTdtQt9xzAVrI7Gz0nGwrz5uWK9w3rTMDWCdcw=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/112891054812355300466\">アロマミンピ（アロマミンピ リラックス&amp;リフレッシュ）</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMoJeT8Q3lRjVJk7pYUz2-Uv6FyB6XvDgNTFAmPq26IbTAYzLipCdFw0_q7P-IkWIYVjHl3Qq22kZpfKoTgpmt-xlpnahhDY8tLwTWkn8iPPMv3hZovV3ZZ-R-EEJgxhzjLLkCAbIBQf1OrZw=s1600-w1600",
+          "width": 3264,
+          "height": 2448,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117057591348292149971\">S “MOS” M0</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqH6D8uFXk1UnHoZqeQJ7R44D9gkNnd14onVenQotiqtUOT3G0koqAWV-5vz9q-20asS6SF0hUag2-YcTVAMiVPqJ4om8FsPDB0=s1600-w1098",
+          "width": 1098,
+          "height": 1019,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115489938266482640289\">Halal restaurant Pakistan Curry</a>"
+        }
+      ],
+      "rating": 4.3,
+      "ratingCount": 166,
+      "ratingMedian": 3,
+      "editorialSummary": null,
+      "caption": "バスマティライスのビリヤニが名物寄りで、量はしっかりめ。 セットはAとBが中心で、曜日でマトンに替えられる日もある。 水は常温、支払いは現金のみなので、訪問前に揃えておきたい。 評価は分かれ寄りで、本格的な雰囲気を試す前提で行くと合わせやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:31:01.579Z",
+      "lastChecked": "2026-05-12T11:31:01.579Z"
+    },
+    "%E4%B8%AD%E8%8F%AF%E8%95%8E%E9%BA%A6+%E3%81%AF%E3%81%9B%E5%B7%9D": {
+      "placeId": "ChIJJ1OH3JKnRjUR81cvLgNrO5U",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqFbCPVD59rD3XeKzNSbsDN9qs59o9ykFAsYS9mpUkJqKTS2xeeAGnOr1tPWN8oLEqLZb6TTtHVxJ8XkhXZnblT2744BEOQWo-8=s1600-w1440",
+          "width": 1440,
+          "height": 1440,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117567531829672042673\">中華蕎麦 はせ川</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOhPv-q_lqTrFZMHjZWqHcJlobr0ftzdD5m_xfjlEiXAONLlA4e3awJfO9LGp9EEyFcr5jqur0ObE-PZJ_GxN7hdL6EAcwExklxmwmuIGHBIbQRrVWYm6rzXTtJxU5VMz635Q7hRaP-b4RQEFgWsD6Y1A=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105044137209447976083\">じょ〜爺（本母穣司）</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOwqKCVQGBc8_sv9DN6gtBfaY_PMKIgOJpsasmiwiqqos77-c2wOfDwsYt3SLCQtUB-sq2guHX6Yhhr0SCr_uBTPJR974beh6f3dzJfrVsv5ppbMHqgrKy1q2zy5YX1eI3kkxKwahkFWz8d1Q=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/112055833479703853106\">オーバーオールおじさん</a>"
+        }
+      ],
+      "rating": 3.9,
+      "ratingCount": 173,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "煮干しや昆布など出汁寄りの構成で、上品な傾向が出やすい一杯。手揉み麺とスモーキーなチャーシューの組み合わせは評価が割れにくい。駐車場はなく、券売機は新札非対応のため小銭か旧札を持参すると動きやすい。開店直後でも並びが出やすく、時間に余裕を持って訪れるのが無難。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:31:10.915Z",
+      "lastChecked": "2026-05-12T11:31:10.915Z"
+    },
+    "tsuchiumu+%2F+%E3%83%84%E3%83%81%E3%82%A6%E3%83%A0": {
+      "placeId": "ChIJFYB-GvenRjUR_VWrj0orYrQ",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqHNLFKT1ehta_QR6Ok2JwrNaepKA7DEt7WZkTwr4OsnfkS-MkUjOMQaRbrpE9Z9X5jHrT5ARouMC0TeQfqHKoTeBI_OH9R34SU=s1600-w1600",
+          "width": 2700,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114366617167919901738\">tsuchiumu / ツチウム</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqHh-xIJaZFyYE620pLuTGXTeSt7A1Uv9xbSxWNjcUOFLlbOB9JGDBAd0JbqppQr1dK4aBAcLUW1ZF5g1LFAYSjAzx49Wn9kNz4=s1600-w1600",
+          "width": 3071,
+          "height": 4095,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114366617167919901738\">tsuchiumu / ツチウム</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOsDam5Bj76N3ZzbsFwX_7kYmNRIYt7FSdz5EYziSHBEHK1x1CmyU2idNt2RifKdQWwo5yDBC1FpkWwH3qO_OwVTiK6LzG-K31jKN3vlf9IoTSdALlKVHQYm4T1A1on8t0VCgqaKf8IAooWg7GPHZtyBw=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/112965830741787235202\">Mervina Tan</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMM9xg_WKms0AMqu3ExWFJS32CaBDPgEUhrqqK6sH-8VX7RkjDj0rcUJHoBqJKnMkQ4ulk9RuJOudLqVQJ3iO8Eq6AlD-3Z1QrQ5WI9bBkvsXgDFcGVwxzHQbKRpXrjUODfsfdXQveyyXVOvrB9KvvK=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109021348477227125984\">Hotspot</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPJlNYc5QIw4-Edd1btzpWDiROaAvJRgZjA-6LtBPPzvfFUMZEtEwG8hXtDGrwXxvRERnXOy9Qei72kfxCVYdAOeC9gRILZK_wC7lTT-jCjIashFtxo189tALRjBM3OLLhT23jnMjaTSeyomsrujdR2VQ=s1600-w1600",
+          "width": 4000,
+          "height": 2252,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115072032985191050717\">KKチャンネル</a>"
+        }
+      ],
+      "rating": 4.6,
+      "ratingCount": 25,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "椎茸を主役に据えた一皿が軸で、出汁の風味が残りやすい。カンパーニュやコールスローを添えたセット構成で、軽めの食事に寄せやすい。異国感のある空間に和の小物が混じり、長居しやすい雰囲気。レビューは高評価帯が多く、見込みを合わせやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:31:22.025Z",
+      "lastChecked": "2026-05-12T11:31:22.025Z"
+    },
+    "Beppu+Spirits+Bar+LAMP": {
+      "placeId": "ChIJSVSBw4SnRjURfKIA3dRonn4",
+      "photos": [
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN68ZHsTtEZ7BWfDsSScLp5KOHk36_E0M1dDLGgNU-NtXEHGgLbi6VoIpHEX1b3DK5DxLp5Wjd7Ma3fb6EBDJ94d_eVMTvDeBAAHagiRT5cKE9mLyXLclHg2j8sAAxYjlTvp-dqB9j7ZDQz5fE=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105763628627133559458\">moi moi</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM-TfHwTVpErfpZ0iOWSjKew_7d9OsBWEbs5DCMyP_r95mbl8AmwnzMqUxvE7DsaIhRSBwUekQwnfOK4JWfw9lCHPs6mFYHzXnCLVuxlWg48sN_y7Eyp7fqOFUsof1o--ELw8u5zEvp-sqJqtA=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105266467154981751063\">Tony Webb</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPbaulqoh8twqQ1CDoHzN7r6tIV3E3r32RZCP994_cA-EHAgked1GsfQqYIrO7r-fjV6kLNMyJ24dgTjSyZNNzL1lTnuI0NuXQNwjvdnSLZSpJ8K7wOVyL2iYO3h5esL9Jg_5Gn50QkZeQ4FxM=s1600-w1600",
+          "width": 3000,
+          "height": 4000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111760169430961089120\">3 senshi</a>"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP9MCcbGYbmba5KXlnxiGweDn3DMLRxJfdzsPFYFBqfS-UbUUW1WhyjU5ke7rgWDINNCqKStJxuxXMDk_fh7IZwccBP6LxFdy1A5EW7kmyC51EJa_9ojqfqxqzHNQEd5Y2xld2WCNe-kko4=s1600-w1600",
+          "width": 3000,
+          "height": 4000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111760169430961089120\">3 senshi</a>"
+        }
+      ],
+      "rating": 4.9,
+      "ratingCount": 31,
+      "ratingMedian": 5,
+      "editorialSummary": null,
+      "caption": "レア酒や焼酎のラインナップが厚めで、好みを伝えながら選びやすい。サイフォン珈琲やカクテルも扱い、お酒以外の選択肢も取りやすい。カウンター越しの説明が丁寧で、銘柄の背景まで聞きやすい雰囲気。価格帯は良心寄りで、試し飲みの組み立てがしやすい。",
+      "captionSource": "generated",
+      "captionGenerated": "2026-05-12T11:31:32.072Z",
+      "lastChecked": "2026-05-12T11:31:32.072Z"
+    }
+  }
+}

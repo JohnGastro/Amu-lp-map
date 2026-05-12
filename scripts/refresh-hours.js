@@ -87,7 +87,9 @@ function loadShopsFromCsv(filePath) {
 
     const name = obj['タイトル'];
     const slug = obj['URL内スラッグ'] || '';
-    const placeId = obj['place_id'] || '';
+    // CSVの `place_id` カラムはGoogle Maps URL内のHEX形式 (0x...:0x...) で
+    // Places APIには使えない。Places APIに渡すべきは `推定_place_id` の ChIJ... 形式。
+    const placeId = obj['推定_place_id'] || '';
 
     if (!name || !placeId) continue;
 
