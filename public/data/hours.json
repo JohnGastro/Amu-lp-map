@@ -1,4 +1,1761 @@
 {
-  "generated": "2026-05-11T21:57:57.678Z",
-  "shops": {}
+  "generated": "2026-05-12T22:04:22.329Z",
+  "shops": {
+    "%E5%A4%A7%E7%94%B0%E5%92%96%E5%96%B1%EF%BC%88%E3%81%8A%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%8A%E3%83%BC%EF%BC%89": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "11:00",
+            "close": "14:30"
+          }
+        ],
+        "月": [],
+        "火": [
+          {
+            "open": "11:00",
+            "close": "14:30"
+          }
+        ],
+        "水": [
+          {
+            "open": "11:00",
+            "close": "14:30"
+          }
+        ],
+        "木": [
+          {
+            "open": "11:00",
+            "close": "14:30"
+          }
+        ],
+        "金": [
+          {
+            "open": "11:00",
+            "close": "14:30"
+          }
+        ],
+        "土": [
+          {
+            "open": "11:00",
+            "close": "14:30"
+          }
+        ]
+      },
+      "weekdayText": "Monday: Closed | Tuesday: 11:00 AM – 2:30 PM | Wednesday: 11:00 AM – 2:30 PM | Thursday: 11:00 AM – 2:30 PM | Friday: 11:00 AM – 2:30 PM | Saturday: 11:00 AM – 2:30 PM | Sunday: 11:00 AM – 2:30 PM",
+      "lastChecked": "2026-05-12T22:04:15.427Z"
+    },
+    "EEL.BISTRO": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "18:00",
+            "close": "00:00"
+          }
+        ],
+        "月": [],
+        "火": [
+          {
+            "open": "18:00",
+            "close": "00:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "18:00",
+            "close": "00:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "18:00",
+            "close": "00:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "18:00",
+            "close": "00:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "18:00",
+            "close": "00:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: Closed | Tuesday: 6:00 PM – 12:00 AM | Wednesday: 6:00 PM – 12:00 AM | Thursday: 6:00 PM – 12:00 AM | Friday: 6:00 PM – 12:00 AM | Saturday: 6:00 PM – 12:00 AM | Sunday: 6:00 PM – 12:00 AM",
+      "lastChecked": "2026-05-12T22:04:15.629Z"
+    },
+    "%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%90%E3%82%B5%E3%83%A9+%E3%83%8A%E3%83%81%E3%83%A5%E3%83%A9%E3%83%AB%E3%83%AF%E3%82%A4%E3%83%B3%E9%A3%9F%E5%A0%82": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "17:00",
+            "close": "22:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "17:00",
+            "close": "22:00"
+          }
+        ],
+        "火": [],
+        "水": [],
+        "木": [
+          {
+            "open": "17:00",
+            "close": "22:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "17:00",
+            "close": "22:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "17:00",
+            "close": "22:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 5:00 – 10:00 PM | Tuesday: Closed | Wednesday: Closed | Thursday: 5:00 – 10:00 PM | Friday: 5:00 – 10:00 PM | Saturday: 5:00 – 10:00 PM | Sunday: 5:00 – 10:00 PM",
+      "lastChecked": "2026-05-12T22:04:15.827Z"
+    },
+    "%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89+%E3%82%B9%E3%83%86%E3%82%A2%E3%83%BC%E3%82%BA": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "12:00",
+            "close": "17:00"
+          }
+        ],
+        "月": [],
+        "火": [],
+        "水": [
+          {
+            "open": "12:00",
+            "close": "18:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "12:00",
+            "close": "18:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "12:00",
+            "close": "18:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "12:00",
+            "close": "18:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: Closed | Tuesday: Closed | Wednesday: 12:00 – 6:00 PM | Thursday: 12:00 – 6:00 PM | Friday: 12:00 – 6:00 PM | Saturday: 12:00 – 6:00 PM | Sunday: 12:00 – 5:00 PM",
+      "lastChecked": "2026-05-12T22:04:16.031Z"
+    },
+    "Cafe+%E8%B1%86": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": null,
+      "weekdayText": null,
+      "lastChecked": "2026-05-12T22:04:16.237Z"
+    },
+    "33°16'42.9\"N 131°30'10.9\"E": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "00:00",
+            "close": "23:59"
+          }
+        ],
+        "月": [],
+        "火": [],
+        "水": [],
+        "木": [],
+        "金": [],
+        "土": []
+      },
+      "weekdayText": "Monday: Open 24 hours | Tuesday: Open 24 hours | Wednesday: Open 24 hours | Thursday: Open 24 hours | Friday: Open 24 hours | Saturday: Open 24 hours | Sunday: Open 24 hours",
+      "lastChecked": "2026-05-12T22:04:16.430Z"
+    },
+    "TANNEL": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "20:00",
+            "close": "00:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "20:00",
+            "close": "00:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "20:00",
+            "close": "00:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "20:00",
+            "close": "00:00"
+          }
+        ],
+        "木": [],
+        "金": [
+          {
+            "open": "20:00",
+            "close": "00:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "20:00",
+            "close": "00:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 8:00 PM – 12:00 AM | Tuesday: 8:00 PM – 12:00 AM | Wednesday: 8:00 PM – 12:00 AM | Thursday: Closed | Friday: 8:00 PM – 12:00 AM | Saturday: 8:00 PM – 12:00 AM | Sunday: 8:00 PM – 12:00 AM",
+      "lastChecked": "2026-05-12T22:04:16.605Z"
+    },
+    "the+HELL": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "20:00",
+            "close": "00:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "20:00",
+            "close": "00:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "20:00",
+            "close": "00:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "20:00",
+            "close": "00:00"
+          }
+        ],
+        "木": [],
+        "金": [
+          {
+            "open": "20:00",
+            "close": "00:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "20:00",
+            "close": "00:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 8:00 PM – 12:00 AM | Tuesday: 8:00 PM – 12:00 AM | Wednesday: 8:00 PM – 12:00 AM | Thursday: Closed | Friday: 8:00 PM – 12:00 AM | Saturday: 8:00 PM – 12:00 AM | Sunday: 8:00 PM – 12:00 AM",
+      "lastChecked": "2026-05-12T22:04:16.781Z"
+    },
+    "%E3%82%B1%E3%83%BC%E3%82%BA%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [],
+        "月": [
+          {
+            "open": "19:00",
+            "close": "04:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "19:00",
+            "close": "04:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "19:00",
+            "close": "04:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "19:00",
+            "close": "04:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "19:00",
+            "close": "04:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "19:00",
+            "close": "04:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 7:00 PM – 4:00 AM | Tuesday: 7:00 PM – 4:00 AM | Wednesday: 7:00 PM – 4:00 AM | Thursday: 7:00 PM – 4:00 AM | Friday: 7:00 PM – 4:00 AM | Saturday: 7:00 PM – 4:00 AM | Sunday: Closed",
+      "lastChecked": "2026-05-12T22:04:16.958Z"
+    },
+    "%E8%89%B2%E5%BD%A9%E9%85%92%E5%A0%B4%E3%81%BA%E3%81%93%E3%81%BA%E3%81%93": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "00:00",
+            "close": "23:59"
+          }
+        ],
+        "月": [],
+        "火": [],
+        "水": [],
+        "木": [],
+        "金": [],
+        "土": []
+      },
+      "weekdayText": "Monday: Open 24 hours | Tuesday: Open 24 hours | Wednesday: Open 24 hours | Thursday: Open 24 hours | Friday: Open 24 hours | Saturday: Open 24 hours | Sunday: Open 24 hours",
+      "lastChecked": "2026-05-12T22:04:17.135Z"
+    },
+    "%E3%82%B3%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%AA%E3%83%BC%E3%83%95%EF%BC%88%EF%BC%A3%EF%BD%8F%EF%BD%92%EF%BD%81%EF%BD%8C%EF%BC%B2%EF%BD%85%EF%BD%85%EF%BD%86%EF%BC%89": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "21:00",
+            "close": "04:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "21:00",
+            "close": "04:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "21:00",
+            "close": "04:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "21:00",
+            "close": "04:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "21:00",
+            "close": "04:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "21:00",
+            "close": "04:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "21:00",
+            "close": "04:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 9:00 PM – 4:00 AM | Tuesday: 9:00 PM – 4:00 AM | Wednesday: 9:00 PM – 4:00 AM | Thursday: 9:00 PM – 4:00 AM | Friday: 9:00 PM – 4:00 AM | Saturday: 9:00 PM – 4:00 AM | Sunday: 9:00 PM – 4:00 AM",
+      "lastChecked": "2026-05-12T22:04:17.323Z"
+    },
+    "%E6%98%A5%E3%81%86%E3%82%89%E3%82%89": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "18:30",
+            "close": "00:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "18:30",
+            "close": "00:00"
+          }
+        ],
+        "火": [],
+        "水": [
+          {
+            "open": "18:30",
+            "close": "00:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "18:30",
+            "close": "00:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "18:30",
+            "close": "00:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "18:30",
+            "close": "00:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 6:30 PM – 12:00 AM | Tuesday: Closed | Wednesday: 6:30 PM – 12:00 AM | Thursday: 6:30 PM – 12:00 AM | Friday: 6:30 PM – 12:00 AM | Saturday: 6:30 PM – 12:00 AM | Sunday: 6:30 PM – 12:00 AM",
+      "lastChecked": "2026-05-12T22:04:17.494Z"
+    },
+    "%E8%82%B4%E9%B6%8F%E9%AD%9A+Miiima": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [],
+        "月": [
+          {
+            "open": "18:00",
+            "close": "22:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "18:00",
+            "close": "22:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "18:00",
+            "close": "22:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "18:00",
+            "close": "22:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "17:30",
+            "close": "22:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "17:30",
+            "close": "22:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 6:00 – 10:00 PM | Tuesday: 6:00 – 10:00 PM | Wednesday: 6:00 – 10:00 PM | Thursday: 6:00 – 10:00 PM | Friday: 5:30 – 10:00 PM | Saturday: 5:30 – 10:00 PM | Sunday: Closed",
+      "lastChecked": "2026-05-12T22:04:17.705Z"
+    },
+    "%E9%BB%92%E6%9C%A8": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [],
+        "月": [],
+        "火": [
+          {
+            "open": "11:30",
+            "close": "13:30"
+          },
+          {
+            "open": "17:30",
+            "close": "21:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "11:30",
+            "close": "13:30"
+          },
+          {
+            "open": "17:30",
+            "close": "21:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "11:30",
+            "close": "13:30"
+          },
+          {
+            "open": "17:30",
+            "close": "21:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "11:30",
+            "close": "13:30"
+          },
+          {
+            "open": "17:30",
+            "close": "21:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "11:30",
+            "close": "13:30"
+          },
+          {
+            "open": "17:30",
+            "close": "21:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: Closed | Tuesday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Wednesday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Thursday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Friday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Saturday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Sunday: Closed",
+      "lastChecked": "2026-05-12T22:04:17.903Z"
+    },
+    "bamboo+bamboo": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "10:00",
+            "close": "17:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "10:00",
+            "close": "17:00"
+          }
+        ],
+        "火": [],
+        "水": [],
+        "木": [
+          {
+            "open": "10:00",
+            "close": "17:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "10:00",
+            "close": "17:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "10:00",
+            "close": "17:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 10:00 AM – 5:00 PM | Tuesday: Closed | Wednesday: Closed | Thursday: 10:00 AM – 5:00 PM | Friday: 10:00 AM – 5:00 PM | Saturday: 10:00 AM – 5:00 PM | Sunday: 10:00 AM – 5:00 PM",
+      "lastChecked": "2026-05-12T22:04:18.090Z"
+    },
+    "SELECT+BEPPU": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "10:00",
+            "close": "17:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "10:00",
+            "close": "17:00"
+          }
+        ],
+        "火": [],
+        "水": [],
+        "木": [
+          {
+            "open": "11:00",
+            "close": "17:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "11:00",
+            "close": "17:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "11:00",
+            "close": "17:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 10:00 AM – 5:00 PM | Tuesday: Closed | Wednesday: Closed | Thursday: 11:00 AM – 5:00 PM | Friday: 11:00 AM – 5:00 PM | Saturday: 11:00 AM – 5:00 PM | Sunday: 10:00 AM – 5:00 PM",
+      "lastChecked": "2026-05-12T22:04:18.284Z"
+    },
+    "SPICA": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "10:00",
+            "close": "17:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "11:00",
+            "close": "17:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "11:00",
+            "close": "17:00"
+          }
+        ],
+        "水": [],
+        "木": [
+          {
+            "open": "11:00",
+            "close": "17:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "11:00",
+            "close": "17:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "10:00",
+            "close": "17:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 11:00 AM – 5:00 PM | Tuesday: 11:00 AM – 5:00 PM | Wednesday: Closed | Thursday: 11:00 AM – 5:00 PM | Friday: 11:00 AM – 5:00 PM | Saturday: 10:00 AM – 5:00 PM | Sunday: 10:00 AM – 5:00 PM",
+      "lastChecked": "2026-05-12T22:04:18.478Z"
+    },
+    "puno%EF%BC%88%E3%83%97%E3%83%8E%EF%BC%89": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "10:00",
+            "close": "17:00"
+          }
+        ],
+        "月": [],
+        "火": [],
+        "水": [],
+        "木": [],
+        "金": [],
+        "土": [
+          {
+            "open": "10:00",
+            "close": "17:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: Closed | Tuesday: Closed | Wednesday: Closed | Thursday: Closed | Friday: Closed | Saturday: 10:00 AM – 5:00 PM | Sunday: 10:00 AM – 5:00 PM",
+      "lastChecked": "2026-05-12T22:04:18.643Z"
+    },
+    "%E9%AE%A8%E4%B9%83%E5%AE%B6": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [],
+        "月": [
+          {
+            "open": "18:00",
+            "close": "22:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "18:00",
+            "close": "22:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "18:00",
+            "close": "22:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "18:00",
+            "close": "22:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "18:00",
+            "close": "22:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "18:00",
+            "close": "22:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 6:00 – 10:00 PM | Tuesday: 6:00 – 10:00 PM | Wednesday: 6:00 – 10:00 PM | Thursday: 6:00 – 10:00 PM | Friday: 6:00 – 10:00 PM | Saturday: 6:00 – 10:00 PM | Sunday: Closed",
+      "lastChecked": "2026-05-12T22:04:18.835Z"
+    },
+    "Pure+Wine+Bar+Enfer": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "19:00",
+            "close": "00:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "19:00",
+            "close": "00:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "19:00",
+            "close": "00:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "19:00",
+            "close": "00:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "19:00",
+            "close": "00:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "19:00",
+            "close": "00:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "19:00",
+            "close": "00:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 7:00 PM – 12:00 AM | Tuesday: 7:00 PM – 12:00 AM | Wednesday: 7:00 PM – 12:00 AM | Thursday: 7:00 PM – 12:00 AM | Friday: 7:00 PM – 12:00 AM | Saturday: 7:00 PM – 12:00 AM | Sunday: 7:00 PM – 12:00 AM",
+      "lastChecked": "2026-05-12T22:04:19.011Z"
+    },
+    "%E7%81%AB%E9%8D%8B%E3%81%AB%E3%81%97%E3%81%A0%2FHotpot+Nishida": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [],
+        "月": [],
+        "火": [
+          {
+            "open": "18:00",
+            "close": "23:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "18:00",
+            "close": "23:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "18:00",
+            "close": "23:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "18:00",
+            "close": "23:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "18:00",
+            "close": "23:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: Closed | Tuesday: 6:00 – 11:00 PM | Wednesday: 6:00 – 11:00 PM | Thursday: 6:00 – 11:00 PM | Friday: 6:00 – 11:00 PM | Saturday: 6:00 – 11:00 PM | Sunday: Closed",
+      "lastChecked": "2026-05-12T22:04:19.202Z"
+    },
+    "%E9%A3%9F%E5%A0%82%E3%83%88%E3%83%B3%E3%83%9C": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "17:00",
+            "close": "23:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "17:00",
+            "close": "23:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "17:00",
+            "close": "23:00"
+          }
+        ],
+        "水": [],
+        "木": [],
+        "金": [
+          {
+            "open": "17:00",
+            "close": "23:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "17:00",
+            "close": "23:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 5:00 – 11:00 PM | Tuesday: 5:00 – 11:00 PM | Wednesday: Closed | Thursday: Closed | Friday: 5:00 – 11:00 PM | Saturday: 5:00 – 11:00 PM | Sunday: 5:00 – 11:00 PM",
+      "lastChecked": "2026-05-12T22:04:19.373Z"
+    },
+    "BEPPU+HOSTEL+%EF%BC%86+CAFE+Ourschestra.%EF%BC%BB%E3%82%A6%E3%83%AB%E3%82%B9%E3%82%B1%E3%82%B9%E3%83%88%E3%83%A9%EF%BC%BD": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "11:30",
+            "close": "22:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "15:00",
+            "close": "22:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "15:00",
+            "close": "22:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "15:00",
+            "close": "22:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "15:00",
+            "close": "22:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "11:30",
+            "close": "22:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "11:30",
+            "close": "22:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 3:00 – 10:00 PM | Tuesday: 3:00 – 10:00 PM | Wednesday: 3:00 – 10:00 PM | Thursday: 3:00 – 10:00 PM | Friday: 11:30 AM – 10:00 PM | Saturday: 11:30 AM – 10:00 PM | Sunday: 11:30 AM – 10:00 PM",
+      "lastChecked": "2026-05-12T22:04:19.539Z"
+    },
+    "%E3%82%BF%E3%82%AD%E3%83%BC%E3%83%88": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "18:00",
+            "close": "22:00"
+          }
+        ],
+        "月": [],
+        "火": [
+          {
+            "open": "18:00",
+            "close": "00:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "18:00",
+            "close": "00:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "18:00",
+            "close": "00:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "18:00",
+            "close": "00:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "18:00",
+            "close": "00:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: Closed | Tuesday: 6:00 PM – 12:00 AM | Wednesday: 6:00 PM – 12:00 AM | Thursday: 6:00 PM – 12:00 AM | Friday: 6:00 PM – 12:00 AM | Saturday: 6:00 PM – 12:00 AM | Sunday: 6:00 – 10:00 PM",
+      "lastChecked": "2026-05-12T22:04:19.717Z"
+    },
+    "BESAME+MUCHO(%E3%83%99%E3%82%B5%E3%83%A1%E3%83%A0%E3%83%BC%E3%83%81%E3%83%A7)": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "10:30",
+            "close": "22:30"
+          }
+        ],
+        "月": [
+          {
+            "open": "10:30",
+            "close": "22:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "10:30",
+            "close": "22:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "10:30",
+            "close": "22:00"
+          }
+        ],
+        "木": [],
+        "金": [
+          {
+            "open": "12:00",
+            "close": "23:30"
+          }
+        ],
+        "土": [
+          {
+            "open": "10:30",
+            "close": "23:30"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 10:30 AM – 10:00 PM | Tuesday: 10:30 AM – 10:00 PM | Wednesday: 10:30 AM – 10:00 PM | Thursday: Closed | Friday: 12:00 – 11:30 PM | Saturday: 10:30 AM – 11:30 PM | Sunday: 10:30 AM – 10:30 PM",
+      "lastChecked": "2026-05-12T22:04:19.894Z"
+    },
+    "Beppu+Sake+Stand+%E5%B7%A1": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "12:00",
+            "close": "20:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "12:00",
+            "close": "20:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "12:00",
+            "close": "20:00"
+          }
+        ],
+        "水": [],
+        "木": [
+          {
+            "open": "12:00",
+            "close": "20:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "12:00",
+            "close": "20:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "12:00",
+            "close": "20:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 12:00 – 8:00 PM | Tuesday: 12:00 – 8:00 PM | Wednesday: Closed | Thursday: 12:00 – 8:00 PM | Friday: 12:00 – 8:00 PM | Saturday: 12:00 – 8:00 PM | Sunday: 12:00 – 8:00 PM",
+      "lastChecked": "2026-05-12T22:04:20.062Z"
+    },
+    "NOODLE+FACTORY+LIFE": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "11:30",
+            "close": "13:30"
+          },
+          {
+            "open": "19:00",
+            "close": "00:30"
+          }
+        ],
+        "月": [],
+        "火": [
+          {
+            "open": "19:00",
+            "close": "00:30"
+          }
+        ],
+        "水": [
+          {
+            "open": "11:30",
+            "close": "13:30"
+          },
+          {
+            "open": "19:00",
+            "close": "00:30"
+          }
+        ],
+        "木": [
+          {
+            "open": "11:30",
+            "close": "13:30"
+          },
+          {
+            "open": "19:00",
+            "close": "00:30"
+          }
+        ],
+        "金": [
+          {
+            "open": "11:30",
+            "close": "13:30"
+          },
+          {
+            "open": "19:00",
+            "close": "00:30"
+          }
+        ],
+        "土": [
+          {
+            "open": "11:30",
+            "close": "13:30"
+          },
+          {
+            "open": "19:00",
+            "close": "00:30"
+          }
+        ]
+      },
+      "weekdayText": "Monday: Closed | Tuesday: 7:00 PM – 12:30 AM | Wednesday: 11:30 AM – 1:30 PM, 7:00 PM – 12:30 AM | Thursday: 11:30 AM – 1:30 PM, 7:00 PM – 12:30 AM | Friday: 11:30 AM – 1:30 PM, 7:00 PM – 12:30 AM | Saturday: 11:30 AM – 1:30 PM, 7:00 PM – 12:30 AM | Sunday: 11:30 AM – 1:30 PM, 7:00 PM – 12:30 AM",
+      "lastChecked": "2026-05-12T22:04:20.247Z"
+    },
+    "%E5%8F%8B%E6%B0%B8%E3%83%91%E3%83%B3%E5%B1%8B": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [],
+        "月": [
+          {
+            "open": "08:30",
+            "close": "18:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "08:30",
+            "close": "18:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "08:30",
+            "close": "18:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "08:30",
+            "close": "18:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "08:30",
+            "close": "18:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "08:30",
+            "close": "18:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 8:30 AM – 6:00 PM | Tuesday: 8:30 AM – 6:00 PM | Wednesday: 8:30 AM – 6:00 PM | Thursday: 8:30 AM – 6:00 PM | Friday: 8:30 AM – 6:00 PM | Saturday: 8:30 AM – 6:00 PM | Sunday: Closed",
+      "lastChecked": "2026-05-12T22:04:20.421Z"
+    },
+    "TANE": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [],
+        "月": [],
+        "火": [
+          {
+            "open": "11:30",
+            "close": "16:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "11:30",
+            "close": "16:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "11:30",
+            "close": "16:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "11:30",
+            "close": "16:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "11:30",
+            "close": "16:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: Closed | Tuesday: 11:30 AM – 4:00 PM | Wednesday: 11:30 AM – 4:00 PM | Thursday: 11:30 AM – 4:00 PM | Friday: 11:30 AM – 4:00 PM | Saturday: 11:30 AM – 4:00 PM | Sunday: Closed",
+      "lastChecked": "2026-05-12T22:04:20.585Z"
+    },
+    "TUMUGU+COFFEE+STAND": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "07:30",
+            "close": "18:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "07:30",
+            "close": "12:00"
+          }
+        ],
+        "火": [],
+        "水": [
+          {
+            "open": "07:30",
+            "close": "18:00"
+          }
+        ],
+        "木": [],
+        "金": [],
+        "土": [
+          {
+            "open": "07:30",
+            "close": "18:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 7:30 AM – 12:00 PM | Tuesday: Closed | Wednesday: 7:30 AM – 6:00 PM | Thursday: Closed | Friday: Closed | Saturday: 7:30 AM – 6:00 PM | Sunday: 7:30 AM – 6:00 PM",
+      "lastChecked": "2026-05-12T22:04:20.753Z"
+    },
+    "Othello+Specialty+Coffee+Roaster": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "11:00",
+            "close": "17:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "11:00",
+            "close": "17:00"
+          }
+        ],
+        "火": [],
+        "水": [
+          {
+            "open": "11:00",
+            "close": "17:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "11:00",
+            "close": "17:00"
+          }
+        ],
+        "金": [],
+        "土": [
+          {
+            "open": "11:00",
+            "close": "17:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 11:00 AM – 5:00 PM | Tuesday: Closed | Wednesday: 11:00 AM – 5:00 PM | Thursday: 11:00 AM – 5:00 PM | Friday: Closed | Saturday: 11:00 AM – 5:00 PM | Sunday: 11:00 AM – 5:00 PM",
+      "lastChecked": "2026-05-12T22:04:20.918Z"
+    },
+    "TACO+NARGO%EF%BC%88%E3%82%BF%E3%82%B3%E3%83%BB%E3%83%8A%E3%83%BC%E3%82%B4%EF%BC%89": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "11:30",
+            "close": "14:30"
+          },
+          {
+            "open": "17:00",
+            "close": "21:30"
+          }
+        ],
+        "月": [
+          {
+            "open": "11:30",
+            "close": "14:30"
+          },
+          {
+            "open": "18:00",
+            "close": "22:30"
+          }
+        ],
+        "火": [
+          {
+            "open": "11:30",
+            "close": "14:30"
+          },
+          {
+            "open": "18:00",
+            "close": "22:30"
+          }
+        ],
+        "水": [
+          {
+            "open": "11:30",
+            "close": "14:30"
+          },
+          {
+            "open": "18:00",
+            "close": "21:30"
+          }
+        ],
+        "木": [],
+        "金": [
+          {
+            "open": "11:30",
+            "close": "14:30"
+          },
+          {
+            "open": "18:00",
+            "close": "22:30"
+          }
+        ],
+        "土": [
+          {
+            "open": "11:30",
+            "close": "14:30"
+          },
+          {
+            "open": "17:00",
+            "close": "22:30"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Tuesday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Wednesday: 11:30 AM – 2:30 PM, 6:00 – 9:30 PM | Thursday: Closed | Friday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Saturday: 11:30 AM – 2:30 PM, 5:00 – 10:30 PM | Sunday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+      "lastChecked": "2026-05-12T22:04:21.094Z"
+    },
+    "Bistro+le+jiu+%E6%85%88%E9%9B%A8": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "11:30",
+            "close": "14:00"
+          },
+          {
+            "open": "17:00",
+            "close": "23:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "11:30",
+            "close": "14:00"
+          },
+          {
+            "open": "17:00",
+            "close": "23:00"
+          }
+        ],
+        "火": [],
+        "水": [
+          {
+            "open": "11:30",
+            "close": "14:00"
+          },
+          {
+            "open": "17:00",
+            "close": "23:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "11:30",
+            "close": "14:00"
+          },
+          {
+            "open": "17:00",
+            "close": "23:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "11:30",
+            "close": "14:00"
+          },
+          {
+            "open": "17:00",
+            "close": "23:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "11:30",
+            "close": "14:00"
+          },
+          {
+            "open": "17:00",
+            "close": "23:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 11:30 AM – 2:00 PM, 5:00 – 11:00 PM | Tuesday: Closed | Wednesday: 11:30 AM – 2:00 PM, 5:00 – 11:00 PM | Thursday: 11:30 AM – 2:00 PM, 5:00 – 11:00 PM | Friday: 11:30 AM – 2:00 PM, 5:00 – 11:00 PM | Saturday: 11:30 AM – 2:00 PM, 5:00 – 11:00 PM | Sunday: 11:30 AM – 2:00 PM, 5:00 – 11:00 PM",
+      "lastChecked": "2026-05-12T22:04:21.264Z"
+    },
+    "%E5%96%AB%E8%8C%B6+%E3%81%AA%E3%81%A4%E3%82%81": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "11:30",
+            "close": "16:30"
+          }
+        ],
+        "月": [
+          {
+            "open": "11:30",
+            "close": "16:30"
+          }
+        ],
+        "火": [
+          {
+            "open": "11:30",
+            "close": "16:30"
+          }
+        ],
+        "水": [],
+        "木": [
+          {
+            "open": "11:30",
+            "close": "16:30"
+          }
+        ],
+        "金": [
+          {
+            "open": "11:30",
+            "close": "16:30"
+          }
+        ],
+        "土": [
+          {
+            "open": "11:30",
+            "close": "16:30"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 11:30 AM – 4:30 PM | Tuesday: 11:30 AM – 4:30 PM | Wednesday: Closed | Thursday: 11:30 AM – 4:30 PM | Friday: 11:30 AM – 4:30 PM | Saturday: 11:30 AM – 4:30 PM | Sunday: 11:30 AM – 4:30 PM",
+      "lastChecked": "2026-05-12T22:04:21.431Z"
+    },
+    "%E5%A4%A2%E3%81%AE%E9%80%94%E4%B8%AD": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "11:00",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "21:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "11:00",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "21:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "11:00",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "21:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "11:00",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "21:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "11:00",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "21:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "11:00",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "22:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "11:00",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "22:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM | Tuesday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM | Wednesday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM | Thursday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM | Friday: 11:00 AM – 2:00 PM, 6:00 – 10:00 PM | Saturday: 11:00 AM – 2:00 PM, 6:00 – 10:00 PM | Sunday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM",
+      "lastChecked": "2026-05-12T22:04:21.629Z"
+    },
+    "%E3%83%91%E3%82%AD%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%AB%E3%83%AC%E3%83%BC": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "11:00",
+            "close": "21:30"
+          }
+        ],
+        "月": [
+          {
+            "open": "11:00",
+            "close": "21:30"
+          }
+        ],
+        "火": [
+          {
+            "open": "11:00",
+            "close": "21:30"
+          }
+        ],
+        "水": [
+          {
+            "open": "11:00",
+            "close": "21:30"
+          }
+        ],
+        "木": [
+          {
+            "open": "11:00",
+            "close": "21:30"
+          }
+        ],
+        "金": [
+          {
+            "open": "11:00",
+            "close": "21:30"
+          }
+        ],
+        "土": [
+          {
+            "open": "11:00",
+            "close": "21:30"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 11:00 AM – 9:30 PM | Tuesday: 11:00 AM – 9:30 PM | Wednesday: 11:00 AM – 9:30 PM | Thursday: 11:00 AM – 9:30 PM | Friday: 11:00 AM – 9:30 PM | Saturday: 11:00 AM – 9:30 PM | Sunday: 11:00 AM – 9:30 PM",
+      "lastChecked": "2026-05-12T22:04:21.802Z"
+    },
+    "%E4%B8%AD%E8%8F%AF%E8%95%8E%E9%BA%A6+%E3%81%AF%E3%81%9B%E5%B7%9D": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "11:30",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "20:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "11:30",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "20:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "11:30",
+            "close": "14:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "11:30",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "20:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "11:30",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "20:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "11:30",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "20:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "11:30",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "20:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 11:30 AM – 2:00 PM, 6:00 – 8:00 PM | Tuesday: 11:30 AM – 2:00 PM | Wednesday: 11:30 AM – 2:00 PM, 6:00 – 8:00 PM | Thursday: 11:30 AM – 2:00 PM, 6:00 – 8:00 PM | Friday: 11:30 AM – 2:00 PM, 6:00 – 8:00 PM | Saturday: 11:30 AM – 2:00 PM, 6:00 – 8:00 PM | Sunday: 11:30 AM – 2:00 PM, 6:00 – 8:00 PM",
+      "lastChecked": "2026-05-12T22:04:21.981Z"
+    },
+    "tsuchiumu+%2F+%E3%83%84%E3%83%81%E3%82%A6%E3%83%A0": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "08:30",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "23:30"
+          }
+        ],
+        "月": [
+          {
+            "open": "08:30",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "23:30"
+          }
+        ],
+        "火": [
+          {
+            "open": "08:30",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "23:30"
+          }
+        ],
+        "水": [
+          {
+            "open": "08:30",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "23:30"
+          }
+        ],
+        "木": [
+          {
+            "open": "08:30",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "23:30"
+          }
+        ],
+        "金": [
+          {
+            "open": "08:30",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "00:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "08:30",
+            "close": "14:00"
+          },
+          {
+            "open": "18:00",
+            "close": "00:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM | Tuesday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM | Wednesday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM | Thursday: 8:30���AM – 2:00 PM, 6:00 – 11:30 PM | Friday: 8:30 AM – 2:00 PM, 6:00 PM – 12:00 AM | Saturday: 8:30 AM – 2:00 PM, 6:00 PM – 12:00 AM | Sunday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM",
+      "lastChecked": "2026-05-12T22:04:22.161Z"
+    },
+    "Beppu+Spirits+Bar+LAMP": {
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "19:00",
+            "close": "00:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "19:00",
+            "close": "00:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "19:00",
+            "close": "00:00"
+          }
+        ],
+        "水": [],
+        "木": [
+          {
+            "open": "19:00",
+            "close": "00:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "19:00",
+            "close": "00:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "19:00",
+            "close": "00:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 7:00 PM – 12:00 AM | Tuesday: 7:00 PM – 12:00 AM | Wednesday: Closed | Thursday: 7:00 PM – 12:00 AM | Friday: 7:00 PM – 12:00 AM | Saturday: 7:00 PM – 12:00 AM | Sunday: 7:00 PM – 12:00 AM",
+      "lastChecked": "2026-05-12T22:04:22.328Z"
+    }
+  }
 }
