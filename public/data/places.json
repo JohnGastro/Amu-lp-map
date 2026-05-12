@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-12T11:31:32.193Z",
+  "generated": "2026-05-12T13:26:02.610Z",
   "captionModel": "claude-opus-4-7",
   "shops": {
     "%E5%A4%A7%E7%94%B0%E5%92%96%E5%96%B1%EF%BC%88%E3%81%8A%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%8A%E3%83%BC%EF%BC%89": {
@@ -495,43 +495,6 @@
       "captionSource": "generated",
       "captionGenerated": "2026-05-12T11:27:17.411Z",
       "lastChecked": "2026-05-12T11:27:17.411Z"
-    },
-    "%E6%B5%AE%E7%BE%BD": {
-      "placeId": "ChIJV42HvatyQTURjVwznoDN4SM",
-      "photos": [
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMYLS9VISTDtmAH4_O4ssYiSsABV7tHRhgQtzrbn1yLPkFrL7WdETrghFZvXNjO2OBwfCveM2Jj9Ww6HADg-Itg7O41g9aTtWYQnOoRcEBfFIMHF2Eqo5Yb5zTHu3Uf-QBXf2kSl9pEiByK=s1600-w1600",
-          "width": 2560,
-          "height": 1707,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109928673943322927644\">Shohei Mizuguchi</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPWgb8SAtaxyD0vJajzfopHrZY6jw_cZhGgvX4z4pztaOSazHj7ypYggo1q4uGgGIGQ0g73iYxsxTg9i4c36uCQNQ38pgSGeyFY1kibGMB7rb9IeR9JT0SfwriJGfdW6VbqWTmLV0RyFW1Iig=s1600-w1600",
-          "width": 3024,
-          "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101058120915403465478\">碇隆一郎</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNeev39p1UgjAZLnQH6YWdHwMvpOtduA57qMIh_r2LydYpGNZBcJY2R5FLl5CkxH5wUsSW_876nMszWEnE1i-ikl231hqOkmI-TubKQXilTO7DS1YAcItt-vjRJgTdNlhkvTj3jWMOl8jF3Qyo=s1600-w1600",
-          "width": 2700,
-          "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/108837135800698411989\">景山良司</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNrNTvNHzeLBqcFxSrWG3hCeZE9jgkO6152Ca6bSZaleP2h_ikkqUQgiyrxBJ0KwNJIdYbBhQnOow_MTAke8fPNPwoCLYdxmKAeSAc4jPaLRJOI-Rp_PLgWlAH3Ex_Y1G27yiJisqXWAx8qaHI=s1600-w1600",
-          "width": 2560,
-          "height": 1707,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109928673943322927644\">Shohei Mizuguchi</a>"
-        }
-      ],
-      "rating": null,
-      "ratingCount": null,
-      "ratingMedian": null,
-      "editorialSummary": null,
-      "caption": "川沿いの景色を眺めながら歩きやすい散歩コース。橋や水路の起伏が控えめで、足元が整いやすい。立ち寄りスポットが点在し、休憩を挟みながら進めやすい構成。所要時間は調整しやすく、滞在の合間にも組み込みやすい。",
-      "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:27:26.474Z",
-      "lastChecked": "2026-05-12T11:27:26.474Z"
     },
     "bamboo+bamboo": {
       "placeId": "ChIJ1Rtx7MKmRjUR9uMvRwxcXMw",
@@ -1465,10 +1428,10 @@
       "ratingCount": 31,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "レア酒や焼酎のラインナップが厚めで、好みを伝えながら選びやすい。サイフォン珈琲やカクテルも扱い、お酒以外の選択肢も取りやすい。カウンター越しの説明が丁寧で、銘柄の背景まで聞きやすい雰囲気。価格帯は良心寄りで、試し飲みの組み立てがしやすい。",
+      "caption": "カウンター越しに蒸留酒とサイフォン珈琲が並ぶ一軒。大分の焼酎やジン、香りで選ぶ珈琲豆まで揃う。横並びの席で、会話が自然に続きやすい空気。夜の一杯にも、散歩帰りの珈琲にも溶け込む。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:31:32.072Z",
-      "lastChecked": "2026-05-12T11:31:32.072Z"
+      "captionGenerated": "2026-05-12T13:26:02.486Z",
+      "lastChecked": "2026-05-12T13:26:02.487Z"
     }
   }
 }

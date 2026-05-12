@@ -51,16 +51,30 @@ const ONLY_SHOP = (() => {
 
 // --- 23万円事件への防御: 1実行あたりのハードリミット ---
 const MAX_DETAILS_CALLS = 60;     // 40店舗 + 余裕
-const MAX_PHOTO_HEAD_CALLS = 300; // 40店舗 × 5枚 + 余裕
-const MAX_ANTHROPIC_CALLS = 60;
+const MAX_PHOTO_HEAD_CALLS = 400; // 40店舗 × 10枚 + 余裕（Vision分類のため上限拡大）
+const MAX_ANTHROPIC_CALLS = 80;   // キャプション40 + 写真分類は別カウンタ
+const MAX_VISION_CALLS = 80;      // 40店舗 × 1リクエスト + 余裕
 let detailsCallCount = 0;
 let photoHeadCount = 0;
 let anthropicCallCount = 0;
+let visionCallCount = 0;
 
 const CAPTION_REGEN_DAYS = 30;
 const CAPTION_MODEL = 'claude-opus-4-7';
+const VISION_MODEL = 'claude-haiku-4-5';   // 写真分類用、コスト最優先
 const PHOTO_MAX_WIDTH = 1600;
 const PHOTOS_PER_SHOP = 5;
+// Vision分類は飲食店向けの優先度。例: お買いもの店ではこの優先度ではうまく行かない可能性あり
+const PHOTO_LABEL_PRIORITY = {
+  food: 100,
+  drink: 80,
+  interior: 50,
+  exterior: 40,
+  signage: 20,
+  menu: 15,
+  people: 5,
+  other: 10,
+};
 
 // --- CSV Parser (refresh-hours.js から流用) ---
 function* parseCsvRows(text) {
@@ -187,33 +201,121 @@ function scorePhoto(photo, shopName) {
   return { score, reason: `ok (ratio ${ratio.toFixed(2)})` };
 }
 
-function pickPhotos(photos, shopName) {
+// 1段階目: サイズ/比率/attribution によるフィルタ — Vision呼び出しコストを抑える
+function preFilterPhotos(photos, shopName) {
   if (!Array.isArray(photos) || photos.length === 0) return [];
   const scored = photos.map((p, idx) => {
     const { score, reason } = scorePhoto(p, shopName);
     return { photo: p, idx, score, reason };
   });
   if (DEBUG_PHOTOS) {
-    console.log(`    [photos] ${scored.length} returned by API:`);
+    console.log(`    [photos pre-filter] ${scored.length} returned by API:`);
     scored.forEach((x, i) => {
       const w = x.photo.width, h = x.photo.height;
       const ok = x.score >= 0 ? '✓' : '✗';
       console.log(`      ${ok} #${i} ${w}x${h} — ${x.reason}`);
     });
   }
-  const filtered = scored
+  return scored
     .filter(x => x.score >= 0)
-    .sort((a, b) => (b.score - a.score) || (a.idx - b.idx));
-  if (filtered.length === 0) return [];
-  const picked = [filtered[0]];
-  let lastIdx = filtered[0].idx;
-  for (const candidate of filtered.slice(1)) {
+    .sort((a, b) => (b.score - a.score) || (a.idx - b.idx))
+    .slice(0, 10); // Vision呼び出し前に上位10枚に絞る
+}
+
+// 2段階目: Vision分類後、ラベル優先度でソートしてサンプリング
+function finalizePhotos(scoredWithLabels) {
+  if (scoredWithLabels.length === 0) return [];
+  // ラベル優先度 + 既存スコアで再ソート
+  const enriched = scoredWithLabels.map(x => {
+    const labelScore = PHOTO_LABEL_PRIORITY[x.label] ?? PHOTO_LABEL_PRIORITY.other;
+    return { ...x, labelScore };
+  });
+  enriched.sort((a, b) => (b.labelScore - a.labelScore) || (b.score - a.score) || (a.idx - b.idx));
+  if (DEBUG_PHOTOS) {
+    console.log(`    [photos post-vision] ranked:`);
+    enriched.forEach(x => console.log(`      ${x.label.padEnd(8)} (${x.labelScore}) #${x.idx} ${x.photo.width}x${x.photo.height}`));
+  }
+  const picked = [enriched[0]];
+  let lastIdx = enriched[0].idx;
+  for (const candidate of enriched.slice(1)) {
     if (picked.length >= PHOTOS_PER_SHOP) break;
-    if (Math.abs(candidate.idx - lastIdx) < 3) continue;
+    if (Math.abs(candidate.idx - lastIdx) < 2) continue;
     picked.push(candidate);
     lastIdx = candidate.idx;
   }
-  return picked.map(x => x.photo);
+  return picked;
+}
+
+// --- Vision: 写真ラベル分類 ---
+// Anthropic API 直叩き（Vision）。Claude Code CLI は remote image URL を直接受け取れないため。
+// 1リクエストで最大10枚をまとめて分類し、行数=画像枚数 のテキストを期待する。
+async function classifyPhotos(photoUrls) {
+  if (!ANTHROPIC_KEY) return null;
+  if (visionCallCount >= MAX_VISION_CALLS) return null;
+  if (!photoUrls.length) return [];
+  visionCallCount++;
+
+  const numbered = photoUrls.map((u, i) => `#${i + 1}`).join(' / ');
+  const systemPrompt = [
+    'あなたは飲食店ガイドの写真キュレーター。提示された写真を以下のいずれか1ラベルに分類してください。',
+    '',
+    'ラベル候補（小文字英語で）:',
+    '- food: 料理・スイーツ・盛り付け・テーブル上の食事',
+    '- drink: 飲み物・ドリンク・酒・コーヒー単体',
+    '- interior: 店内空間・席・カウンター（料理が映っていない）',
+    '- exterior: 店舗の外観・ファサード・入口',
+    '- signage: 看板・ロゴ・店名表示',
+    '- menu: メニュー表・価格表',
+    '- people: 人物が主役の写真（スタッフ・客）',
+    '- other: 上記いずれにも該当しない',
+    '',
+    '出力フォーマット（厳密）:',
+    '画像1枚につき1行、`#N: label` の形のみ。前置きや解説は出さない。',
+  ].join('\n');
+
+  const userText = `次の ${photoUrls.length} 枚を順に分類してください（${numbered}）。各行 \`#N: label\` のみ。`;
+  const content = [];
+  for (let i = 0; i < photoUrls.length; i++) {
+    content.push({ type: 'image', source: { type: 'url', url: photoUrls[i] } });
+  }
+  content.push({ type: 'text', text: userText });
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'x-api-key': ANTHROPIC_KEY,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model: VISION_MODEL,
+        max_tokens: 300,
+        system: systemPrompt,
+        messages: [{ role: 'user', content }],
+      }),
+    });
+    if (!res.ok) {
+      const errText = await res.text();
+      console.warn(`    ! Vision classify failed: ${res.status}: ${errText.slice(0, 200)}`);
+      return null;
+    }
+    const data = await res.json();
+    const text = (data.content || []).map(c => c.text || '').join('');
+    const labels = new Array(photoUrls.length).fill('other');
+    text.split('\n').forEach(line => {
+      const m = line.match(/#(\d+)\s*[:：]\s*([a-z]+)/i);
+      if (m) {
+        const idx = parseInt(m[1], 10) - 1;
+        const label = m[2].toLowerCase();
+        if (idx >= 0 && idx < labels.length) labels[idx] = label;
+      }
+    });
+    return labels;
+  } catch (e) {
+    console.warn(`    ! Vision classify exception: ${e.message}`);
+    return null;
+  }
 }
 
 // --- レビュー中央値 ---
@@ -233,17 +335,32 @@ function buildCaptionPrompts({ shopName, category, googleSummary, reviews, fewSh
   }).join('\n');
 
   const systemPrompt = [
-    '別府のホテルAmu周辺の店ガイドのキャプションを書く。',
-    '【制約】',
+    'あなたは別府のホテル Amu のキュレーション担当。Amu が「滞在中に立ち寄って欲しい」と選んだ周辺の店の紹介文を書く。',
+    '',
+    '【絶対NG】',
+    '- 価格に関する論評（「価格はやや高め」「料金は控えめ」「コスパ」「会計の見通し」「予算」など、金額の高低や財布感に触れる表現は一切NG）。',
+    '- 評価・口コミに関する分析的な記述（「評価が分かれる」「賛否」「割れる」「ズレ」「見込み」「レビュー数」「評価帯」「ばらつき」「期待値を絞る」など）。',
+    '- 訪問のストレスを連想させる記述（「混雑」「並ぶ」「待ち時間」「行列」「売り切れ」「予約が無難」「事前確認が必要」など）。',
+    '- 客層に関する記述（「常連寄り」「一見さん」「外国人客」「賑やか」「うるさい」など）。',
+    '- 弱点・短所を匂わす表現（「クセ」「物足りない」「微妙」「遠め」「狭め」「やや遅め」「やや高め」「分かれ寄り」など）。',
+    '- 主観強語（「美味しい」「最高」「絶品」「素晴らしい」「感動」「最強」「最高峰」など）。',
+    '',
+    '【書くべきこと】',
+    '- その店の「特色・楽しみ方・どんな滞在シーンに合うか」。',
+    '- 料理／飲み物／空間／立地のうち、その店ならではの要素を具体的に1〜2個。',
+    '- 散歩・夜の一杯・朝の珈琲など、Amu滞在のどのシーンに溶け込むかの示唆。',
+    '',
+    '【トーン】',
     '- 3〜4文、各文20〜35字。',
-    '- 中性的・実用的トーン。断定や誇張を避ける（「〜やすい」「〜寄り」「〜が出やすい」等の語尾を活用）。',
-    '- 形容詞の連打NG。',
-    '- 「美味しい」「最高」「絶品」「素晴らしい」「感動」等の主観強語は禁止。',
-    '- レビュー要約だが「広告じみていない」自然な散文に。',
-    '- 体言止め混ぜてもOKだが連発しない。',
+    '- 中性的・実用的。断定や誇張を避け、「〜やすい」「〜寄り」「〜が出やすい」「〜が残る」など穏やかな語尾を活用。',
+    '- 形容詞の連打NG。体言止めは混ぜてもOKだが連発しない。',
+    '- 広告コピーではなく、ホテルの友人が伝言を残すような落ち着いた一文。',
     '',
     '【出力形式】',
     'キャプション本文だけ。前置きや「以下が〜」のような枕詞は出さない。',
+    '',
+    '【書き終わったら必ず】',
+    '上に書いた「絶対NG」リストの語句が混入していないか自分で読み返し、混入していたら必ず書き直してから出力する。',
   ].join('\n');
 
   const userPrompt = [
@@ -325,22 +442,37 @@ async function processShop(shop, existingEntry, fewShotExamples) {
   }
   const details = result.result;
 
-  const pickedPhotos = pickPhotos(details.photos || [], shop.name);
-  const photos = [];
-  for (const p of pickedPhotos) {
+  // Stage 1: サイズ/比率による事前フィルタ
+  const candidates = preFilterPhotos(details.photos || [], shop.name);
+  // photo_reference → 実URL 解決
+  const resolved = [];
+  for (const c of candidates) {
     try {
-      const url = await resolvePhotoUrl(p.photo_reference);
-      photos.push({
-        url,
-        width: p.width,
-        height: p.height,
-        attribution: (p.html_attributions || []).join(' | '),
-      });
+      const url = await resolvePhotoUrl(c.photo.photo_reference);
+      resolved.push({ ...c, url });
     } catch (e) {
       console.warn(`    ! photo HEAD failed: ${e.message}`);
     }
-    await new Promise(r => setTimeout(r, 80));
+    await new Promise(r => setTimeout(r, 60));
   }
+
+  // Stage 2: Vision で内容分類（ANTHROPIC_API_KEY ありの時だけ）
+  let labels = null;
+  if (resolved.length && ANTHROPIC_KEY) {
+    labels = await classifyPhotos(resolved.map(r => r.url));
+  }
+  const withLabels = resolved.map((r, i) => ({ ...r, label: (labels && labels[i]) || 'unclassified' }));
+
+  // Stage 3: 料理優先で最終選別（Visionなしならラベルなし=スコア通り）
+  const picked = labels ? finalizePhotos(withLabels) : withLabels.slice(0, PHOTOS_PER_SHOP);
+
+  const photos = picked.map(x => ({
+    url: x.url,
+    width: x.photo.width,
+    height: x.photo.height,
+    attribution: (x.photo.html_attributions || []).join(' | '),
+    label: x.label,
+  }));
 
   const ratingMedian = reviewRatingMedian(details.reviews);
   const editorialSummary = details.editorial_summary && details.editorial_summary.overview;
@@ -480,7 +612,7 @@ async function main() {
   fs.writeFileSync(PLACES_PATH, JSON.stringify(output, null, 2), 'utf8');
   console.log(`\nWrote ${Object.keys(out).length} entries to ${PLACES_PATH}`);
   console.log(`Done! ${success} ok, ${fail} failed.`);
-  console.log(`API usage: details=${detailsCallCount} photoHead=${photoHeadCount} anthropic=${anthropicCallCount}`);
+  console.log(`API usage: details=${detailsCallCount} photoHead=${photoHeadCount} caption=${anthropicCallCount} vision=${visionCallCount}`);
 }
 
 main().catch(e => {

@@ -1,5 +1,5 @@
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
 
 <style>
@@ -9,6 +9,9 @@
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
+    touch-action: pan-x pan-y;
   }
 
   #access-beppu-app {
@@ -18,6 +21,11 @@
     overflow: hidden;
     color: rgba(0, 0, 0, 0.75);
     font-family: "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+  }
+
+  /* Google Map needs its own pinch zoom — un-restrict touch inside the map */
+  #beppu-map {
+    touch-action: auto;
   }
 
   #access-beppu-app * {
@@ -41,7 +49,7 @@
   .ab-content-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 180px 70px 116px 70px;
+    padding: 56px 70px 64px 70px;
     flex: 1;
     min-height: 0;
   }
@@ -2922,7 +2930,9 @@
           // Mobile: 3-step expand animation
           // Step 1: slide modal up to map top edge
           var mapCol = document.querySelector('.ab-map-col');
-          var expandedTop = mapCol ? Math.round(mapCol.getBoundingClientRect().top) : Math.round(window.innerHeight * 0.12);
+          var rawExpandedTop = mapCol ? Math.round(mapCol.getBoundingClientRect().top) : Math.round(window.innerHeight * 0.12);
+          // Guarantee chip row stays visible above the modal so users keep navigation
+          var expandedTop = Math.max(rawExpandedTop, Math.round(window.innerHeight * 0.16));
           modalEl.style.setProperty('--modal-top', expandedTop + 'px');
 
           function onSlideEnd(e) {
