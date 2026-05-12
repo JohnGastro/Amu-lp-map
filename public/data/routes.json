@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-12T13:37:44.150Z",
+  "generated": "2026-05-12T13:49:09.790Z",
   "hotel": {
     "lat": 33.2785833,
     "lng": 131.5030278,
@@ -3066,6 +3066,99 @@
       },
       "walkDuration": 197,
       "walkDistance": 244
+    },
+    "mitsui-repark-kitahama1": {
+      "origin": {
+        "lat": 33.2783972,
+        "lng": 131.5026503
+      },
+      "mode": "WALKING",
+      "duration": 29,
+      "distance": 38,
+      "path": [
+        {
+          "lat": 33.27848,
+          "lng": 131.50264
+        },
+        {
+          "lat": 33.27853,
+          "lng": 131.50304
+        }
+      ],
+      "bounds": {
+        "northeast": {
+          "lat": 33.2785295,
+          "lng": 131.5030372
+        },
+        "southwest": {
+          "lat": 33.2784807,
+          "lng": 131.5026358
+        }
+      },
+      "walkDuration": 29,
+      "walkDistance": 38
+    },
+    "times-beppu-ekimaecho": {
+      "origin": {
+        "lat": 33.278507,
+        "lng": 131.5018594
+      },
+      "mode": "WALKING",
+      "duration": 85,
+      "distance": 109,
+      "path": [
+        {
+          "lat": 33.2784,
+          "lng": 131.50188
+        },
+        {
+          "lat": 33.27853,
+          "lng": 131.50304
+        }
+      ],
+      "bounds": {
+        "northeast": {
+          "lat": 33.2785295,
+          "lng": 131.5030372
+        },
+        "southwest": {
+          "lat": 33.2783954,
+          "lng": 131.501879
+        }
+      },
+      "walkDuration": 85,
+      "walkDistance": 109
+    },
+    "kitahama-dori-parking": {
+      "origin": {
+        "lat": 33.2786558,
+        "lng": 131.5031755
+      },
+      "mode": "WALKING",
+      "duration": 9,
+      "distance": 11,
+      "path": [
+        {
+          "lat": 33.27855,
+          "lng": 131.50319
+        },
+        {
+          "lat": 33.27854,
+          "lng": 131.50307
+        }
+      ],
+      "bounds": {
+        "northeast": {
+          "lat": 33.2785516,
+          "lng": 131.5031936
+        },
+        "southwest": {
+          "lat": 33.278537,
+          "lng": 131.5030731
+        }
+      },
+      "walkDuration": 9,
+      "walkDistance": 11
     }
   }
 }
