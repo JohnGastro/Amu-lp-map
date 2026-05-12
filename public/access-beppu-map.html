@@ -1877,6 +1877,7 @@
 
     function getCategoryEmoji(category, name, description) {
       var text = String((category || '') + ' ' + (name || '') + ' ' + (description || '')).toLowerCase();
+      if (text.indexOf('駐車') >= 0 || text.indexOf('parking') >= 0 || text.indexOf('リパーク') >= 0 || text.indexOf('タイムズ') >= 0) return '🅿️';
       if (text.indexOf('お酒') >= 0 || text.indexOf('酒') >= 0 || text.indexOf('izakaya') >= 0 || text.indexOf('bar') >= 0 || text.indexOf('ワイン') >= 0 || text.indexOf('beer') >= 0 || text.indexOf('sake') >= 0) return '🍶';
       if (text.indexOf('カレー') >= 0 || text.indexOf('curry') >= 0) return '🍛';
       if (text.indexOf('ラーメン') >= 0 || text.indexOf('ramen') >= 0 || text.indexOf('そば') >= 0 || text.indexOf('うどん') >= 0) return '🍜';
@@ -2683,6 +2684,7 @@
     function inferCategoryFromCsv(rawCategory, placeName) {
       var text = String(rawCategory || '').toLowerCase() + ' ' + String(placeName || '').toLowerCase();
 
+      if (text.indexOf('駐車') >= 0 || text.indexOf('parking') >= 0 || text.indexOf('リパーク') >= 0 || text.indexOf('タイムズ') >= 0) return '駐車場';
       if (text.indexOf('お酒') >= 0 || text.indexOf('酒') >= 0 || text.indexOf('bar') >= 0 || text.indexOf('liquor') >= 0 || text.indexOf('izakaya') >= 0 || text.indexOf('ワイン') >= 0 || text.indexOf('ビール') >= 0) return 'お酒';
       if (text.indexOf('喫茶') >= 0 || text.indexOf('coffee') >= 0 || text.indexOf('カフェ') >= 0 || text.indexOf('珈琲') >= 0) return '喫茶';
       if (text.indexOf('朝食') >= 0 || text.indexOf('breakfast') >= 0 || text.indexOf('morning') >= 0 || text.indexOf('モーニング') >= 0) return '朝食';
