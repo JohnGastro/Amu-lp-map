@@ -45,6 +45,30 @@
     background: #c3bcb2;
   }
 
+  /* ===== Embed mode (?embed=1) — slim down for iframe ===== */
+  html.ab-embed,
+  html.ab-embed body { background: #c3bcb2; }
+  html.ab-embed #access-beppu-app { width: 100%; height: 100%; }
+  html.ab-embed .ab-shell {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+  html.ab-embed .ab-content-wrapper {
+    padding: 20px 20px 20px 20px;
+  }
+  html.ab-embed .ab-section-label,
+  html.ab-embed .ab-header-row,
+  html.ab-embed .ab-left-header,
+  html.ab-embed .ab-right-header {
+    display: none !important;
+  }
+  /* Compact main grid; rely on the JS preset filter */
+  html.ab-embed .ab-main-content {
+    padding: 0;
+    gap: 12px;
+  }
+
   /* dpk0J - ContentWrapper */
   .ab-content-wrapper {
     display: flex;
@@ -1883,6 +1907,28 @@
       mobile: window.matchMedia('(max-width: 980px)').matches
     };
     var shouldAutoFitFilters = false;
+
+    // ----- URL parameter handling -----
+    // ?category=駐車場   → preselect that filter (main or sub)
+    // ?embed=1           → hide aspirational header/chips for compact iframe embedding
+    (function applyUrlParams() {
+      try {
+        var sp = new URLSearchParams(window.location.search);
+        var paramCategory = sp.get('category');
+        if (paramCategory) {
+          var mainKeys = MAIN_CATEGORIES.map(function (c) { return c.key; });
+          var subKeys = SUB_CATEGORIES.map(function (c) { return c.key; });
+          if (mainKeys.indexOf(paramCategory) >= 0) {
+            state.activeCategory = paramCategory;
+          } else if (subKeys.indexOf(paramCategory) >= 0) {
+            state.activeSubcategory = paramCategory;
+          }
+        }
+        if (sp.get('embed') === '1') {
+          document.documentElement.classList.add('ab-embed');
+        }
+      } catch (e) { /* noop */ }
+    })();
 
     var fallbackPlaces = [
       {
