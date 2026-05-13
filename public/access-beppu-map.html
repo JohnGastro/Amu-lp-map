@@ -2855,22 +2855,99 @@
       return [];
     }
 
+    function mapSupabaseShopsToPlaces(supaShops) {
+      var out = [];
+      supaShops.forEach(function (sh, idx) {
+        var lat = Number(sh.lat);
+        var lng = Number(sh.lng);
+        if (!Number.isFinite(lat) || !Number.isFinite(lng)) return;
+        var name = String(sh.name || '').trim();
+        if (!name) return;
+        var slug = String(sh.slug || sh.place_id || ('supa-' + idx)).trim();
+        var rawCategory = sh.category || '';
+        var category = inferCategoryFromCsv(rawCategory, name);
+        var desc = sh.caption_override || sh.caption_auto || '';
+        var subtitle = normalizeCategoryUi(category);
+        var subcategory = sh.subcategory || inferSubcategoryFromCsv(rawCategory, name, desc);
+        var emojiTag = getCategoryEmoji(category, name, desc);
+        var photos = Array.isArray(sh.photos) ? sh.photos : [];
+        var thumbnail = (photos[0] && photos[0].url) || pickImageFromCsv(name, category);
+        out.push({
+          id: slug,
+          name: name,
+          slug: slug,
+          placeId: sh.place_id,
+          subtitle: subtitle,
+          category: category,
+          subcategory: subcategory,
+          lat: lat,
+          lng: lng,
+          tags: category,
+          emojiTag: emojiTag,
+          thumbnail: thumbnail,
+          photos: photos,
+          description: desc || '別府駅・ホテルから徒歩圏内のおすすめスポット。',
+          googleRating: sh.rating,
+          googleRatingCount: sh.rating_count,
+          ratingMedian: sh.rating_median,
+          editorialSummary: sh.editorial_summary,
+          businessHoursText: sh.hours_text || undefined,
+          businessHours: sh.hours_json ? JSON.stringify(sh.hours_json) : undefined,
+          _supabaseSource: true,
+        });
+      });
+      return out;
+    }
+
+    async function loadSupabaseShops() {
+      var supabaseUrl = 'https://aoehwevqlkpgvzdyfuja.supabase.co';
+      var supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvZWh3ZXZxbGtwZ3Z6ZHlmdWphIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3NTI0MTYsImV4cCI6MjA5MjMyODQxNn0.D4Vr26xPO5p5mv903Qup0XsHNvNIuAL_dwVY7M7j78Y';
+      try {
+        var res = await fetch(supabaseUrl + '/rest/v1/rpc/amu_beppu_shops_list', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': supabaseAnonKey,
+            'Authorization': 'Bearer ' + supabaseAnonKey,
+            'Cache-Control': 'no-store',
+          },
+          body: '{}',
+        });
+        if (!res.ok) return null;
+        var data = await res.json();
+        if (!Array.isArray(data) || data.length === 0) return null;
+        return data;
+      } catch (e) {
+        console.warn('[AccessBeppu] Supabase shops_list failed:', e.message);
+        return null;
+      }
+    }
+
     async function initialize() {
       renderChips();
 
-      var csvPlaces = await loadDebugCsvPlaces();
+      // 優先: Supabase master 取得
+      var supaShops = await loadSupabaseShops();
+      var supaPlaces = supaShops ? mapSupabaseShopsToPlaces(supaShops) : [];
+
+      var csvPlaces = supaPlaces.length ? [] : await loadDebugCsvPlaces();
       var cmsPlaces = [];
-      if (window.__WEBFLOW_CMS_RESPONSE) {
+      if (!supaPlaces.length && window.__WEBFLOW_CMS_RESPONSE) {
         cmsPlaces = mapWebflowCmsItemsToPlaces(window.__WEBFLOW_CMS_RESPONSE);
       }
 
-      places = csvPlaces.length
-        ? csvPlaces
-        : (cmsPlaces.length ? normalizeCmsFields(cmsPlaces) : fallbackPlaces);
-      console.info('[AccessBeppu] places source:', csvPlaces.length ? 'csv' : (cmsPlaces.length ? 'cms' : 'fallback'), 'count=', places.length);
+      places = supaPlaces.length
+        ? supaPlaces
+        : (csvPlaces.length
+            ? csvPlaces
+            : (cmsPlaces.length ? normalizeCmsFields(cmsPlaces) : fallbackPlaces));
+      var src = supaPlaces.length ? 'supabase' : (csvPlaces.length ? 'csv' : (cmsPlaces.length ? 'cms' : 'fallback'));
+      console.info('[AccessBeppu] places source:', src, 'count=', places.length);
+      var _isSupabaseSource = supaPlaces.length > 0;
 
       // Load hours.json and enrich places with latest business hours/status
-      try {
+      // (Supabase source は既に hours_json / caption / photos を含むので skip)
+      if (!_isSupabaseSource) try {
         var hoursResp = await fetch('data/hours.json');
         if (hoursResp.ok) {
           var hoursData = await hoursResp.json();
@@ -2896,7 +2973,7 @@
       }
 
       // Load places.json and enrich with Google Places photos / median rating / Amu-toned caption
-      try {
+      if (!_isSupabaseSource) try {
         var placesResp = await fetch('data/places.json');
         if (placesResp.ok) {
           var placesData = await placesResp.json();
@@ -2925,7 +3002,8 @@
       // Supabase 経由でキャプション手動上書き + 非表示フラグを取得し、
       // 該当店舗の caption を上書き / hidden=true の店舗をリストから除外する。
       // CMS は https://amu-onboarding.vercel.app/beppu/cms にある。
-      try {
+      // Supabase source の場合は shops_list が override も hidden も既に適用済み。
+      if (!_isSupabaseSource) try {
         var supabaseUrl = 'https://aoehwevqlkpgvzdyfuja.supabase.co';
         var supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvZWh3ZXZxbGtwZ3Z6ZHlmdWphIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3NTI0MTYsImV4cCI6MjA5MjMyODQxNn0.D4Vr26xPO5p5mv903Qup0XsHNvNIuAL_dwVY7M7j78Y';
         var overrideResp = await fetch(supabaseUrl + '/rest/v1/rpc/amu_beppu_captions_list', {
