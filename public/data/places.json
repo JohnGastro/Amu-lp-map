@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-12T13:26:02.610Z",
+  "generated": "2026-05-12T13:54:32.627Z",
   "captionModel": "claude-opus-4-7",
   "shops": {
     "%E5%A4%A7%E7%94%B0%E5%92%96%E5%96%B1%EF%BC%88%E3%81%8A%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%8A%E3%83%BC%EF%BC%89": {
@@ -9,35 +9,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMYhduNZ2GtyLZld58If5KF6Yij6t7AkD3o8i9-WbpyH800_9IYVt21vEaACLG7vY_x0yV4dXQ9y-6QxY3o-alfDYAtFSxEIcnz3KzYF1AVEI1cHouY904_f8-l6C6iwGK8rO7IFhcMxVORPA=s1600-w1600",
           "width": 3464,
           "height": 4618,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105150634200975764251\">ぱるちーさん</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105150634200975764251\">ぱるちーさん</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNgRykhOWR_kpQJ_QK4M3a5aaWEyiHnYN1CHU7qn_8iVnJQ-0PTwxAC5j1HnTYNv3Z3zO8YBILvelT7BCLrOQqw4CeFYobk_mGWnoM2JdN18_45Qe4RtBZeUV70mKf74tlHad-u-I7wPvM0Ug=s1600-w1600",
+          "width": 4284,
+          "height": 4284,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109916801672212473031\">Dongkyu Choi</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPbbAYC4NAAbzFDegzH4TcbUmNrJixbYflOc7HazPFZ9q9nZ0jCqrNo8AMC62atDfaJJg6RWX9_VpCAhSKtTZmm0ydqj6iHn0XkdKD4XWds06dxNAsBGLzHaV9rj7FhiQmBv0VBw3PXz7dekAFeeBKkTA=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109497698336050858202\">温たま</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPZXlo7XouJyFcaxfW4M7WbL2tOJwTgn8ud2osDqsQgSNcqiD_98IiYgId1CVRB9tmZi8hLSS1eYbhLM6u67yamUQzPpHegELvDADjRyngqJhRmsvAGZeZEgNQP8G0B6kLDiS69-hzUbYs7z79DlfVDdg=s1600-w1600",
           "width": 4096,
           "height": 3072,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109606932459609038570\">Kazuki Yajima</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109606932459609038570\">Kazuki Yajima</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMTvKQj9Af5UZREzvl5C1umQpeThpZE7k8--SWUjQfIjs1KxKBDT6m5auDBLK5rH4yJJNfhDFruXzRqesNYPDOEsjU51HQwWW6XkAtxtufQOiV5fCNGCRcTie_FNlIkyuAhbal-5W-6x0qhLiAxCVgo8w=s1600-w1600",
-          "width": 3024,
-          "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109061760451515327480\">後藤伸也</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPotqd91M6_AXJ61cEGSuYQfG9yTdgjIuzbkXau1UrhSFLtoxx-cQPbYHz0oEc9yMIvokhhFrSuhLjRgXOxOOkYAxVtmpjy3oIJGKjJ3BPKPpZMH5kztyk9aosZRx7iMU5MkjCTFJ3sFtmebA=s1600-w1600",
-          "width": 3024,
-          "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117118293506841765606\">株式会社</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNRr3df9Y_greCXDzIMDBIf_PdDXFM4O8QlZym6JDEcaHyxoG8UHTOajQYkzJfc1fLjOlBptAoGcomkEqN9zwLm6MoiIvJQbOHOu4IvQpeOlzzXH09lF4q6ouj17aT4RUI3qfJ_anHFa_dbJJMhzo6c=s1600-w1600",
+          "width": 3840,
+          "height": 2160,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106690192326933697772\">masa kamejp</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.8,
       "ratingCount": 59,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "無水チキンカレーが軸で、注文に迷いが出にくい構成。\nスパイスと黒胡椒の輪郭がはっきり寄りで、香りが残りやすい。\nカウンター中心の小規模店で、営業日と席数は事前確認が安心。\nサイズ展開があり、量を合わせて選びやすい運用。",
+      "caption": "無水で炊いたチキンカレーが軸の、カウンター7席ほどの一軒。手羽元のほろほろとブラックペッパーの効きが残り、スパイスの輪郭が立ちやすい。Sから選べるサイズ感で、散歩がてらの昼に寄りやすい。駅裏から徒歩10分ほど、Amu滞在の昼の選択肢として組み込みやすい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:25:09.295Z",
-      "lastChecked": "2026-05-12T11:25:09.296Z"
+      "captionGenerated": "2026-05-12T13:46:17.096Z",
+      "lastChecked": "2026-05-12T13:46:17.098Z"
     },
     "EEL.BISTRO": {
       "placeId": "ChIJbwFiLgCnRjURHGSwTPJDOrQ",
@@ -46,41 +57,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqG6z_Nq7pajQLInvGPdvdLOHGw8MPIzpqlWHApBKCXkp-TEu1_NiQv65mWgSKd7QkH01c1_6vqQF_W35UOT3sKmfCDeONbLcJs=s1600-w1600",
           "width": 3024,
           "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102119354106831591835\">EEL.BISTRO</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102119354106831591835\">EEL.BISTRO</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqGDP0hB4i5pZ8_SUc2rkR8ZSBq19DLkiGyu8UPAgOTOhPwn28vWLCtFFC0rRiDxLNPjHfDLPTgMnF2EbuMsy_D6X1HIdL0nDXY=s1600-w1600",
+          "width": 1774,
+          "height": 2364,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102119354106831591835\">EEL.BISTRO</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqFQ6Z3qDX5aMWbImim333lOL03mIBD3ZBsuysmDlGomQnns6omqtrkQS_iftjMuRu8YNVleT0q8yx0St_sHJ1sZuXGahn43u3k=s1600-w828",
           "width": 828,
           "height": 1792,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102119354106831591835\">EEL.BISTRO</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102119354106831591835\">EEL.BISTRO</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOAAvzZ5-HUHLnzKzwuFOO4ORnhH2dDFo7hGRm8BC5a52a64hHocSCIGGFG5OdC81zh-5OY-AdFzdpSdpNWCaImsB9BrjukmHspPX5XwKFZU4OQqyanPiSDy9aPG_wKANZGQneLrjy3tNjBDDQ=s1600-w1600",
           "width": 2268,
           "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107864493811530478577\">shus ta</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107864493811530478577\">shus ta</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOqr32cT9go2a7CypkOYZVw4FlSSYvvH8JiPacuYlHBIXAedc718TFUSih_QmKScgodNZevDgGCSPvYI-bibBEsW3r5YbldPGtdth6o0rWKaBA8etnfL5c7NTg4q_pJd3Lzsc5Waf0TP1KlpA=s1600-w1600",
-          "width": 2268,
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNt5M6CPvQnmluNYTKAZJ7UY9sNOs4XRLw70aFRTjlMd8eMsQYMhcwZuOWmfYp9a7EHSgjmd3nfbJKZbf5TZYAUjoLzGpKJerKKSWS97BlnLSbvAgpu-CPJHaYm7YdOGeDGQ_mq6KyEquDF3B_hylTsvQ=s1600-w1600",
+          "width": 3024,
           "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107864493811530478577\">shus ta</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPX0vVA5dRGZdy0R3GiZOVfOO5kIqEzP7AJk1EX9-xys2ZDik2BARDa17Q7K_B8L1doo_rraM40ntLHZ6ra_gh-wEYjfmZTAG_ty4wP7JQa2GmOp0_iBmLMw8GK7FxNs1mr6k--rwydpcbcjcDCfzd1zQ=s1600-w1600",
-          "width": 4032,
-          "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100491637080512922620\">とよひろ</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100948716342921421967\">Crystal Inge</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 3.2,
       "ratingCount": 5,
       "ratingMedian": 3,
       "editorialSummary": null,
-      "caption": "ナチュラルワインの品揃えに寄せた構成で、グラスでも数種から選びやすい。カウンター6〜7席のみで、店主との距離が近めの作り。料理はワインに合わせる小皿寄りなので、軽くつまむ使い方が向く。静かに飲みたい層や、ワインを軸にしたい夜に合わせやすい。",
+      "caption": "ナチュラルワインが中心で、グラスで数種類から選びやすい。カウンター6〜7席のこじんまりした構えで、店主との会話も楽しめる空間。タコサラダやチーズの盛り合わせなど、軽めのつまみと合わせて静かに過ごしやすい。Amuに戻る前の夜の一杯に、寄り道として馴染みやすい一軒。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:25:19.442Z",
-      "lastChecked": "2026-05-12T11:25:19.442Z"
+      "captionGenerated": "2026-05-12T13:46:27.539Z",
+      "lastChecked": "2026-05-12T13:46:27.539Z"
     },
     "%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%90%E3%82%B5%E3%83%A9+%E3%83%8A%E3%83%81%E3%83%A5%E3%83%A9%E3%83%AB%E3%83%AF%E3%82%A4%E3%83%B3%E9%A3%9F%E5%A0%82": {
       "placeId": "ChIJwxJgBgCnRjURqd-dcfA-gxk",
@@ -89,41 +105,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqGqVE4GDfhVY5SrAr55Vq17TBCpxhu9En1nvd-iAjA5ph2aeea5StrCXKGbtDuSEIZMJbxLQRimii673YZuxlj38g9-qYa6dQ=s1600-w1600",
           "width": 2880,
           "height": 4087,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111698812735232514533\">ニューバサラ ナチュラルワイン食堂</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111698812735232514533\">ニューバサラ ナチュラルワイン食堂</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqGzpoww4hVRHakpaSqLjmt9hrBHPV41dtBy0z9SiUEIh21222PYaSgQolqnMwNHvOHN5Lj1LTWimuMlViWFVG_hLElRjLy4MA=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111698812735232514533\">ニューバサラ ナチュラルワイン食堂</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqE_hzzfK-UvrFmNogDUvVUSoD9o1nSioLYf8cblc7PyQca0KABWnu1IupKjGVFuMgLJ2lqK0HLA8m9KU94WkScNZw89TujDVw=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111698812735232514533\">ニューバサラ ナチュラルワイン食堂</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111698812735232514533\">ニューバサラ ナチュラルワイン食堂</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqFH5ZEETM3XzR0zyTe6j4Wq4GF3seRYO8C_3jlEBA1nJgio7L1NYDLZgImJxoTkqDBc8VzEPuoVVWm7lS2uN__cK2yK8CkjKg=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111698812735232514533\">ニューバサラ ナチュラルワイン食堂</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111698812735232514533\">ニューバサラ ナチュラルワイン食堂</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPG3Et3F03o_1_EW0QL99_hdV_GW6FcjwxYspM8GfqR1_C0ekxYFbTRRhIRjZL1q1pa_UZIuyk4qPOWd898e88eb7_jgNZo06HB_5Yx5ocDNRbYkFkP5J3oogA9h8_512uFaf_mniW42B7OWhI2C7Lelg=s1600-w1600",
-          "width": 4080,
-          "height": 3072,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110685271441553506514\">Tsutomu Suzuki</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNZJj0otFh6Rp0qmronbokeeb8bu70xNN1KZ6JAfCj845cYUaWxIePqjh88XJddcH9YCOuwtRZ_SH5liWA_Q9duwEEuCh9uGh3qjjgZWV9G3Mss7lw-Jdedv3J1cWurPwFQakINebi7dvX1_bxQcOGAaA=s1600-w1600",
-          "width": 4080,
-          "height": 3072,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110685271441553506514\">Tsutomu Suzuki</a>"
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqG7ynZ6oTH3jDUE7z4jb8K2PUj9JvY2zja60N7GMpM4NurPKBF8Kj9dlTjSp9YEIbbiDQqB6PuqEsi7mzIJdsYIHDfDOSb7CQ=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111698812735232514533\">ニューバサラ ナチュラルワイン食堂</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.8,
       "ratingCount": 14,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "古民家を改装した空間で、ナチュラルワインと季節の料理を合わせやすい店。黒板メニュー中心で、一人でも数品から頼みやすい構成。カウンターや立ち飲み席もあり、滞在スタイルを選びやすい。常連客で賑わう時間帯もあるので、ゆっくり過ごすなら予約寄りの利用が無難。",
+      "caption": "古民家を改装した空間で、ナチュラルワインと季節の料理を合わせる一軒。黒板に並ぶ日替わりの皿は、スパイスやハーブの効きで素材の輪郭が出やすい。カウンター、テーブル、立ち飲みと席の選択肢があり、一人でも複数人でも馴染みやすい。夕方の散歩のあと、一杯と数皿でゆっくり夜に切り替えたい時に。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:25:30.501Z",
-      "lastChecked": "2026-05-12T11:25:30.501Z"
+      "captionGenerated": "2026-05-12T13:46:38.591Z",
+      "lastChecked": "2026-05-12T13:46:38.592Z"
     },
     "%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89+%E3%82%B9%E3%83%86%E3%82%A2%E3%83%BC%E3%82%BA": {
       "placeId": "ChIJj3BaxMKmRjUR5O5OZVrnvZQ",
@@ -132,35 +153,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMASTPDzFCGDY34v-8Qt-31BnsiPMabAl3OJ9WdKOH7lDwsVHUV3uyHiBT2IuBEm8vVlc4EiEFxQVMqPE-8Cw_rOm_cruCbSoFsjmJeiDXVBLdffpUjpMN7LeTXmOvZAyxH06SNPWTAVDqDJT7ECbAOTA=s1600-w1600",
           "width": 3600,
           "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105629154335165384310\">Ju-Yin Chen</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105629154335165384310\">Ju-Yin Chen</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM8vi3JEdCl-iW_M3WknLXKMEmZ0yDcuJR7oLjytM-Rp1vYObh6NZrPcmvOGYUnKqzAM06QGC7fIgyckwDjf5G8IfxqQc4d40MZaG3OU6gsy3uVbknDIkzo6_teCzJbhwODGB6FgSkX0avBGg=s1600-w1600",
+          "width": 1665,
+          "height": 1249,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103077289741479757090\">creamy horror</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOjflW3ITRSu5y84YcpZsR99B8NvsrMWkDS6IMD0ggFDQEknKtXFJV9v2NThJE5VJZOkHjQyooYT2Q72RgBOf58VKgsQZ7vRxds-QHmYnn3Xy126o4WTvZmlaCXwSxEkwdWd51y4f2SyHLhR0oH8bFM_w=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105629154335165384310\">Ju-Yin Chen</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOqwzu4Egu7YauuPlmiobv0Q2CqUm2c_s2xm6MWihsyAE_iNufu2d0YuwszAIkC9u5M4nQszoOv8ADcNZE69FZAdtxvIoZu_R6dv1dWxsadZSBHv9xrlpkCjI_LWGab1p62PDOJAHCa-4FPFrdDaDLpvg=s1600-w1600",
           "width": 4624,
           "height": 3468,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111227817776547641534\">ひろきん</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111227817776547641534\">ひろきん</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNtctBcYDKN5G1rDEjWKx-l8Rity16nYjMTrVpW0DlXYEiVeuZ7XibYs3M-o-8hDE2tO1xlji5znM0IsaRV5FV6iHjnYevnMQqHHkRVEC_HTPwqIWmX_sCkcxFCcJAgeVW4h12tB9hI8LkGtg=s1600-w1600",
-          "width": 1836,
-          "height": 3264,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101891633737587215850\">Y S</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO2hYBy-pO4nebMMnEOlz0-sF9WLROF3zz8CaysBWwLu9vmfqxIwS9m-tjSvU9U2djAdGDhzXuSv9z6lr4qtAB8ZVN2Z5lr54CoTg_QEuas-n2KnDsRz1EGnuDxkusr6-FLyWiy4XoRQRupAIc=s1600-w1600",
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP_uc-4j1FZWALsq3p7dlmAUo4uP2xZOkQGv_mFOhisLDvRnFWPD_E1VC4wr20K_zWPHPAgeZbkpgGTj3jrAlFFhf6xRtrLlcGfMwjbcbQ3e8m0QVmBBfPOBwx8V0SwcxiKy8y3Fbmg2vnz=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115519923395071078025\">GG YY</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117708419174769614013\">Tomita Itaru</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.7,
       "ratingCount": 116,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "一杯ずつ丁寧に抽出するスタイルで、提供までは少し待ち寄り。テラス席があり、天気のいい日は外でゆっくり過ごしやすい。豆は週替わり、オーツミルク変更にも対応で、好みを合わせやすい。コーヒー以外のドリンクも揃い、同行者と来ても選びやすい。",
+      "caption": "一杯ずつ豆を挽いて淹れる、丁寧な抽出が軸の一軒。店先のテラスは光の入りがよく、別府の街並みを眺めながらのひと休みに合う。コーヒー以外にバナナジュースや季節のドリンクも並び、選びやすい。Amuからの散歩がてら、朝や昼下がりの寄り道に。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:25:39.765Z",
-      "lastChecked": "2026-05-12T11:25:39.765Z"
+      "captionGenerated": "2026-05-12T13:46:51.245Z",
+      "lastChecked": "2026-05-12T13:46:51.245Z"
     },
     "Cafe+%E8%B1%86": {
       "placeId": "ChIJQcF5OeymRjURK0fsU00wdsk",
@@ -169,54 +201,87 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqEpobY06IN0fCkUF1tR2d9Mpj1htrgJnUKkuJ1wCDVvIvfKb2HonPfnb8aPPWqEw5HkK2KwXmxMJOcy1fKiVBnVRi83bgWFj8I=s1600-w1600",
           "width": 3024,
           "height": 3440,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117675607918793447987\">Cafe 豆</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117675607918793447987\">Cafe 豆</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNS-3S3tjTu_QGEE9TcqAqY39GM-Fl2hCnat9PCrzY0kll4Vnoh73xBt1_sIeJ70KMZdo7spJnWYJ3lCSj2mf_pKpWlNLlyTEuAiSj7r2MNk8UU3jhzCx_k45ksDWMvyydK8EoOW92eOuWmyg=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117762660592495381274\">Dish創作オムライス</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOrPswEg4H9eDyXL8yow7eZhyZxgWZaX3TlInvDHP1q0WY3hhrSXr288Dk4P4f8cB8yitNAV-EbUN-su5cxLJluD-3BxAmmgpKGPKuYbrAvtooWf8LV-ORd7Hrn9bmfU1P7EYfEfEEEHO7DsTWFvI699Q=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111230430728183076384\">Mmm Mm</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNTORRcQr4aD86ytEc7zUqC-el6ZyAtArRtdNiDxuYPx2Aujj85iLiYsXChPpPVeyeCB1oLY9LOuT13hSZvrLOQTFx8CulmB75nvanGT4n9zv5KIxGVn6d7RIqik-Alof1FhGJ8VMSxtpbc-cZ9zj2sgA=s1600-w1600",
+          "width": 3000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101405349248461392512\">Y</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO1nDoHXolWZvQAi8kq178UZUssp-VK89pB5KoyW6it-TtzrqwY7L_exMoreCNevDi6-MhuBHkJkEYyxg98xmFDQlG_MzNt8i3dlanZOtkbNhcGCsnBgv581aCnbxxvF6bQQeJ7eKXrlfWEz9umhXHGzQ=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/104648988644283695086\">赤いみみ</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOYtchyvjtXA-pE3hE1g4elaIeRCOWEuLoGoM2yz6Oj_nkL7haS2PTajhnN-fUZ0-BO_BU70-XB9F0J8pqIyn6AG3yx4ZPNSomxCTroHB3dL1QGylQtMSG_e86RBeUPd--9ECsC_eX45xqd=s1600-w1600",
-          "width": 3600,
-          "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115030790793417710292\">cherry chu</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/104648988644283695086\">赤いみみ</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.7,
       "ratingCount": 83,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "裏路地に入ると緑のある庭が広がり、滞在のテンポを落としやすい。焼きたてワッフルやチーズケーキ、中煎りコーヒーが選ばれやすい一軒。地域猫が外でくつろぐ景色もあり、雰囲気を楽しむ寄りの使い方が合う。駐車場は小さめで、支払いは現金とD払い、ワンドリンク制の点は事前に押さえておきたい。",
+      "caption": "流川通りから一本入った場所に、緑あふれる庭付きの一軒。庭先には地域猫がのんびりと過ごし、時間の流れが少しゆるむ。焼きたてのワッフルとフルーツの盛り合わせは、中煎りの珈琲とよく合う一皿。Amuからの散歩がてら、午後をひと休みするのに馴染みやすい場所。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:25:49.336Z",
-      "lastChecked": "2026-05-12T11:25:49.336Z"
+      "captionGenerated": "2026-05-12T13:47:01.675Z",
+      "lastChecked": "2026-05-12T13:47:01.675Z"
     },
     "33°16'42.9\"N 131°30'10.9\"E": {
       "placeId": "ChIJf9zUL92mRjURmqeTKhXrnFk",
       "photos": [
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMfDSaQV90fR0FPmRgqHKqVGFupyUa2-8qWhUN69h8sOeliaBAF1OMCvoEdSYnBwHNEvfWkU8GrEBCzr53QOeWEi-417C69urC1S5bZyvzhwZTkq4GV0KFrmEmO5AF4u4yfkUXn0U5IGtBN=s1600-w1600",
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM_O5kay3fqevhDD9NLtilhTePluo3Bl7DkP0unKQyoQex9_YH9EcSMGxaFrRKLad7eqyB6yJ0BxOewcbj8O9B_gigCDhSATtQ2XrEonk6tbT1R8yjs0LSPI0Bw2nVh7brqYjeArR_Jx6qT=s1600-w1600",
           "width": 4800,
           "height": 2700,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/108745890395192198361\">Satoru Kono</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/108745890395192198361\">Satoru Kono</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNmMWPjeR3L0SCgTQGjMM3YLUW97TgOS9yT2fh3y7G20jIn2NZ8vRIJfcxV5GSAeKRuZANdOLidbwPubZyn9EU8mHzSfYmSsBZGAEEknQFmYKrhKVrh5v4XIZZRmfhVMkAhTI6j4TzZH_V3K7M=s1600-w1600",
+          "width": 3648,
+          "height": 2736,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102066185136208854412\">カカオ.</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN65kYeM1FghTql6rzxe8dWc92VZDHde_hq57P0nYOMjdUBE7B8m40exmf8mfWa1yVCl-NVUXCXsjZLo-ywBe3zG7HkaSOVVQxKmRrh3jwg16CykI824RRbX7pdH3RBVL7QS3BVXyAjTmSypdk=s1600-w1600",
+          "width": 2736,
+          "height": 3648,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102066185136208854412\">カカオ.</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNZAcGe5RsDsbD83Hd0m0JxUx7PEJQ8ql2vFPlyizPbd2gfMrGWlpOmodmuohRb7KFcRIgVsZvn72uQmsxIhOW1ud2b-ESQQ4sw5N9oKhL2t1PMh8bqH62fLEWwtlYqQdSqlKi7NCDf55hiqg=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101459887106232646937\">MAN KIT NG</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101459887106232646937\">MAN KIT NG</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.8,
       "ratingCount": 4,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "商店街沿いに位置していて、立ち寄りやすい導線。料金は控えめで、短時間利用にも合わせやすい。口コミ数は少なめなので、満空状況は時間帯で変わりやすい。評価は高め寄りで、選択肢として確保しやすい。",
+      "caption": "商店街に隣接する平場の駐車場で、街歩きの起点に置きやすい。車を預けたら、そのままアーケード沿いの散策へ流れられる。鉄輪や駅前方面へ動く日の、車中心のスケジュールに合わせやすい。日中の観光と夜の街歩き、どちらの拠点にも転用しやすい立地。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:26:00.209Z",
-      "lastChecked": "2026-05-12T11:26:00.209Z"
+      "captionGenerated": "2026-05-12T13:47:13.480Z",
+      "lastChecked": "2026-05-12T13:47:13.480Z"
     },
     "TANNEL": {
       "placeId": "ChIJLd8E91OnRjURySxguPNYrWc",
@@ -225,29 +290,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqGxo5niW7ndFKTLeRUe3KwxHaHc8wXS9VjNUIfB-L3oqXBNoXqwrQuHErKfSM6jvfxaMvSwrq7htOs7GmaJEWOhrSDHDBeCVls=s1600-w1600",
           "width": 1707,
           "height": 960,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118429129434477817088\">TANNEL</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118429129434477817088\">TANNEL</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqF5Jut2DLzVvSwYAEV4yB0NXcFhJKxZqHg7EpLGChldpR_gebN79Fbyde_7NXu4Xdvk2hIBuyd_-txz3bPffMl1S5H0jUyOKic=s1600-w1109",
+          "width": 1109,
+          "height": 1479,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118429129434477817088\">TANNEL</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqEQm1kq8lAdIdZx7J6ryzL6ecQcV5nL2Pd3EV2doIcvX--PvoZcf3HgkiiKAihYN4BzeXMV9X4xTlkZZGhcZ0zQ8iMG1eq0zc8=s1600-w1152",
+          "width": 1152,
+          "height": 2048,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118429129434477817088\">TANNEL</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqHo9iT37w-mq20dED85Qb5-l_pShdynTRJP3Z3q9UtpWkPmJWwCHaMGmNvL4eeh1pjvsl6Tp3WLYqC6P0cFL0haxNW-rFXwO5g=s1600-w1152",
           "width": 1152,
           "height": 2048,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118429129434477817088\">TANNEL</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118429129434477817088\">TANNEL</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNB3TlFDZ18FJGARr-7640_34UjpQ2XkCWeiwQENhRGjBhuiOhEhYqb6HjCLJcAocdR3Nj1IFFadxVrBhO-fR9IPovx7iMHLaUWCv3Ih89UKtozYyrkI3xji5p4pzzu2e3IbB6ggaPVX5N15A=s1600-w1600",
-          "width": 3024,
-          "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114088954045420619544\">roy t</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMjI1LLdpOpXj3EBpQ-Oa68NBuRTFV5hr0HuEnShXKXXM1QlChprpP05X0hNOMKIKAFDe2AqD11vu9tbYUDVFn9jmMRyofI01832lKL9jwn6WQ62JhnBmk_2x23_SQpII9t8dFcjAL7v0ECwfk=s1600-w1600",
+          "width": 2448,
+          "height": 3264,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103413044933306135606\">K H</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.8,
       "ratingCount": 41,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "看板控えめの隠れ家寄りで、扉の先の体験が際立ちやすい。レコードと音響の存在感があり、ウイスキー中心の品揃えで選びやすい。常連の比率が高めの時間帯もあり、訪問タイミングで雰囲気が変わりやすい。お茶割りや〆の一杯、コーヒーやスイーツも揃い、使い分けしやすい構成。",
+      "caption": "大分の方言で「訪ねる」を意味する、看板の控えめなバー。カウンター越しに大きなスピーカーが据えられ、レコードの音に浸りながら一杯を傾けられる。ウイスキーの揃いが厚く、好みを伝えてゆだねやすい雰囲気。Amuに戻る前、夜の締めに寄りやすい一軒。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:26:11.419Z",
-      "lastChecked": "2026-05-12T11:26:11.419Z"
+      "captionGenerated": "2026-05-12T13:47:25.738Z",
+      "lastChecked": "2026-05-12T13:47:25.738Z"
     },
     "the+HELL": {
       "placeId": "ChIJ3916qHunRjURfTxr8yZu1No",
@@ -256,35 +338,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMNnxLmkpuwzgcptyRniAMUo4MRPS1iwxWcb-LGv10pNxmcd2RC5Jp2qjtcT7idzYewfYyISPPreDUCRXcy-NmUiHY3K6zLAS2kaBDtQ0IRvWrmy7cNWu3IRTEPl8x9rplNtpvtDpH9F77Njd5X6Z-Xpw=s1600-w1600",
           "width": 3024,
           "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115163696904494968868\">Max Rozenberg</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115163696904494968868\">Max Rozenberg</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPOprJrS7ZQNBNSfmTtNZlzaORC81txT1hY308zy5fA6b3JJjFdfFl1t8N-ae23Ge8ES5cTHFMBz6uGqbDeltpqlLDdd4cUo-JKB7TVm5-G4PyYIe9aQCVoUDaqvgCgAAcAUrQ_qkfc9kacBg=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100373901466647734511\">Yayoi,t</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNeEKYhlNR45wAjiVH0vyI8DHJIMLDRL1e0aSMPMV9Jwb16iE5G2bGo_I0yq91Rl_Jg7XW7hCKaFM3VvqGvOli1V81x4nrZkvKEcqUJk0N-gOqU9AsQQT9LdWDf3Yo-ePUORt67m0N6v4lC8A=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/108882745722451384820\">いでほ</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOOS8tU_G3HWQRCOXqY3PBkv2TyrztbU2w-I4X4rwVyBZflhV30qpGCjIDYYMo250kqO7H1CUCE8zRBJvx1xywW_zoSpmoMuregkzGQ7CBUp5NPs7k-poYGgRSYEHi8Kxh-pWqaEdua2OyABbzraqnnew=s1600-w1600",
           "width": 3024,
           "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115163696904494968868\">Max Rozenberg</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115163696904494968868\">Max Rozenberg</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNbk8QwpldrAuveHgQC3Oqtn9gOMhlq8yE-1lo60yIR8-3IBvHoxhkdJSsuakLdhg2G0AUmifNPemLShSKBHD_uW0ABzO74Lek1DOPrfmL1u8sNvit2QfmdkcxfXWT_oZticODyTLnNaFS0XxE=s1600-w1600",
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNpIiEuWXG4v4tU0vgNvkv0tp0u7kgmP8GmhODNqDkMZG2WlbJjXNVqWNSyAm8MuvkW-VRAm_TbF7sSGcjSBk9yAJ2wYuqNmMVzOMPs0yWXS07Ti02RvaVSFYg5Nng86JpeJp1gaTxwKXIS-xPK8Nf-iw=s1600-w1600",
           "width": 3024,
           "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103601320995167318988\">SUYOUNG AHN</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPKH0XMrvWXuw1lQwU-AXR8ssgUGDyUpGnWpLNujdeMiaPQg-m7sZ-czjjd_IJGCSjY1o-d3SBYs8CJd-Dxkwq-HWWSwhJcJsmpHgRC4-lGZDb7-oMkCs9w2OAwj8ZuAw9AUW-F8p4naHNO6A=s1600-w1600",
-          "width": 3024,
-          "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115300665015942465311\">Rosha The Great (Rosha)</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115163696904494968868\">Max Rozenberg</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.7,
       "ratingCount": 65,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "果実を漬け込んだカクテルがあり、選びやすい構成。音楽と照明のバランスが取れていて、長めの滞在でも疲れにくい寄り。レコードはディスプレイ中心なので、用途を合わせると体験のズレが出にくい。評価は高めで、雰囲気重視で使いやすい一軒。",
+      "caption": "フルーツを漬け込んだカクテルが看板で、飲み終わりの果実まで楽しめる一杯。音楽と照明の溶け合う空間は、夜の散歩の終点に置きやすい。腰を据えて長居する時間に向く、別府の夜の灯り。Amuに戻る前、もう一杯を重ねたい夜に。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:26:20.526Z",
-      "lastChecked": "2026-05-12T11:26:20.526Z"
+      "captionGenerated": "2026-05-12T13:47:37.857Z",
+      "lastChecked": "2026-05-12T13:47:37.857Z"
     },
     "%E3%82%B1%E3%83%BC%E3%82%BA%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3": {
       "placeId": "ChIJfYhLbrinRjURPfFZoZnvP4Y",
@@ -293,29 +386,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNL0wYtn4O4cOyXb0VlyR2TLXgDaBpThPuKuODkRZv5kHeNmZCWowXJ3IdWMvfefrBFIZwoDhig6QMRGHUrmPA7odS6Rhn159v2bRk7GYZr7wetjmWlQB5hmJKqw7__H0WiAX9SrwxuNJAO=s1600-w1600",
           "width": 4128,
           "height": 1908,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115702604437105143879\">dy ma (mady)</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115702604437105143879\">dy ma (mady)</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMZ7d0cJkj3_ynNEGqArJoui72XB_PphUfXQ1cuxtNbB01rlxjlGn4zA8y_uN5ORxA-tiJim9oTirrXe1OLlkG546SoPZz-JIlYMrjjYmZxbzeuxcxrA7m2zqDREHA8Qm2SxeN0nR5thLgssgM=s1600-w1600",
+          "width": 3088,
+          "height": 3088,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115702604437105143879\">dy ma (mady)</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNZ2gwAdrTraFu__l4DxLeQCqFjwsLuG1kVxV07GxSr0WRcifESVG-Q0cjPjxLHnPetc5ly1CymC9Fa69uB6f2xUhFCSqkWCNDG7iur4315bbTopaBtbZyrIl9j3Qsa3WwT_fRKGSoJeu3v=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117437731473547630817\">Paul Fossey</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMXCH0gxRdcW6oXkvsoElnXw9bJ5fj6siTn2qEdFFWGhO05Sc7etoiS9LZYILNM2kTHcJbGlO3lQ1WF_xmEWWfTc1bki5oEd7ejFZYB3wQo4CUmqjp3vUwRSaKiNph1_N4QzdqGY68WzWwK=s1600-w1600",
           "width": 3088,
           "height": 3088,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115702604437105143879\">dy ma (mady)</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115702604437105143879\">dy ma (mady)</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNl-C00MU1Xce-oNZxj6bNBpnuwSjVmsvwN_5DZLv50hNhY0aPMF3hBJbAkkvgSjwXHQxt_KUFD4Qnvc3QRoYfmGS7N0QvEa7ACjNuKQLj_S2sR803SJ7hsfZcTcKUFRDYSnXjdB60T2ktSRJY=s1600-w1600",
-          "width": 3088,
-          "height": 3088,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115702604437105143879\">dy ma (mady)</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP60NQ4-yfyC-FsyzxGmhuvelT9zZely-YjAD7ccN9zhzNrKyS6-Qpk6yXZao8rsp_X0CzpYnay9vuoHuzWXEW7tex7SfkUt5iZFoCPuF_XjZh6kPiQRF3Vo9lah2OizjAT0cglQy9bFYDZ8LM=s1600-w1600",
+          "width": 2560,
+          "height": 2560,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115702604437105143879\">dy ma (mady)</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.7,
       "ratingCount": 6,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "海鮮チヂミなど料理の評価が安定寄りで、頼みやすい。 価格帯は控えめで、軽く一杯の使い方にも合わせやすい。 サービス面の言及もあり、滞在の印象は穏やかに出やすい。 ビール銘柄の好みは分かれるので、事前に確認しておくと安心。",
+      "caption": "海鮮チヂミなど、軽めの一皿と一杯を合わせやすい店。気取らない雰囲気で、夜の散歩のあとに腰を落ち着けやすい。お酒と料理の組み合わせを少しずつ試しながら、ゆっくり過ごせる時間が流れる。Amuに戻る前の、もう一杯に向く。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:26:29.716Z",
-      "lastChecked": "2026-05-12T11:26:29.716Z"
+      "captionGenerated": "2026-05-12T13:47:47.878Z",
+      "lastChecked": "2026-05-12T13:47:47.878Z"
     },
     "%E8%89%B2%E5%BD%A9%E9%85%92%E5%A0%B4%E3%81%BA%E3%81%93%E3%81%BA%E3%81%93": {
       "placeId": "ChIJ_Uc5PtGnRjURlfus4PSzwuU",
@@ -324,29 +434,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO9ZTatEi4QM27q1F82gslfN8aE9GAmOw8Eu-dQ4G2zXaUcLeJqL1slYlMsuRYRGcRPHDT0oT63DOwfoGocp7FP0E__01flYQj6nxwFfbcs9eTokkc-0y4FEN0q9_enNUwC2adjxeL1zei_=s1600-w1600",
           "width": 3468,
           "height": 4624,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111227817776547641534\">ひろきん</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111227817776547641534\">ひろきん</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMe-2ghA14kC4NSZ3CZFKHTh3OTmXlfP_kTZMbZgyPitYRjUAZDF5XhM_ffqKckBhBUYhwx0AGgcGB7OMD55efpS08jM6NgHFxhgOCjWbQBnQN6qRdN4WDGm50VEdoUvfVa9HIpqnzEbQY6o60=s1600-w1600",
+          "width": 4624,
+          "height": 3468,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111227817776547641534\">ひろきん</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNn6b6tpJ0JtyPMfKmA-PgeccGMn1Z3ijFn61F3toSarXlEvSoOdw_5RbAQCtkdRtwPuZX003XuHltmBGTKDKWL8wT2zrYHBc201c_Hc9Wc444wZnOtS7IWWBNCpOzOcTwo_2X2GdCdYqIcMBLsl6Fn=s1600-w1600",
+          "width": 2448,
+          "height": 3264,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/112420925343931121377\">A Ma</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMyyG5BH2UoSf_hY474kSkYXjaxVEYfVaGjdhSpVoCPAfkYem9NCUq3AyalRX_rkYW5ccLn3iU9MsRvKH_JKOO87tAnNQ2B1VCY1Jy8LwuGPT_o_AZisLCvb6cWYDwMF4L7bUvCUUaOSZzN986qteT1DQ=s1600-w1600",
           "width": 1962,
           "height": 1962,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105384182639352922438\">Tomomi TAIRA (TEQ)</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105384182639352922438\">Tomomi TAIRA (TEQ)</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPPVJvqaDcBZwZ1yRUUXk9lbxfWsAJrd4bYMPInqH_1l53te2f0XDJukQM5QUB4UpQPxR2Op8gudIgAPbbPYQ4vlpEJfuK-GlK4I3X-8kqCm6IO0VbMBifq8MObptNTw5MlT9KUsh92pCLftyE=s1600-w1496",
-          "width": 1496,
-          "height": 842,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/108745890395192198361\">Satoru Kono</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPWhkGhiTLEDcCEECxngtTDioek38HJjrzy9jx6XJ1OkJMee-7llDd2oGzk7S2r4-IU1RfO3fUMf7UpgClxdadoNwwKswC_o5RJ3wemaycvHBUkmcdXNK0d9M-94KF4xOExPoj6nej3Bzsn_j01DdwRjA=s1600-w1600",
+          "width": 2017,
+          "height": 2017,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105384182639352922438\">Tomomi TAIRA (TEQ)</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.4,
       "ratingCount": 5,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "おばんざいが日替わりで揃い、夜の使い回しがしやすい構成。深夜帯まで開いており、二次会・三次会の選択肢に入れやすい。場所はやや見つけにくく、落ち着いた利用になりやすい。品数は幅広めで、軽くつまむ流れにも寄せやすい。",
+      "caption": "日替わりのおばんざいを軸に、魚も肉も野菜も並ぶ手数の多さ。路地に潜むような立地で、見つけた時の手応えが残りやすい。深夜帯まで灯りが続き、夕食のあとに一杯足したい夜に寄りやすい。女将の手仕事が伝わる一皿で、Amuに戻る前のひと息に馴染む。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:26:39.493Z",
-      "lastChecked": "2026-05-12T11:26:39.493Z"
+      "captionGenerated": "2026-05-12T13:47:59.615Z",
+      "lastChecked": "2026-05-12T13:47:59.615Z"
     },
     "%E3%82%B3%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%AA%E3%83%BC%E3%83%95%EF%BC%88%EF%BC%A3%EF%BD%8F%EF%BD%92%EF%BD%81%EF%BD%8C%EF%BC%B2%EF%BD%85%EF%BD%85%EF%BD%86%EF%BC%89": {
       "placeId": "ChIJx5PWqMKmRjURZf6Nbkzl7G8",
@@ -355,35 +482,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOZMqAbR7pflRsxW0yKhymP0qIquXTXOSeSqeAhYdkLNfBlds3Kg5wDT-HmTFyrTXfiHrp2HVjiDaLJsACQ5LBzH8ZtBgAvJj_G7juRDh3trjLAv0zY6O0A3B83sfVG7jOKSFU-pu5r73ud8Hc_eL_VcQ=s1600-w1600",
           "width": 4800,
           "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115364382632838010153\">amuro t</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115364382632838010153\">amuro t</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN6rJKg_LG5GvI3FrLXULBLNsZsDZ_2-w2G7_BUkcNG2GF2OHtjNKR8uKMZkKU3WsuQFiqxqpnDfautfNNX16wPhS_5MUZoleEeTDMJvm4D1sJOv0nJBqrjKN3ZsbVUFJY2d9JkPcyDt9vH0w4CvG_fGQ=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115364382632838010153\">amuro t</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPwATuQfLzwvTcdMMetISyNTRWZOjvCTuyJdrPD0Zcshi8CVFI4ksXB3rR3Wt1bp5ueujppdkTLrE9WtY5Cx9Z70bcaQwt4u5L64cb4yJRIW6iczqakRet8DPBcEH4nPdM_lQaCS6PkygZwNw=s1600-w1600",
+          "width": 4608,
+          "height": 2592,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111760169430961089120\">3 senshi</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPUIXXgoiQ08N4eYU4fVRh5nkSn7Nb00GI1xd8RrwjJkyQI6m_a4-8qljgIktOWx847x-1-iramMaM9DXpNm36lOgWYrkC6x82SIsfg3WPBdQdMT4-A-3lbR6Um8LZ5zSRmfiMxN60m7mWi=s1600-w1600",
           "width": 3024,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107790194306666161378\">L</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107790194306666161378\">L</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNd6X55-oPLN3wxaMFxHp1QtdIi050ZKtBeBcbixDf55RJtEq_np22satofXc5Fvyl1Y1iUXKi59eo5opzxfC7k1EUdrrCRTEl8sNqkPOM7M3XUyxWx2_hH_YLvQHCR6m3VeuioqMInYm1ysQ=s1600-w1600",
-          "width": 4608,
-          "height": 2592,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111760169430961089120\">3 senshi</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPuP7sNyxvayTVN04xcfLfTr5GpeidU11uNM-nC2NnMcWI68z4xjuwnpWiWjhxKgzEyJUB2Aeiq5IfNaEuGr9gdkGqZiY1yXyzC8I0ZAjEWC6K35etWhKjf3QbZAmTH4H-mdKUay1cBaXZ8ua0jF3EU=s1600-w1600",
-          "width": 4800,
-          "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115364382632838010153\">amuro t</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPJzB8x9g4BRq_vAfXkLo8e-fshV0WQj37A1Uly0idZWNs_nnYDs5lZHDFtLecZY9-uLLhNn6jJXKKc7Eeusj35jY9UKdjQ-aRTQlV-K_ia0oVjTNRX82_u5y7emccbr2dTdb-pCAuIDLlGBcs=s1600-w1600",
+          "width": 3024,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107790194306666161378\">L</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.6,
       "ratingCount": 19,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "深夜帯まで開いていて、遅い時間の食事や一杯にも合わせやすい。料理は軽食から麺・カレーまで幅があり、選び方の自由が利く寄り。マスターとママの距離感がカウンター中心で、一人でも滞在しやすい。価格帯は控えめで、評価も安定寄り。",
+      "caption": "深夜まで開いていて、夜の散歩の締めに立ち寄りやすい。ママが手を動かす料理は、ホットサンドやオムライスなど軽食寄りが揃う。生ビールにこだわるマスターのカウンター越しに、会話の距離が近い空間。Amuに戻る前の一杯と、小腹を満たす一皿が同時に収まる。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:26:49.213Z",
-      "lastChecked": "2026-05-12T11:26:49.213Z"
+      "captionGenerated": "2026-05-12T13:48:11.372Z",
+      "lastChecked": "2026-05-12T13:48:11.372Z"
     },
     "%E6%98%A5%E3%81%86%E3%82%89%E3%82%89": {
       "placeId": "ChIJGWwrt9ymRjURnDqxA3VQdZI",
@@ -392,35 +530,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOLtYaLsXSYBtRNeo4Oans_NTfTOPeG1qODa_dM8zeohcGIfsdY0MQvQeD_sNjEqe245_JjJNuoLJHfwLVxZIcUXMiktREHXkiUi2n4ALDF2soADRKU0UfOrO3X_qhCKKX08OSlCrKd5_pDUSE=s1600-w1600",
           "width": 4000,
           "height": 2252,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114473938994635590326\">Filippo Alimonda</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114473938994635590326\">Filippo Alimonda</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP5HmLMyGaIUIKSsjA_ABSy69AVpjrLiW_B9rpcu_ICF4BjpWKL---iKhlsDXIk2iurzBeoFZWYiCCZzuGFjaL7pGrzlU1WJBT5h8-yFxibJt9x0ahAzDv6AmzrjVnPbCmYbc5ItUQ1iHF6pFU=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114075413333862240364\">섭섭지원군</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMzp4R8NOxHH-LhXIkjW4HPL22hj9vNnyKuPOEyfxqDiFghOj5XgEKIc0pfQon8eI_bs2i6dKQHKEbbSZF5wad6XNmKBfq8OK8iZVoBQkto8eb0kGpG9bufeAnDpYtFoqHgSmBXx7mp2bnZC7_8jH84FQ=s1600-w1600",
+          "width": 3000,
+          "height": 4000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111829640845551495533\">モンモン</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPhO10VMqFNQXf1GjZ7UTqhN9hGs8fd9JPi_FDWSmBQK-egI8acVGgSoaWXScVwAs4yS3kLwVo2dcFYPQGDtei-cHsHUHYvIf8LHqJK_qAbbDKCX3nNBT4H802ZbabPwt42kLbzGtKZTcPCYV-GS_EMww=s1600-w1600",
           "width": 3182,
           "height": 2386,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117135622266126009903\">マクロとチャチャ</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117135622266126009903\">マクロとチャチャ</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMYkzKK2yMYxUEeeKAQ8pM_CoJR-wnk4_hXxwOGGJ3liliOD083JIiNxA00PkGokaacB-U_Wtspg8eLvtdkXX-aRTPS0baCZcmiCoc1QXi7P1l6e_HK-bLzf891qsaxw9PXMGe6oKy-SncWan0=s1600-w1600",
-          "width": 3024,
-          "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107233847341951371337\">YH’s Donguri</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMup0i2guKkffoKl-xo5zMFZ4VL3F6IWtR_VJ0aTa0kFnZzXm68wWndYlv4KzbDnWOYMmmaH9SYZUyDnbyC0W_J1xIynlHmlpc_gJJAy6DURqZturx78PjkHhBgE9ahqD9tliqELfL6K4ED=s1600-w1600",
-          "width": 4000,
-          "height": 3000,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114075413333862240364\">섭섭지원군</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNdKcKdUXaca1ybrtfZltzUUic2xXT_p6Vbp6X9p_1QFtP1zcz5pli3lOZVXjQM--cGpiMGl-JvgOy0QyGRVG0aKLdaFJ8VVU8BrFo6mZo_fG0yp5CVKTgqxAWChCdHYxAfaZ2WB5Yw62GmQa6q-GsiTQ=s1600-w1600",
+          "width": 4624,
+          "height": 3472,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114971801609742508375\">mid .e</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.4,
       "ratingCount": 69,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "おまかせ中心で、その日の素材に寄った構成が出やすい。関アジや肉料理など、内容は来店時の仕入れ次第。落ち着いた距離感で、常連寄りの空気がある。予算感は事前にすり合わせておくと、見込みのズレが少なめ。",
+      "caption": "大将のおまかせで、その日の魚や肉が静かに並ぶ。関サバ関アジから裏メニューのハンバーグまで、流れに任せて味わう一夜になりやすい。焼酎の語らいや女将との会話で、ゆったり腰を据えやすい構え。夜の二軒目より、じっくり向き合う一軒目に合う夕食処。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:26:58.307Z",
-      "lastChecked": "2026-05-12T11:26:58.307Z"
+      "captionGenerated": "2026-05-12T13:48:22.838Z",
+      "lastChecked": "2026-05-12T13:48:22.838Z"
     },
     "%E8%82%B4%E9%B6%8F%E9%AD%9A+Miiima": {
       "placeId": "ChIJgXEDcFCnRjURK29QOSch3Qw",
@@ -429,35 +578,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNSGi_E4wB2I3vIeQKikoIp1Jst_gMV-tFwEnVH43E_ZwwVfPlL8FYHHARAoeu9AodlhbYX78iBenrHaCY5Wo475q0JBKFYkTa-aryVDaHRoc0wue_eP86xK14t2bteu_90YS_HfRXae0Wf_kg=s1600-w1600",
           "width": 3431,
           "height": 2573,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106772999364862739202\">三盛二重亀甲剣花菱</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106772999364862739202\">三盛二重亀甲剣花菱</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOuLfFSGWza2PBxNm20SWzxjizTxG2pU_O7Jib-mpkiJERFRpYYUqqxJ6BhZcNZF5780Jl5ww0mI2ROZkSCWyY0oJjMlurZQA-1dNHbwev5U2rQzjVXtgRUeedrK1uonx2iF4OJoGRYlnUbeJUf7quUlg=s1600-w1600",
+          "width": 4263,
+          "height": 4576,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109931833716076552444\">Yoshinori gourmet</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOcTfQhF4Jj243vwZGscb_6TRL2_8MzyhqpGr9SdDINkjiZHRrkMc4dk9QLsx1DBxEcXB8aAuf0bb1eJ9sIDDQVI8R865jWU5rBwBKjXw5d4FD0PHEt4o6Fd_JbZzH6qDO5XpvK_SyR-u-Hha3VZrHTDw=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101431632365460298943\">muu</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPPk7wkZOOQKuJRZYGiHhNTSi5UajnI6J6rUT5j-v8mtivJbCbuuZyz63MtT0997lgjKdrhtyGLrJRwTNTqNeHG3p2aqyQ5KBEHdPlHoC28Wbkm5V5ZTOd4SMRcNLWjTPmMp_qQMbv5NR5ddG7wxNFSrw=s1600-w1600",
           "width": 3600,
           "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109931833716076552444\">Yoshinori gourmet</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109931833716076552444\">Yoshinori gourmet</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPOLFTBJqZdM7Qf1EQCB_ICbnKDjvjRAqcmf1Rbenoog9G0Op9tPath-zn7tZPQ5BZ0Nv-CC5dnw_FbUJpdVi58MWBI6lu4_8XC7PjRClFSucAYhpoazkLVS1x6uZnMaRaLSR0SXE--au-2d-q3AkBd0w=s1600-w1600",
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNfNyXwTN3CycIg1qk-S0CBlKuZYvXMkWafR8jv-yCDCXkyUjtLqA3Di21ELz_63G2hcZx9B9nQTu9aOk8GYRG8zRCcG52J3fA6ia1WGn7Tzbdt65U0ALR4HQSOA-OsNfKrsZ77dnuFwZVqyw=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107882603530977968416\">K SASA</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM1VSadr22BlEfeN-owwV3BeEhR7Oaq725n3Es2-ylSLHHr81LWU7GvUpwy8gM1SxUVki-3EdBppPMu7L3HG8WZuDBFAiyOqhYIwAA3PW7Ej59SpcnLcgfMv75ZWaix_HWUPWcMmibiLV7fqg=s1600-w1600",
-          "width": 4624,
-          "height": 3468,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111227817776547641534\">ひろきん</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100231308805319218991\">Emily Lau</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.7,
       "ratingCount": 85,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "手間をかけた一品が続き、満足感が出やすい構成。 刺身やとり天たるたるなど、推し寄りのメニューが揃う。 予約必須の傾向で、早めに枠を押さえると動きやすい。 接客の距離感が穏やかで、初訪でも滞在しやすい。",
+      "caption": "魚と鶏を軸に、手仕事の一皿が並ぶ夜の店。\nとり天たるたるや呉豆腐など、一手間ある肴が揃いやすい。\nご夫婦の距離感が穏やかで、長居しても疲れにくい空気が残る。\nAmuの夜、ゆっくりお酒を傾けたい時間に寄り添う一軒。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:27:08.035Z",
-      "lastChecked": "2026-05-12T11:27:08.035Z"
+      "captionGenerated": "2026-05-12T13:48:39.308Z",
+      "lastChecked": "2026-05-12T13:48:39.308Z"
     },
     "%E9%BB%92%E6%9C%A8": {
       "placeId": "ChIJt0nXjocdRDURXkbE1BMBY8c",
@@ -466,35 +626,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNOBhXV--122m80nhafFTa2yJ1_deYzJpK5ep-wUmSZpS9BddhfGJI6U6T23heUpAeZA8gk4VLvoWi4ZrrkeFmcuXxg7pyjPGbnIA_cd0g0r7PkVHDgx49sajw6xEziyCsbCmdaenA1N_3g=s1600-w1600",
           "width": 2532,
           "height": 1702,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110446431326874381447\">明楽獅</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110446431326874381447\">明楽獅</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOoAT0-tYuCdcJNtcPvww2BrwYkyMSQUlZzzVKGa9NRlnrmieZQGhhjrTessn_CSekurlVJFaSVkM1WjMZlY9dUt19BYpNio8JNCiTQI7GqKEMiWvg4_0oE-LcQRKsHZ6aYHy7Nvo-AuDom-Q=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109497698336050858202\">温たま</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPk5T53N97d1o87Nz7pJ76IiYYZcO_IS1fWSy6unhNsrRXmI-ufA_SQvqxPeBx5kgki03fmgNfcpnJerIfLZB0Ypts6wv8gwZlO7HMTGziCwA3N5BHU_DYYOeABvp-TPQTnaQ2dQkdoIDqSrC5Liec1_g=s1600-w1600",
+          "width": 4096,
+          "height": 2304,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101116725621686887773\">jun kiku</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOpjEpsu3rxNn2fggPs5gKvSaGBWArlZUrSWzM5Ohi4wm6dkBofjrduqWcduaGov7LqP00H84duRzj5NoT2YUEZmJUC67ojkE7A_0dhK5LLVDvXlhEBmuhFn8Ut4FqRiilIuf4r0JS9qHN7Tzw=s1600-w1600",
           "width": 2160,
           "height": 2160,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114294506600016281644\">Michael Park (Nitroningen)</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114294506600016281644\">Michael Park (Nitroningen)</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMy1XsCuPkQwQ9MOOx0QSNYMNPlb5DTXeTRljZEkiRyttGwS-Ynpc7fjEr5MkZyzQmkYxOiwQNKJpASb-wnH4gQdwR4PATZ-mwoGzbovMs6OiIYcgkCi62ChsGQR2GV5Py2H6fSeegMxK-V0JHMq-HXiA=s1600-w1600",
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNxmDBQoOj2Duusc37m381MCZBYb-yOrwUTjLqJ67uxAuEybLMjM93uuNzv9q-33EfZlJ_dW7dowpdj7CWQ3qSYgCDccsBAWFg-CmYeuX3tbn_HkPw5a39ExYuniZOqqpt0aMjYQTtlJxakhBw=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114294506600016281644\">Michael Park (Nitroningen)</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMnhdgf1odXHGcL2KwW53mrOlUBJ9S6boj3y6Tl2KMzwH3vjT_VZmpyeldj5ykK7QBjxiE3m6CZZEVxFPeKCpoYRk9uQsLxq3gdnY5alXml9_eJqNNicA4rcJSdglk3VlJ2LeYaqioK-QobB6oY0SsD=s1600-w1600",
-          "width": 3024,
-          "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111452764313372531564\">s s</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114294506600016281644\">Michael Park (Nitroningen)</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.2,
       "ratingCount": 120,
       "ratingMedian": 4,
       "editorialSummary": null,
-      "caption": "海鮮と地獄そばが軸で、用途を分けて使いやすい。寿司や定食はネタが丁寧で、価格帯も抑えめ。夫婦での営業のため、混雑時は提供に時間がかかりやすい。口コミは安定寄りで、事前に雰囲気をつかみやすい。",
+      "caption": "名物は、焼いた蕎麦をつゆに浸して食べる地獄そば。\n海鮮も丁寧な仕事で、白身の旨みが舌に残りやすい。\nご夫婦で営む小さな店構えで、長く居ても疲れにくい。\n亀川散策の昼食や、ゆるい昼酒の一杯にも合わせやすい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:27:17.411Z",
-      "lastChecked": "2026-05-12T11:27:17.411Z"
+      "captionGenerated": "2026-05-12T13:48:58.860Z",
+      "lastChecked": "2026-05-12T13:48:58.860Z"
     },
     "bamboo+bamboo": {
       "placeId": "ChIJ1Rtx7MKmRjUR9uMvRwxcXMw",
@@ -503,35 +674,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO6mHlQRoYWRf83zpx-vhCgVGyug3s_A1ROLmn77tM9B3AoI7RFGv64r53hhYhwmssXvk1JoZaW8oIvLPPm02aCP0N_6COBchXgb0URWMVJdPqKtf-eSDobkuhLvKLDgVBeIQLA_tPLB0xgqyg=s1600-w1600",
           "width": 2048,
           "height": 2048,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102516450471973453179\">KUEIHUA GrukHimmelreich</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102516450471973453179\">KUEIHUA GrukHimmelreich</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNbUHUaU-Nn014JRR8a5TA1EeJRJHFHiKn46j2c1X5OZ8c8EOIMBIsfHypQxlw8dLTjKeD1J320J0w-jagYbdihq_hIGRS9wAoIkZL93qCn7WV-qTvSehVW6SuuDOPTFDA2dSU8MWCRNSdVUw=s1600-w1600",
+          "width": 2160,
+          "height": 2160,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110539462425504329025\">sanae ak</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMnch4pg3_E-vZ1BjhD8JeAHW9OGkGf8bk5eJ433CNbx0AQcgl9ROmI-Ozeuy8drpIcyTLmr8PMOzhVS7kIspPkbBpdPx66Utpr8DcpkDF_5ic8q2tSxla5Mg_UZbX_bGnA1_GettQ8VAJM=s1600-w1600",
+          "width": 2160,
+          "height": 2160,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110539462425504329025\">sanae ak</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPVMgWdCqDoXT_HbumrCODUzIeElAbO92kTF8u4JxwEHR1c7h3DToqv_gOfnOyD4flwULB7UDRBl1ZSRzQErD8K4epTG4VRp3BMp6rMn-JAAIb2mrxutHM8K9mBKF42-fEszG8dednlYBC9rQ=s1600-w1600",
           "width": 2160,
           "height": 2160,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110539462425504329025\">sanae ak</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110539462425504329025\">sanae ak</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOoZlDvf5wte5iaSkqvFHC36vqeYs3AK052atZem4xwmWsCRQdwPFOOBY-2Y7HsxpR8ArQo1RCM6ulldPG2KHpFOlABS_JUYsD_4BXcsVDGhsSBiuB-JhTsr-n73jcZKyYIxHLAxjiueD8wOU4=s1600-w1600",
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOBrxGq3JFCgbYn-0T-J9JbuFtrNzbvxatNe8W_aq46CblWOKxWmkni-yc7h9kcPM4AzWOlZVYgdJIENN4nb9VbsS-f0GWu4VKI8glj2tzr-MjGsJSAh2tGROmsgZPrMn3V53kdx2lbeLa8npQ=s1600-w1600",
           "width": 2160,
           "height": 2160,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110539462425504329025\">sanae ak</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNvoqmSL6A91VKzxfD1vheqvni7zqlYjJzE1eNY0UM_7YDF0gXgOXx431p1NrW8Fy88Jr08wj3GWiTpw-01kvqrLZxw3J_f4tgO8jEyr_XtPj3ACukwVVZRhrS9AQI-lfTknWJgL7cFaEY4cryf5Y0oSg=s1600-w1600",
-          "width": 3024,
-          "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/104519327485842032451\">榴岡綾瀬</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110539462425504329025\">sanae ak</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 2.6,
       "ratingCount": 38,
       "ratingMedian": 1,
       "editorialSummary": null,
-      "caption": "竹細工の品揃えで、別府らしさに触れやすい店構え。接客に関する口コミは賛否が分かれ、訪問時の相性が出やすい。商品に触れる前に一声かけると、行き違いを避けやすい。評価帯は広めで、期待値を絞ってから立ち寄る使い方が向く。",
+      "caption": "別府で長く続く竹細工の店で、職人の手仕事を間近で見られる。 薬味入れや籠など、暮らしに馴染む道具が並びやすい。 鉄輪や駅前の散歩の途中、ふらりと立ち寄って手に取りたい。 旅の記憶に残る一品を、静かに選びやすい空気感。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:27:36.097Z",
-      "lastChecked": "2026-05-12T11:27:36.097Z"
+      "captionGenerated": "2026-05-12T13:49:11.467Z",
+      "lastChecked": "2026-05-12T13:49:11.467Z"
     },
     "SELECT+BEPPU": {
       "placeId": "ChIJbUJT6sKmRjURWVAoCE00kDc",
@@ -540,41 +722,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqG7RfmmL409Li8L0wiS-RzqLO-BT2Cc0iJZvqd0g1ydw9L4dVmCEbx8XyfKc3Q-mmkIsnk4S4lNhMpEgHWgUM3_k_fzffCmHQ=s1600-w1600",
           "width": 4800,
           "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105184656253958295776\">SELECT BEPPU</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105184656253958295776\">SELECT BEPPU</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMtdCFcU0ITEi5eR-kILf3Ke-6RvijT7XfOczM8C5_A8e4c9ktaKneoK3QCG-3pRQB8vCjW4612gROyVNqfx8NJ4U-yzi-i2q63V_BUrAts9J0pbJeNj9yGsJ9xjq5LsytrrBw9-DxG-ij9evc=s1600-w1600",
           "width": 3024,
           "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115885725323461087908\">ddkinombe</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115885725323461087908\">ddkinombe</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZONuHYb9PnR-XjWIcxN8jAR6I87f3LcG_xQB2Ooql42-xwu4qbUgXL0rksTRWZHYhNB3htZVL4E62RZnaMUl2d-0YnvDrz9LAHrSRA_vVQHrdSnuq8mqR3XFMAXj57gPTOzvHW6E-dP3szjMw=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118194993544597376017\">Lauren</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN_Pr9GneyPAQObJcuIls3lc8vlb64OU2ER-vF5XzTprletthhTWYCBnClk3NQHU7yAZuVek5krki-iIWe6V8q4ySGuPvzBIr7tMxr7DaeWhq2R3Y9FXQfemOkT6Q9ObR2b7zhcAqbTvfJThg=s1600-w1600",
+          "width": 1960,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100267297294209141470\">絶好調あらっきー</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMo6rEfL7w3HB1la70gtU9cjAhUvM3A4_TsR6nLfAnGyj7_-o-1yqSY9BV68uS1ko_dDyavPJxiXb8hCdli7EXJ2O1PElt1bVNDTTu4zy3N9GG0aE8QD21d7O9tXG5MD2nqyKxRUVTm98GAhg=s1600-w1600",
           "width": 3024,
           "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/104118014681360204939\">高橋敦史</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMDvl16TZ_3ddAv1kBESF6iPUskttaLGIi5GNaHnH_A2d1UzBK5HWxlNbk0uWGjJWBeZA8wOQ5LigLr_UWEWjZl0ZlmzU_ufsjBKPP-JFhM7QlEA7ZnwBiRhgzgTKgy9T9zzd5xV-CZi_28=s1600-w1600",
-          "width": 3024,
-          "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115878840202630519936\">Yuna</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMDD1SUkQ95ODjKVXSuT2iI96-XKB9wepi72aK1d4mVnRK14wCPpI3AmoZeaBcdyxu_27Y2lUoB1wFb4pUqdBDwOFgUP1RkvW3o55gmsfJGuGRjsRamPhQzrt4k1ZTFjQGo3ckSPYb3pu4GTuo=s1600-w1600",
-          "width": 4608,
-          "height": 2592,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114717080003972609434\">bluejays 47</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/104118014681360204939\">高橋敦史</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.4,
       "ratingCount": 62,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "古民家をリノベした空間に、地元作家の作品が並ぶ。竹細工や陶芸、アクセサリーなど、独自性のある品が見つけやすい。2階は展示スペースで、襖絵などを無料で鑑賞できる。お土産選びから自分用の一点まで、用途を広げて使いやすい。",
+      "caption": "古民家を生かした空間に、別府や大分の作家ものが並ぶ。竹細工や焼き物、アクセサリーまで、手に取りやすい距離で見られる。二階は畳敷きの展示室になっていて、襖絵をゆっくり眺められる。温泉帰りの散歩がてら、自分への一点ものを探す時間に合いやすい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:27:45.374Z",
-      "lastChecked": "2026-05-12T11:27:45.374Z"
+      "captionGenerated": "2026-05-12T13:49:23.835Z",
+      "lastChecked": "2026-05-12T13:49:23.835Z"
     },
     "SPICA": {
       "placeId": "ChIJFTLnk8GmRjUROXWv8tsfbd8",
@@ -583,29 +770,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqEZvZfZFq8KcdsIKUXFSKZzr1wV1SqHEAoCSYnftP8qbSXUQjc7lNtCDVNBNcLbtYCEU_fFfUQjcOodP6VbLQl3gvcCFM8dpCM=s1600-w1600",
           "width": 3024,
           "height": 1702,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111536531436315211156\">SPICA</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111536531436315211156\">SPICA</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZONhXIaU1Onjw6WKA2yLT5kj75TeBWmgxJLeHIf_eFM9t-TToCfS2dRc07SI8MW2e2jRlvKVQRQcVkCB3fgqomSkr04HqgXrjDMDH7rsL-mWJ92iiIcmTj0MRzpO6SVcND_gfGdhwC7x8J-1w=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111760169430961089120\">3 senshi</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZORRH0QHufVe1-h4nVFE-8vnWGDmrOyctO2akGkq5aDq-zXfY7O9nBj1Rb86hyMyULurdNeHZGmjT08StNK9bzlIV_oSNKJM2mmQkO_ik_oRNmdRUfo32W25GfyNFcgEKTIXb5rJlUR5vq9Lg=s1600-w1600",
+          "width": 3000,
+          "height": 4000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111760169430961089120\">3 senshi</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPZOW4keCJJ54vgvpkHRgFBwuY1GPE6Dmd1Q83DMfV19Eijhxsd4dlK6IdeZT8TvZfSAImWsko1nSbi1XMF1zm8osqWbjg_0QOYRusOxXotv0ML7eQrMYo9cRc8yJODNH97XdLgkoCe89pDOw=s1600-w1600",
+          "width": 2759,
+          "height": 3679,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109603300820746768009\">ayumi ogo</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN449dk4T2rASRBAfKQh0WZ4RT8gEkeTFZvzUzU9j7Tz_AcCJ4p2cnb0FXMR28V6kWMeBfwc3REYUuwxQkvyo4HJ11pt8fO0-eQsMNaNsOnGARAt3YqSfQMhrweAT3GzOde2bU2hkXL0Q3bpdg=s1600-w1460",
           "width": 1460,
           "height": 844,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114805536716294818475\">kao</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOPFT0jeCtrbtVAnjNt6bvxG2jbGPFANsU_oFls4dsvQw1lubGUT0NDF704Ro3MckfHrXXB46pX-felIq9qkgnZ_veQ1q3rLm7Ept4at8tpbAwm_5g3jNCr7RkgC7ER-h9Z6EfNp7D_P8tQ4g=s1600-w1600",
-          "width": 4032,
-          "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/108202593031105593992\">S A</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114805536716294818475\">kao</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.2,
       "ratingCount": 156,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "工芸作家の企画展や個性のある雑貨が並び、見て回りやすい構成。アンティークの什器を活かした空間で、滞在の流れもつくりやすい。価格はやや高めだが、贈り物や自分用の一点を選び寄りの使い方ができる。接客の距離感に触れる声もあり、目的を絞って訪れる方が合いやすい。",
+      "caption": "工芸作家の企画展や雑貨が並び、見て歩くだけでも時間が溶ける一軒。アンティークの什器を活かした空間は、落ち着いて器や焼き菓子を選びやすい。大分ならではのオリジナル土産や贈りものを探す散歩にも合う。Amuに戻る前の、ゆっくりした午後の寄り道にちょうどよい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:27:54.623Z",
-      "lastChecked": "2026-05-12T11:27:54.623Z"
+      "captionGenerated": "2026-05-12T13:49:34.725Z",
+      "lastChecked": "2026-05-12T13:49:34.725Z"
     },
     "puno%EF%BC%88%E3%83%97%E3%83%8E%EF%BC%89": {
       "placeId": "ChIJX7d3VeCnRjURXwx9_bbWa_c",
@@ -614,23 +818,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqEpVVFS9BS5WbDM8wX9FW950cgSIG81v2lKvu9efIANO3CeMpFcGjpd9ca-ikK77-Z4g79VRWQzHujBWOeTLNTzdnndz2r8qKo=s1600-w1600",
           "width": 1984,
           "height": 1984,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118273621781237038654\">puno（プノ）</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118273621781237038654\">puno（プノ）</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNk-QIqZ_TmtIayxPLyNWv1IYdEGzJ1YyRFE5qD2du_ipToMBF7GSPmqwNsbDcHNkUOOP6b-kY3t5SAqKBZqniencnIL231xIr-V4IBdDjubFeWIWPy0KurtrPYIGr7P9hFGVQAJghbsVM1Lg=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115589979691760174586\">M D</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO3tKoiN8OsoW54eWf_2_0yGfkImt2Pr5Ry6fdYbnt_UVSWgMH4bFsA0NJg9ZcVnyaMT2ZJWHk1owilhDdeRRbLpVEW85uAZgST5_svQTEw4epGLzUkOXWICurQGgMgeXrbc7goZXMi2xJJ=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110403349724541366702\">Anna Ya</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOT0Mu8apkAYTnBMKFhuwhchDlvUUk1mkMGglCo_DVBaUSb4vvVVF3BmlrA1rtX4M0Vrw7m2MhitX4PyDByZ6dvUt5m4KF6dKCloIaicNyqJ1uXa5PL16uRMEiQ9mhI1U0FE8_3fl0GwCrtKw=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110403349724541366702\">Anna Ya</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNvsFHaVmhid0KXrzIlAMKYRazwWnsB-zlNXFSrB5BzAUVyjLq5rnmcBNg_eCpPNGBn2aa51XEnipUvr9u0EG6-RmpOtuaD7gVPuLQc-_ScqRf0deDTJ013d677wsMV0b95HmY-jzTHdVyg26c=s1600-w1600",
           "width": 3024,
           "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115589979691760174586\">M D</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115589979691760174586\">M D</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 5,
       "ratingCount": 2,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "雑貨を中心に扱う、こぢんまりとした店構え。近隣店からの紹介で訪れる動線もあり、回遊の合間に寄りやすい。レビュー数は少なめなので、現地で雰囲気を掴むのが判断の軸になりやすい。評価は高め寄りで、土産探しや小物選びに使いやすい立ち位置。",
+      "caption": "昼の散歩がてら立ち寄りやすい、雑貨と食事の店。手仕事の小物が並び、別府の土産探しに使いやすい。軽めの昼食を挟みながら、ゆっくり棚を眺める時間が合う。お買いものと小休止をひとまとめにできる立ち寄り先。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:28:04.072Z",
-      "lastChecked": "2026-05-12T11:28:04.072Z"
+      "captionGenerated": "2026-05-12T13:49:44.254Z",
+      "lastChecked": "2026-05-12T13:49:44.254Z"
     },
     "%E9%AE%A8%E4%B9%83%E5%AE%B6": {
       "placeId": "ChIJ37SIttymRjURH4X7zhzYgUk",
@@ -639,35 +866,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNouRT3wItP5EOogGyIfSGvKx6icroRPJNZts3cTKeljFotg5t_8S_JXJ-_BFR4KeNnNW2ldM9E3nQmb_HuDMtmfVKorVs9L2wS3rczeaN4ml37ieHvNX1ZrH4FHlmezrqoBs6KS2Eik3fJU5EKJuiawQ=s1600-w1600",
           "width": 4032,
           "height": 2268,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102228924006252215677\">Liu Yizhe</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102228924006252215677\">Liu Yizhe</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPyvm3IpZisKOfkWGDhj46OyR7bcXJrZXmmlCNjdHWZ0yKW22DVFDUJCRYQm5J-9GNVUa-ttGJBE4O2HiWjZFQv34vATXz-2O38X-waNWRX9FC8nJkWizE6rs3Gh2XfSbnEDvm8uuXlrFxpzg=s1600-w1600",
+          "width": 4800,
+          "height": 3200,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118282366011624389072\">OO OoOo</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPpvpezdz9nGDYD9oE_5BrMPTwNTFARQAZ1FKalvbvLWAnY5zefcSdbf_hTNh3PkhZEK2WfyyOd3Jmk6vs2LI3M7VH_AEW4uUJVVsmokz_AWifRjMdOlLpe3jKLbOGjwL2ZC_CIYqTYMyvEfNhYxzedVA=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107498595453655570440\">Hidehiro Fujio</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOxAW-La9ZQzWw4WTboVRlrvrceQPI5yxQKJ8UBeFRsshkA1tO_G8PGSRLQutKFEm3yBj0vAZCZkjiejy9jiuxVrll8Llqn1WrCeKuu5oTlzhcbX7ofcKyQ6P6SVrnr-o1gRPjNx-bNfv6Q9VW1_oJKNA=s1600-w1600",
           "width": 4000,
           "height": 3000,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107498595453655570440\">Hidehiro Fujio</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107498595453655570440\">Hidehiro Fujio</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPrpkY9zpT5_FiSRf8LsoUI4BQ4WJRTbpK-FWtQSd72e0XIn4X_fS9KtRDy4ecNgsoQmqB-yQLlO8wAcf7ivkhCQN6MjaKGMyUCYrepek8UQa3n2l6t4qqb33TJdyCVofsWiphc7awzflrJj_c7TpPzrQ=s1600-w1600",
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOeyiDfecxuyxg4QWoVLl2LMiE4ztvaMYHUH8wr516VzRI72qiXC8Ihj3qRautSr3e6gzdQvyCbhewzGSnIbnZvarIXfa8AOBlMK8IxogBvgRx5k-jJ6AOq1EEs_WvJXrTQGUoVgEgXHKzFLk4TtnlNoA=s1600-w1600",
           "width": 3024,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109042446935024946813\">まなちん（Tiktok「墓場のまなぶくん」）</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP1ZdQE48UUuyfm_Kme5IJBiVnVfuxi_k56CuBxqc2AzIH1EtZ6wNJ6vDSW6Qg62Fs3C7woRxbG1O_wgI0S5g4-rQUrL2BndQ8EjlbmQvpayM7isCdeeDdqFfwSjFEDMr4bF5_-YCE2_IMoQ-SXhw7OhQ=s1600-w1600",
-          "width": 4800,
-          "height": 2700,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102228924006252215677\">Liu Yizhe</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109042446935024946813\">まなちん（Tiktok「墓場のまなぶくん」）</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.4,
       "ratingCount": 103,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "駅やバスセンターから近く、立ち寄りやすい立地。 刺身や寿司は鮮度寄りで、季節の魚に振りやすい構成。 カウンターでの単品注文が向きやすく、好みを伝えながら頼める。 価格はやや高めの帯で、酒と肴をゆっくり楽しむ使い方が合いやすい。",
+      "caption": "別府の海の近くで、親子二代が続けてきた寿司店。\n城下カレイや雲丹など、地の魚をカウンターで味わいやすい。\n日本酒の品揃えに厚みがあり、夜の一杯にも合わせやすい。\n夕食をゆっくり過ごしたい滞在の夜に溶け込む一軒。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:28:13.685Z",
-      "lastChecked": "2026-05-12T11:28:13.685Z"
+      "captionGenerated": "2026-05-12T13:50:04.366Z",
+      "lastChecked": "2026-05-12T13:50:04.366Z"
     },
     "Pure+Wine+Bar+Enfer": {
       "placeId": "ChIJVVV6U8OmRjURHNgci6HyleY",
@@ -676,35 +914,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqHqMBiyojmFG-boa-7eNWc2jFpVwrPeHHXYj-17Z56XXyt7ISLyyaAHGb2UCyoPHG52KVMN0uuZg4UvAVojrvZgMJ-raOB2o2U=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102678986506486536546\">Pure Wine Bar Enfer</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102678986506486536546\">Pure Wine Bar Enfer</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOjg8hMDGnzuzwnOXjHylJLRqM6IhcGYjm2URjyaSiJO7ZXTO8VPtElGurmDk3jRIvRbJ6tjB45UXpByp1EGEvnCRH2zQOLkAi-CCQisWHdK3uyTN_FJUjRePEa7z5B0xlRoKIhAi55jt9MnA=s1600-w1600",
+          "width": 4608,
+          "height": 2592,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111760169430961089120\">3 senshi</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO4A4Fmafbal93RIWkovgDU2Jw82KF9TJt2MwC3PkKetriFtzrU2GzBpsjuBcp-7-RpPKrCHP1m_rHR16-WLEgrgICukBm-B5QyAoiktXhLxc_Xo6ZHG3Y0-qdRM0Uq1KcGwBodGjYhO8zGdQ=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110990361584721477679\">discoveryjapan1</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN4vuAhCsGCiHAZRE1UNDSQj0RMkCNncSJQ06X8JiyBDihkxvlwOGHuoS3dW8PcVJrgfZxwJhDdFf-8Ii6hc-QdIGQe7yom_ge0qqAJQoLtggdc_B1V_rGwSNLxv2jgpBHz1GQxiwGTQ0xeqA=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/113878520513695009401\">S</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/113878520513695009401\">S</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNiWzpvaOBLaSiUX8bJxFQbmV29tCuDXgFRYqrYNpgzlGksvqfUgehsB5Sn1CD8MC5fjd758Tkil-KalAvtea-nHRRQRkZulP0b8WQP0AKWspl9jRVQyw9cyKpn7zOabPCxKLAlIGg-LCA5PWo=s1600-w1600",
-          "width": 3024,
-          "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102061007778780867578\">Bailey Eckert</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM7Lmr1bFuIK8Fh-y15bIlvNVynzRPSUdS_1_2SPAyyyUUzGWOuSMnmL-xmlISzSvTfyJkIJrItmYxC3q9siVPNXgDV9-Rd_gLeWapJ8-pdhrN2RkGKHEMyv2Ni50ByITra0Dk9SRTVcCH7xA=s1600-w1600",
-          "width": 3024,
-          "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101871653694116970562\">三浦崇志（八百屋んおいさん）</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPzSKZmXpfmD4cY8kx4MUyWuvDB8Rl-Ckuu0aB56mHySxxt7ryiQ8FTG_wEgRNp7aUnIiv5g1lno7GeXFAl5PVuvef8aJ7xVj5cFoQq2p_RBD12lBmpsevJRHSJcaEphnTVUmmIATmLO1jwlw=s1600-w1600",
+          "width": 4000,
+          "height": 1848,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/108107163556296138526\">Nd4 Neda4</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.5,
       "ratingCount": 50,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "ワインの提案は好みを伝える対話形式で、好き嫌いが分かれやすい構成。 竹瓦小路のレトロな空気に内外装が馴染み、滞在の落ち着きが出やすい。 メニュー表記がなく、グラスは継ぎ足し寄りなので、ペースは自分で区切りやすい。 価格帯はグラス1000〜2000円目安、会計の見通しは事前確認が無難。",
+      "caption": "竹瓦小路の木造横丁に灯りがともる、ナチュールワインの一軒。メニューはなく、好みを伝えると店主がグラスを選んでくれる構成。レトロな路地の空気と相まって、夜の散歩の締めに馴染みやすい。Amuから歩いて寄れる距離で、一杯だけの立ち寄りにも使いやすい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:28:24.903Z",
-      "lastChecked": "2026-05-12T11:28:24.903Z"
+      "captionGenerated": "2026-05-12T13:50:16.564Z",
+      "lastChecked": "2026-05-12T13:50:16.564Z"
     },
     "%E7%81%AB%E9%8D%8B%E3%81%AB%E3%81%97%E3%81%A0%2FHotpot+Nishida": {
       "placeId": "ChIJLwbJ1DWnRjURKCUcdlTY3Ng",
@@ -713,41 +962,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqFqQcsL8StX2s1kDPabCBal832Wir2NtlMNphS1RbV0KlY_i-IdKTntq3LoX1IN8j88M2MFj0wgo4xPYzIa9iXVASNEgCLFglg=s1600-w1600",
           "width": 4601,
           "height": 3067,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110060176595569429416\">火鍋にしだ/Hotpot Nishida</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110060176595569429416\">火鍋にしだ/Hotpot Nishida</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqHxDkWOgXrEJDRoHihJeLgogG3ZzIk5IVKhDyiihy25Iu92gAIV7cnexbG4SUNcMd2tXTVqYbxlF06yX-ZxqnYC-H0gOGlvJPw=s1600-w1600",
           "width": 4704,
           "height": 3136,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110060176595569429416\">火鍋にしだ/Hotpot Nishida</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110060176595569429416\">火鍋にしだ/Hotpot Nishida</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMHCw7TGH-zStvOmBwa_RRGYqSFBuqIk4XTGKoOr23QZnpv8zK_JKA_GYMWl6ZtaH5ZYh80Pn7OSJF97gh7Cv4s362YIJaXrdKCGN42rJqYbSdDHe2SHmvqryvJoIpaqp9kjJA8NEHwYij3DVm_xEd-Xw=s1600-w1600",
           "width": 4800,
           "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111975665770736123390\">キルチョンヨンイ</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111975665770736123390\">キルチョンヨンイ</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOVzmpFHt5jd2zLkoI3qKYZb69SnBCczpI_iLHlInaxE75no3ZSuCE5LVfc5lqu3BtDbyRzzr0xYp1sqGSsfx26nk6zXVb7OdIA9Svpf1byBanFr_Bb0fPbkxj_z5D4ldJ2CZcX1yWIyyA0qPFvUiDeUw=s1600-w1600",
+          "width": 2857,
+          "height": 2857,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105384182639352922438\">Tomomi TAIRA (TEQ)</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMDD3xxVpED3FbAWqpIJbNMUjJXZjRXQAE48SJs8W8lq5v8kG-mkQszNeMRXF_VG5SbRMQ5CEEgMz3pVpS9FaU6ePZuKogo_Ch5AJK4Xp2u2lonIGNcif-D6NsaNhNufe9qsjBCg_NujOl77W6uyIQLCw=s1600-w1108",
           "width": 1108,
           "height": 1477,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118066889422135579803\">Taka Taka</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPGHsAjmTixn20YxIppXC0GVRH30M8qKBnIeh05TfcCw8_BDD-vKGQrkb7tx7YkUN8EPIK7KbKcF6oVNCYkERpivdJD4gLhf_T7V4CRLw_NrbFeid5IYPS2jYkhIXWPSegGi-XKKow171uvcS4=s1600-w1600",
-          "width": 2448,
-          "height": 3264,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105755696394783043380\">Gug Byus</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/118066889422135579803\">Taka Taka</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.7,
       "ratingCount": 109,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "スープの香りが穏やかで、辛味の調整がしやすい印象。 照明と内装が落ち着き寄りで、滞在の時間配分を組みやすい。 タレや具材の種類が多めで、好みに寄せた組み立てが出やすい。 予約済みでの来店が無難で、見込みのズレが少なめ。",
+      "caption": "スープが体にすっと入り、辛味も自分で調整しやすい。店内は照明の取り方が穏やかで、火鍋の湯気と相性が良い。具材は野菜から練り物まで幅広く、つけだれの組み立てでも遊べる。Amuに戻る前の夜、ゆっくり卓を囲みたい日に。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:28:34.017Z",
-      "lastChecked": "2026-05-12T11:28:34.017Z"
+      "captionGenerated": "2026-05-12T13:50:27.418Z",
+      "lastChecked": "2026-05-12T13:50:27.418Z"
     },
     "%E9%A3%9F%E5%A0%82%E3%83%88%E3%83%B3%E3%83%9C": {
       "placeId": "ChIJ90gCx72nRjUR0y-TJMiF4Gk",
@@ -756,35 +1010,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOHdaHL1TmsmzigwFOj_PD1JzL_Qnch1n7A6Z5ZG3E4A90V2tqARQEzez8HoDovimEfeB7wxcoTZR5_8TFt67M_byucLScPWkxhn9r9VTu6qPgSlSocAavekHUkJfD0d-vN75hqc_-de-vB7zEs87yYlg=s1600-w1600",
           "width": 4000,
           "height": 3000,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109497698336050858202\">温たま</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109497698336050858202\">温たま</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNrsqBKc7YE15ao3iVDfgqoX90htdN9fnH1cbzz6F-Hkd52uvxDVjtVOepEvt5GP7-H0dreoCA_M9HtfZVAboAdY5O1PM-iBoKDFeDOhjJ8u9_eISCJtH_ZiJIQ3P8Z9RArV3OrJIMi7r0FpOPU9cWD7Q=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103546119919776140184\">mia lee</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMTBQHL5w3rjSbTBQJzytk35HElNKeCy6Sxn86lrYarL32ELeVLVOaNm9LwUGPyCKE379tJspQooCca-KCq66QZ1G5wq5mGO60ir4a_uQrOi8355UIC01CdbZJugJ_Jy89H0snafriHAQ0s52CVQehorA=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109497698336050858202\">温たま</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPJpchoTUnBxya_iGccZ4eLzQOI8TTwN3G2ygS1MDzgfq6rlmpOgi6HIUmM9raEU3eP8jT8qvdjfGvUEZn0WB_h_ajn0JHMsqejUSGBuNsLwBPHMOEvxHXKriQSdE3mLLXPZwg7Cj3Q05_iYz-xeXA9=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114184848976958437618\">渡辺丘士</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114184848976958437618\">渡辺丘士</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP32m0pVQWacMYIF-h7aizFSDi1I3VTafb1yINDU9bhALK6jRbG7dC9oq3PyVZLJ4k46EP47q_q3RQxLWvwjySOIqq6mEiC8_FjnmvDLlJ9ISMBRhCxlQ2VWmWnaJs3W4706RRQcGTpDrKGO6jiPhXIcQ=s1600-w1600",
-          "width": 4032,
-          "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103546119919776140184\">mia lee</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOOzDzT0Xqhm_idt0xH85NIFokmhLu5jh9zddkmHUpmzl1OgYBmVRDGRL4zJXJw7Xu8lY3r1z4Ns5XvWDlEeEeS4_psbIGQF6bkI7prXq2yy0VWtyuAm_ZDSraD79Z5QbGYGrmORqSBaV2X_HI8R2zh3Q=s1600-w1600",
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPYOeFc3W_NAdkqJn1zj8VkUYBfyDne7v-6hIAB3u8yFkljnl08IudJpO3lKMnhKPuuAmGrKXRkwGmo6NOyDzqy8ZLWHA2p8FQDckjdRH4P4ZCUnoHxEkK91Mz1of0YrQ5qWdfDgUDa8xtxvXYz00TxYw=s1600-w1600",
           "width": 3600,
           "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115712465911991490850\">桜丼和寿</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105028906484677243877\">kbt 9021</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.7,
       "ratingCount": 26,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "食堂と名乗るが、実際は小粋な居酒屋寄り。コの字カウンターで、少人数でゆっくり過ごしやすい。刺身を中心に魚料理が厚めで、日本酒や焼酎と合わせやすい。支払いは現金のみなので、事前準備があると安心。",
+      "caption": "コの字カウンターで、肴と酒に集中しやすい構え。その日のおすすめから刺身を選び、日本酒や麦焼酎を合わせやすい。マグロをはじめ魚のつまみが軸で、夜の一杯にちょうどよい。滞在の夜、ゆっくり腰を据えたい時間に合わせやすい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:28:42.941Z",
-      "lastChecked": "2026-05-12T11:28:42.941Z"
+      "captionGenerated": "2026-05-12T13:50:45.965Z",
+      "lastChecked": "2026-05-12T13:50:45.965Z"
     },
     "BEPPU+HOSTEL+%EF%BC%86+CAFE+Ourschestra.%EF%BC%BB%E3%82%A6%E3%83%AB%E3%82%B9%E3%82%B1%E3%82%B9%E3%83%88%E3%83%A9%EF%BC%BD": {
       "placeId": "ChIJ9UVh8sOnRjUR-1OftTmOFa4",
@@ -793,29 +1058,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM1xW9cK0KnqB-i91juAv3i3elsjfExN-maCt3reyPGEzVZ8fqpzRFl7EUhgfCjf4ZJ-nnO4acVocryFodqlxIj-Q9aAjF82YVkqs3rn-tXfLihlm5SFYCLrg_pgojFS3NeUi_D7J_irERb8Q=s1600-w1600",
           "width": 3264,
           "height": 2448,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/116201432985324003696\">フードアナリスト赤松</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/116201432985324003696\">フードアナリスト赤松</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPzoEoWX0mMcL50QFFxVyzftFzT2c6UKRg0npgd6qQRGpvH30kRwvHsrq_N8ewTPL_grqFRh4cEOjDwG-SsTmT3e-5nR96j4tY-skjlIIfDwphhgp8sK-5-hzzv9Zhqj91OBD0Y6j-BirUG=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100255764131072056943\">BackpackingAndy</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP4Kh59-AZITiyAS-HmLdFxTZiwe3lSDdVqbfJFemmQ_vL6OrSCmRTFwAJskqXIZZwF4KWFOZiE8zE_3WYoBF_CDwdqEjww0MGcTsV38K2tjiyodTcnl3WSIpFR7Kq0d_j0e0NTO4kfiGVhow=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117119805152386121623\">白石洋一（yoichi shiraishi）</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117119805152386121623\">白石洋一（yoichi shiraishi）</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMT0D5xi58l9PkE1BiBdoxFSJXWlyMHGUeEUS_4b1Tfv17IxnlN0ufutr-k2NoYC65I7uGjpijFEb50Zt2DBkgDFF-oLeUTljSFRqHcKN9TTuaz1WonXNHa8QbxCb5aRk7DPBVBEhnBCWF0vOo=s1600-w1600",
-          "width": 4800,
-          "height": 2700,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109497698336050858202\">温たま</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNLq2PqC6fPBR4Q0WPFhJ8oeEVprn5mXD7W-MNicqKh-6W3B1U_sfw_FVOLUdLIt7IroZyPfZ0b4i6tWiUbnc22GBmkGmda80qB4Cxd_D0Lv2EjX8BeAEb7G3qj9uDfA-r0SHvz41E-t90U1w=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100255764131072056943\">BackpackingAndy</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNgYRVXFH9KgVIVyy_wH12xrQWDgPDZzI8gTz-zX5FLmzP82dZK_6Pcvaz1E8ECyvtXirJRW_864pv6a87eOKj51JT50N_QWU9g0ifOKfVXPPR5a9UMOSF00I1gyfReoFySd9UhRGUYlXvaLvM=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109991392380183765546\">サーモン伊藤</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4,
       "ratingCount": 76,
       "ratingMedian": 4,
       "editorialSummary": null,
-      "caption": "商店街沿いで夜まで人通りがあり、立ち寄りやすい立地。共有スペースは広めで、滞在の合間に使いやすい。BARの回遊もしやすく、夕食からお酒まで一連で動ける位置取り。レビューは設備面で評価が割れやすいので、利用前に用途を絞っておくと判断しやすい。",
+      "caption": "竹瓦温泉そばの路地に建つ、ホステル併設のカフェ。\n照明と音の組み立てが穏やかで、長居しやすい空気が残る。\n昼は珈琲や軽めの食事、夜はバーカウンターでの一杯へと切り替わる。\n温泉のあとや路地歩きの締めに、立ち寄り寄りで使いやすい一軒。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:28:53.421Z",
-      "lastChecked": "2026-05-12T11:28:53.421Z"
+      "captionGenerated": "2026-05-12T13:51:02.835Z",
+      "lastChecked": "2026-05-12T13:51:02.835Z"
     },
     "%E3%82%BF%E3%82%AD%E3%83%BC%E3%83%88": {
       "placeId": "ChIJrXhFSaSnRjURIlIKVDt39Rc",
@@ -824,35 +1106,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqFzSqNrfjUs5lz_FWarXlRCMp3tTJipYzG5QdYTZmhTq-Ddhi3D8VNIJuC9IQ_RuBKpzRkEKUtgtQr-vqTZXs2whU8SoEMwICA=s1600-w1440",
           "width": 1440,
           "height": 1920,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100955826191645873582\">Takito</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100955826191645873582\">Takito</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqFvC8ql6nLzSHX89pH8oTWtIqsalHfRr6y6oLJx96bpvqgyawbZEYdUWmJpiY019nGI7Kh_hVmcfFX9_yAnswhZtLlEegRwpYE=s1600-w1600",
+          "width": 4608,
+          "height": 3456,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100955826191645873582\">Takito</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPGlD-BjPWZMrp5lu4eLygPeKC8btAjy7JvyKdePg4uxce3iGvECNxcg0ssUq5eIg-KPESnXNNCUPt4c1D2-sq7cqpTIDhICdFtrCxPJ2i-Y7ZMDo7V8182EC7gfznFTMtouaHUugx4T78iu7It3u9PYw=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100504035480019323458\">幸松koumatu香乙里kaori</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNz_WA1ZEhmvLBFZLMqJUg1f3snAfLjKOg5Qt1wmVD7nwKUxLmy5Top3-7fXUWip_3DRVvG0BytviO-iYZZGGk3T_rDG7sk95vLtUIPfLO1bBE0fuQf7WIs3NJE57zOgoKZdcbI4Ll-PvcE=s1600-w1600",
           "width": 4800,
           "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100452309360548278370\">SHO UMI</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100452309360548278370\">SHO UMI</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPV9wEeJFBydLrQrH8-NxD6OXA_DnQk9oW150YcM0h3Xs3so_NxnpQEooxC_xh-6HOGbf4PhhDgkcpAedaNuqnHJdJbu7ZbIgGm15DsP2HObzcA3JJY2zjO_3KpJZdd5xFkv1CLiGL6b7Ezj38=s1600-w1600",
-          "width": 3600,
-          "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100452309360548278370\">SHO UMI</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO5At6Ekgju3neUfBUKyw7hmt4MQ0mhbRB32w98LrxS76h43Jeaea_Q8KHOTHVD6wkex6VyXbV5nJsyDuHXTtB3ES47uVUSHyL__5f65opGHWQePwBPQo_Hia_vby2Aq5DeBgDzLuDCgso1tAYE7sAj=s1600-w1600",
-          "width": 4800,
-          "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/116436226882507516445\">naman khator</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP0bNbBRXnDJ3mi77nGqgclPQ75mfIcvj0KKj5-YphJB2fFNh72uYcK_JS9GMwVT0j6PBwB0ijgtkOKXXfSWfGXsmn-33rMSrVlA0R8tf_cLJ2Ldt9QB4FnanMemrV6SzAfRv-IyTaZI-0bmU6g2Mw-DQ=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117224296586219764100\">karina batrez</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.6,
       "ratingCount": 62,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "本場寄りのメキシカンで、スパイスの香りが立ちやすい。タコスはジューシー寄りで、辛さは控えめに調整しやすい。テキーラやマルガリータなど、飲み物の幅も取りやすい。留学生も集まる空気感で、賑やかさは出やすい。",
+      "caption": "別府では珍しいメキシカンの一軒で、本場の香りを残したタコスやカルニタスが軸。スパイスの立ち上がりが穏やかで、香ばしさが最後まで残りやすい。テキーラやマルガリータ、ジャマイカウォーターまで揃い、夜の一杯にも合わせやすい。ラテンの空気がある店内で、Amuに戻る前のゆったりした夕食に溶け込む。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:29:03.540Z",
-      "lastChecked": "2026-05-12T11:29:03.540Z"
+      "captionGenerated": "2026-05-12T13:51:16.284Z",
+      "lastChecked": "2026-05-12T13:51:16.284Z"
     },
     "BESAME+MUCHO(%E3%83%99%E3%82%B5%E3%83%A1%E3%83%A0%E3%83%BC%E3%83%81%E3%83%A7)": {
       "placeId": "ChIJuxT9woOnRjUR99uWyfi3Tho",
@@ -861,41 +1154,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqGToaz5sifShNXtUkxfUtnUmPrGCkO1qvJuHXbh-PBYADAn8QNqLtkaZRw4Hawz83gmVK1V1nnx-_cGi39Mti0Y7bJJesTLpSc=s1600-w1600",
           "width": 3000,
           "height": 4000,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114539472982476205829\">BESAME MUCHO(ベサメムーチョ)</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114539472982476205829\">BESAME MUCHO(ベサメムーチョ)</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqGGhQxodFjws-mcg2A_jvmucjcsMwBax2PqPpJ7S3GuBpv3ZU3fCZa-0EKGCWIgdOS_-rlPAsnBJvW3eoD6TXGq5f8bG6Zdcc8=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114539472982476205829\">BESAME MUCHO(ベサメムーチョ)</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqGFcqNNPNGQZuftT9rDwSGN_nSRP9kVrsvcilw-P1h-fuND7UJyJwkTjz721plQTmiY2r2icOesicJ_WsPk9wf3HUHpcGGcCUk=s1600-w1600",
           "width": 4000,
           "height": 3000,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114539472982476205829\">BESAME MUCHO(ベサメムーチョ)</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114539472982476205829\">BESAME MUCHO(ベサメムーチョ)</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqEFrH8aSJLFtO15k8iNYRf49AEr46t4TGK0JQsSIlGcKWbegxyyyRvzfvfpKSeYMRFm3ri2Q9lnJAZ8tvBDzEecqfyuGj1HCDY=s1600-w1600",
           "width": 3000,
           "height": 4000,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114539472982476205829\">BESAME MUCHO(ベサメムーチョ)</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114539472982476205829\">BESAME MUCHO(ベサメムーチョ)</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMDe24lW1r9mSQ4_uC-6p-dg6einuq9N64s4f8E9jySlWVt2YkKtpvL4yNbS2ZRb7j-OPKbYYNAdxAqlaJEjChBPtEjlqLL8Y0I-LZeGo0qJlxpInHd_ZW_Kdf80nclX2xxtm91OtfiSMIfs1rJ5pps=s1600-w1600",
-          "width": 4032,
-          "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/101792303331571549182\">Yuki Uemura</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNWE3-69IUwLrhTp6sTwKew17qaamimmjUvZu-8EHwCeOs7TCKjbH5Ll-xhAtY82r8FBPlLy751olw621M2Qgi3e-kjEjwptp3DmtPALpcNOYV8qDQhcFhW-b1FjkMaLr_lswTI91rRfUPTBztXaaztLQ=s1600-w1600",
-          "width": 3600,
-          "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109615464410479342740\">piyo</a>"
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqE-5MlmI4VUZd2QuPKZJ0-z1GryIkHsj9W63eAgbAqJjPMBr4RPYmxTIdlEPOGFyOWcqU7HH2I9CtLT-8iuWamRVvOvCPSXT5w=s1600-w1600",
+          "width": 3000,
+          "height": 4000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114539472982476205829\">BESAME MUCHO(ベサメムーチョ)</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 5,
       "ratingCount": 30,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "タコスを軸に、店主との会話も楽しみやすい小規模店。高架下付近で立ち寄りやすく、夜は酒寄りの使い方もしやすい。自家製のサガワコーラなど飲み物の選択肢もあり、用途を切り替えやすい。枚数で価格が変わる構成で、人数や食べ方に合わせて調整しやすい。",
+      "caption": "高架下沿いの小さな空間で、タコスを気軽に楽しめる一軒。自家製のサガワコーラがあり、お酒と並んで選びやすい。マスターとの会話の距離感がほどよく、長居しやすい雰囲気。Amuでの夕食や、夜の一杯に立ち寄りやすい立地。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:29:13.282Z",
-      "lastChecked": "2026-05-12T11:29:13.282Z"
+      "captionGenerated": "2026-05-12T13:51:26.886Z",
+      "lastChecked": "2026-05-12T13:51:26.886Z"
     },
     "Beppu+Sake+Stand+%E5%B7%A1": {
       "placeId": "ChIJjVIdQK-nRjURt-ZpU_xvUOc",
@@ -904,35 +1202,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOR5zVoT4AyKlObBC4y77IaSRWm-SpL8Ie2mlx34JudxNzvNJwAjvbYs6GRITwS8EWerKdzept2c2N1d-pZYZ5G3FbL7pqWsyQNAJSZ1XvUVyI3KPr8YKsOMxSsX6IHHGxyfg6XjmZxoKlrCo8=s1600-w1600",
           "width": 4032,
           "height": 2268,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115881819993680755968\">Masa “明智” prime</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115881819993680755968\">Masa “明智” prime</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOajQZeYnv7lT9zsA1gNZjwQt1ZjkVxtmxeglvbxy1He8kUkrB8wFsDn8dd634Z9NHQm4lnLnHdAlV5sg49YVRRO_C5eyrIdNe4FdiWSgfQtY_zwAX8Cn_3ioVyqB62HaeuDjKsLG3ljMF2YA=s1600-w1600",
+          "width": 4032,
+          "height": 2268,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117982601068277374652\">masaru tanaka</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOeLt57bpgE-SUVi16yCU8cfAgRd2uTfo269DAjv6I8QtGJR2E2eq_W-n8erSg13sEuw-ve1Bz-Jl2Ko20GY0B9AZI2HGi_LO1mPwhhaR2pwhYZQodOUprhWwz5aslvzNvsrVZPOWjUeg8ElzTVrPMOFg=s1600-w1600",
+          "width": 3197,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110522530920313660249\">A Kinoshita</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP-BMrXvFCCGL2z0KzQTwe9khrfWnzbGl3QO8bZcDFqz4U6BitAd_t8zcuEkv-ElRNOPJlwQL2g_YzfgKDQc0gWhk2bjMuVfSBxaRqX61MPUACS5Myu3Q-wvZUqOmjY4utRrXjJhuPK_iSNCQ=s1600-w1600",
           "width": 3600,
           "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102507114076500227643\">yk kim</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102507114076500227643\">yk kim</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNxbjQUJIs4A5hlPK4yauHH08iLH5gWCwr_5tMJ83eRSfUW4IzXANDryuTeqQyXffBwO4YkSMlX3aYx_CwOfRaoVeDL4-i5o1TneInAHNSBFsH9VpaOgW-zO2So6FB9-RSDpSNWo_XFgvA8sIQ=s1600-w1600",
-          "width": 4000,
-          "height": 2252,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114860744445817369379\">Steve</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMILzpObWKmoCavKd70L_QNRLJqRuHyz1xBqghDFOIas2pTF5cuPWB2zSSWkvzAM4e-lt6NoTaxkOdorKrYk4DpvTqdU0KNRbnrtlu61TekI9LhWZzx5egPG60KCFK_cvj1WzyjjlacfqX6hQ=s1600-w1600",
-          "width": 3472,
-          "height": 4624,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117680394682585705283\">N-a06</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMLZf_rFpWeSIbYTaBMFF3GhMde9666ej0cY7IN9TjN-TzNsbCY2bLYnyfsgSgTRZ-HBk3lbbO4A5NpFKmrR8ZtdEr8kaZSBYdQPM3Cq62IuXyY3X8n_Hj63dNw_J3486ePRYrgi5hwikgXLqBogLqZYw=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/104478016770617441772\">ichi ko</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.3,
       "ratingCount": 220,
       "ratingMedian": 4,
       "editorialSummary": null,
-      "caption": "クラフトビールと日本酒が軸で、ボトルワインも置く立ち飲み寄り。キムチ系のつまみが揃い、酒に合わせて選びやすい。店員が銘柄や食材の説明をしてくれるので、初見でも頼みやすい。常連の出入りが多く、活気のある時間帯に当たりやすい。",
+      "caption": "クラフトビールと日本酒を軸にした立ち飲みスタンド。\nカボスのキムチなど、土地の素材を生かした肴が並ぶ。\nスタッフが酒や食材の話を添えてくれて、街の空気に触れやすい。\n別府駅から徒歩圏で、夕食前の一杯にも溶け込みやすい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:29:23.883Z",
-      "lastChecked": "2026-05-12T11:29:23.883Z"
+      "captionGenerated": "2026-05-12T13:51:44.323Z",
+      "lastChecked": "2026-05-12T13:51:44.323Z"
     },
     "NOODLE+FACTORY+LIFE": {
       "placeId": "ChIJN97BsB-nRjURVhK1RJoi03Y",
@@ -941,35 +1250,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqG0XvuJlSn3mUeVBXI1ceyyE-smcDYPF9rlwGdjk1a3Fy7REy6L6ZNUDUndnbzpQdMJn6f-8r9AlZJlCIjumnwlQF3b-A-BCTw=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100419857400502536903\">NOODLE FACTORY LIFE</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100419857400502536903\">NOODLE FACTORY LIFE</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqEr0Wd3gbqvtOjkssoefFandtRoIVt3LJrxRayNj23HvLvML83le-THP5squbgiGndlww0mbRwP0hAdofgt_R9E2drHapqfFFs=s1600-w1600",
+          "width": 3024,
+          "height": 1702,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100419857400502536903\">NOODLE FACTORY LIFE</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOAmu7cR-S0WmNUbFUR9GOpSTYvXGK-IRXtw25v9FYDKbjWGsdBPNPx_g2zbrzsPafB5HTy6steFPUXQqrNf0d1n1KHII7xUa5PwNPDlGC_kos2TV_QiksOvC5CpxBV0bVei90w3DTVHutX7k1jtMipaw=s1600-w1600",
+          "width": 3000,
+          "height": 4000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100330946515581160177\">新台灣娛樂摔角聯盟 no.2 NTW</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM8IKSe03nmnYzjQLJZNDZWG4ddiEZMHQEEWkx_sZeQ0LXZo8LTPTnLkneFt8SAv-4pBMna4VHtyDTZluFNjY6Xd6PJ85WZ_QeSfgSgvRfP19oeHlvPIwfouLbfw9ca8AUudAjl6TtcAeuk0Dwq1Bsh=s1600-w1600",
           "width": 3600,
           "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109113132780836894119\">TANUTAT TAAY</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109113132780836894119\">TANUTAT TAAY</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNKTOrdM8UJkEb_69v-To8g89M3ElcjJg0jhPkOBGSfC7EdGqMaxrq4MyrcrG59o96SedNFQh4wJRGsmgyBfiAk6pzjHcoitX1qRf76qbXkOojdWKJ8wTwIx10yof5nTD8APeFzWp_ADll_85zfLdUJUQ=s1600-w1600",
-          "width": 4000,
-          "height": 3000,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117492636897541542471\">김은경</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNEDFuPBtqJDeyHIVUQQ5v8G-LyqEWQXpEC-QVGxbt4KI2SUViKl_eNRYlZ7An9k_dPRqaWcVhx8wB0NcwVWbmYEpnEAIx88306A7tcSAY7rJVnItk4jZW1ergQqOy1z_ZAcen2dwjjsp-KNSwQ_yT7Eg=s1600-w1600",
-          "width": 4800,
-          "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117068352375087775385\">E</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNI000K_QBJaefel-AYiM4ipn6uRIm9B8TjZ0kdzjbfjUFCjX5CpgvznJL-XF-Up20wCLdBhsiwqWc2Rm8ZYL_vZ3dHaznnLcQgN0yALJN9m505k6lmz9du1HY4IVNjclTPut8AOAiKSQv2j9oTyZaT=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117118293506841765606\">株式会社</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4,
       "ratingCount": 633,
       "ratingMedian": 3,
       "editorialSummary": null,
-      "caption": "担々麺は黒胡椒で辛味を立てる構成で、後半まで飲み進めやすい。豚骨はクセ控えめで、あっさり寄りの仕上がり。麺の硬さは好みで指定しやすく、券売機は多言語対応。夜からの営業で、外国人客の比率が高めの落ち着いた空気感。",
+      "caption": "黒胡椒で立ち上げる担々麺など、ニューウェーブ寄りの一杯が並ぶ。中太から細麺まで、注文ごとに表情が変わりやすい。鶏出汁の醤油や塩、冷やしも揃い、夜の食事処として使いやすい。Amuから歩いて、一杯で締める夜に馴染む。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:29:32.677Z",
-      "lastChecked": "2026-05-12T11:29:32.677Z"
+      "captionGenerated": "2026-05-12T13:51:56.144Z",
+      "lastChecked": "2026-05-12T13:51:56.144Z"
     },
     "%E5%8F%8B%E6%B0%B8%E3%83%91%E3%83%B3%E5%B1%8B": {
       "placeId": "ChIJ9496tsOmRjURwXsXXKER6z8",
@@ -978,35 +1298,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOs-tyhuTk21J20hprhkAGBLP7mk1Oa8tAw6BZKVncCRBS_zuYn4N2qH-Jaa8KMKpP5DPbcp2FC6LRQ3ZnThVAXvPFC-oGiCILZ7UqmKPeF2A72CZnRZLgkzxeRCUQWxxYfFRxbiqUoQOKnORHahfQIdQ=s1600-w1600",
           "width": 4800,
           "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103680459464423822444\">さかけん</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103680459464423822444\">さかけん</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNlNBaj_hrkwyVHSeMCrafWFzNTOTtqTyzHdneCrsglvTLP8deH33-EgwDMWZzlEx4dkAeiLiAqD67KbG1b7dy4dUnSyR0Pk5Os2bJAk6PDL0cEAu3NjMv3xvPvjzFbMKfEcVfhSHxZ2MIAzAdiXIByaw=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103158393281374859690\">新藤</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOmJYCRK9z86N6GexqcOlpzdYFBpskoM56bWfqwX_TeiWip_fWMHvT6TasPSzfGxHOu6Te6zIbsDXslWyPYbr04iiNYhphXMV5LMtIEmS79GWyUoC8QFr02lfeFEytRrEiWpCADRve2mUjjfvw1FHx8=s1600-w1600",
+          "width": 2094,
+          "height": 2094,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111460119855717049738\">ミャク</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOPtMyn37qeu7HOwEB42xqQXvd8_DhrVIGWKX-xTHUEAL0uA1OQXCkEQI8DhgFEm6TcbAL78JNGT3ijjSPpDYDmcgpPD8k6XLvLmXOvzlZz_tjDjpM0lfjxbpcOVyk9PBmcmw4BSrz-jrfsfA=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109830556705488327066\">C.Y. 瀞</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109830556705488327066\">C.Y. 瀞</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMI4JRjMlNiYmOOtcQZx1tJTVzImnJqTVqwXq1sVDM8_KLOZyZrl2152TC--pkgY0uEa2QEeEIriPj01HVvwSpJPd_wzsqgsNTNBeBPYU2-NxtrzghoY-A2VOLci9MR_PENcYAD2b0U02nz4B15KmlA=s1600-w1600",
-          "width": 4800,
-          "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103158393281374859690\">新藤</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNndijesEBU_E38FwF2P10rjJ3HtcCieypdg2OM9d2hsWnnHB3SSLELFya_ODvhoXN4-KvLvSaLk4PQHSTmLhpFDluNod8kUlCA_i9MFDiSkRG1c-_kYm93evy7TpkLqtO2aK-_QQatq9tfADg_LKU4Tw=s1600-w1600",
-          "width": 2953,
-          "height": 3402,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/104962408151593490679\">muu</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOKsa8JicJR3Ti9KerwWHio7D-7yVj33UyJsA3pX6x8wszxXyv85KiOZ0pAECDjPiBa02nSu2xK3jeX4NAeziOYV8pYQyZ9__rzQskTJ5tqvrJtqh76z5IPEXUo5fmgjVZ0ZzxXfJn_HJyooHHtVoy9Bg=s1600-w1600",
+          "width": 4080,
+          "height": 3072,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100204476636259715675\">かげ</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.4,
       "ratingCount": 2384,
       "ratingMedian": 4,
       "editorialSummary": null,
-      "caption": "焼きたてのアンパンは生地がやわらかく、香りも残りやすい。並びは出やすいが、注文票を書きながら待つ流れで回転は早めの寄り。小ぶりサイズで、種類を組み合わせて選びやすい。レビュー数も多く、混雑帯や売り切れの傾向を読み取りやすい。",
+      "caption": "焼きたてのパンが小ぶりに並ぶ、別府の街に根付いた一軒。あんぱんやクリームパン、コッペパンなど、定番をふわっとした生地で楽しめる。竹瓦温泉の散策途中に立ち寄って、その場でひとつ頬張る流れが心地よい。朝の散歩や、Amuに戻る前のちょっとした寄り道に馴染みやすい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:29:42.202Z",
-      "lastChecked": "2026-05-12T11:29:42.202Z"
+      "captionGenerated": "2026-05-12T13:52:07.760Z",
+      "lastChecked": "2026-05-12T13:52:07.760Z"
     },
     "TANE": {
       "placeId": "ChIJl3vdtfunRjURTgEIEEhAOnE",
@@ -1015,35 +1346,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZO1TM-BcrH1cE8Pxlkf-h7KhD3deoT0wz5nueuAI-16hYYCu0vzSHVK676sfMu9CwuzZbOntBNvk7Yb_NAYgRrK6_ItNM1r8q1-dAFfe7LMCQ5ibFoXXAaHSN6x08Yg2gllitEizHKdy-Y2PA=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117404597035066010771\">マグロ船長</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117404597035066010771\">マグロ船長</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNIccIY_slC8xSI12QI8A7by9mItwwui9sIjM76Oxvw_5CCWmNW3kl41Jq5wG7WR7kUiOjWraXnBnJ_0LzrpJukE6NwsSrOsucgQRfUKS81AYpUvA23q8QnT4sa3XGUIpPA8LlkQSVFi34njQ=s1600-w1600",
+          "width": 4800,
+          "height": 2700,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103706564676189457840\">kohtaro k</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPA89IWM9pKflVQSfSS3KU8LSjFRKv1qLr4gaKGUC_DWvJqDVGh67aXwxLIdUf95sZZm8Z-Xj6famjdUprEuBJxZTRol7kkyyWNfwEAsSsoSTCXTU82uofDrjLlCZJCTq4am5SHS7uf3FP3qLI51PQ7og=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114713115029452538483\">momo</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNkpsywLbWsSNmDPmOIirbbgqOgqk4XQ8ihvpUlk3V3vbQ8TnNAEZc9K4GFIfMdS02zOUehroAbYZn_cKLAh2sM2yRTQLxXeL2FKVY2juDkDlaOLWL5isSdgZIk3QWTbZI6WA0mjp_0KJp7qAa9lPEEVg=s1600-w1600",
           "width": 3024,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115791780512938439838\">客野由美子</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115791780512938439838\">客野由美子</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN5uha7FWkYkbcZKXzoEwKLT8eWEeXZmXfz5Uj9GhNkedaRZDD0oXchFFiRmnoSau8Wvcm8pO0-R3GQQuvUbiez6ekdNzHTQxpuYrBeVqk-qGJ6ukL4hMv_2rCCCw678e8yZxH16afrFiH8tSptdUqe=s1600-w1600",
-          "width": 3024,
-          "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111472370376767632994\">Kiona Mayatsuma</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMOkcZ8Ulpp92mSdRtMNKS5jk8OA0LP1zlYfcXAZEPA7oP_tipOrmW_9DavayoBxxzaVjGBcKW5AhnXx3qZHe_n5rQEsN5b_fRA3HrVzbEdwa4SuCfAlHBeC2M_0__SGDeXB9nwbmH4Z_cM=s1600-w1600",
-          "width": 2772,
-          "height": 3695,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/113407644304538496404\">なかちん</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOT8I5KsBbF_vw_Qok6R1oFGdcfXTwYxRC_eYpxNwwQco_WZ7duQDqnoSVx_llxuiHOBgp77qJHCextby_CCTpCr9r2f3Yg860YbPwO2yfLj0HIBhv3ohwt79WgK7BlhqkwTGYPZYYNwNJuWbj1UEa-sg=s1600-w1600",
+          "width": 3600,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/107064345000190069740\">桜人ノリ</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.6,
       "ratingCount": 202,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "プレート形式の南インドカレーで、副菜とご飯の構成が見やすい。サンバルやラッサムなど一部はおかわりに対応しており、量を調整しやすい。日替わりで内容が変わるため、訪問ごとに違いが出やすい。人気店寄りで、待ち時間や予約の検討がしやすい。",
+      "caption": "ワンプレートで南インドのミールスを味わえる店。\nサンバルやラッサムなど副菜が日替わりで、表情が変わりやすい。\n食材の輪郭が立つ仕立てで、昼の余韻が長く残る。\n別府の散策を始める前の昼に組み込みやすい一皿。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:29:51.199Z",
-      "lastChecked": "2026-05-12T11:29:51.199Z"
+      "captionGenerated": "2026-05-12T13:52:28.091Z",
+      "lastChecked": "2026-05-12T13:52:28.091Z"
     },
     "TUMUGU+COFFEE+STAND": {
       "placeId": "ChIJGX5BsRWnRjURKHhqjz9wKkQ",
@@ -1052,41 +1394,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqHtYW3KLzk8cynKUQmvtvQkzKF1Up7lEmktq3UYRoKa4AvAIIW33mAoW-mSKoxrtaJdctCjbiLkBy833-3S-uZfXKkYi0vKSiY=s1600-w1567",
           "width": 1567,
           "height": 1045,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117482090716374214450\">TUMUGU COFFEE STAND</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117482090716374214450\">TUMUGU COFFEE STAND</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqFrdB1AkM2-vRGRRneDDuGsSYJN4ZDl2yqPQHHTi1Rpbevc80PgW36eyPsDIkFiQEMPVtgr4mvSkUL0C8JihG42-oy3pcmAjw4=s1600-w1108",
+          "width": 1108,
+          "height": 1477,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117482090716374214450\">TUMUGU COFFEE STAND</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqGOLw19PgtYcQ8HlNSvrrV9v0rbCCeJZ-EAYyiuNCNYZU8OsFjV8Ee6PiAW2dEKe3OtAUrIbqqltZpGg4bF38bVzO4ZqaPoRxI=s1600-w1567",
           "width": 1567,
           "height": 1045,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117482090716374214450\">TUMUGU COFFEE STAND</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117482090716374214450\">TUMUGU COFFEE STAND</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqEOlJf8lvSusU1w31u7DFUHOU7VjCJzvHY4PGtudHuGScZ15VKMpKI4aT8cOQItxjhdwL7dEcTLTS_kpi2KxvuSu_cNxSt29Ak=s1600-w1600",
           "width": 3200,
           "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117482090716374214450\">TUMUGU COFFEE STAND</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117482090716374214450\">TUMUGU COFFEE STAND</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNr1G6sMXCipbMRdy-Dv2BPiEzq033vyJNGv-6TDmQ-diTqxSZzyVwJZ47OU1gyH9RTCzfT8aS2VZCo_xnlQ103fZC7HqeG5zWGFbBkL9BD77j28RPtXq-djy64lLntFZCtiDx6x1nwoKwY-pis80OH=s1600-w1600",
-          "width": 3600,
-          "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115642417954014392046\">Izac Ng</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMXr44sfeX1ZIlcda6_BLZXEAVDx90MhtIMWVj-A_n9qiKPer0uPm5mbDplmJO_wR4_eGuDOIfYMQltdvAyskTta7h252TNNqWzJAv5r1MysYVO6_aXbUc6GK7iiHNoKWSZWSryh5EMQ9-3WZIWHnJ3yQ=s1600-w1600",
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqGYIgN9ARg0yb654z0jW-ZjfXqGjK41QhmVrPEwPn25T_Pgd2sL8_OUHkCAyMeOyZ5LWoVjJ5JMr8GRUykIfaTYXBrFwom2MS8=s1600-w1600",
           "width": 3024,
           "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/112811367864268581280\">Sergio Díaz Jiménez</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117482090716374214450\">TUMUGU COFFEE STAND</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.9,
       "ratingCount": 142,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "駅近の高架下にあり、朝の時間帯から立ち寄りやすい。シングルオリジンのコーヒーが軸で、目覚めの一杯に向きやすい。焼豚ドッグやプリンなど、軽食やスイーツも揃う構成。混み合う時間帯もあるので、滞在時間に余裕を持たせると使いやすい。",
+      "caption": "高架下に佇むスタンドで、シングルオリジンの一杯と向き合える。焼豚ドッグやプリンなど、軽食と甘味も揃う。朝の散歩がてら立ち寄って、目覚めの珈琲を一杯。豆を持ち帰れば、滞在後の余韻にもつながる。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:30:01.517Z",
-      "lastChecked": "2026-05-12T11:30:01.517Z"
+      "captionGenerated": "2026-05-12T13:52:38.911Z",
+      "lastChecked": "2026-05-12T13:52:38.911Z"
     },
     "Othello+Specialty+Coffee+Roaster": {
       "placeId": "ChIJqc8Md8OmRjURVOxuTJpyluc",
@@ -1095,41 +1442,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqEBBbCkRaOuI8xLyQ4hXTvzodfUYADab5QNCIek2H_CtcTart55kOPm7Ud8ZnyjSA3shNz6PTW14bk-4NewO35dS8C4WIN7n0k=s1600-w1600",
           "width": 2448,
           "height": 1378,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106670418962600286642\">Othello Specialty Coffee Roaster</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106670418962600286642\">Othello Specialty Coffee Roaster</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqFzllUBKkxUGk2hJqUUTyBX68wIOUecnEUaTtoSXWnJwM6GxV9_ZfF-2GGWfbXS6-vjjRdrPp1Xgp6Vh-fsquLLALAoBUmtq-c=s1600-w1108",
+          "width": 1108,
+          "height": 1477,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106670418962600286642\">Othello Specialty Coffee Roaster</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqHzryP00dFE8useoCcApF7kzehWgO-5ToeG60ElfefbxzbWIhIn40cbjWi0sk6ELEdOz4olb97ZXANKce1Kgrs8In9JS7AOIP8=s1600-w1600",
           "width": 3024,
           "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106670418962600286642\">Othello Specialty Coffee Roaster</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106670418962600286642\">Othello Specialty Coffee Roaster</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqEqpy1uUpjx9jQ4Do3MjwutXdq19Q96SWhHTx45i73FH7iw6AH1e92a_XzRM8yXP5qs8HmtJYtH6rTKsVdImGYRaktBqRZs4BU=s1600-w1440",
           "width": 1440,
           "height": 1800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106670418962600286642\">Othello Specialty Coffee Roaster</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106670418962600286642\">Othello Specialty Coffee Roaster</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPAX6Pb6DmSlvxjj2xgeflcOIy-PtGgEXgII_TzBi_LZfxkYkzlc16YUBwTbWQCLmP01TdgWTix7T0o9_eVLW4l8VwW4j6wmM2-RND60TVp-ChJbN2Yl_QXaTMaY1nU7aRhSyfC1gVk28vWI-A=s1600-w1536",
-          "width": 1536,
-          "height": 1536,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/113365136413663409432\">Josh T (Makinjosh)</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMWXk6cWMuPxYC2RR_Djy5jwkqDZ-HnmBirWV5IPWKqA72Xkpu12dCIwI8UyclQacbeK6cjBY7o7nryHLEaGBEPcfAQ5pzdVIiRpyEMby7R6jMR7UC57hzuhB8-R8eMeGvLucQ5WByWZYbkTew=s1600-w1536",
-          "width": 1536,
-          "height": 1536,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/113365136413663409432\">Josh T (Makinjosh)</a>"
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqGfh0a5_zgH0tul_z9gs-rUcUAkUFOP8bdBCbAIZAJSPeA2RHk0ove7SIYYaYT1Qk0orFymJOTj_5gdyMzKSyhk5lvh2QA9K8c=s1600-w1600",
+          "width": 3024,
+          "height": 3780,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106670418962600286642\">Othello Specialty Coffee Roaster</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.4,
       "ratingCount": 91,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "浅煎り中心の自家焙煎で、香り寄りの一杯が出やすい。テイクアウト主体で、豆や器の物販も並ぶ構成。駐車場が裏手にあり、車での立ち寄りもしやすい。提供メニューは絞られているので、目的を合わせて訪れると満足度が上がりやすい。",
+      "caption": "通りに面した焙煎所で、豆の香りが入口から漂う。注文ごとに挽くテイクアウトのコーヒーで、浅煎りやラテが軸になる。豆や器も並んでいて、滞在の土産にも選びやすい。朝の散歩や、チェックアウト前の一杯に寄りやすい一軒。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:30:13.389Z",
-      "lastChecked": "2026-05-12T11:30:13.389Z"
+      "captionGenerated": "2026-05-12T13:52:50.332Z",
+      "lastChecked": "2026-05-12T13:52:50.332Z"
     },
     "TACO+NARGO%EF%BC%88%E3%82%BF%E3%82%B3%E3%83%BB%E3%83%8A%E3%83%BC%E3%82%B4%EF%BC%89": {
       "placeId": "ChIJ8UYJTwCnRjURaIUvLS0bYMM",
@@ -1138,41 +1490,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqElUuLSOM9kSXAMABFO5iZw63XW6Dvxw-JhN8UCr2cVvsD_-7CC-MW46dFAXoy5ugqsKJKaNluJry6IrOTmLP-6BSRPYhFc6Uk=s1600-w1600",
           "width": 4526,
           "height": 3395,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110340979166565542624\">TACO NARGO（タコ・ナーゴ）</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110340979166565542624\">TACO NARGO（タコ・ナーゴ）</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqEjtYzx6r1soe5ejSnnk2t6g3onhaShKKKmB-k8wSzrH7BeRf6kHtzVILAeF2Y69y7wdbKF26IjIeSXwDejW_w6XAF81PUWBKg=s1600-w1600",
+          "width": 3024,
+          "height": 1702,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110340979166565542624\">TACO NARGO（タコ・ナーゴ）</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqHwP1vH1SQCBrHIVnVYetRnG_aXFgWwWWcs76b3TVnxpqiJgl1OS8GYHwr2kmmnc4qPGMrnMHRoHbdN_SUT6DRRO1gSsdLgxdg=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110340979166565542624\">TACO NARGO（タコ・ナーゴ）</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqEuKLnTXJKfIlALaKOjJnm-Cn2wwBoc5F4Nh2Vc5PN8nefIk6-YA54qwjefcljv6DRbPl7oO65S8UxyYPWHJePB4wYToasHKi0=s1600-w1600",
           "width": 3599,
           "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110340979166565542624\">TACO NARGO（タコ・ナーゴ）</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110340979166565542624\">TACO NARGO（タコ・ナーゴ）</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqHmsP2cYiAkIdIl8DXxjf5_qjl2kIUZSD0CaYOcbbUD7W9EkUQyig3OBEKmWdz9cTgDHYpRIS2doqTYPFDOt3j3oRJ6PvGVc3I=s1600-w1600",
           "width": 3600,
           "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110340979166565542624\">TACO NARGO（タコ・ナーゴ）</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPDNj3Nqbd9c9lKPlkJgXvQPG_WLO9O6EvHHPh-Ts_fdQZZYh8Cl28pwEFwRMM_cuoz69hTmWIDvWI56VPbV0E5orbajFM2mr4TxyCH4u9Xg6lUS-lK5o88udignNG0PKuJv5rhi_O2BRKrzg=s1600-w1600",
-          "width": 2000,
-          "height": 1500,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115354975863354094277\">ミッツェル</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOA290H3nmHyGsc8YN_i2-UEnI3afjzLENJWF3btaGB_r4mX_UbQ1uIuarYC0ApYf7jcVGGexi5OBknIu5Li5VdnD6tL6hozB5XU5gEddhso5scMV0hTXTT48Hut6BXckbYkdTW55x9qgFJ26zi9UKZ=s1600-w1600",
-          "width": 4000,
-          "height": 3000,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102103383759259159245\">田中一成</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110340979166565542624\">TACO NARGO（タコ・ナーゴ）</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.6,
       "ratingCount": 63,
       "ratingMedian": 4,
       "editorialSummary": null,
-      "caption": "本格メキシカン寄りで、トルティーヤや自家製ソースの満足感が出やすい。タコスは3種盛りから入ると、味の傾向を比べやすい。中庭やテラス席もあり、夜の長居にも合わせやすい構成。評価は安定寄りで、ランチから夜の一杯まで使い分けやすい。",
+      "caption": "別府で本格的なメキシカンが味わえる、希少な一軒。 トルティーヤやサルサが手作りで、香りや食感に作り手の意図が残る。 カウンターも中庭席もあり、一人の夕食から仲間との一杯まで合わせやすい。 散歩がてら立ち寄り、テキーラやコロナを片手に夜を緩めるのに溶け込む。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:30:23.191Z",
-      "lastChecked": "2026-05-12T11:30:23.191Z"
+      "captionGenerated": "2026-05-12T13:53:01.303Z",
+      "lastChecked": "2026-05-12T13:53:01.303Z"
     },
     "Bistro+le+jiu+%E6%85%88%E9%9B%A8": {
       "placeId": "ChIJb0l6yz2nRjUR1sxl-25bEUA",
@@ -1181,35 +1538,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM4bgjWJvapqz5r5_0z9QTspK_DGCHBTVFjmRPCmOGnlqI0VHrMIHN1Y3XCyFxadZE9V8Jx8CuTt13DXK7pAHV4NRAe1NECYDwRzG4_y7fXMpkqc9I1leHXzcSE0TLhHkvbdet7uESjxmgEnAykLwGRUQ=s1600-w1600",
           "width": 3072,
           "height": 4080,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111202958880257781705\">yo ue</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111202958880257781705\">yo ue</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOcfTSU-oa2wMNTH7HnsZWnnlY6ie9lq33YfQvb4GFzDGL8vPhPbkjJ2EUqSrivT8CO_6nWP5fncgxOPnWL5BSryGa3exOH5ufrsfSVzvXYY2vkEc9yPvoA_CDLEwnu7F2xnvS8WXDdgqhqRI8=s1600-w1600",
+          "width": 4800,
+          "height": 3600,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100943287508603118900\">胖头鱼</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMQzAc83hCJEgl2nX6YaexQtEaLriW7-zzTkhZ3e3CWmKtk9IhLryYBaf4QtiiHU1o7hJAM_p2CQ1T04UMERhXFmOrN1smadbjQwgyD-HW4dy5aQLnv5tsMr5OWD4PGGKt7ztWCPdWsBOXJFMmKi-gs=s1600-w1600",
+          "width": 3968,
+          "height": 2976,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102862694496523826804\">yas</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOGyrW4gmFU5Nw3HLdnGx3IXPqHLOzKJi-oXQKEd82a6LilXkN8lcjrHh0Dt2tRZiWd2ZAvoyBUM1CnhvLLfELnZcTbhK6l4zfshUgIRpOvVmHFqkvK9lhFvzGjOOqyCHDK9WK3tf_0lC5z=s1600-w1600",
           "width": 3024,
           "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106763252797364767922\">り</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/106763252797364767922\">り</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMv4wGeXD2kjDzhnUczSXlAiOF9-343PFDk4B8zeTktsQazmThryfjs0jVGodtd_RNTgRXo8f8GwytSuuFubaXOIJ6-65EzoGzO4Uw0QffpH9_YrfwdSkxng7OEqUj28RKb7yqochxOE3SJCz5ka8cl8g=s1600-w1600",
-          "width": 4032,
-          "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109953001625135702378\">My</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOkIluWgwekX1tr_EkLCNYOt5MtCYSnxYm0rHnzWWtCMtk7Ojwswcya0bvxDlqS7p6BFqTPF8rJnqjVo5PR4kN_6764RuJXyAmEtIX97JP35DIg8x_AL84PFu7LvXWIB782euiGJnwbnhF3_O0MbP-oWg=s1600-w1600",
-          "width": 3468,
-          "height": 4624,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111227817776547641534\">ひろきん</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPT4uf3UaTYn90_6jZ08I1RODveitmH36AZ4zgNPoVh40bBQHPutEc_Lb0SskNLr7B3FhQr1bnf9X1KUg7n9sgDeY8Aa9nuembqjK5CSCcSzs3MYph1F9jQDTOHwbjgEkEnMPSaL9iTj2_cx57c_dU8Fw=s1600-w1600",
+          "width": 3072,
+          "height": 4080,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111202958880257781705\">yo ue</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.7,
       "ratingCount": 65,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "カウンターのみのビストロで、シェフの所作を眺めながら過ごしやすい。前菜やフォカッチャ、スープまで含めて構成が整っており、コース全体の満足が出やすい。記念日や落ち着いた食事に向く距離感で、予約寄りの利用が安心。価格帯は手頃で、グラスワインや県産クラフトビールも選べる。",
+      "caption": "アーケード沿いの小さなカウンタービストロ。前菜の彩りやスープの仕立てなど、コースの一皿ごとに季節を感じやすい。シェフが一人で静かに回す店内で、二人で過ごす夜にも向く。Amuでの記念日や、ゆっくり腰を据えたいランチに合わせやすい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:30:33.050Z",
-      "lastChecked": "2026-05-12T11:30:33.050Z"
+      "captionGenerated": "2026-05-12T13:53:13.259Z",
+      "lastChecked": "2026-05-12T13:53:13.259Z"
     },
     "%E5%96%AB%E8%8C%B6+%E3%81%AA%E3%81%A4%E3%82%81": {
       "placeId": "ChIJSatcztymRjURHkF5GOR7bvs",
@@ -1218,35 +1586,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM1GDc28gHJgPEosJp18gVGl3p2TT3BpoDjRFlkuWLMnUv5NdZKn4uMRfaMuL2JcLPeDCYLVnj2MBlyK442o6DxlVG1IO5_Mh7HRUcf04o0nsQlKAdjYLaThE4Q73QA0zYQsY437wBzhIwy4oM=s1600-w1600",
           "width": 4800,
           "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102296768998733910346\">ピロ式</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102296768998733910346\">ピロ式</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZORWUvfWvAjjgCJbXKOJ2OpdC8gMJJ3sFE7ejDm-PPYAfTFourOHKSMD82fHo8QEx6Tn52wmNeghNuG-8ZVp2mLkxoLKhAU0RpoqD67HZoUHqFv0xlwbnGijS6Db-WZvHzcBHt__p83axhmboA=s1600-w1600",
+          "width": 4032,
+          "height": 2268,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103826022610704292135\">Edison Wong</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM4PZucCE7fmteBVSZW9QvcUknFT_e8CQJTUoV0lVAH7HcBqG7z3J0LplvfaNHlAnEhC7LpIdGGjosyAAnWtHV5OkfZ1o-KnQFUatEBoX5bxujgpWx2pt8ZJ2BbMr9Y-5pucRTE8amtP8dsMK7I3ZGRFg=s1600-w1600",
+          "width": 3024,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100268537275117230582\">meg</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPYQAKx84cYlMVmcYc2GWmxBDb-c8RdDRI5s3p_Wo3v20Rdmap2y-2Gx4qzz1MLNHvhibYKPgAgOC_MreWbCD0_Wyfc0QeaIQ54qlkFoez2MFozQ3-pzNgfelBmdzTtZFHAVtqkX4Y4unc3WwjCqga_Tg=s1600-w1600",
           "width": 3024,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100268537275117230582\">meg</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100268537275117230582\">meg</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNCPzchb6H5LqBGfK4TIcfBrPRf2fXztiX6NdmitPiB4KZ-qEe6rDuavVO9FHNQ8PwXBedEID1j7JHkz9xnH9Agp-rVDYyoHiYuJH6mhAqbfEZWp10zD7HrvAzXrYLGOX4sS05cBITtfQxdAg=s1600-w1600",
-          "width": 4032,
-          "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115053272193246203751\">NoMusic NoLife</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPEQSAewzixFYBKMjdRhKdnzHLGEfvtKVU8Wz7wXlLZv9RRv-YTUqkmdCfPtxhru-0ZZobbzN5OyoIucd74V9R_ajxrktK6BQqziwV0nsPsoup8h1QFEm6NV3BOE7caCsVthPkOnfodHIWZBA=s1600-w1600",
-          "width": 3024,
-          "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115053272193246203751\">NoMusic NoLife</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOmISt_IEWDppPasnsT4MRHaLr8T36DCNcHm7efda9CvpX9UkAXp1oplZwGMBe0it5eeUYsJhkqMUZmYIZDOHFeQEJqEMxpoN7tFiLJRJRKs4Fna-K97gzUAQQZu96aAsKO2KlQCVKUYQIDbAg=s1600-w1600",
+          "width": 4080,
+          "height": 3072,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102116824707408366967\">大山ひろし</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.3,
       "ratingCount": 252,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "昭和38年創業の喫茶で、レトロな空間が滞在しやすい。自家焙煎のコーヒーやたまごサンド、トーストなどメニューの幅も取りやすい。営業開始は11時台でやや遅めに動き出す傾向。評価は安定寄りで、雰囲気込みで選びやすい一軒。",
+      "caption": "1963年創業の喫茶で、焙煎機のある店内に時間がゆっくり流れる。看板はたまごサンドや温泉コーヒーなど、長く受け継がれた品書き。厚切りトーストやコーヒーフロートも合わせやすく、昼の小休止に向く。商店街散歩のついでに、滞在の途中で立ち寄りやすい一軒。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:30:42.592Z",
-      "lastChecked": "2026-05-12T11:30:42.592Z"
+      "captionGenerated": "2026-05-12T13:53:23.162Z",
+      "lastChecked": "2026-05-12T13:53:23.162Z"
     },
     "%E5%A4%A2%E3%81%AE%E9%80%94%E4%B8%AD": {
       "placeId": "ChIJq_DxRWOnRjURedD2aiuglco",
@@ -1255,35 +1634,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPvSb9FL-TmcLg40bkaLmXkdLHLeTfUEUiG2hFEKLnMRjx0vJtZpGZBKe64ZdPTSTdOhVlDCZ8ILST76LMBtXUhOdcAl6TtEwLyVNebngVzTPbP0G45JWi4aAhqAOFH0G34jXbhuelcJP3I3Pc=s1600-w1523",
           "width": 1523,
           "height": 856,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115321525962251125422\">夢の途中</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115321525962251125422\">夢の途中</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOKW6os9hD8kdnReLOFQmJfJHh_v75My2rDqM-KGSb01bHk47Jp75qwoKLKFzJ_d2kYqS6Vd5AZKS5ZXwlX1aZMERq8blJMxxWdEHxk-OpsFh0ZqQdEM_TUgKdx8svMu-LATRri8kVnarYsoek=s1600-w1080",
+          "width": 1080,
+          "height": 1080,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115321525962251125422\">夢の途中</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMdSFdzqJLTIp9hpZ6PhjOsdCRG3DbIpx5x8VRc4_awLYZklTnGAR26P9qs2kA6fTAMYnR0ntFmGqT8vIeu6Y3-hr_61BDZh4S3KLIiVfQ43orZjqZGpt0bQgeZi7rhj0PEEZoEkchlDUh3itkciBCH=s1600-w1600",
+          "width": 4096,
+          "height": 3072,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100217939845007792093\">桜咲く</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOtJSj3zDVgIdEUzjX627EE59LmmtYERO-rdp77YzvCcO2Iset7zxE1ZoPkh60OYotDWOShVfNFiBBBJNkHNHQiyVMFlRKZ7tISnl-yJPxx-qETMJbrymDyJrygu2r5HV8qYIxuiDGQy3g1NRbvxmGA=s1600-w1600",
           "width": 4800,
           "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100687924017163942456\">UTAN506</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100687924017163942456\">UTAN506</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOgIx05KoZHwC-HgWsBWmuH6YJC0bBPZX0nGHhMZPK8_ybSbcD_A1hX4mHisSOrR7NdD31WTzeac_kmSU37z61IxcESU2OvTCPkqkm8cwPB2UYmpCbH8GUVqnayPygmZHnxN7Ybhi-zrCop0A=s1600-w1600",
-          "width": 4032,
-          "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109958123730896589697\">深田高史</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN7X83xhY2v-Y9XUo-UiNau1e8tpHYMFGyoX9FEb8dry6bGXCUYwPTqSG4J1Faj7s9XakdFcWuAfH1AgHMkTtLHeRszkDTFHeerxtvmeHQ5hWCofg_Ws2gXX7Doi2BBaXrzKt_7EeWyULfSzw=s1600-w1600",
-          "width": 4032,
-          "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109958123730896589697\">深田高史</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZORjkoafvKdh3N0LfJ5bkxTSadsSXA3Gg81wYFpL3dZBEKS3sO_n1FPAlln3JvvJ3XxwaDsOllWODRDGtiL1xb25pZMNQktRR9j0XAfso5OGa0C-yMCWLZYXtVEnnpFf8bpQLG1UViOByGlurutylC3SQ=s1600-w1600",
+          "width": 4000,
+          "height": 3000,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110942959887745899744\">Alex</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 3.7,
       "ratingCount": 374,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "二郎系の構成で、ボリュームと濃さが出やすい一杯。券売機方式で、コール前の流れが把握しやすい。麺量やトッピングで調整でき、初訪でも合わせ寄り。評価は高めで安定し、見込みのズレが少なめ。",
+      "caption": "太麺と濃厚スープが軸の、別府で珍しい二郎系の一杯。券売機で食券を渡し、麺の量とトッピングを伝える流れが楽しめる。にんにくと脂の組み合わせで、滞在の合間にしっかり食べたい昼や夜に合う。湯上がりの空腹を、骨太な一杯で受け止める使い方が馴染みやすい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:30:52.735Z",
-      "lastChecked": "2026-05-12T11:30:52.735Z"
+      "captionGenerated": "2026-05-12T13:53:34.218Z",
+      "lastChecked": "2026-05-12T13:53:34.218Z"
     },
     "%E3%83%91%E3%82%AD%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%AB%E3%83%AC%E3%83%BC": {
       "placeId": "ChIJ_ZV5Bz6nRjURjmVYbUbioRY",
@@ -1292,35 +1682,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqGJ2ADQvgpniSuhcdHF0B-olCoO0zR-O_4fCBKhShRUz_s0HE6vBGZ9DIAqD44AhzlyzZGKqh1xMT3OPbcG1RAfJ7aUuIhYQr8=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115489938266482640289\">Halal restaurant Pakistan Curry</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115489938266482640289\">Halal restaurant Pakistan Curry</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqFePTuVhZCyLXVlMjjDaoIjyR59WBwCZojfcXPghcq09k0GBoBv2pg0ySUE7A0BgKASOjXXdx5bqHZMp3VffbIb9TMoyDQkesc=s1600-w844",
+          "width": 844,
+          "height": 879,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115489938266482640289\">Halal restaurant Pakistan Curry</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqH05CLm4VNpBH3wDiogIIr3LsSaatCZ6OaY1OYvDOP3tUksUJS40ur90eUtVg7e7Wjyr27cy0d4q7yVPwCPEKURCmI04A2DcVc=s1600-w960",
+          "width": 960,
+          "height": 642,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115489938266482640289\">Halal restaurant Pakistan Curry</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMu0KhV4J_420oe18wiqcqhJdZaDcb6E4p2prMbAIbNNWm3xZbEF9cCAhch1QDVQ3thlJkBkRBSqA9ZMaihM-QENrEn9p_TArpggduEkbBl6evGSLuTdtQt9xzAVrI7Gz0nGwrz5uWK9w3rTMDWCdcw=s1600-w1600",
           "width": 4800,
           "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/112891054812355300466\">アロマミンピ（アロマミンピ リラックス&amp;リフレッシュ）</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/112891054812355300466\">アロマミンピ（アロマミンピ リラックス&amp;リフレッシュ）</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMoJeT8Q3lRjVJk7pYUz2-Uv6FyB6XvDgNTFAmPq26IbTAYzLipCdFw0_q7P-IkWIYVjHl3Qq22kZpfKoTgpmt-xlpnahhDY8tLwTWkn8iPPMv3hZovV3ZZ-R-EEJgxhzjLLkCAbIBQf1OrZw=s1600-w1600",
-          "width": 3264,
-          "height": 2448,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117057591348292149971\">S “MOS” M0</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/places/ANXAkqH6D8uFXk1UnHoZqeQJ7R44D9gkNnd14onVenQotiqtUOT3G0koqAWV-5vz9q-20asS6SF0hUag2-YcTVAMiVPqJ4om8FsPDB0=s1600-w1098",
-          "width": 1098,
-          "height": 1019,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115489938266482640289\">Halal restaurant Pakistan Curry</a>"
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPJsrh1wNBJx97rFxftTi3RLAnOvCyHxtfA60CGH-M5FrpkRlhUn-8cHEfCPnNYc06VuMracgc3u9myeZZiuncKtMY7vbztsg3YmK5pu9LdMmSVqgC7yNVbMoL_0bYAFhka03_AsG2W5Zsztc0=s1600-w1600",
+          "width": 2448,
+          "height": 3264,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117057591348292149971\">S “MOS” M0</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.3,
       "ratingCount": 166,
       "ratingMedian": 3,
       "editorialSummary": null,
-      "caption": "バスマティライスのビリヤニが名物寄りで、量はしっかりめ。 セットはAとBが中心で、曜日でマトンに替えられる日もある。 水は常温、支払いは現金のみなので、訪問前に揃えておきたい。 評価は分かれ寄りで、本格的な雰囲気を試す前提で行くと合わせやすい。",
+      "caption": "バスマティライスのビリヤニは軽く、量があっても進めやすい。\nスパイスの輪郭がきれいで、後味がすっと引く一皿。\n食材も並ぶ店内は、別府にいながら異国の空気が残る。\n散策の途中の昼、もしくは夜の主食にも合わせやすい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:31:01.579Z",
-      "lastChecked": "2026-05-12T11:31:01.579Z"
+      "captionGenerated": "2026-05-12T13:53:55.676Z",
+      "lastChecked": "2026-05-12T13:53:55.676Z"
     },
     "%E4%B8%AD%E8%8F%AF%E8%95%8E%E9%BA%A6+%E3%81%AF%E3%81%9B%E5%B7%9D": {
       "placeId": "ChIJJ1OH3JKnRjUR81cvLgNrO5U",
@@ -1329,29 +1730,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqFbCPVD59rD3XeKzNSbsDN9qs59o9ykFAsYS9mpUkJqKTS2xeeAGnOr1tPWN8oLEqLZb6TTtHVxJ8XkhXZnblT2744BEOQWo-8=s1600-w1440",
           "width": 1440,
           "height": 1440,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117567531829672042673\">中華蕎麦 はせ川</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/117567531829672042673\">中華蕎麦 はせ川</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOQWIwbf6l0Cs4FfkPkuXZjk8LOXb3Lz7jUvF7T6aNBBcnSplEqcgR2niZWPpYhcOH04ZxE0xiy8KItMlfB3z6pz8RI2z7ApGBkwMMolAIMbIuQ-VEomJm8SwJ0u7R-9irbB3IIzMgshR8NLg=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/100252783526418534644\">梶原直樹（zeus1961）</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOSlbdUN3hlIJe830ztrZK1sxwMo9Az5-y9jw782Btk8zwmZ5JJk6mbHX_0qlNb-Ab-m_mQeF5j10I6ACNFxcIgd4bGLFeYDp7PN00dDqHpFDeq7p9hFbQvbWQOdoISHD-kWziLHzWCpLReJOhXR6UWtg=s1600-w1600",
+          "width": 3024,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115791780512938439838\">客野由美子</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOPHSRF0sFYywXqTElej_apnR6dtVScBqKw__Bbf3_sjaaMIP3IFJpHqhkxgxSu41NHsx6ScJjxm9oo9eQIcgU3lvwuRPmTt-i8DRKhGZi0_LG5-_uKJZ_v1osAHNy8ZId6tCZDniTGln37xYPezZiJ=s1600-w1600",
+          "width": 4032,
+          "height": 3024,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/110838535775158485455\">osamu tanabe</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOhPv-q_lqTrFZMHjZWqHcJlobr0ftzdD5m_xfjlEiXAONLlA4e3awJfO9LGp9EEyFcr5jqur0ObE-PZJ_GxN7hdL6EAcwExklxmwmuIGHBIbQRrVWYm6rzXTtJxU5VMz635Q7hRaP-b4RQEFgWsD6Y1A=s1600-w1600",
           "width": 4032,
           "height": 3024,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105044137209447976083\">じょ〜爺（本母穣司）</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOwqKCVQGBc8_sv9DN6gtBfaY_PMKIgOJpsasmiwiqqos77-c2wOfDwsYt3SLCQtUB-sq2guHX6Yhhr0SCr_uBTPJR974beh6f3dzJfrVsv5ppbMHqgrKy1q2zy5YX1eI3kkxKwahkFWz8d1Q=s1600-w1600",
-          "width": 3024,
-          "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/112055833479703853106\">オーバーオールおじさん</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105044137209447976083\">じょ〜爺（本母穣司）</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 3.9,
       "ratingCount": 173,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "煮干しや昆布など出汁寄りの構成で、上品な傾向が出やすい一杯。手揉み麺とスモーキーなチャーシューの組み合わせは評価が割れにくい。駐車場はなく、券売機は新札非対応のため小銭か旧札を持参すると動きやすい。開店直後でも並びが出やすく、時間に余裕を持って訪れるのが無難。",
+      "caption": "煮干しと醤油のスープに、和風出汁のコクが穏やかに重なる中華そば。手揉み麺と通常麺から選べ、スモーキーなチャーシューが余韻を残す。9席ほどの落ち着いた店内で、開店直後が動きやすい時間帯。別府駅から徒歩数分、Amuでの一日の始まりに合わせやすい一杯。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:31:10.915Z",
-      "lastChecked": "2026-05-12T11:31:10.915Z"
+      "captionGenerated": "2026-05-12T13:54:06.741Z",
+      "lastChecked": "2026-05-12T13:54:06.741Z"
     },
     "tsuchiumu+%2F+%E3%83%84%E3%83%81%E3%82%A6%E3%83%A0": {
       "placeId": "ChIJFYB-GvenRjUR_VWrj0orYrQ",
@@ -1360,41 +1778,46 @@
           "url": "https://lh3.googleusercontent.com/places/ANXAkqHNLFKT1ehta_QR6Ok2JwrNaepKA7DEt7WZkTwr4OsnfkS-MkUjOMQaRbrpE9Z9X5jHrT5ARouMC0TeQfqHKoTeBI_OH9R34SU=s1600-w1600",
           "width": 2700,
           "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114366617167919901738\">tsuchiumu / ツチウム</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114366617167919901738\">tsuchiumu / ツチウム</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqENgmvkDqZ6UKRgDBhaTMmwI15mStrwsSRX8CXk7D5tS3537--X8QF-NLeNizCJu3KxQKz0vbEFzbb4-2oU0DaoS4pT9XP52YE=s1600-w1600",
+          "width": 4800,
+          "height": 2700,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114366617167919901738\">tsuchiumu / ツチウム</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/places/ANXAkqF0ymAug4OG_7GmiC8EjXNS1lNtvNqZLe2oybenbsLbAViLnHVpoBWfP8yNlUuvuJCi99CSY6xUQy4dBFcEPd29cXi49jj9d0g=s1600-w1600",
+          "width": 2700,
+          "height": 4800,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114366617167919901738\">tsuchiumu / ツチウム</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/places/ANXAkqHh-xIJaZFyYE620pLuTGXTeSt7A1Uv9xbSxWNjcUOFLlbOB9JGDBAd0JbqppQr1dK4aBAcLUW1ZF5g1LFAYSjAzx49Wn9kNz4=s1600-w1600",
           "width": 3071,
           "height": 4095,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114366617167919901738\">tsuchiumu / ツチウム</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/114366617167919901738\">tsuchiumu / ツチウム</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOsDam5Bj76N3ZzbsFwX_7kYmNRIYt7FSdz5EYziSHBEHK1x1CmyU2idNt2RifKdQWwo5yDBC1FpkWwH3qO_OwVTiK6LzG-K31jKN3vlf9IoTSdALlKVHQYm4T1A1on8t0VCgqaKf8IAooWg7GPHZtyBw=s1600-w1600",
           "width": 4800,
           "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/112965830741787235202\">Mervina Tan</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMM9xg_WKms0AMqu3ExWFJS32CaBDPgEUhrqqK6sH-8VX7RkjDj0rcUJHoBqJKnMkQ4ulk9RuJOudLqVQJ3iO8Eq6AlD-3Z1QrQ5WI9bBkvsXgDFcGVwxzHQbKRpXrjUODfsfdXQveyyXVOvrB9KvvK=s1600-w1600",
-          "width": 4800,
-          "height": 3600,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/109021348477227125984\">Hotspot</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPJlNYc5QIw4-Edd1btzpWDiROaAvJRgZjA-6LtBPPzvfFUMZEtEwG8hXtDGrwXxvRERnXOy9Qei72kfxCVYdAOeC9gRILZK_wC7lTT-jCjIashFtxo189tALRjBM3OLLhT23jnMjaTSeyomsrujdR2VQ=s1600-w1600",
-          "width": 4000,
-          "height": 2252,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/115072032985191050717\">KKチャンネル</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/112965830741787235202\">Mervina Tan</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.6,
       "ratingCount": 25,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "椎茸を主役に据えた一皿が軸で、出汁の風味が残りやすい。カンパーニュやコールスローを添えたセット構成で、軽めの食事に寄せやすい。異国感のある空間に和の小物が混じり、長居しやすい雰囲気。レビューは高評価帯が多く、見込みを合わせやすい。",
+      "caption": "椎茸のポタージュが看板で、出汁の余韻が長く残りやすい。 カンパーニュやフムスを添えたブランチが、朝から夜まで通しで頼める。 異国感のある内装に和の小物が混ざり、ひと息つきやすい空気。 Amuでの朝、最初の一杯を外で取りたい日に合わせやすい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T11:31:22.025Z",
-      "lastChecked": "2026-05-12T11:31:22.025Z"
+      "captionGenerated": "2026-05-12T13:54:20.353Z",
+      "lastChecked": "2026-05-12T13:54:20.353Z"
     },
     "Beppu+Spirits+Bar+LAMP": {
       "placeId": "ChIJSVSBw4SnRjURfKIA3dRonn4",
@@ -1403,35 +1826,46 @@
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN68ZHsTtEZ7BWfDsSScLp5KOHk36_E0M1dDLGgNU-NtXEHGgLbi6VoIpHEX1b3DK5DxLp5Wjd7Ma3fb6EBDJ94d_eVMTvDeBAAHagiRT5cKE9mLyXLclHg2j8sAAxYjlTvp-dqB9j7ZDQz5fE=s1600-w1600",
           "width": 3600,
           "height": 4800,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105763628627133559458\">moi moi</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105763628627133559458\">moi moi</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNcRb3HXNfztsjcjr4t7hVvk6Xr21edsO-qu2et-qDGgYFH5wpxXdDk-atb6P4PCGiYwRSIYnd0RdwE1y7rpPHqIWQlBacwpFNDeU5wVxYbK5XfBONLR-LEMRXxDfphNVLDAqxYQKWOqfWJY_CFippmfw=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/104947891471420391193\">Rene C</a>",
+          "label": "unclassified"
+        },
+        {
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM2Hvw8FFy8GqfwlBhl7J8E-x1KAeRFQG64xXGgQfIM3U8XzYyZ4ypBGsnNa5RMMl43SxmwzX5JTbzlHqM9LbqB9rADWAfcVkoBQswWWAwIsoyNFyBxP1iBpMD-DztbLhbE_TZAHnWzg35gZI0=s1600-w1600",
+          "width": 3024,
+          "height": 4032,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111931362526234698517\">yohwaoh</a>",
+          "label": "unclassified"
         },
         {
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM-TfHwTVpErfpZ0iOWSjKew_7d9OsBWEbs5DCMyP_r95mbl8AmwnzMqUxvE7DsaIhRSBwUekQwnfOK4JWfw9lCHPs6mFYHzXnCLVuxlWg48sN_y7Eyp7fqOFUsof1o--ELw8u5zEvp-sqJqtA=s1600-w1600",
           "width": 3024,
           "height": 4032,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105266467154981751063\">Tony Webb</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/105266467154981751063\">Tony Webb</a>",
+          "label": "unclassified"
         },
         {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPbaulqoh8twqQ1CDoHzN7r6tIV3E3r32RZCP994_cA-EHAgked1GsfQqYIrO7r-fjV6kLNMyJ24dgTjSyZNNzL1lTnuI0NuXQNwjvdnSLZSpJ8K7wOVyL2iYO3h5esL9Jg_5Gn50QkZeQ4FxM=s1600-w1600",
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP2oeUQKnqZGkHaYqj6d8vwGq7D06NAH-ZHC04LUU_GXDxL4AqJjkxMtxiKtMb16q_qdXv6IcMQP1Rs3-A78g4ghlwrDssdUITxlVn2fT6nnse9OKTQlbySgxy1M_-27um_onyWSqqmmx9BcjE=s1600-w1600",
           "width": 3000,
           "height": 4000,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111760169430961089120\">3 senshi</a>"
-        },
-        {
-          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZP9MCcbGYbmba5KXlnxiGweDn3DMLRxJfdzsPFYFBqfS-UbUUW1WhyjU5ke7rgWDINNCqKStJxuxXMDk_fh7IZwccBP6LxFdy1A5EW7kmyC51EJa_9ojqfqxqzHNQEd5Y2xld2WCNe-kko4=s1600-w1600",
-          "width": 3000,
-          "height": 4000,
-          "attribution": "<a href=\"https://maps.google.com/maps/contrib/111760169430961089120\">3 senshi</a>"
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/103248254860598900800\">Chris S</a>",
+          "label": "unclassified"
         }
       ],
       "rating": 4.9,
       "ratingCount": 31,
       "ratingMedian": 5,
       "editorialSummary": null,
-      "caption": "カウンター越しに蒸留酒とサイフォン珈琲が並ぶ一軒。大分の焼酎やジン、香りで選ぶ珈琲豆まで揃う。横並びの席で、会話が自然に続きやすい空気。夜の一杯にも、散歩帰りの珈琲にも溶け込む。",
+      "caption": "カウンターで蒸留酒とサイフォン珈琲が同じ流れに並ぶ、別府らしい一軒。マスターと話しながら、大分の焼酎やジンを少量ずつ試しやすい。豆の香りで選んでサイフォンで淹れてもらう一杯も用意がある。Amuに戻る前の夜の一杯にも、散歩途中の珈琲休憩にも溶け込みやすい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-12T13:26:02.486Z",
-      "lastChecked": "2026-05-12T13:26:02.487Z"
+      "captionGenerated": "2026-05-12T13:54:32.505Z",
+      "lastChecked": "2026-05-12T13:54:32.505Z"
     }
   }
 }

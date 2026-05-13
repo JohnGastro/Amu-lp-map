@@ -249,8 +249,11 @@ function finalizePhotos(scoredWithLabels) {
 // --- Vision: 写真ラベル分類 ---
 // Anthropic API 直叩き（Vision）。Claude Code CLI は remote image URL を直接受け取れないため。
 // 1リクエストで最大10枚をまとめて分類し、行数=画像枚数 のテキストを期待する。
+// 注: `claude setup-token` で発行される subscription token は Vision endpoint では使えない。
+// 401 が一度返ったら本実行内ではスキップする。
+let visionDisabled = false;
 async function classifyPhotos(photoUrls) {
-  if (!ANTHROPIC_KEY) return null;
+  if (!ANTHROPIC_KEY || visionDisabled) return null;
   if (visionCallCount >= MAX_VISION_CALLS) return null;
   if (!photoUrls.length) return [];
   visionCallCount++;
@@ -297,7 +300,12 @@ async function classifyPhotos(photoUrls) {
     });
     if (!res.ok) {
       const errText = await res.text();
-      console.warn(`    ! Vision classify failed: ${res.status}: ${errText.slice(0, 200)}`);
+      if (res.status === 401) {
+        visionDisabled = true;
+        console.warn(`    ! Vision auth invalid — disabling for this run (subscription tokens cannot call /v1/messages with image content)`);
+      } else {
+        console.warn(`    ! Vision classify failed: ${res.status}: ${errText.slice(0, 200)}`);
+      }
       return null;
     }
     const data = await res.json();
@@ -404,12 +412,19 @@ async function generateCaptionViaAnthropicApi(prompts) {
 
 function generateCaptionViaClaudeCli(prompts) {
   return new Promise((resolve, reject) => {
+    // ANTHROPIC_API_KEY と ANTHROPIC_AUTH_TOKEN を env から外して、
+    // CLI が Claude Code のサブスク認証 (OAuth) を使うようにする。
+    // 残しておくと、Vision用に渡した token (Vision endpoint で 401) を
+    // CLI も優先利用してしまい、全キャプション生成が失敗する。
+    const env = { ...process.env };
+    delete env.ANTHROPIC_API_KEY;
+    delete env.ANTHROPIC_AUTH_TOKEN;
     const proc = spawn('claude', [
       '-p', prompts.userPrompt,
       '--system-prompt', prompts.systemPrompt,
       '--model', CAPTION_MODEL,
       '--output-format', 'text',
-    ], { stdio: ['ignore', 'pipe', 'pipe'] });
+    ], { stdio: ['ignore', 'pipe', 'pipe'], env });
     let out = '';
     let err = '';
     proc.stdout.on('data', d => { out += d; });
