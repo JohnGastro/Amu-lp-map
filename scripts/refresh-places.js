@@ -25,6 +25,7 @@
 const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
+// downloadPhoto は path モジュールを使うので require 済み
 
 const CSV_PATH = path.resolve(__dirname, '../public/data/beppu-restaurants.csv');
 const PLACES_PATH = path.resolve(__dirname, '../public/data/places.json');
@@ -62,6 +63,8 @@ let visionCallCount = 0;
 const CAPTION_REGEN_DAYS = 30;
 const CAPTION_MODEL = 'claude-opus-4-7';
 const VISION_MODEL = 'claude-haiku-4-5';   // 写真分類用、コスト最優先
+const PHOTO_DL_DIR = '/tmp/beppu-vision-photos';
+const PHOTO_DL_BYTES_MAX = 6 * 1024 * 1024;  // 1枚あたり最大6MB（暴走防止）
 const PHOTO_MAX_WIDTH = 1600;
 const PHOTOS_PER_SHOP = 5;
 // Vision分類は飲食店向けの優先度。例: お買いもの店ではこの優先度ではうまく行かない可能性あり
@@ -247,12 +250,99 @@ function finalizePhotos(scoredWithLabels) {
 }
 
 // --- Vision: 写真ラベル分類 ---
-// Anthropic API 直叩き（Vision）。Claude Code CLI は remote image URL を直接受け取れないため。
-// 1リクエストで最大10枚をまとめて分類し、行数=画像枚数 のテキストを期待する。
-// 注: `claude setup-token` で発行される subscription token は Vision endpoint では使えない。
-// 401 が一度返ったら本実行内ではスキップする。
+// 2モード:
+//   1. --via-claude-cli: ローカルに画像DLしてから `claude -p` に絶対パスを渡す（subscription auth、追加課金ゼロ）
+//   2. (default): Anthropic API 直叩き（要 ANTHROPIC_API_KEY、Visionサポートのキー）
 let visionDisabled = false;
+
+async function downloadPhoto(url, idx) {
+  const filename = `${Date.now()}-${idx}.jpg`;
+  const filepath = path.join(PHOTO_DL_DIR, filename);
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const len = parseInt(res.headers.get('content-length') || '0', 10);
+  if (len > PHOTO_DL_BYTES_MAX) throw new Error(`size ${len} > limit ${PHOTO_DL_BYTES_MAX}`);
+  const buf = Buffer.from(await res.arrayBuffer());
+  if (buf.length > PHOTO_DL_BYTES_MAX) throw new Error(`size ${buf.length} > limit ${PHOTO_DL_BYTES_MAX}`);
+  fs.writeFileSync(filepath, buf);
+  return filepath;
+}
+
+async function classifyPhotosViaClaudeCli(photoUrls) {
+  if (!photoUrls.length) return [];
+  if (visionDisabled) return null;
+  if (visionCallCount >= MAX_VISION_CALLS) return null;
+  visionCallCount++;
+  fs.mkdirSync(PHOTO_DL_DIR, { recursive: true });
+
+  // 1) ローカルにDL
+  const localPaths = [];
+  for (let i = 0; i < photoUrls.length; i++) {
+    try {
+      const p = await downloadPhoto(photoUrls[i], i);
+      localPaths.push(p);
+    } catch (e) {
+      console.warn(`    ! photo DL failed #${i + 1}: ${e.message}`);
+      localPaths.push(null);
+    }
+  }
+  const valid = localPaths.map((p, i) => ({ idx: i, path: p })).filter(x => x.path);
+  if (valid.length === 0) return null;
+
+  // 2) claude -p で一括分類
+  const prompt = [
+    `次の${valid.length}枚の画像をそれぞれ分類してください。`,
+    '出力は厳密に「#N: label」形式で1行ずつ。前置きや解説は出さない。',
+    'labelは以下のいずれかの小文字英語: food / drink / interior / exterior / signage / menu / people / other',
+    '',
+    ...valid.map(v => `#${v.idx + 1}: ${v.path}`),
+  ].join('\n');
+
+  const env = { ...process.env };
+  delete env.ANTHROPIC_API_KEY;
+  delete env.ANTHROPIC_AUTH_TOKEN;
+
+  const result = await new Promise((resolve) => {
+    const proc = spawn('claude', [
+      '-p', prompt,
+      '--permission-mode', 'bypassPermissions',
+      '--model', VISION_MODEL,
+      '--output-format', 'text',
+    ], { stdio: ['ignore', 'pipe', 'pipe'], env });
+    let out = '';
+    let err = '';
+    proc.stdout.on('data', d => { out += d; });
+    proc.stderr.on('data', d => { err += d; });
+    proc.on('error', () => resolve(null));
+    proc.on('close', code => {
+      if (code !== 0) {
+        console.warn(`    ! Vision CLI exit ${code}: ${err.slice(0, 200)}`);
+        return resolve(null);
+      }
+      resolve(out);
+    });
+  });
+
+  // 3) 画像クリーンアップ
+  for (const p of localPaths) {
+    if (p) { try { fs.unlinkSync(p); } catch {} }
+  }
+
+  if (!result) return null;
+  const labels = new Array(photoUrls.length).fill('other');
+  result.split('\n').forEach(line => {
+    const m = line.match(/#(\d+)\s*[:：]\s*([a-z]+)/i);
+    if (m) {
+      const idx = parseInt(m[1], 10) - 1;
+      if (idx >= 0 && idx < labels.length) labels[idx] = m[2].toLowerCase();
+    }
+  });
+  return labels;
+}
+
 async function classifyPhotos(photoUrls) {
+  if (VIA_CLAUDE_CLI) return classifyPhotosViaClaudeCli(photoUrls);
+  // Anthropic API 直叩きルート（要 ANTHROPIC_API_KEY）
   if (!ANTHROPIC_KEY || visionDisabled) return null;
   if (visionCallCount >= MAX_VISION_CALLS) return null;
   if (!photoUrls.length) return [];
@@ -471,9 +561,9 @@ async function processShop(shop, existingEntry, fewShotExamples) {
     await new Promise(r => setTimeout(r, 60));
   }
 
-  // Stage 2: Vision で内容分類（ANTHROPIC_API_KEY ありの時だけ）
+  // Stage 2: Vision で内容分類（CLIモード or ANTHROPIC_API_KEY ありの時）
   let labels = null;
-  if (resolved.length && ANTHROPIC_KEY) {
+  if (resolved.length && (VIA_CLAUDE_CLI || ANTHROPIC_KEY)) {
     labels = await classifyPhotos(resolved.map(r => r.url));
   }
   const withLabels = resolved.map((r, i) => ({ ...r, label: (labels && labels[i]) || 'unclassified' }));
