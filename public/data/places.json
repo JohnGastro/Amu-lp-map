@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-13T10:25:21.283Z",
+  "generated": "2026-05-13T11:17:09.073Z",
   "captionModel": "claude-opus-4-7",
   "shops": {
     "%E5%A4%A7%E7%94%B0%E5%92%96%E5%96%B1%EF%BC%88%E3%81%8A%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%8A%E3%83%BC%EF%BC%89": {
@@ -246,18 +246,44 @@
       "placeId": "ChIJf9zUL92mRjURmqeTKhXrnFk",
       "photos": [
         {
+          "photo_ref": "Ab43m-urTcnrIkbH_b1zd5roZ6LDy42V9qT5vHgckKXg34qEUOTsroV5pcatEVUW4c2TodbrZp45NmbouUOLSGlwKTwMESC_ZDN36nXof5i5DFKmZbnhdVf8WyvS7nc7rrN5VZsmKJWWzX1BjOPTqZmB3R_y9PM1JSAMxuV9fGUjL-MKzeoNspe26cLqZmASoXOPw_2pFRWHx4qESLsTpBcL8DtTk72nIsXvkuDo6bS8uMpqtuckPTraMdHGJBSbauhAVVmUVgc8kjffSMVR65GL32Y2jz--rdFpbTZHxAqYFIhgSYlZJv9mTfCU_YhEdXCZahXnpXS5gzI0y0DoDqOZJ1adsnB4vcFjQNYNV61Q1zM2I769nLlfsMWJzBqrDz9sZr_vzIFHIWZHtYs6Uw6fC6DX946HF94JxfDCC1ZXZSQ",
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM_O5kay3fqevhDD9NLtilhTePluo3Bl7DkP0unKQyoQex9_YH9EcSMGxaFrRKLad7eqyB6yJ0BxOewcbj8O9B_gigCDhSATtQ2XrEonk6tbT1R8yjs0LSPI0Bw2nVh7brqYjeArR_Jx6qT=s1600-w1600",
           "width": 4800,
           "height": 2700,
           "attribution": "<a href=\"https://maps.google.com/maps/contrib/108745890395192198361\">Satoru Kono</a>",
-          "label": "exterior"
+          "label": "unclassified",
+          "auto_selected": true,
+          "display_order": 0
         },
         {
+          "photo_ref": "Ab43m-vKssyvU_66TuxJ7ISOKMnoLt-DF8uiARQZcZsAVmmWjH_7iO0xAquV3el6097jk1vwJwiqZzerEXjfTuznD-oubx6OZfp-l1hX69KFvQMmuW1YpKVBDwlpf-vZP1mL7PqZktPscgOkpWkFFD9r-9qiL54lBBDtA1qMUjiqN0hWPeEHLUKr5E_uOgWFVx4uahs0sjswv2RhwF4vWtqch7HcSkpH5DOY-6f08_W_BcEEEB0WT_pAvpi7D5yEuKohGg-3FrNaDKP1yblyvt9i0Mgq7NUytnIO-679tSTasH0i5quvYEhsGtj1ubyN-6ON2WyaQ9Ovxdtdyu12RIymvV_oJRJ-aTOS5-ngr0wCEzs72QztvzrpXHV5lfv9mOsCFO5ewWVA4udkwyZP80CitzIqVVyR-gxHlYKW2xru50W-6CLN",
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNMtz1nNOFAWuq7YF8NH-Y6ACX7QxIPl9PJhnxFW6E3yN8BD6N2t60-W1ZRHXzGOjgVcmco0aFDSXQJFJ3p01FzoJXRP_RyP8tuc_fjb_OpLdhAMpTQRrndu3wziwvVWwdBA8QJSG39PMM0ccQ=s1600-w1600",
+          "width": 3648,
+          "height": 2736,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102066185136208854412\">カカオ.</a>",
+          "label": "unclassified",
+          "auto_selected": true,
+          "display_order": 1
+        },
+        {
+          "photo_ref": "Ab43m-sRP-He5TtDNAzQv0oMPQLt23o2yBFSMzHCHQy_Lanol_PA1BVSpiX3NmJ4gvodt4zuyS_RGRZp38ECWwmnVp8u9O9zAYRARKBaADUBUCERmLhnP4Fz6nW29mP6a6G2bKwTU08EhTBM2P7S7aTyT1IPY6Qwxz4qXYsJnhKXGyZoxSeNRJovLQqsh9Z3QdkPHF0Ri0zcvdbQ5_D9Zp0R5r31B0MuvOrr_dVRY5Rmx4bJjUApb0RaTVSS1gpbk3rL4hHmmdFXM9tq39oj5c9OJ3MHtxjtmCX71FE0w0yZgFb8d5zqpNzc9oI6W3o0YqggYr3PhCUwiFi1gbIb_CQkki8CHTcWRMWM7S-5fq1EQeTjjBdj9Pb36C5DkL0OvmLVNtV6xNRkBufdny22dRn_doDANPLGf0WewuSmwm2sHo2IucQU",
+          "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN65kYeM1FghTql6rzxe8dWc92VZDHde_hq57P0nYOMjdUBE7B8m40exmf8mfWa1yVCl-NVUXCXsjZLo-ywBe3zG7HkaSOVVQxKmRrh3jwg16CykI824RRbX7pdH3RBVL7QS3BVXyAjTmSypdk=s1600-w1600",
+          "width": 2736,
+          "height": 3648,
+          "attribution": "<a href=\"https://maps.google.com/maps/contrib/102066185136208854412\">カカオ.</a>",
+          "label": "unclassified",
+          "auto_selected": true,
+          "display_order": 2
+        },
+        {
+          "photo_ref": "Ab43m-tFW_P7k41QKCnVT0vuB8kpf4sEyXZMOCtbsKcW34LVgl07TkFpUd8lrnsAWoK3ekPcD5UT846wTiNEXa05Xk4Q3vIY2ZJiuM8Kjd8tqFEZ_rI-ItUBN3YamdvUxG1a2xQErh__W8ngfSZap8psJKWSIllmkH8sV2QVi5Y3bolTsSjhmBEw_hDT42dZTX6wyrK2i4Y8wsDwOyJRo-jLYAD3qB9IcaN3NPlZsKOL0ZH9Zxdkg2ohwG_Pyphg3rIWuulIncF-uU-7qAOtnWOw_wqYAEsdZhp2xSTV_JETCt_Vzan2Wo4dCiM3sl80hvEAZLNhKTSWwCAp6p3b_zdded3oJVwsF_9y6TtmBnHLPs1eOE74akjuxq3jFgKYx8IWHQ-PIY1ygK5n242Y-f681ZzFU5J9GU5lFzv5BKTDsRHcXmc",
           "url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNZAcGe5RsDsbD83Hd0m0JxUx7PEJQ8ql2vFPlyizPbd2gfMrGWlpOmodmuohRb7KFcRIgVsZvn72uQmsxIhOW1ud2b-ESQQ4sw5N9oKhL2t1PMh8bqH62fLEWwtlYqQdSqlKi7NCDf55hiqg=s1600-w1600",
           "width": 4032,
           "height": 3024,
           "attribution": "<a href=\"https://maps.google.com/maps/contrib/101459887106232646937\">MAN KIT NG</a>",
-          "label": "signage"
+          "label": "unclassified",
+          "auto_selected": true,
+          "display_order": 3
         }
       ],
       "rating": 4.8,
@@ -266,8 +292,8 @@
       "editorialSummary": null,
       "caption": "商店街の近くにあり、街歩きの起点として使いやすい。\n車で別府を訪れる滞在に、置き場として馴染ませやすい。\n中心部の回遊に合わせて、足を伸ばす拠点に整えやすい。\n短時間の用事から、夜の散策前の停留まで、扱いやすい。",
       "captionSource": "generated",
-      "captionGenerated": "2026-05-13T10:04:25.923Z",
-      "lastChecked": "2026-05-13T10:04:25.923Z"
+      "captionGenerated": "2026-05-13T10:04:25.923+00:00",
+      "lastChecked": "2026-05-13T11:17:08.797Z"
     },
     "TANNEL": {
       "placeId": "ChIJLd8E91OnRjURySxguPNYrWc",

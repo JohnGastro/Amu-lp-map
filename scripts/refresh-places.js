@@ -39,6 +39,9 @@ const NO_CAPTION = args.includes('--no-caption');
 const FORCE_CAPTION = args.includes('--force-caption');
 const VIA_CLAUDE_CLI = args.includes('--via-claude-cli');
 const DEBUG_PHOTOS = args.includes('--debug-photos');
+const PUSH_SUPABASE = args.includes('--push');         // Supabase amu_beppu_shops/_photos に書き込む
+const FROM_CSV = args.includes('--from-csv');           // legacy CSV から店舗一覧（seed/移行期用）
+const NO_JSON_FALLBACK = args.includes('--no-json-fallback');  // places.json書き出しをスキップ
 const SAMPLE_N = (() => {
   const idx = args.indexOf('--sample');
   if (idx === -1) return null;
@@ -49,6 +52,10 @@ const ONLY_SHOP = (() => {
   const idx = args.indexOf('--shop');
   return idx === -1 ? null : args[idx + 1];
 })();
+
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
+const SUPABASE_ADMIN_PW = process.env.SUPABASE_ADMIN_PW || 'amu-beppu';
 
 // --- 23万円事件への防御: 1実行あたりのハードリミット ---
 const MAX_DETAILS_CALLS = 60;     // 40店舗 + 余裕
@@ -569,14 +576,27 @@ async function processShop(shop, existingEntry, fewShotExamples) {
   const withLabels = resolved.map((r, i) => ({ ...r, label: (labels && labels[i]) || 'unclassified' }));
 
   // Stage 3: 料理優先で最終選別（Visionなしならラベルなし=スコア通り）
-  const picked = labels ? finalizePhotos(withLabels) : withLabels.slice(0, PHOTOS_PER_SHOP);
+  const pickedTop = labels ? finalizePhotos(withLabels) : withLabels.slice(0, PHOTOS_PER_SHOP);
+  const pickedIds = new Set(pickedTop.map(x => x.url));
+  // pushモード時は採用外の写真も含めて全候補を返す（CMSで切替できるよう）
+  const allCandidates = PUSH_SUPABASE
+    ? [
+        ...pickedTop.map((x, i) => ({ ...x, _autoSelected: true, _displayOrder: i })),
+        ...withLabels.filter(x => !pickedIds.has(x.url)).map((x, i) => ({
+          ...x, _autoSelected: false, _displayOrder: 100 + i,
+        })),
+      ]
+    : pickedTop.map((x, i) => ({ ...x, _autoSelected: true, _displayOrder: i }));
 
-  const photos = picked.map(x => ({
+  const photos = allCandidates.map(x => ({
+    photo_ref: x.photo.photo_reference || null,
     url: x.url,
     width: x.photo.width,
     height: x.photo.height,
     attribution: (x.photo.html_attributions || []).join(' | '),
     label: x.label,
+    auto_selected: x._autoSelected,
+    display_order: x._displayOrder,
   }));
 
   const ratingMedian = reviewRatingMedian(details.reviews);
@@ -631,6 +651,73 @@ async function processShop(shop, existingEntry, fewShotExamples) {
   };
 }
 
+// --- Supabase RPC helper ---
+async function supaRpc(name, body) {
+  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+    throw new Error('SUPABASE_URL / SUPABASE_ANON_KEY env required for --push');
+  }
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/${name}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+    },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    const errText = await res.text();
+    throw new Error(`${name} ${res.status}: ${errText.slice(0, 300)}`);
+  }
+  const text = await res.text();
+  return text ? JSON.parse(text) : null;
+}
+
+async function loadShopsFromSupabase() {
+  const data = await supaRpc('amu_beppu_shops_list_all', { pw: SUPABASE_ADMIN_PW });
+  return (data || []).map(s => ({
+    id: s.slug,
+    name: s.name,
+    placeId: s.place_id,
+    category: s.category || '',
+    reviewSummary: s.caption_auto || '',
+    googleMapUrl: s.google_maps_url || '',
+    _existing: {
+      caption: s.caption_auto,
+      captionSource: s.caption_source,
+      captionGenerated: s.caption_generated_at,
+    },
+  }));
+}
+
+async function pushShopToSupabase(shop, entry) {
+  // shop master 更新（caption_override は守られる）
+  await supaRpc('amu_beppu_shop_upsert', {
+    pw: SUPABASE_ADMIN_PW,
+    p_place_id: shop.placeId,
+    p_payload: {
+      slug: shop.id,
+      name: shop.name,
+      rating: entry.rating,
+      rating_count: entry.ratingCount,
+      rating_median: entry.ratingMedian,
+      editorial_summary: entry.editorialSummary,
+      caption_auto: entry.caption,
+      caption_generated_at: entry.captionGenerated,
+      last_checked_at: entry.lastChecked,
+    },
+  });
+
+  // 写真候補一括書き換え（excluded/display_orderは保持される設計）
+  if (entry.photos && entry.photos.length) {
+    await supaRpc('amu_beppu_shop_photos_replace_set', {
+      pw: SUPABASE_ADMIN_PW,
+      p_place_id: shop.placeId,
+      p_photos: entry.photos,
+    });
+  }
+}
+
 // --- main ---
 async function main() {
   if (!GOOGLE_KEY && !DRY_RUN) {
@@ -638,8 +725,15 @@ async function main() {
     process.exit(1);
   }
 
-  let shops = loadShopsFromCsv(CSV_PATH);
-  console.log(`Loaded ${shops.length} shops with place_id from CSV`);
+  let shops;
+  if (PUSH_SUPABASE && !FROM_CSV) {
+    console.log('Loading shop master from Supabase (--push mode)…');
+    shops = await loadShopsFromSupabase();
+    console.log(`Loaded ${shops.length} shops from Supabase`);
+  } else {
+    shops = loadShopsFromCsv(CSV_PATH);
+    console.log(`Loaded ${shops.length} shops with place_id from CSV`);
+  }
 
   if (ONLY_SHOP) {
     shops = shops.filter(s => s.id === ONLY_SHOP || s.name === ONLY_SHOP);
@@ -679,16 +773,27 @@ async function main() {
   const out = { ...existing };
   let success = 0, fail = 0;
 
+  let pushed = 0;
   for (let i = 0; i < shops.length; i++) {
     const shop = shops[i];
     console.log(`\n[${i + 1}/${shops.length}] ${shop.name} (${shop.id})`);
     try {
-      const entry = await processShop(shop, existing[shop.id], fewShotExamples);
+      const existingEntry = shop._existing || existing[shop.id];
+      const entry = await processShop(shop, existingEntry, fewShotExamples);
       out[shop.id] = entry;
       success++;
       console.log(`  ✓ photos:${entry.photos.length} median:${entry.ratingMedian} captionSource:${entry.captionSource}`);
       if (entry.captionSource === 'generated') {
         console.log(`  📝 ${entry.caption}`);
+      }
+      if (PUSH_SUPABASE) {
+        try {
+          await pushShopToSupabase(shop, entry);
+          pushed++;
+          console.log(`  ↑ pushed to Supabase`);
+        } catch (e) {
+          console.error(`  ! supabase push failed: ${e.message}`);
+        }
       }
     } catch (e) {
       console.error(`  ✗ ${e.message}`);
@@ -709,14 +814,18 @@ async function main() {
     }
   }
 
-  const output = {
-    generated: new Date().toISOString(),
-    captionModel: CAPTION_MODEL,
-    shops: out,
-  };
-  fs.writeFileSync(PLACES_PATH, JSON.stringify(output, null, 2), 'utf8');
-  console.log(`\nWrote ${Object.keys(out).length} entries to ${PLACES_PATH}`);
-  console.log(`Done! ${success} ok, ${fail} failed.`);
+  // places.json fallback の書き出し（PUSH+NO_JSON_FALLBACKでskip）
+  if (!(PUSH_SUPABASE && NO_JSON_FALLBACK)) {
+    const output = {
+      generated: new Date().toISOString(),
+      captionModel: CAPTION_MODEL,
+      shops: out,
+    };
+    fs.writeFileSync(PLACES_PATH, JSON.stringify(output, null, 2), 'utf8');
+    console.log(`\nWrote ${Object.keys(out).length} entries to ${PLACES_PATH}`);
+  }
+
+  console.log(`Done! ${success} ok, ${fail} failed${PUSH_SUPABASE ? `, ${pushed} pushed to Supabase` : ''}.`);
   console.log(`API usage: details=${detailsCallCount} photoHead=${photoHeadCount} caption=${anthropicCallCount} vision=${visionCallCount}`);
 }
 
