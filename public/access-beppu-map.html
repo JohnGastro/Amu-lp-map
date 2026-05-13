@@ -2922,6 +2922,47 @@
         console.warn('[AccessBeppu] Could not load places.json:', e.message);
       }
 
+      // Supabase 経由でキャプション手動上書き + 非表示フラグを取得し、
+      // 該当店舗の caption を上書き / hidden=true の店舗をリストから除外する。
+      // CMS は https://amu-onboarding.vercel.app/beppu/cms にある。
+      try {
+        var supabaseUrl = 'https://aoehwevqlkpgvzdyfuja.supabase.co';
+        var supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvZWh3ZXZxbGtwZ3Z6ZHlmdWphIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3NTI0MTYsImV4cCI6MjA5MjMyODQxNn0.D4Vr26xPO5p5mv903Qup0XsHNvNIuAL_dwVY7M7j78Y';
+        var overrideResp = await fetch(supabaseUrl + '/rest/v1/rpc/amu_beppu_captions_list', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': supabaseAnonKey,
+            'Authorization': 'Bearer ' + supabaseAnonKey,
+          },
+          body: '{}',
+        });
+        if (overrideResp.ok) {
+          var overrideRows = await overrideResp.json();
+          var overrideMap = {};
+          (overrideRows || []).forEach(function (r) { overrideMap[r.place_id] = r; });
+          var overridden = 0;
+          var hiddenIds = {};
+          places.forEach(function (place) {
+            var entry = overrideMap[place.id] || overrideMap[place.slug];
+            if (!entry) return;
+            if (entry.caption_override) {
+              place.description = entry.caption_override;
+              place._captionSource = 'manual';
+              overridden++;
+            }
+            if (entry.hidden) hiddenIds[place.id] = true;
+          });
+          if (Object.keys(hiddenIds).length) {
+            places = places.filter(function (p) { return !hiddenIds[p.id]; });
+            console.info('[AccessBeppu] Supabase: hid', Object.keys(hiddenIds).length, 'places');
+          }
+          console.info('[AccessBeppu] Supabase: overrode', overridden, 'captions');
+        }
+      } catch (e) {
+        console.warn('[AccessBeppu] Could not load Supabase overrides:', e.message);
+      }
+
       // Shuffle places so card order is random on each load
       for (var i = places.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
