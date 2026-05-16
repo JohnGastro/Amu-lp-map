@@ -864,6 +864,16 @@
     });
   };
 
+  BeppuMapModule.prototype.bindRecenterButton = function bindRecenterButton() {
+    var btn = document.getElementById('beppu-recenter-btn');
+    if (!btn || !this.map) return;
+    var self = this;
+    btn.addEventListener('click', function () {
+      self.map.panTo({ lat: self.hotel.lat, lng: self.hotel.lng });
+      self.map.setZoom(self.zoom);
+    });
+  };
+
   BeppuMapModule.prototype.init = async function init() {
     var mapsLib = await google.maps.importLibrary('maps');
     var markerLib = await google.maps.importLibrary('marker');
@@ -970,6 +980,7 @@
     this.renderPlaces(this.options.places || [], AdvancedMarkerElement);
     this.bindEmbeddedHoverInteraction();
     this.bindCardEvents();
+    this.bindRecenterButton();
 
     // Shrink markers when zoomed out
     var self = this;

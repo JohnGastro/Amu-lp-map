@@ -359,6 +359,33 @@
     letter-spacing: 0.2px;
   }
 
+  #beppu-recenter-btn {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.96);
+    color: #3c3c3c;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+  #beppu-recenter-btn:hover { background: #fff; }
+  #beppu-recenter-btn:active { transform: scale(0.94); }
+  #beppu-recenter-btn svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+
   #beppu-route-chip {
     position: absolute;
     left: 14px;
@@ -1801,6 +1828,15 @@
         <section class="ab-map-col">
           <div class="ab-map-wrap">
             <div id="beppu-map"></div>
+            <button id="beppu-recenter-btn" type="button" aria-label="Amuの位置に戻る" title="Amuの位置に戻る">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="3"></circle>
+                <line x1="12" y1="2" x2="12" y2="5"></line>
+                <line x1="12" y1="19" x2="12" y2="22"></line>
+                <line x1="2" y1="12" x2="5" y2="12"></line>
+                <line x1="19" y1="12" x2="22" y2="12"></line>
+              </svg>
+            </button>
             <div id="beppu-route-chip">
               <span class="beppu-route-line">
                 <span>🚶</span>
@@ -1858,7 +1894,7 @@
     window.BEPPU_TZ_OFFSET_MINUTES = 540;
     window.GOOGLE_MAP_ID = 'c9289c731e6bc6c03d298152';
   </script>
-          <script src="./assets/js/access-beppu-map.js?v=29"></script>
+          <script src="./assets/js/access-beppu-map.js?v=30"></script>
 <script>
   (function () {
     var CATEGORY_EMOJI_BY_KEY = {
