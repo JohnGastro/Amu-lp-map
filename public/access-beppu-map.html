@@ -28,6 +28,14 @@
     touch-action: auto;
   }
 
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0);
+    white-space: nowrap; border: 0;
+  }
+
   #access-beppu-app * {
     box-sizing: border-box;
   }
@@ -359,31 +367,73 @@
     letter-spacing: 0.2px;
   }
 
+  .ab-right-header-top {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+  }
+  .ab-right-header-top .ab-question {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .ab-right-header-top #beppu-lang-switcher {
+    flex-shrink: 0;
+  }
+  #beppu-lang-switcher {
+    display: inline-flex;
+    align-items: center;
+  }
+  #beppu-lang-switcher select {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 32px;
+    padding: 0 26px 0 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path d='M1 3 L5 7 L9 3' fill='none' stroke='%231a1a1a' stroke-width='1.6' stroke-linecap='round'/></svg>") no-repeat right 10px center,
+      rgba(255, 255, 255, 0.94);
+    background-size: 10px 10px, auto;
+    color: #1a1a1a;
+    font-size: 12px;
+    line-height: 32px;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
+  #beppu-lang-switcher select:focus {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+
   #beppu-recenter-btn {
     position: absolute;
     right: 14px;
     top: 14px;
     z-index: 5;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: none;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.96);
-    color: #3c3c3c;
+    background: #1a1a1a;
+    color: #fff;
     cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     transition: background 0.15s ease, transform 0.1s ease;
   }
-  #beppu-recenter-btn:hover { background: #fff; }
+  #beppu-recenter-btn:hover { background: #2c2c2c; }
   #beppu-recenter-btn:active { transform: scale(0.94); }
   #beppu-recenter-btn svg {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     display: block;
+    stroke-width: 2.2;
   }
 
   #beppu-route-chip {
@@ -1812,13 +1862,19 @@
         <div class="ab-left-header">
           <div class="ab-meta-line">Amu Hotelまで</div>
           <div class="ab-meta-chips">
-            <div class="ab-meta-chip"><span class="ab-meta-icon">directions_car</span><span class="ab-meta-chip-long">東九州自動車道「別府IC」より車で15分</span><span class="ab-meta-chip-short">別府IC 15分</span></div>
-            <div class="ab-meta-chip"><span class="ab-meta-icon">train</span><span class="ab-meta-chip-long">JR日豊本線「別府駅」東口より徒歩8分</span><span class="ab-meta-chip-short">別府駅 8分</span></div>
+            <div class="ab-meta-chip"><span class="ab-meta-icon">directions_car</span><span class="ab-meta-chip-long" data-i18n="ui.by_car_long">東九州自動車道「別府IC」より車で15分</span><span class="ab-meta-chip-short" data-i18n="ui.by_car_short">別府IC 15分</span></div>
+            <div class="ab-meta-chip"><span class="ab-meta-icon">train</span><span class="ab-meta-chip-long" data-i18n="ui.by_train_long">JR日豊本線「別府駅」東口より徒歩8分</span><span class="ab-meta-chip-short" data-i18n="ui.by_train_short">別府駅 8分</span></div>
           </div>
         </div>
 
         <section class="ab-right-header">
-          <div class="ab-question">どんな場所をお探しですか？</div>
+          <div class="ab-right-header-top">
+            <div class="ab-question" data-i18n="ui.question">どんな場所をお探しですか？</div>
+            <div id="beppu-lang-switcher">
+              <label for="beppu-lang-select" class="visually-hidden" data-i18n="ui.lang_label">言語</label>
+              <select id="beppu-lang-select" aria-label="言語" data-i18n-attr="aria-label" data-i18n="ui.lang_label"></select>
+            </div>
+          </div>
           <div class="ab-chip-row" id="ab-main-categories"></div>
           <div class="ab-chip-row sub" id="ab-sub-categories"></div>
         </section>
@@ -1828,7 +1884,7 @@
         <section class="ab-map-col">
           <div class="ab-map-wrap">
             <div id="beppu-map"></div>
-            <button id="beppu-recenter-btn" type="button" aria-label="Amuの位置に戻る" title="Amuの位置に戻る">
+            <button id="beppu-recenter-btn" type="button" data-i18n="ui.recenter" data-i18n-attr="aria-label,title" aria-label="Amuの位置に戻る" title="Amuの位置に戻る">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="3"></circle>
                 <line x1="12" y1="2" x2="12" y2="5"></line>
@@ -1840,7 +1896,7 @@
             <div id="beppu-route-chip">
               <span class="beppu-route-line">
                 <span>🚶</span>
-                <span data-route-summary>店舗を選択するとルートを表示します。</span>
+                <span data-route-summary data-i18n="ui.route_prompt">店舗を選択するとルートを表示します。</span>
               </span>
             </div>
           </div>
@@ -1854,11 +1910,11 @@
     </div>
 
     <div class="ab-modal-overlay" id="ab-shop-modal-overlay" aria-hidden="true">
-      <aside class="ab-shop-modal" id="ab-shop-modal" role="dialog" aria-modal="true" aria-label="店舗詳細">
-        <p class="ab-shop-modal__live-status is-unknown" id="ab-shop-modal-live-status">営業時間情報なし</p>
+      <aside class="ab-shop-modal" id="ab-shop-modal" role="dialog" aria-modal="true" aria-label="店舗詳細" data-i18n="ui.shop_modal_aria" data-i18n-attr="aria-label">
+        <p class="ab-shop-modal__live-status is-unknown" id="ab-shop-modal-live-status" data-i18n="ui.no_hours">営業時間情報なし</p>
         <header class="ab-shop-modal__header">
           <h3 class="ab-shop-modal__title" id="ab-shop-modal-title">店舗名</h3>
-          <button type="button" class="ab-shop-modal__close" id="ab-shop-modal-close" aria-label="閉じる">
+          <button type="button" class="ab-shop-modal__close" id="ab-shop-modal-close" aria-label="閉じる" data-i18n="ui.close" data-i18n-attr="aria-label">
             <span class="ab-shop-modal__close-icon" aria-hidden="true"></span>
           </button>
         </header>
@@ -1871,11 +1927,11 @@
           <p class="ab-shop-modal__desc" id="ab-shop-modal-description"></p>
           <div class="ab-shop-modal__info">
             <div class="ab-shop-modal__row">
-              <span class="ab-shop-modal__row-label">定休日</span>
+              <span class="ab-shop-modal__row-label" data-i18n="ui.closed_days_label">定休日</span>
               <span class="ab-shop-modal__row-value" id="ab-shop-modal-closed">情報なし</span>
             </div>
             <div class="ab-shop-modal__row">
-              <span class="ab-shop-modal__row-label">営業時間</span>
+              <span class="ab-shop-modal__row-label" data-i18n="ui.hours_label">営業時間</span>
               <span class="ab-shop-modal__row-value" id="ab-shop-modal-hours">情報なし</span>
             </div>
           </div>
@@ -1894,7 +1950,8 @@
     window.BEPPU_TZ_OFFSET_MINUTES = 540;
     window.GOOGLE_MAP_ID = 'c9289c731e6bc6c03d298152';
   </script>
-          <script src="./assets/js/access-beppu-map.js?v=30"></script>
+          <script src="./assets/js/beppu-i18n.js?v=3"></script>
+          <script src="./assets/js/access-beppu-map.js?v=34"></script>
 <script>
   (function () {
     var CATEGORY_EMOJI_BY_KEY = {
@@ -1922,19 +1979,71 @@
     }
 
     var MAIN_CATEGORIES = [
-      { key: '朝食', label: '朝食' },
-      { key: '昼食', label: '昼食' },
-      { key: '夕食', label: '夕食' },
-      { key: 'お酒', label: 'お酒' },
-      { key: '喫茶', label: '喫茶' }
+      { key: '朝食', label: '朝食', i18nKey: 'ui.category_breakfast' },
+      { key: '昼食', label: '昼食', i18nKey: 'ui.category_lunch' },
+      { key: '夕食', label: '夕食', i18nKey: 'ui.category_dinner' },
+      { key: 'お酒', label: 'お酒', i18nKey: 'ui.category_drinks' },
+      { key: '喫茶', label: '喫茶', i18nKey: 'ui.category_cafe' }
     ];
 
     var SUB_CATEGORIES = [
-      { key: 'お買いもの', label: 'お買いもの' },
-      { key: '散歩', label: '散歩' },
-      { key: '温泉', label: '温泉' },
-      { key: '駐車場', label: '駐車場' }
+      { key: 'お買いもの', label: 'お買いもの', i18nKey: 'ui.category_shopping' },
+      { key: '散歩', label: '散歩', i18nKey: 'ui.category_walk' },
+      { key: '温泉', label: '温泉', i18nKey: 'ui.category_onsen' },
+      { key: '駐車場', label: '駐車場', i18nKey: 'ui.category_parking' }
     ];
+
+    function tt(key, params) {
+      if (window.BeppuI18n && typeof window.BeppuI18n.t === 'function') {
+        return window.BeppuI18n.t(key, params);
+      }
+      return key;
+    }
+
+    function categoryUiKey(rawKey) {
+      switch (rawKey) {
+        case '朝食': return 'ui.category_breakfast';
+        case '昼食': return 'ui.category_lunch';
+        case '夕食': return 'ui.category_dinner';
+        case 'お酒': return 'ui.category_drinks';
+        case '喫茶': return 'ui.category_cafe';
+        case '甘味': return 'ui.category_sweets';
+        case '温泉': return 'ui.category_onsen';
+        case '駐車場': return 'ui.category_parking';
+        case 'お買いもの': return 'ui.category_shopping';
+        case '散歩': return 'ui.category_walk';
+        default: return null;
+      }
+    }
+
+    function localizedCategory(rawKey) {
+      var k = categoryUiKey(rawKey);
+      return k ? tt(k) : (rawKey || '');
+    }
+
+    function setupLanguageSwitcher() {
+      if (!window.BeppuI18n) return;
+      var select = document.getElementById('beppu-lang-select');
+      if (!select) return;
+      var langs = window.BeppuI18n.getLanguages();
+      var current = window.BeppuI18n.getLang();
+      select.innerHTML = '';
+      langs.forEach(function (l) {
+        var opt = document.createElement('option');
+        opt.value = l.code;
+        opt.textContent = l.label;
+        if (l.code === current) opt.selected = true;
+        select.appendChild(opt);
+      });
+      select.addEventListener('change', function () {
+        var next = select.value;
+        if (next && next !== window.BeppuI18n.getLang()) {
+          window.BeppuI18n.setLang(next);
+          // 全描画を確実に更新するためリロード（labelやカテゴリ chip も含めて再構築）
+          window.location.reload();
+        }
+      });
+    }
 
     /** @type {import('./assets/js/access-beppu-map').PageState} */
     var state = {
@@ -2096,7 +2205,7 @@
       }
       var t = document.createElement('span');
       t.className = 'ab-chip-text';
-      t.textContent = item.label;
+      t.textContent = item.i18nKey ? tt(item.i18nKey) : item.label;
       button.appendChild(t);
       button.dataset.key = item.key;
       button.addEventListener('click', function () { onClick(item.key); });
@@ -2227,7 +2336,7 @@
     }
 
     function readCardStatusMeta(placeId) {
-      var fallback = { text: '営業時間情報なし', state: 'is-unknown' };
+      var fallback = { text: tt('ui.no_hours'), state: 'is-unknown' };
       if (!placeId) return fallback;
 
       var card = null;
@@ -2283,9 +2392,9 @@
     function renderShopModal(place) {
       if (!place) return;
       modalPlaceId = place.id;
-      modalTitleEl.textContent = place.name || '店舗名';
+      modalTitleEl.textContent = place.name || tt('ui.shop_name_fallback');
       modalGenreEl.textContent = place.subtitle || place.category || 'カテゴリ情報なし';
-      modalDescEl.textContent = place.description || '説明はありません。';
+      modalDescEl.textContent = place.description || tt('ui.fallback_description');
       renderModalLiveStatus(place.id);
 
       var parsedHours = parseBusinessHoursJson(place.businessHours);
@@ -2303,7 +2412,7 @@
         var straightDist = Math.sqrt(dx * dx + dy * dy);
         var walkDist = Math.round(straightDist * 1.4);
         var walkMin = Math.max(1, Math.round(walkDist / 80));
-        modalRouteEl.textContent = '🚶 Amuから徒歩 約' + walkMin + '分（' + walkDist + 'm）';
+        modalRouteEl.textContent = tt('ui.walk_from_amu', { min: walkMin, dist: walkDist });
       }
 
       // Set Google Map link
@@ -2515,7 +2624,7 @@
       var arrow = document.createElement('button');
       arrow.type = 'button';
       arrow.className = 'spot-arrow';
-      arrow.setAttribute('aria-label', '店舗詳細を表示');
+      arrow.setAttribute('aria-label', tt('ui.view_details'));
       var arrowIcon = document.createElement('span');
       arrowIcon.className = 'spot-arrow-icon';
       arrow.appendChild(arrowIcon);
@@ -2529,7 +2638,7 @@
       // fpCXQ - Description
       var desc = document.createElement('p');
       desc.className = 'spot-description';
-      desc.textContent = place.description || '別府駅・ホテルから徒歩圏内のおすすめスポット。';
+      desc.textContent = place.description || tt('ui.fallback_description');
 
       // Hidden open-status for JS modal functionality
       var openStatus = document.createElement('p');
@@ -2893,24 +3002,40 @@
 
     function mapSupabaseShopsToPlaces(supaShops) {
       var out = [];
+      var lang = (window.BeppuI18n && window.BeppuI18n.getLang) ? window.BeppuI18n.getLang() : 'ja';
       supaShops.forEach(function (sh, idx) {
         var lat = Number(sh.lat);
         var lng = Number(sh.lng);
         if (!Number.isFinite(lat) || !Number.isFinite(lng)) return;
-        var name = String(sh.name || '').trim();
-        if (!name) return;
+        var jaName = String(sh.name || '').trim();
+        if (!jaName) return;
+        var i18nBlock = (sh.i18n && sh.i18n[lang]) ? sh.i18n[lang] : null;
+        var name = (lang !== 'ja' && i18nBlock && i18nBlock.name) ? String(i18nBlock.name) : jaName;
+        var address = (lang !== 'ja' && i18nBlock && i18nBlock.address) ? String(i18nBlock.address) : (sh.address || '');
         var slug = String(sh.slug || sh.place_id || ('supa-' + idx)).trim();
         var rawCategory = sh.category || '';
         var category = inferCategoryFromCsv(rawCategory, name);
-        var desc = sh.caption_override || sh.caption_auto || '';
-        var subtitle = normalizeCategoryUi(category);
+        var jaDesc = sh.caption_override || sh.caption_auto || '';
+        var desc = (lang !== 'ja' && i18nBlock && i18nBlock.caption) ? String(i18nBlock.caption) : jaDesc;
+        var subtitle = localizedCategory(category);
         var subcategory = sh.subcategory || inferSubcategoryFromCsv(rawCategory, name, desc);
         var emojiTag = getCategoryEmoji(category, name, desc);
         var photos = Array.isArray(sh.photos) ? sh.photos : [];
         var thumbnail = (photos[0] && photos[0].url) || pickImageFromCsv(name, category);
+        var fallbackDescKey = (
+          category === '朝食' ? 'ui.fallback_breakfast' :
+          category === '昼食' ? 'ui.fallback_lunch' :
+          category === '夕食' ? 'ui.fallback_dinner' :
+          category === 'お酒' ? 'ui.fallback_drinks' :
+          category === '喫茶' ? 'ui.fallback_cafe' :
+          category === '甘味' ? 'ui.fallback_sweets' :
+          category === '温泉' ? 'ui.fallback_onsen' :
+          'ui.fallback_description'
+        );
         out.push({
           id: slug,
           name: name,
+          jaName: jaName,
           slug: slug,
           placeId: sh.place_id,
           subtitle: subtitle,
@@ -2922,7 +3047,9 @@
           emojiTag: emojiTag,
           thumbnail: thumbnail,
           photos: photos,
-          description: desc || '別府駅・ホテルから徒歩圏内のおすすめスポット。',
+          address: address,
+          i18n: sh.i18n || null,
+          description: desc || tt(fallbackDescKey),
           googleRating: sh.rating,
           googleRatingCount: sh.rating_count,
           ratingMedian: sh.rating_median,
@@ -2960,6 +3087,16 @@
     }
 
     async function initialize() {
+      // i18n を最初にロードしてからチップ描画（カテゴリ名翻訳のため）
+      try {
+        if (window.BeppuI18n && typeof window.BeppuI18n.load === 'function') {
+          await window.BeppuI18n.load('data/i18n.json');
+          setupLanguageSwitcher();
+        }
+      } catch (e) {
+        console.warn('[AccessBeppu] i18n load failed:', e && e.message);
+      }
+
       renderChips();
 
       // 優先: Supabase master 取得

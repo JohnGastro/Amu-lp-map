@@ -1,6 +1,14 @@
 (function (global) {
   'use strict';
 
+  function ttI18n(key, params) {
+    if (global.BeppuI18n && typeof global.BeppuI18n.t === 'function' && global.BeppuI18n.state && global.BeppuI18n.state.ready) {
+      var v = global.BeppuI18n.t(key, params);
+      if (v && v !== key) return v;
+    }
+    return null;
+  }
+
   /**
    * @typedef {'昼食'|'朝食'|'夕食'|'お酒'|'喫茶'|'お買いもの'|'散歩'|'駐車場'|'温泉'} Category
    */
@@ -420,18 +428,19 @@
   }
 
   function formatClosedStatusText(nextOpenInfo) {
-    if (!nextOpenInfo || !Number.isFinite(nextOpenInfo.minutes)) return '\u55b6\u696d\u6642\u9593\u5916';
+    var closedLabel = ttI18n('ui.closed') || '\u55b6\u696d\u6642\u9593\u5916';
+    if (!nextOpenInfo || !Number.isFinite(nextOpenInfo.minutes)) return closedLabel;
     if (nextOpenInfo.minutes >= 180 && Number.isFinite(nextOpenInfo.openMinutes)) {
       var dayNames = ['\u65e5', '\u6708', '\u706b', '\u6c34', '\u6728', '\u91d1', '\u571f'];
       var clock = formatMinutesToClockText(nextOpenInfo.openMinutes);
       if (nextOpenInfo.dayOffset === 0) {
-        return '\u55b6\u696d\u6642\u9593\u5916\u30fb\u672c\u65e5' + clock + '\u301c';
+        return closedLabel + '\u30fb\u672c\u65e5' + clock + '\u301c';
       }
       var dayLabel = Number.isFinite(nextOpenInfo.openDay) ? (dayNames[nextOpenInfo.openDay] + '\u66dc\u65e5') : '\u6b21\u56de';
-      return '\u55b6\u696d\u6642\u9593\u5916\u30fb' + dayLabel + clock + '\u301c';
+      return closedLabel + '\u30fb' + dayLabel + clock + '\u301c';
     }
     var suffix = formatUntilOpenText(nextOpenInfo.minutes);
-    return suffix ? ('\u55b6\u696d\u6642\u9593\u5916\u30fb' + suffix) : '\u55b6\u696d\u6642\u9593\u5916';
+    return suffix ? (closedLabel + '\u30fb' + suffix) : closedLabel;
   }
 
   function parseBusinessHoursMap(value) {
@@ -545,7 +554,7 @@
     });
 
     if (isOpen) {
-      return { text: '\u55b6\u696d\u4e2d', className: 'is-open' };
+      return { text: ttI18n('ui.open_now') || '\u55b6\u696d\u4e2d', className: 'is-open' };
     }
 
     var candidates = [];
@@ -573,7 +582,7 @@
     }
 
     if (!candidates.length) {
-      return { text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' };
+      return { text: ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' };
     }
 
     var nextOpenInfo = candidates.reduce(function (best, cur) {
@@ -1077,7 +1086,7 @@
 
   BeppuMapModule.prototype.getOpenStatusForPlace = function getOpenStatusForPlace(place, options) {
     var self = this;
-    if (!place) return Promise.resolve({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+    if (!place) return Promise.resolve({ text: (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057'), className: 'is-unknown' });
     var forceRefresh = !!(options && options.forceRefresh);
     var cacheKey = getOpenStatusCacheKey(place);
     if (forceRefresh && cacheKey) {
@@ -1101,9 +1110,9 @@
       return Promise.resolve(resolveAndCache(csvStatus));
     }
     if (this._openStatusPlacesDisabled) {
-      return Promise.resolve(resolveAndCache({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' }));
+      return Promise.resolve(resolveAndCache({ text: (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057'), className: 'is-unknown' }));
     }
-    if (!this.placesService) return Promise.resolve(resolveAndCache({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' }));
+    if (!this.placesService) return Promise.resolve(resolveAndCache({ text: (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057'), className: 'is-unknown' }));
 
     return new Promise(function (resolve) {
       var finalize = function (status) {
@@ -1124,14 +1133,14 @@
           disablePlacesStatusLookup(detailsStatus);
         }
         if (detailsStatus !== google.maps.places.PlacesServiceStatus.OK || !details) {
-          finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+          finalize({ text: (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057'), className: 'is-unknown' });
           return;
         }
         var openNow = details.opening_hours && typeof details.opening_hours.open_now === 'boolean'
           ? details.opening_hours.open_now
           : null;
         if (openNow === true) {
-          finalize({ text: '\u55b6\u696d\u4e2d', className: 'is-open' });
+          finalize({ text: (ttI18n('ui.open_now') || '\u55b6\u696d\u4e2d'), className: 'is-open' });
           return;
         }
         if (openNow === false) {
@@ -1143,7 +1152,7 @@
           finalize({ text: formatClosedStatusText(nextOpenInfo), className: 'is-closed' });
           return;
         }
-        finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+        finalize({ text: (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057'), className: 'is-unknown' });
       };
 
       var inferredPlaceId = place.placeId || (/^ChIJ/.test(String(place.id || '')) ? String(place.id) : '');
@@ -1158,14 +1167,14 @@
           );
         } catch (error) {
           disablePlacesStatusLookup(error && error.message ? error.message : 'getDetails failed');
-          finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+          finalize({ text: (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057'), className: 'is-unknown' });
         }
         return;
       }
 
       var name = String(place.name || '').trim();
       if (!name) {
-        finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+        finalize({ text: (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057'), className: 'is-unknown' });
         return;
       }
       var hasValidCoords = Number.isFinite(place.lat) && Number.isFinite(place.lng);
@@ -1187,7 +1196,7 @@
               disablePlacesStatusLookup(findStatus);
             }
             if (findStatus !== google.maps.places.PlacesServiceStatus.OK || !results || !results[0] || !results[0].place_id) {
-              finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+              finalize({ text: (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057'), className: 'is-unknown' });
               return;
             }
             try {
@@ -1200,13 +1209,13 @@
               );
             } catch (error) {
               disablePlacesStatusLookup(error && error.message ? error.message : 'getDetails failed');
-              finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+              finalize({ text: (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057'), className: 'is-unknown' });
             }
           }
         );
       } catch (error) {
         disablePlacesStatusLookup(error && error.message ? error.message : 'findPlaceFromQuery failed');
-        finalize({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+        finalize({ text: (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057'), className: 'is-unknown' });
       }
     });
   };
@@ -1215,7 +1224,7 @@
     if (!this.placePreviewElement) return;
     var statusEl = this.placePreviewElement.querySelector('.beppu-place-preview__status');
     if (!statusEl) return;
-    statusEl.textContent = status && status.text ? status.text : '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057';
+    statusEl.textContent = status && status.text ? status.text : (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057');
     statusEl.classList.remove('is-open', 'is-closed', 'is-unknown');
     statusEl.classList.add(status && status.className ? status.className : 'is-unknown');
   };
@@ -1233,9 +1242,9 @@
             self.applyOpenStatusToPreview(status);
           }
         })["catch"](function () {
-          self.applyOpenStatusToCard(placeId, { text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+          self.applyOpenStatusToCard(placeId, { text: (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057'), className: 'is-unknown' });
           if (self.activePlaceId === placeId) {
-            self.applyOpenStatusToPreview({ text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+            self.applyOpenStatusToPreview({ text: (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057'), className: 'is-unknown' });
           }
         })
       );
@@ -1280,7 +1289,7 @@
     if (!card) return;
     var statusEl = card.querySelector('.spot-open-status');
     if (!statusEl) return;
-    statusEl.textContent = status && status.text ? status.text : '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057';
+    statusEl.textContent = status && status.text ? status.text : (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057');
     statusEl.classList.remove('is-open', 'is-closed', 'is-unknown');
     statusEl.classList.add(status && status.className ? status.className : 'is-unknown');
   };
@@ -1673,11 +1682,11 @@
         lat: place.lat,
         lng: place.lng,
         thumbnail: resolvePreviewThumbnail(place, activeCard),
-        openStatusText: '\u55b6\u696d\u6642\u9593\u78ba\u8a8d\u4e2d...',
+        openStatusText: (ttI18n('ui.checking_hours') || '\u55b6\u696d\u6642\u9593\u78ba\u8a8d\u4e2d...'),
         openStatusClass: 'is-unknown',
       };
       this.setPlacePreview(previewPlace);
-      this.applyOpenStatusToCard(place.id, { text: '\u55b6\u696d\u6642\u9593\u78ba\u8a8d\u4e2d...', className: 'is-unknown' });
+      this.applyOpenStatusToCard(place.id, { text: (ttI18n('ui.checking_hours') || '\u55b6\u696d\u6642\u9593\u78ba\u8a8d\u4e2d...'), className: 'is-unknown' });
       var self = this;
       this.getOpenStatusForPlace(place).then(function (status) {
         if (self.activePlaceId !== place.id) return;
@@ -1687,10 +1696,10 @@
         self.applyOpenStatusToCard(place.id, status);
       })["catch"](function () {
         if (self.activePlaceId !== place.id) return;
-        previewPlace.openStatusText = '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057';
+        previewPlace.openStatusText = (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057');
         previewPlace.openStatusClass = 'is-unknown';
         self.setPlacePreview(previewPlace);
-        self.applyOpenStatusToCard(place.id, { text: '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057', className: 'is-unknown' });
+        self.applyOpenStatusToCard(place.id, { text: (ttI18n('ui.no_hours') || '\u55b6\u696d\u6642\u9593\u60c5\u5831\u306a\u3057'), className: 'is-unknown' });
       });
     }
     var appliedAdaptiveZoom = false;
