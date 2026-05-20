@@ -1951,7 +1951,7 @@
     window.GOOGLE_MAP_ID = 'c9289c731e6bc6c03d298152';
   </script>
           <script src="./assets/js/beppu-i18n.js?v=3"></script>
-          <script src="./assets/js/access-beppu-map.js?v=34"></script>
+          <script src="./assets/js/access-beppu-map.js?v=35"></script>
 <script>
   (function () {
     var CATEGORY_EMOJI_BY_KEY = {
@@ -2274,8 +2274,17 @@
 
     function formatBusinessHoursSummary(hoursJson) {
       var days = ['月', '火', '水', '木', '金', '土', '日'];
+      var dayKeyMap = {
+        '月': 'ui.day_mon', '火': 'ui.day_tue', '水': 'ui.day_wed',
+        '木': 'ui.day_thu', '金': 'ui.day_fri', '土': 'ui.day_sat', '日': 'ui.day_sun'
+      };
+      var dayLabel = function (k) { return tt(dayKeyMap[k]); };
+      var closedSuffix = tt('ui.day_suffix_closed');
+      var noInfo = tt('ui.no_info');
+      var none = tt('ui.none');
+
       if (!hoursJson) {
-        return { closedText: '情報なし', hoursText: '情報なし' };
+        return { closedText: noInfo, hoursText: noInfo };
       }
 
       var closedDays = [];
@@ -2284,7 +2293,7 @@
       days.forEach(function (dayKey) {
         var periods = Array.isArray(hoursJson[dayKey]) ? hoursJson[dayKey] : [];
         if (!periods.length) {
-          closedDays.push(dayKey + '曜');
+          closedDays.push(dayLabel(dayKey) + closedSuffix);
           return;
         }
         var line = periods.map(function (period) {
@@ -2303,12 +2312,13 @@
       });
 
       var hoursLines = groupedOrder.map(function (line) {
-        return groupedByLine[line].join('・') + ' ' + line;
+        var labels = groupedByLine[line].map(dayLabel);
+        return labels.join('・') + ' ' + line;
       });
 
       return {
-        closedText: closedDays.length ? closedDays.join(' / ') : 'なし',
-        hoursText: hoursLines.length ? hoursLines.join('\n') : '情報なし'
+        closedText: closedDays.length ? closedDays.join(' / ') : none,
+        hoursText: hoursLines.length ? hoursLines.join('\n') : noInfo
       };
     }
 
