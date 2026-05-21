@@ -1408,11 +1408,26 @@
     if (window.innerWidth <= 980) {
       bottomPad = padding + Math.round(window.innerHeight * 0.45);
     }
+    // Clamp padding so the sum never approaches the map element size.
+    // Without this, on small iPhone viewports the bottom padding (innerHeight * 0.45)
+    // can exceed the actual map height, and Google Maps fitBounds throws the
+    // viewport to a degenerate location (the white "mountain" tiles users see).
+    var mapEl = this.options && this.options.mapElement;
+    var mapWidth = mapEl ? mapEl.clientWidth : window.innerWidth;
+    var mapHeight = mapEl ? mapEl.clientHeight : window.innerHeight;
+    var maxHorizPad = Math.max(0, Math.floor(mapWidth * 0.3));
+    var maxVertPad = Math.max(0, Math.floor(mapHeight * 0.3));
+    // Leave at least 80px usable height for the map itself.
+    var maxBottomPad = Math.max(0, mapHeight - 80 - Math.min(padding, maxVertPad));
+    var safeLeft = Math.min(padding, maxHorizPad);
+    var safeRight = Math.min(padding, maxHorizPad);
+    var safeTop = Math.min(padding, maxVertPad);
+    var safeBottom = Math.min(bottomPad, maxBottomPad);
     this.map.fitBounds(bounds, {
-      left: padding,
-      right: padding,
-      top: padding,
-      bottom: bottomPad,
+      left: safeLeft,
+      right: safeRight,
+      top: safeTop,
+      bottom: safeBottom,
     });
 
     var zoom = this.map.getZoom();
