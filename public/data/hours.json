@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-24T21:46:07.743Z",
+  "generated": "2026-05-25T22:02:17.256Z",
   "shops": {
     "%E5%A4%A7%E7%94%B0%E5%92%96%E5%96%B1%EF%BC%88%E3%81%8A%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%8A%E3%83%BC%EF%BC%89": {
       "businessStatus": "OPERATIONAL",
@@ -536,7 +536,7 @@
           }
         ]
       },
-      "weekdayText": "Monday: Closed | Tuesday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Wednesday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Thursday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Friday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Saturday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Sunday: Closed",
+      "weekdayText": "Monday: Closed | Tuesday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Wednesday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Thursday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Friday: 11:30��AM – 1:30 PM, 5:30 – 9:00 PM | Saturday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Sunday: Closed",
       "lastChecked": "2026-05-12T22:04:17.903Z"
     },
     "bamboo+bamboo": {
@@ -946,7 +946,7 @@
           }
         ]
       },
-      "weekdayText": "Monday: Closed | Tuesday: 6:00 PM – 12:00 AM | Wednesday: 6:00 PM – 12:00 AM | Thursday: 6:00 PM – 12:00 AM | Friday: 6:00 PM – 12:00 AM | Saturday: 6:00 PM – 12:00 AM | Sunday: 6:00 – 10:00 PM",
+      "weekdayText": "Monday: Closed | Tuesday: 6:00 PM – 12:00 AM | Wednesday: 6:00 PM – 12:00 AM | Thursday: 6:00��PM – 12:00 AM | Friday: 6:00 PM – 12:00 AM | Saturday: 6:00 PM – 12:00 AM | Sunday: 6:00 – 10:00 PM",
       "lastChecked": "2026-05-12T22:04:19.717Z"
     },
     "BESAME+MUCHO(%E3%83%99%E3%82%B5%E3%83%A1%E3%83%A0%E3%83%BC%E3%83%81%E3%83%A7)": {
@@ -1193,12 +1193,7 @@
             "close": "18:00"
           }
         ],
-        "月": [
-          {
-            "open": "07:30",
-            "close": "12:00"
-          }
-        ],
+        "月": [],
         "火": [],
         "水": [
           {
@@ -1215,8 +1210,8 @@
           }
         ]
       },
-      "weekdayText": "Monday: 7:30 AM – 12:00 PM | Tuesday: Closed | Wednesday: 7:30 AM – 6:00 PM | Thursday: Closed | Friday: Closed | Saturday: 7:30 AM – 6:00 PM | Sunday: 7:30 AM – 6:00 PM",
-      "lastChecked": "2026-05-12T22:04:20.753Z"
+      "weekdayText": "Monday: Closed | Tuesday: Closed | Wednesday: 7:30 AM – 6:00 PM | Thursday: Closed | Friday: Closed | Saturday: 7:30 AM – 6:00 PM | Sunday: 7:30 AM – 6:00 PM",
+      "lastChecked": "2026-05-25T22:02:15.815Z"
     },
     "Othello+Specialty+Coffee+Roaster": {
       "businessStatus": "OPERATIONAL",
@@ -1710,7 +1705,7 @@
           }
         ]
       },
-      "weekdayText": "Monday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM | Tuesday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM | Wednesday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM | Thursday: 8:30���AM – 2:00 PM, 6:00 – 11:30 PM | Friday: 8:30 AM – 2:00 PM, 6:00 PM – 12:00 AM | Saturday: 8:30 AM – 2:00 PM, 6:00 PM – 12:00 AM | Sunday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM",
+      "weekdayText": "Monday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM | Tuesday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM | Wednesday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM | Thursday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM | Friday: 8:30 AM – 2:00 PM, 6:00 PM – 12:00 AM | Saturday: 8:30 AM – 2:00 PM, 6:00 PM – 12:00 AM | Sunday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM",
       "lastChecked": "2026-05-12T22:04:22.161Z"
     },
     "Beppu+Spirits+Bar+LAMP": {
