@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-14T22:02:27.973Z",
+  "generated": "2026-06-15T22:56:54.536Z",
   "shops": {
     "%E5%A4%A7%E7%94%B0%E5%92%96%E5%96%B1%EF%BC%88%E3%81%8A%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%8A%E3%83%BC%EF%BC%89": {
       "businessStatus": "OPERATIONAL",
@@ -433,7 +433,7 @@
           }
         ]
       },
-      "weekdayText": "Monday: 6:30 PM – 12:00 AM | Tuesday: Closed | Wednesday: 6:30 PM –��12:00 AM | Thursday: 6:30 PM – 12:00 AM | Friday: 6:30 PM – 12:00 AM | Saturday: 6:30 PM – 12:00 AM | Sunday: 6:30 PM – 12:00 AM",
+      "weekdayText": "Monday: 6:30 PM – 12:00 AM | Tuesday: Closed | Wednesday: 6:30 PM – 12:00 AM | Thursday: 6:30 PM – 12:00 AM | Friday: 6:30 PM – 12:00 AM | Saturday: 6:30 PM – 12:00 AM | Sunday: 6:30 PM – 12:00 AM",
       "lastChecked": "2026-05-12T22:04:17.494Z"
     },
     "%E8%82%B4%E9%B6%8F%E9%AD%9A+Miiima": {
@@ -1224,10 +1224,6 @@
         ],
         "月": [
           {
-            "open": "11:30",
-            "close": "14:30"
-          },
-          {
             "open": "18:00",
             "close": "22:30"
           }
@@ -1274,8 +1270,8 @@
           }
         ]
       },
-      "weekdayText": "Monday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Tuesday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Wednesday: 11:30 AM – 2:30 PM, 6:00 – 9:30 PM | Thursday: Closed | Friday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Saturday: 11:30 AM – 2:30 PM, 5:00 – 10:30 PM | Sunday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
-      "lastChecked": "2026-05-12T22:04:21.094Z"
+      "weekdayText": "Monday: 6:00 – 10:30 PM | Tuesday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Wednesday: 11:30 AM – 2:30 PM, 6:00 – 9:30 PM | Thursday: Closed | Friday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Saturday: 11:30 AM – 2:30 PM, 5:00 – 10:30 PM | Sunday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+      "lastChecked": "2026-06-15T22:56:53.336Z"
     },
     "Bistro+le+jiu+%E6%85%88%E9%9B%A8": {
       "businessStatus": "OPERATIONAL",
