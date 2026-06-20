@@ -40,6 +40,7 @@ const FORCE_CAPTION = args.includes('--force-caption');
 const VIA_CLAUDE_CLI = args.includes('--via-claude-cli');
 const DEBUG_PHOTOS = args.includes('--debug-photos');
 const PUSH_SUPABASE = args.includes('--push');         // Supabase amu_beppu_shops/_photos に書き込む
+const STORAGE_UPLOAD = args.includes('--storage');     // 採用写真をSupabase Storageにアップロードして永続URL化（lh3失効対策）
 const FROM_CSV = args.includes('--from-csv');           // legacy CSV から店舗一覧（seed/移行期用）
 const NO_JSON_FALLBACK = args.includes('--no-json-fallback');  // places.json書き出しをスキップ
 const SAMPLE_N = (() => {
@@ -85,6 +86,13 @@ const PHOTO_LABEL_PRIORITY = {
   people: 5,
   other: 10,
 };
+
+// --- Supabase Storage 永続化 ---
+// Google Places の photo URL (lh3.googleusercontent.com) は数週間で失効するため、
+// 採用写真をこのpublicバケットにコピーして、失効しない固定URLで配信する。
+const STORAGE_BUCKET = 'amu-beppu-photos';
+let storageUploadCount = 0;
+const MAX_STORAGE_UPLOADS = 400; // 40店 × 10枚 + 余裕（暴走防止）
 
 // --- CSV Parser (refresh-hours.js から流用) ---
 function* parseCsvRows(text) {
@@ -273,6 +281,57 @@ async function downloadPhoto(url, idx) {
   if (buf.length > PHOTO_DL_BYTES_MAX) throw new Error(`size ${buf.length} > limit ${PHOTO_DL_BYTES_MAX}`);
   fs.writeFileSync(filepath, buf);
   return filepath;
+}
+
+// Storage上のオブジェクトパスを安定させるための短いハッシュ（photo_reference由来）
+function shortHash(s) {
+  let h = 0;
+  const str = String(s || '');
+  for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) >>> 0;
+  return h.toString(36);
+}
+
+// lh3 の写真を1枚DLして amu-beppu-photos バケットにアップロードし、
+// { publicUrl, storagePath } を返す。失敗時は例外を投げる（呼び出し側でlh3 urlにフォールバック）。
+async function persistPhotoToStorage(placeId, candidate) {
+  if (storageUploadCount >= MAX_STORAGE_UPLOADS) {
+    throw new Error(`MAX_STORAGE_UPLOADS (${MAX_STORAGE_UPLOADS}) exceeded`);
+  }
+  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+    throw new Error('SUPABASE_URL / SUPABASE_ANON_KEY env required for --storage');
+  }
+  const srcUrl = candidate.url;
+  const res = await fetch(srcUrl);
+  if (!res.ok) throw new Error(`source DL HTTP ${res.status}`);
+  const contentType = (res.headers.get('content-type') || 'image/jpeg').split(';')[0].trim();
+  const buf = Buffer.from(await res.arrayBuffer());
+  if (buf.length > PHOTO_DL_BYTES_MAX) throw new Error(`size ${buf.length} > limit ${PHOTO_DL_BYTES_MAX}`);
+  const ext = contentType.includes('png') ? 'png'
+    : contentType.includes('webp') ? 'webp'
+    : contentType.includes('heic') ? 'heic'
+    : 'jpg';
+  const key = shortHash(candidate.photo.photo_reference || srcUrl);
+  // place_id は英数のみ（ChIJ…）なのでパスに安全。slugは日本語URLエンコード済みで二重エンコードになるため使わない。
+  const storagePath = `${placeId}/${key}.${ext}`;
+  const encodedPath = storagePath.split('/').map(encodeURIComponent).join('/');
+  const uploadUrl = `${SUPABASE_URL}/storage/v1/object/${STORAGE_BUCKET}/${encodedPath}`;
+  storageUploadCount++;
+  const up = await fetch(uploadUrl, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      'apikey': SUPABASE_ANON_KEY,
+      'Content-Type': contentType,
+      'x-upsert': 'true',
+      'cache-control': 'public, max-age=31536000, immutable',
+    },
+    body: buf,
+  });
+  if (!up.ok) {
+    throw new Error(`storage upload ${up.status}: ${(await up.text()).slice(0, 200)}`);
+  }
+  const publicUrl = `${SUPABASE_URL}/storage/v1/object/public/${STORAGE_BUCKET}/${encodedPath}`;
+  return { publicUrl, storagePath };
 }
 
 async function classifyPhotosViaClaudeCli(photoUrls) {
@@ -588,16 +647,33 @@ async function processShop(shop, existingEntry, fewShotExamples) {
       ]
     : pickedTop.map((x, i) => ({ ...x, _autoSelected: true, _displayOrder: i }));
 
-  const photos = allCandidates.map(x => ({
-    photo_ref: x.photo.photo_reference || null,
-    url: x.url,
-    width: x.photo.width,
-    height: x.photo.height,
-    attribution: (x.photo.html_attributions || []).join(' | '),
-    label: x.label,
-    auto_selected: x._autoSelected,
-    display_order: x._displayOrder,
-  }));
+  const photos = [];
+  for (const x of allCandidates) {
+    let finalUrl = x.url;
+    let storagePath = null;
+    // 採用写真（表示対象）だけ永続化する。非採用候補はlh3のまま残し、
+    // CMSで後から採用された時に次回の refresh で永続化される。
+    if (STORAGE_UPLOAD && x._autoSelected) {
+      try {
+        const up = await persistPhotoToStorage(shop.placeId, x);
+        finalUrl = up.publicUrl;
+        storagePath = up.storagePath;
+      } catch (e) {
+        console.warn(`    ! storage upload failed (${shop.id}): ${e.message} — keeping lh3 url`);
+      }
+    }
+    photos.push({
+      photo_ref: x.photo.photo_reference || null,
+      url: finalUrl,
+      storage_path: storagePath,
+      width: x.photo.width,
+      height: x.photo.height,
+      attribution: (x.photo.html_attributions || []).join(' | '),
+      label: x.label,
+      auto_selected: x._autoSelected,
+      display_order: x._displayOrder,
+    });
+  }
 
   const ratingMedian = reviewRatingMedian(details.reviews);
   const editorialSummary = details.editorial_summary && details.editorial_summary.overview;

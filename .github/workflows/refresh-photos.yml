@@ -1,0 +1,45 @@
+name: Refresh shop photos
+
+# Google Places の写真URL (lh3.googleusercontent.com) は数週間で失効するため、
+# 採用写真を Supabase Storage (amu-beppu-photos) にコピーして失効しない固定URLで配信する。
+# 手動トリガ + 月1自動更新で、再失効を未然に防ぐ。
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 21 1 * *'  # 毎月1日 6:00 JST (21:00 UTC 前日)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-photos
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Places APIで写真を再取得 → Storageへアップロード → Supabase / places.json に固定URLを保存
+      # スクリプト内に 23万円事件対策のハードリミット (details<=60 / photoHead<=400 / storage<=400) あり
+      - name: Refresh photos to Supabase Storage
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+          SUPABASE_URL: https://aoehwevqlkpgvzdyfuja.supabase.co
+          # anon key はフロント公開済みのため直書きで可。Storage書き込みは専用RLSポリシーで許可。
+          SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvZWh3ZXZxbGtwZ3Z6ZHlmdWphIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3NTI0MTYsImV4cCI6MjA5MjMyODQxNn0.D4Vr26xPO5p5mv903Qup0XsHNvNIuAL_dwVY7M7j78Y
+        run: node scripts/refresh-places.js --push --storage --no-caption
+
+      # places.json のキャッシュを更新（フロントはSupabase優先だが予備として保持）
+      - name: Commit refreshed places.json if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/places.json
+          git diff --cached --quiet || git commit -m "chore: refresh shop photos to storage [skip ci]"
+          git push || true

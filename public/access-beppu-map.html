@@ -2883,35 +2883,30 @@
       return String(seed);
     }
 
+    // 写真が無い/失効した時に出す、ブランドカラーのプレースホルダ画像（data URI）。
+    // 外部画像サービスに依存せず、カテゴリemojiを中央に置いて店種が伝わるようにする。
+    function buildPlaceholderImage(category, name) {
+      var emoji = getCategoryEmoji(category, name || '', '');
+      var svg = [
+        '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">',
+        '<defs><linearGradient id="ph" x1="0" y1="0" x2="0.35" y2="1">',
+        '<stop offset="0" stop-color="#edebe4"/><stop offset="1" stop-color="#c3bcb2"/>',
+        '</linearGradient></defs>',
+        '<rect width="400" height="300" fill="url(#ph)"/>',
+        '<text x="200" y="158" font-size="116" text-anchor="middle" dominant-baseline="central"',
+        ' font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif" opacity="0.55">',
+        emoji,
+        '</text>',
+      ].join('');
+      return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+    }
+
     function buildPhotoFallback(category, name) {
-      var seed = buildImageSeed(String(category || '') + ':' + String(name || ''));
-      return '';
+      return buildPlaceholderImage(category, name);
     }
 
     function pickImageFromCsv(name, category) {
-      var tag = mapCategoryTagByKeyword(name, category);
-      var queryByTag = {
-        curry: 'curry,japanese curry,restaurant',
-        ramen: 'ramen,japanese noodle shop,restaurant',
-        sushi: 'sushi,restaurant,japan',
-        noodle: 'japanese noodles,restaurant',
-        pasta: 'italian pasta,restaurant',
-        pizza: 'italian pizza,restaurant',
-        coffee: 'coffee shop,coffee cup,cafe',
-        bar: 'bar,restaurant,night',
-        '昼食': 'japanese lunch,food',
-        '朝食': 'breakfast,japan,meal',
-        '夕食': 'dinner,japan,restaurant',
-        'お酒': 'japanese bar,restaurant,drink',
-        '喫茶': 'coffee shop,cafe',
-        'お買いもの': 'shopping,store,shop',
-        散歩: 'japan city street,walkway',
-        駐車場: 'parking lot,car',
-        温泉: 'onsen,hot spring',
-        その他: 'beppu,restaurant,street',
-      };
-      var query = queryByTag[tag] || queryByTag[category] || 'beppu,restaurant';
-      return '';
+      return buildPlaceholderImage(category, name);
     }
 
     function pickDescriptionFromRow(row, name) {
