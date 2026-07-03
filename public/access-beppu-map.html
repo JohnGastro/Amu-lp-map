@@ -2622,7 +2622,12 @@
         if (!shopSlug) return;
         var target = null;
         places.forEach(function (p) {
-          if (!target && (p.slug === shopSlug || p.id === shopSlug)) target = p;
+          if (target) return;
+          var decodedSlug = '';
+          try { decodedSlug = decodeURIComponent(String(p.slug || '')); } catch (e2) { /* noop */ }
+          if (p.slug === shopSlug || p.id === shopSlug || decodedSlug === shopSlug || p.name === shopSlug || p.jaName === shopSlug) {
+            target = p;
+          }
         });
         if (!target) return;
         if (mapModule && typeof mapModule.selectPlace === 'function') {
