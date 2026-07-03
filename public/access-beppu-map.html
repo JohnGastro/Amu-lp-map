@@ -777,7 +777,51 @@
   }
 
   .spot-open-status {
-    display: none;
+    margin: 2px 0 0;
+    font-family: "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    color: #8a857d;
+  }
+  .spot-open-status.is-open { color: #2e7d32; }
+  .spot-open-status.is-closed { color: #b3261e; }
+  .spot-open-status.is-unknown { display: none; }
+
+  .spot-walk-info {
+    margin: 4px 0 0;
+    font-family: "A P-OTF A1Gothic Std", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    color: #6d675f;
+  }
+  .spot-walk-info.is-far { color: #a3541a; }
+
+  /* 現在地ボタンと青ドット */
+  .ab-geo-btn {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px 10px 0;
+    border-radius: 999px;
+    border: none;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  .ab-geo-btn.is-loading { opacity: 0.6; }
+  .ab-geo-btn.is-active { background: #c93400; }
+  .ab-geo-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: #1a73e8;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.35), 0 1px 4px rgba(0, 0, 0, 0.3);
   }
 
   /* fpCXQ - Description */
@@ -1047,7 +1091,48 @@
   }
 
   .ab-shop-modal__actions {
-    display: none;
+    display: flex;
+    gap: 8px;
+    padding: 12px 32px 0;
+    max-width: 480px;
+  }
+
+  .ab-shop-modal__actions #ab-shop-modal-detail-btn {
+    display: none; /* デスクトップは常時展開なので不要 */
+  }
+
+  .ab-shop-modal__action-btn--primary {
+    background: #c93400 !important;
+    color: #fff !important;
+  }
+
+  .ab-shop-modal__nearby {
+    padding: 12px 32px 4px;
+  }
+  .ab-shop-modal__nearby:empty { display: none; }
+  .ab-shop-modal__nearby-title {
+    margin: 0 0 6px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .ab-shop-modal__nearby-item {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 8px 6px 0;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid #b5aea3;
+    background: transparent;
+    color: #4d4b49;
+    font-size: 11px;
+    font-family: inherit;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+  }
+  .ab-shop-modal__nearby-item:hover {
+    border-color: #c93400;
+    color: #c93400;
   }
 
   .ab-shop-modal__body {
@@ -1939,8 +2024,10 @@
         <p class="ab-shop-modal__route" id="ab-shop-modal-route"></p>
         <div class="ab-shop-modal__actions">
           <button type="button" class="ab-shop-modal__action-btn" id="ab-shop-modal-detail-btn" data-i18n="ui.view_more">もっと見る</button>
-          <a class="ab-shop-modal__action-btn" id="ab-shop-modal-gmap-btn" href="#" target="_blank" rel="noopener noreferrer">Google Map</a>
+          <button type="button" class="ab-shop-modal__action-btn" id="ab-shop-modal-share-btn" data-i18n="ui.share">共有</button>
+          <a class="ab-shop-modal__action-btn ab-shop-modal__action-btn--primary" id="ab-shop-modal-gmap-btn" href="#" target="_blank" rel="noopener noreferrer">Google Map</a>
         </div>
+        <div class="ab-shop-modal__nearby" id="ab-shop-modal-nearby"></div>
       </aside>
     </div>
   </div>
@@ -2049,6 +2136,7 @@
     var state = {
       activeCategory: '',
       activeSubcategory: '',
+      openNowOnly: false,
       selectedPlaceId: null,
       mobile: window.matchMedia('(max-width: 980px)').matches
     };
@@ -2324,17 +2412,18 @@
 
     function buildModalSubPhotos(place) {
       var list = [];
+      var seen = {};
       // Prefer Google Places photos from places.json when available
       if (place.photos && place.photos.length) {
         for (var i = 0; i < place.photos.length; i += 1) {
           var p = place.photos[i];
-          if (p && p.url) list.push(p.url);
+          if (p && p.url && !seen[p.url]) {
+            seen[p.url] = true;
+            list.push(p.url);
+          }
         }
       }
-      var primary = place.thumbnail || pickImageFromCsv(place.name, place.category);
-      while (list.length < 6) {
-        list.push(primary || '');
-      }
+      // 実写真の枚数だけ表示（同一写真の複製で埋めない）
       return list.slice(0, 6);
     }
 
@@ -2476,12 +2565,123 @@
         });
         modalSubGridEl.appendChild(sub);
       });
+      modalSubGridEl.style.display = modalSubGridEl.children.length ? '' : 'none';
       markSelectedSubPhoto(modalPinnedMainPhotoUrl);
+
+      renderModalNearbyShops(place);
+    }
+
+    // モーダル下部に「この近くの店」3件を表示（満席・休みだった時のリカバリー導線）
+    function renderModalNearbyShops(place) {
+      var container = document.getElementById('ab-shop-modal-nearby');
+      if (!container) return;
+      container.innerHTML = '';
+      var candidates = places
+        .filter(function (p) { return p.id !== place.id && Number.isFinite(p.lat) && Number.isFinite(p.lng); })
+        .map(function (p) {
+          var dLat = (p.lat - place.lat) * 111320;
+          var dLng = (p.lng - place.lng) * 111320 * Math.cos(place.lat * Math.PI / 180);
+          return { p: p, d: Math.sqrt(dLat * dLat + dLng * dLng) };
+        })
+        .sort(function (a, b) { return a.d - b.d; })
+        .slice(0, 3);
+      if (!candidates.length) return;
+
+      var title = document.createElement('p');
+      title.className = 'ab-shop-modal__nearby-title';
+      title.textContent = tt('ui.nearby_shops');
+      container.appendChild(title);
+
+      candidates.forEach(function (item) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'ab-shop-modal__nearby-item';
+        var walkMin = Math.max(1, Math.round(item.d * 1.4 / 80));
+        btn.textContent = item.p.name + '（🚶 ' + walkMin + tt('ui.walk_min_suffix') + '）';
+        btn.addEventListener('click', function () {
+          if (mapModule && typeof mapModule.selectPlace === 'function') {
+            mapModule.selectPlace(item.p.id, { scrollCard: false });
+          } else {
+            openShopModal(item.p.id);
+          }
+        });
+        container.appendChild(btn);
+      });
     }
 
     function refreshOpenModalStatus() {
       if (!modalPlaceId || !modalOverlayEl || !modalOverlayEl.classList.contains('is-open')) return;
       renderModalLiveStatus(modalPlaceId);
+    }
+
+    // ?shop=slug のディープリンクで直接店舗を開く
+    function applyDeepLinkShop() {
+      try {
+        var sp = new URLSearchParams(window.location.search);
+        var shopSlug = sp.get('shop');
+        if (!shopSlug) return;
+        var target = null;
+        places.forEach(function (p) {
+          if (!target && (p.slug === shopSlug || p.id === shopSlug)) target = p;
+        });
+        if (!target) return;
+        if (mapModule && typeof mapModule.selectPlace === 'function') {
+          mapModule.selectPlace(target.id);
+        } else {
+          openShopModal(target.id);
+        }
+      } catch (e) { /* noop */ }
+    }
+
+    // 現在地表示: 地図右下のボタンで青ドットを表示・追従
+    function setupGeolocationControl() {
+      if (!mapModule || !mapModule.map || !navigator.geolocation || !window.google || !google.maps) return;
+      var map = mapModule.map;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'ab-geo-btn';
+      btn.setAttribute('aria-label', tt('ui.my_location'));
+      btn.textContent = '📍';
+      var geoMarker = null;
+      var watchId = null;
+
+      function placeDot(pos) {
+        var latLng = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+        if (!geoMarker) {
+          var dot = document.createElement('div');
+          dot.className = 'ab-geo-dot';
+          geoMarker = new mapModule.AdvancedMarkerElement({
+            map: map,
+            position: latLng,
+            content: dot,
+            title: tt('ui.my_location'),
+            zIndex: 9999
+          });
+        } else {
+          geoMarker.position = latLng;
+        }
+        return latLng;
+      }
+
+      btn.addEventListener('click', function () {
+        btn.classList.add('is-loading');
+        navigator.geolocation.getCurrentPosition(function (pos) {
+          btn.classList.remove('is-loading');
+          btn.classList.add('is-active');
+          var latLng = placeDot(pos);
+          map.panTo(latLng);
+          if (watchId == null) {
+            watchId = navigator.geolocation.watchPosition(function (p2) {
+              placeDot(p2);
+            }, function () { /* 追従失敗は無視 */ }, { enableHighAccuracy: true, maximumAge: 15000 });
+          }
+        }, function () {
+          // 権限拒否・取得失敗は静かにフォールバック
+          btn.classList.remove('is-loading');
+        }, { enableHighAccuracy: true, timeout: 8000 });
+      });
+
+      map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(btn);
     }
 
     function positionMobileModal() {
@@ -2549,14 +2749,20 @@
       }
     }
 
+    function countPlacesForTag(key) {
+      if (!places || !places.length) return -1; // データ未ロード時は隠さない
+      return places.filter(function (p) { return placeHasTag(p, key); }).length;
+    }
+
     function renderChips() {
       mainCategoryEl.innerHTML = '';
       subCategoryEl.innerHTML = '';
 
       MAIN_CATEGORIES.forEach(function (item) {
+        if (countPlacesForTag(item.key) === 0) return; // 該当0件の死にチップは出さない
         mainCategoryEl.appendChild(createChip(item, state.activeCategory, function (key) {
-          state.activeCategory = key;
-          state.activeSubcategory = '';
+          // 再クリックで解除（全件表示に戻れる）。メイン×サブは併用可。
+          state.activeCategory = state.activeCategory === key ? '' : key;
           shouldAutoFitFilters = true;
           applyFilters({ autoFit: true });
           renderChips();
@@ -2564,18 +2770,25 @@
       });
 
       SUB_CATEGORIES.forEach(function (item) {
+        if (countPlacesForTag(item.key) === 0) return;
         subCategoryEl.appendChild(createChip(item, state.activeSubcategory, function (key) {
-          var nextSub = state.activeSubcategory === key ? '' : key;
-          state.activeSubcategory = nextSub;
-          // Keep filter selection mutually exclusive across main/sub groups.
-          if (nextSub) {
-            state.activeCategory = '';
-          }
+          state.activeSubcategory = state.activeSubcategory === key ? '' : key;
           shouldAutoFitFilters = true;
           applyFilters({ autoFit: true });
           renderChips();
         }));
       });
+
+      // 「営業中」トグル（hours情報がある店が対象）
+      var openNowItem = { key: '__open_now__', label: '営業中', i18nKey: 'ui.open_now' };
+      var openChip = createChip(openNowItem, state.openNowOnly ? '__open_now__' : '', function () {
+        state.openNowOnly = !state.openNowOnly;
+        shouldAutoFitFilters = true;
+        applyFilters({ autoFit: true });
+        renderChips();
+      });
+      openChip.classList.add('ab-chip--open-now');
+      subCategoryEl.appendChild(openChip);
     }
 
     function createCard(place) {
@@ -2593,6 +2806,8 @@
       thumbWrap.className = 'spot-thumb-wrap';
       var img = document.createElement('img');
       img.className = 'spot-thumb';
+      img.loading = 'lazy';
+      img.decoding = 'async';
       img.src = place.thumbnail || pickImageFromCsv(place.name, place.category);
       img.alt = place.name;
       img.onerror = function () {
@@ -2630,6 +2845,16 @@
       textBlock.appendChild(divider);
       textBlock.appendChild(subtitle);
 
+      // 徒歩分数（徒歩圏外の店は車アクセスであることを明示）
+      if (Number.isFinite(place._walkMin)) {
+        var walkInfo = document.createElement('p');
+        walkInfo.className = 'spot-walk-info' + (place._farFromHotel ? ' is-far' : '');
+        walkInfo.textContent = place._farFromHotel
+          ? '🚗 ' + (tt('ui.far_from_hotel') !== 'ui.far_from_hotel' ? tt('ui.far_from_hotel') : '徒歩圏外')
+          : '🚶 ' + place._walkMin + (tt('ui.walk_min_suffix') !== 'ui.walk_min_suffix' ? tt('ui.walk_min_suffix') : '分');
+        textBlock.appendChild(walkInfo);
+      }
+
       // LEYWI - ArrowButton
       var arrow = document.createElement('button');
       arrow.type = 'button';
@@ -2638,8 +2863,14 @@
       var arrowIcon = document.createElement('span');
       arrowIcon.className = 'spot-arrow-icon';
       arrow.appendChild(arrowIcon);
-      arrow.addEventListener('click', function () {
-        openShopModal(place.id);
+      arrow.addEventListener('click', function (event) {
+        // カード全体のクリック委譲(selectPlace)と二重発火しないように止める
+        event.stopPropagation();
+        if (mapModule && typeof mapModule.selectPlace === 'function') {
+          mapModule.selectPlace(place.id, { scrollCard: false });
+        } else {
+          openShopModal(place.id);
+        }
       });
 
       header.appendChild(textBlock);
@@ -2699,11 +2930,47 @@
       });
     }
 
+    function placeHasTag(place, key) {
+      if (!key) return true;
+      if (Array.isArray(place.tags) && place.tags.length) return place.tags.indexOf(key) >= 0;
+      return place.category === key || place.subcategory === key;
+    }
+
+    // hours_json（曜日キー: [{open,close}]）から現在(JST)営業中かを同期判定。情報なしはnull。
+    function isPlaceOpenNowSync(place) {
+      var hj = null;
+      try {
+        hj = place.businessHours ? JSON.parse(place.businessHours) : null;
+      } catch (e) { hj = null; }
+      if (!hj) return null;
+      var days = ['日', '月', '火', '水', '木', '金', '土'];
+      var now = new Date();
+      var totalMin = now.getUTCHours() * 60 + now.getUTCMinutes() + 540; // JST
+      var dayIdx = (now.getUTCDay() + Math.floor(totalMin / 1440)) % 7;
+      var mins = totalMin % 1440;
+      function toMin(s) {
+        var p = String(s || '').split(':');
+        return (parseInt(p[0], 10) || 0) * 60 + (parseInt(p[1], 10) || 0);
+      }
+      var today = hj[days[dayIdx]] || [];
+      for (var i = 0; i < today.length; i += 1) {
+        var o = toMin(today[i].open), c = toMin(today[i].close);
+        if (c > o) { if (mins >= o && mins < c) return true; }
+        else if (c !== o) { if (mins >= o) return true; } // 深夜またぎの当日側
+      }
+      var yest = hj[days[(dayIdx + 6) % 7]] || [];
+      for (var j = 0; j < yest.length; j += 1) {
+        var o2 = toMin(yest[j].open), c2 = toMin(yest[j].close);
+        if (c2 < o2 && mins < c2) return true; // 前日からの深夜またぎ
+      }
+      return false;
+    }
+
     function getVisiblePlaces() {
       return places.filter(function (place) {
-        var hitMain = state.activeCategory === '' || place.category === state.activeCategory;
-        var hitSub = state.activeSubcategory === '' || place.subcategory === state.activeSubcategory;
-        return hitMain && hitSub;
+        return placeHasTag(place, state.activeCategory)
+          && placeHasTag(place, state.activeSubcategory)
+          && (!state.openNowOnly || isPlaceOpenNowSync(place) === true);
       });
     }
 
@@ -2897,6 +3164,7 @@
         ' font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif" opacity="0.55">',
         emoji,
         '</text>',
+        '</svg>',
       ].join('');
       return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
     }
@@ -3019,10 +3287,16 @@
         var address = (lang !== 'ja' && i18nBlock && i18nBlock.address) ? String(i18nBlock.address) : (sh.address || '');
         var slug = String(sh.slug || sh.place_id || ('supa-' + idx)).trim();
         var rawCategory = sh.category || '';
-        var category = inferCategoryFromCsv(rawCategory, name);
+        // tags配列を第一級で使う。無い場合のみcategory文字列を分割（キーワード推測はしない）
+        var tagsArr = Array.isArray(sh.tags) && sh.tags.length
+          ? sh.tags.map(function (t) { return String(t).trim(); }).filter(Boolean)
+          : String(rawCategory).split('/').map(function (t) { return t.trim(); }).filter(Boolean);
+        var category = tagsArr[0] || inferCategoryFromCsv(rawCategory, name);
         var jaDesc = sh.caption_override || sh.caption_auto || '';
         var desc = (lang !== 'ja' && i18nBlock && i18nBlock.caption) ? String(i18nBlock.caption) : jaDesc;
-        var subtitle = localizedCategory(category);
+        var subtitle = tagsArr.length
+          ? tagsArr.map(localizedCategory).join(' · ')
+          : localizedCategory(category);
         var subcategory = sh.subcategory || inferSubcategoryFromCsv(rawCategory, name, desc);
         var emojiTag = getCategoryEmoji(category, name, desc);
         var photos = Array.isArray(sh.photos) ? sh.photos : [];
@@ -3048,7 +3322,7 @@
           subcategory: subcategory,
           lat: lat,
           lng: lng,
-          tags: category,
+          tags: tagsArr,
           emojiTag: emojiTag,
           thumbnail: thumbnail,
           photos: photos,
@@ -3061,6 +3335,8 @@
           editorialSummary: sh.editorial_summary,
           businessHoursText: sh.hours_text || undefined,
           businessHours: sh.hours_json ? JSON.stringify(sh.hours_json) : undefined,
+          _closedPermanently: sh.business_status === 'CLOSED_PERMANENTLY',
+          _closedTemporarily: sh.business_status === 'CLOSED_TEMPORARILY',
           _supabaseSource: true,
         });
       });
@@ -3219,13 +3495,21 @@
         console.warn('[AccessBeppu] Could not load Supabase overrides:', e.message);
       }
 
-      // Shuffle places so card order is random on each load
-      for (var i = places.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var tmp = places[i]; places[i] = places[j]; places[j] = tmp;
-      }
+      // 閉業店は表示しない
+      places = places.filter(function (p) { return !p._closedPermanently; });
+
+      // 徒歩距離のメタを付与し、ホテルから近い順に並べる（毎回同じ順で「さっき見た店」に戻れる）
+      places.forEach(function (p) {
+        var dLat = (p.lat - HOTEL_COORDS.lat) * 111320;
+        var dLng = (p.lng - HOTEL_COORDS.lng) * 111320 * Math.cos(p.lat * Math.PI / 180);
+        p._walkMeters = Math.round(Math.sqrt(dLat * dLat + dLng * dLng) * 1.4);
+        p._walkMin = Math.max(1, Math.round(p._walkMeters / 80));
+        p._farFromHotel = p._walkMeters > 1500;
+      });
+      places.sort(function (a, b) { return (a._walkMeters || 0) - (b._walkMeters || 0); });
 
       buildList();
+      renderChips(); // データ確定後に再描画（該当0件チップの非表示・URLパラメータの選択状態反映）
       syncDesktopModalFrame();
 
       // Mobile: auto-select leftmost card on scroll snap
@@ -3248,7 +3532,8 @@
               var placeId = closest.getAttribute('data-place-id');
               if (placeId && placeId !== lastSnapPlaceId && mapModule) {
                 lastSnapPlaceId = placeId;
-                mapModule.selectPlace(placeId);
+                // スクロール連動はマーカー強調とルート表示のみ。モーダルは明示タップ時だけ開く。
+                mapModule.selectPlace(placeId, { openModal: false, scrollCard: false });
               }
             }
           }, 120);
@@ -3262,6 +3547,23 @@
       if (modalCloseEl) {
         modalCloseEl.addEventListener('click', function () {
           closeShopModal();
+        });
+      }
+      var modalShareBtn = document.getElementById('ab-shop-modal-share-btn');
+      if (modalShareBtn) {
+        modalShareBtn.addEventListener('click', function () {
+          var place = modalPlaceId ? getPlaceById(modalPlaceId) : null;
+          var shareUrl = window.location.origin + window.location.pathname
+            + (place ? '?shop=' + encodeURIComponent(place.slug || place.id) : '');
+          if (navigator.share) {
+            navigator.share({ title: place ? place.name : document.title, url: shareUrl })["catch"](function () { /* キャンセルは無視 */ });
+          } else if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(shareUrl).then(function () {
+              var orig = modalShareBtn.textContent;
+              modalShareBtn.textContent = tt('ui.share_copied');
+              window.setTimeout(function () { modalShareBtn.textContent = orig; }, 1600);
+            });
+          }
         });
       }
       if (modalDetailBtn) {
@@ -3304,24 +3606,8 @@
       if (modalOverlayEl) {
         modalOverlayEl.addEventListener('click', function (event) {
           if (event.target !== modalOverlayEl) return;
-
-          var clickX = event.clientX;
-          var clickY = event.clientY;
+          // 背景タップは「閉じる」だけ。下の要素へのクリック転送は誤操作（別モーダル即再オープン）の元なので行わない。
           closeShopModal();
-
-          // Let the overlay close first, then forward the same click to the underlying UI.
-          window.setTimeout(function () {
-            var target = document.elementFromPoint(clickX, clickY);
-            if (!target) return;
-            if (modalOverlayEl && (target === modalOverlayEl || modalOverlayEl.contains(target))) return;
-            target.dispatchEvent(new MouseEvent('click', {
-              bubbles: true,
-              cancelable: true,
-              view: window,
-              clientX: clickX,
-              clientY: clickY
-            }));
-          }, 0);
         });
       }
       document.addEventListener('keydown', function (event) {
@@ -3334,10 +3620,14 @@
       var forceMock = window.FORCE_MAP_MOCK === true;
       if (forceMock) {
         setMapFallback('');
+        applyFilters();
+        applyDeepLinkShop();
         return;
       }
       if (!apiKey) {
         setMapFallback('Google Maps APIキーが未設定です');
+        applyFilters();
+        applyDeepLinkShop();
         return;
       }
 
@@ -3363,9 +3653,9 @@
             defaultTimezoneOffsetMinutes: 540,
             enablePlacesOpenStatus: enablePlacesOpenStatus,
             fallbackMessage: '徒歩ルートを取得できませんでした。しばらくしてから再度お試しください。',
-            onPlaceSelected: function (id) {
+            onPlaceSelected: function (id, opts) {
               state.selectedPlaceId = id;
-              if (id) openShopModal(id);
+              if (id && (!opts || opts.openModal !== false)) openShopModal(id);
             }
           });
 
@@ -3381,7 +3671,14 @@
           }
 
           await mapModule.init();
-          applyFilters();
+          // URLパラメータでフィルタ指定済みの場合は初期ビューも絞り込みにフィットさせる
+          if (state.activeCategory || state.activeSubcategory) {
+            applyFilters({ autoFit: true, forceFit: true });
+          } else {
+            applyFilters();
+          }
+          applyDeepLinkShop();
+          setupGeolocationControl();
         } catch (error) {
           routeChipElement.textContent = '地図の読み込みに失敗しました。APIキーとドメイン設定を確認してください。';
           routeChipElement.classList.add('is-fallback');

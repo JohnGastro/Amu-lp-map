@@ -854,15 +854,17 @@
     });
   };
 
+  BeppuMapModule.prototype._canHoverPointer = function _canHoverPointer() {
+    try {
+      return !!(global.matchMedia && global.matchMedia('(hover: hover) and (pointer: fine)').matches);
+    } catch (error) {
+      return false;
+    }
+  };
+
   BeppuMapModule.prototype.bindEmbeddedHoverInteraction = function bindEmbeddedHoverInteraction() {
     if (!this._isEmbeddedInIframe || !this.options || !this.options.mapElement) return;
-    var canHover = false;
-    try {
-      canHover = !!(global.matchMedia && global.matchMedia('(hover: hover) and (pointer: fine)').matches);
-    } catch (error) {
-      canHover = false;
-    }
-    if (!canHover) return;
+    if (!this._canHoverPointer()) return;
     var mapEl = this.options.mapElement;
     var self = this;
     mapEl.addEventListener('mouseenter', function () {
@@ -898,9 +900,12 @@
       zoomControl: true,
       clickableIcons: false,
       // In iframe embeds, default to scroll-priority; hover will temporarily enable map interaction.
-      gestureHandling: this._isEmbeddedInIframe ? 'none' : 'cooperative',
+      // タッチ端末（hover不可）はhoverでの解除経路が無いため、完全ロックではなく2本指パンを許可する。
+      gestureHandling: this._isEmbeddedInIframe
+        ? (this._canHoverPointer() ? 'none' : 'cooperative')
+        : 'cooperative',
       scrollwheel: !this._isEmbeddedInIframe,
-      draggable: !this._isEmbeddedInIframe,
+      draggable: !this._isEmbeddedInIframe || !this._canHoverPointer(),
       styles: [
         // Base tone: soft, low-contrast grayscale to match page UI.
         { elementType: 'geometry', stylers: [{ color: '#d1cec5' }] },
@@ -1030,15 +1035,17 @@
    * Look up a static route for a given place.
    * Matches by place slug/id, then verifies coordinates haven't drifted.
    */
-  BeppuMapModule.prototype._getStaticRoute = function _getStaticRoute(origin) {
+  BeppuMapModule.prototype._getStaticRoute = function _getStaticRoute(origin, placeId) {
     if (!this._staticRoutes) return null;
-    // Try matching by place id (which is the slug)
-    var place = null;
-    this.placeById.forEach(function (p) {
-      if (Math.abs(p.lat - origin.lat) < 0.0001 && Math.abs(p.lng - origin.lng) < 0.0001) {
-        place = p;
-      }
-    });
+    // placeIdがあれば直接引く（座標近傍マッチは同一ビル内の別店舗を誤爆するため）
+    var place = placeId ? this.placeById.get(placeId) : null;
+    if (!place) {
+      this.placeById.forEach(function (p) {
+        if (Math.abs(p.lat - origin.lat) < 0.0001 && Math.abs(p.lng - origin.lng) < 0.0001) {
+          place = p;
+        }
+      });
+    }
     if (!place) return null;
 
     var route = this._staticRoutes[place.slug] || this._staticRoutes[place.id] || null;
@@ -1430,8 +1437,11 @@
       bottom: safeBottom,
     });
 
-    var zoom = this.map.getZoom();
-    if (Number.isFinite(zoom)) {
+    // fitBoundsのズーム反映は非同期のため、idle後にクランプする
+    var self = this;
+    google.maps.event.addListenerOnce(this.map, 'idle', function () {
+      var zoom = self.map.getZoom();
+      if (!Number.isFinite(zoom)) return;
       var nextZoom = zoom;
       if (Number.isFinite(minZoom)) {
         nextZoom = Math.max(nextZoom, minZoom);
@@ -1441,9 +1451,9 @@
       }
       nextZoom = Math.max(0, Math.min(22, nextZoom));
       if (nextZoom !== zoom) {
-        this.map.setZoom(nextZoom);
+        self.map.setZoom(nextZoom);
       }
-    }
+    });
   };
 
   BeppuMapModule.prototype.fitToPlaceIds = function fitToPlaceIds(placeIds, options) {
@@ -1602,7 +1612,8 @@
     this.applyHoverPreviewMarker();
   };
 
-  BeppuMapModule.prototype.selectPlace = async function selectPlace(placeId) {
+  BeppuMapModule.prototype.selectPlace = async function selectPlace(placeId, selectOpts) {
+    var uiOpts = selectOpts || {};
     if (!this.placeMarkers.has(placeId)) return;
     if (this.visiblePlaceIds && !this.visiblePlaceIds.has(placeId)) return;
     this._hoverPreviewPlaceId = null;
@@ -1659,7 +1670,7 @@
     this.applyActiveMarkerPriority(placeId);
 
     var activeCard = this.placeCards.get(placeId);
-    if (activeCard && typeof activeCard.scrollIntoView === 'function') {
+    if (uiOpts.scrollCard !== false && activeCard && typeof activeCard.scrollIntoView === 'function') {
       activeCard.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     }
 
@@ -1673,7 +1684,7 @@
     }
 
     if (typeof this.options.onPlaceSelected === 'function') {
-      this.options.onPlaceSelected(placeId);
+      this.options.onPlaceSelected(placeId, uiOpts);
     }
 
     var place = nextPlace || this.placeById.get(placeId);
@@ -1718,7 +1729,8 @@
       });
     }
     var appliedAdaptiveZoom = false;
-    if (this._nearStreak >= 1 && this.map && google && google.maps) {
+    // 初回選択はルート境界フィット、近距離の連続選択のみ2点フィット
+    if (this._nearStreak >= 2 && this.map && google && google.maps) {
       var adaptiveBounds = new google.maps.LatLngBounds();
       adaptiveBounds.extend({ lat: this.hotel.lat, lng: this.hotel.lng });
       adaptiveBounds.extend({ lat: place.lat, lng: place.lng });
@@ -1744,7 +1756,7 @@
     var requestId = ++this._routeRequestId;
 
     // --- Try static route data first ---
-    var cached = this._getStaticRoute(destination);
+    var cached = this._getStaticRoute(destination, targetPlaceId);
     if (cached) {
       return new Promise(function (resolve) {
         if (requestId !== self._routeRequestId || (targetPlaceId && self.activePlaceId !== targetPlaceId)) {
@@ -1879,7 +1891,7 @@
     var requestId = ++this._hoverRouteRequestId;
 
     // --- Try static route data first ---
-    var cached = this._getStaticRoute(destination);
+    var cached = this._getStaticRoute(destination, targetPlaceId);
     if (cached && cached.path && cached.path.length) {
       return new Promise(function (resolve) {
         if (requestId !== self._hoverRouteRequestId || !targetPlaceId || self._hoverPreviewPlaceId !== targetPlaceId) {

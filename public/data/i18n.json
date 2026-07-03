@@ -1,10 +1,49 @@
 {
   "languages": [
-    { "code": "ja",    "label": "日本語",      "short": "JP", "navMatch": ["ja"] },
-    { "code": "en",    "label": "English",     "short": "EN", "navMatch": ["en"] },
-    { "code": "zh_cn", "label": "简体中文",    "short": "中", "navMatch": ["zh-CN", "zh-Hans", "zh"] },
-    { "code": "zh_tw", "label": "繁體中文",    "short": "繁", "navMatch": ["zh-TW", "zh-HK", "zh-Hant"] },
-    { "code": "ko",    "label": "한국어",       "short": "KO", "navMatch": ["ko"] }
+    {
+      "code": "ja",
+      "label": "日本語",
+      "short": "JP",
+      "navMatch": [
+        "ja"
+      ]
+    },
+    {
+      "code": "en",
+      "label": "English",
+      "short": "EN",
+      "navMatch": [
+        "en"
+      ]
+    },
+    {
+      "code": "zh_cn",
+      "label": "简体中文",
+      "short": "中",
+      "navMatch": [
+        "zh-CN",
+        "zh-Hans",
+        "zh"
+      ]
+    },
+    {
+      "code": "zh_tw",
+      "label": "繁體中文",
+      "short": "繁",
+      "navMatch": [
+        "zh-TW",
+        "zh-HK",
+        "zh-Hant"
+      ]
+    },
+    {
+      "code": "ko",
+      "label": "한국어",
+      "short": "KO",
+      "navMatch": [
+        "ko"
+      ]
+    }
   ],
   "ja": {
     "ui": {
@@ -16,7 +55,13 @@
       "checking_hours": "営業時間確認中…",
       "hours_label": "営業時間",
       "closed_days_label": "定休日",
-      "day_mon": "月", "day_tue": "火", "day_wed": "水", "day_thu": "木", "day_fri": "金", "day_sat": "土", "day_sun": "日",
+      "day_mon": "月",
+      "day_tue": "火",
+      "day_wed": "水",
+      "day_thu": "木",
+      "day_fri": "金",
+      "day_sat": "土",
+      "day_sun": "日",
       "day_suffix_closed": "曜",
       "no_info": "情報なし",
       "none": "なし",
@@ -53,7 +98,13 @@
       "category_walk": "散歩",
       "map_load_failed": "地図の読み込みに失敗しました。APIキーとドメイン設定を確認してください。",
       "map_fetch_failed": "地図の取得に失敗しました（ネットワークまたはAPI制限）",
-      "map_auth_failed": "Google Maps認証エラー（モック表示）"
+      "map_auth_failed": "Google Maps認証エラー（モック表示）",
+      "far_from_hotel": "徒歩圏外・車がおすすめ",
+      "walk_min_suffix": "分",
+      "nearby_shops": "この近くの店",
+      "share": "共有",
+      "share_copied": "リンクをコピーしました",
+      "my_location": "現在地"
     }
   },
   "en": {
@@ -66,7 +117,13 @@
       "checking_hours": "Checking hours…",
       "hours_label": "Hours",
       "closed_days_label": "Closed days",
-      "day_mon": "Mon", "day_tue": "Tue", "day_wed": "Wed", "day_thu": "Thu", "day_fri": "Fri", "day_sat": "Sat", "day_sun": "Sun",
+      "day_mon": "Mon",
+      "day_tue": "Tue",
+      "day_wed": "Wed",
+      "day_thu": "Thu",
+      "day_fri": "Fri",
+      "day_sat": "Sat",
+      "day_sun": "Sun",
       "day_suffix_closed": "",
       "no_info": "No info",
       "none": "None",
@@ -103,7 +160,13 @@
       "category_walk": "Stroll",
       "map_load_failed": "Failed to load the map. Please check the API key and domain settings.",
       "map_fetch_failed": "Failed to fetch the map (network or API limit).",
-      "map_auth_failed": "Google Maps authentication error (mock display)."
+      "map_auth_failed": "Google Maps authentication error (mock display).",
+      "far_from_hotel": "Not walkable — go by car/taxi",
+      "walk_min_suffix": " min walk",
+      "nearby_shops": "Nearby spots",
+      "share": "Share",
+      "share_copied": "Link copied",
+      "my_location": "My location"
     }
   },
   "zh_cn": {
@@ -116,7 +179,13 @@
       "checking_hours": "正在确认营业时间…",
       "hours_label": "营业时间",
       "closed_days_label": "公休日",
-      "day_mon": "周一", "day_tue": "周二", "day_wed": "周三", "day_thu": "周四", "day_fri": "周五", "day_sat": "周六", "day_sun": "周日",
+      "day_mon": "周一",
+      "day_tue": "周二",
+      "day_wed": "周三",
+      "day_thu": "周四",
+      "day_fri": "周五",
+      "day_sat": "周六",
+      "day_sun": "周日",
       "day_suffix_closed": "",
       "no_info": "暂无信息",
       "none": "无",
@@ -153,7 +222,13 @@
       "category_walk": "散步",
       "map_load_failed": "地图加载失败，请检查API密钥与域名设置。",
       "map_fetch_failed": "地图获取失败（网络或API限制）。",
-      "map_auth_failed": "Google地图认证错误（模拟显示）。"
+      "map_auth_failed": "Google地图认证错误（模拟显示）。",
+      "far_from_hotel": "步行较远・建议乘车",
+      "walk_min_suffix": "分钟步行",
+      "nearby_shops": "附近的店",
+      "share": "分享",
+      "share_copied": "已复制链接",
+      "my_location": "当前位置"
     }
   },
   "zh_tw": {
@@ -166,7 +241,13 @@
       "checking_hours": "正在確認營業時間…",
       "hours_label": "營業時間",
       "closed_days_label": "公休日",
-      "day_mon": "週一", "day_tue": "週二", "day_wed": "週三", "day_thu": "週四", "day_fri": "週五", "day_sat": "週六", "day_sun": "週日",
+      "day_mon": "週一",
+      "day_tue": "週二",
+      "day_wed": "週三",
+      "day_thu": "週四",
+      "day_fri": "週五",
+      "day_sat": "週六",
+      "day_sun": "週日",
       "day_suffix_closed": "",
       "no_info": "暫無資訊",
       "none": "無",
@@ -203,7 +284,13 @@
       "category_walk": "散步",
       "map_load_failed": "地圖載入失敗，請確認API金鑰與網域設定。",
       "map_fetch_failed": "地圖取得失敗（網路或API限制）。",
-      "map_auth_failed": "Google地圖認證錯誤（模擬顯示）。"
+      "map_auth_failed": "Google地圖認證錯誤（模擬顯示）。",
+      "far_from_hotel": "步行較遠・建議乘車",
+      "walk_min_suffix": "分鐘步行",
+      "nearby_shops": "附近的店",
+      "share": "分享",
+      "share_copied": "已複製連結",
+      "my_location": "目前位置"
     }
   },
   "ko": {
@@ -216,7 +303,13 @@
       "checking_hours": "영업시간 확인 중…",
       "hours_label": "영업시간",
       "closed_days_label": "정기 휴일",
-      "day_mon": "월", "day_tue": "화", "day_wed": "수", "day_thu": "목", "day_fri": "금", "day_sat": "토", "day_sun": "일",
+      "day_mon": "월",
+      "day_tue": "화",
+      "day_wed": "수",
+      "day_thu": "목",
+      "day_fri": "금",
+      "day_sat": "토",
+      "day_sun": "일",
       "day_suffix_closed": "요일",
       "no_info": "정보 없음",
       "none": "없음",
@@ -253,7 +346,13 @@
       "category_walk": "산책",
       "map_load_failed": "지도를 불러오지 못했습니다. API 키와 도메인 설정을 확인해 주세요.",
       "map_fetch_failed": "지도 가져오기에 실패했습니다 (네트워크 또는 API 제한).",
-      "map_auth_failed": "Google 지도 인증 오류 (모의 표시)."
+      "map_auth_failed": "Google 지도 인증 오류 (모의 표시).",
+      "far_from_hotel": "도보권 밖・차량 이용 추천",
+      "walk_min_suffix": "분 도보",
+      "nearby_shops": "근처 가게",
+      "share": "공유",
+      "share_copied": "링크를 복사했습니다",
+      "my_location": "현재 위치"
     }
   }
 }
