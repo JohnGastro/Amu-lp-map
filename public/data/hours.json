@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-06T22:05:42.296Z",
+  "generated": "2026-07-07T22:04:57.099Z",
   "shops": {
     "%E5%A4%A7%E7%94%B0%E5%92%96%E5%96%B1%EF%BC%88%E3%81%8A%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%8A%E3%83%BC%EF%BC%89": {
       "businessStatus": "OPERATIONAL",
@@ -81,7 +81,7 @@
           }
         ]
       },
-      "weekdayText": "Monday: Closed | Tuesday: 6:00 PM – 12:00 AM | Wednesday: 6:00 PM – 12:00 AM | Thursday: 6:00 PM – 12:00 AM | Friday: 6:00 PM – 12:00 AM | Saturday: 6:00 PM – 12:00 AM | Sunday: 6:00 PM – 12:00 AM",
+      "weekdayText": "Monday: Closed | Tuesday: 6:00 PM – 12:00 AM | Wednesday: 6:00 PM –��12:00 AM | Thursday: 6:00 PM – 12:00 AM | Friday: 6:00 PM – 12:00 AM | Saturday: 6:00 PM – 12:00 AM | Sunday: 6:00 PM – 12:00 AM",
       "lastChecked": "2026-05-12T22:04:15.629Z"
     },
     "%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%90%E3%82%B5%E3%83%A9+%E3%83%8A%E3%83%81%E3%83%A5%E3%83%A9%E3%83%AB%E3%83%AF%E3%82%A4%E3%83%B3%E9%A3%9F%E5%A0%82": {
@@ -536,7 +536,7 @@
           }
         ]
       },
-      "weekdayText": "Monday: Closed | Tuesday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Wednesday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Thursday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Friday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Saturday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Sunday: Closed",
+      "weekdayText": "Monday: Closed | Tuesday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Wednesday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Thursday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Friday: 11:30��AM – 1:30 PM, 5:30 – 9:00 PM | Saturday: 11:30 AM – 1:30 PM, 5:30 – 9:00 PM | Sunday: Closed",
       "lastChecked": "2026-05-12T22:04:17.903Z"
     },
     "bamboo+bamboo": {
@@ -857,10 +857,53 @@
       "lastChecked": "2026-05-12T22:04:19.373Z"
     },
     "BEPPU+HOSTEL+%EF%BC%86+CAFE+Ourschestra.%EF%BC%BB%E3%82%A6%E3%83%AB%E3%82%B9%E3%82%B1%E3%82%B9%E3%83%88%E3%83%A9%EF%BC%BD": {
-      "businessStatus": "CLOSED_PERMANENTLY",
-      "hoursMap": null,
-      "weekdayText": null,
-      "lastChecked": "2026-06-10T22:47:43.137Z"
+      "businessStatus": "OPERATIONAL",
+      "hoursMap": {
+        "日": [
+          {
+            "open": "11:30",
+            "close": "22:00"
+          }
+        ],
+        "月": [
+          {
+            "open": "15:00",
+            "close": "22:00"
+          }
+        ],
+        "火": [
+          {
+            "open": "15:00",
+            "close": "22:00"
+          }
+        ],
+        "水": [
+          {
+            "open": "15:00",
+            "close": "22:00"
+          }
+        ],
+        "木": [
+          {
+            "open": "15:00",
+            "close": "22:00"
+          }
+        ],
+        "金": [
+          {
+            "open": "11:30",
+            "close": "22:00"
+          }
+        ],
+        "土": [
+          {
+            "open": "11:30",
+            "close": "22:00"
+          }
+        ]
+      },
+      "weekdayText": "Monday: 3:00 – 10:00 PM | Tuesday: 3:00 – 10:00 PM | Wednesday: 3:00 – 10:00 PM | Thursday: 3:00 – 10:00 PM | Friday: 11:30 AM – 10:00 PM | Saturday: 11:30 AM – 10:00 PM | Sunday: 11:30 AM – 10:00 PM",
+      "lastChecked": "2026-07-07T22:04:54.462Z"
     },
     "%E3%82%BF%E3%82%AD%E3%83%BC%E3%83%88": {
       "businessStatus": "OPERATIONAL",
@@ -1144,12 +1187,7 @@
     "TUMUGU+COFFEE+STAND": {
       "businessStatus": "OPERATIONAL",
       "hoursMap": {
-        "日": [
-          {
-            "open": "07:00",
-            "close": "16:00"
-          }
-        ],
+        "日": [],
         "月": [],
         "火": [],
         "水": [
@@ -1167,8 +1205,8 @@
           }
         ]
       },
-      "weekdayText": "Monday: Closed | Tuesday: Closed | Wednesday: 7:00 AM – 4:00 PM | Thursday: Closed | Friday: Closed | Saturday: 7:00 AM – 4:00 PM | Sunday: 7:00 AM – 4:00 PM",
-      "lastChecked": "2026-06-05T22:09:33.860Z"
+      "weekdayText": "Monday: Closed | Tuesday: Closed | Wednesday: 7:00 AM – 4:00 PM | Thursday: Closed | Friday: Closed | Saturday: 7:00 AM – 4:00 PM | Sunday: Closed",
+      "lastChecked": "2026-07-07T22:04:55.597Z"
     },
     "Othello+Specialty+Coffee+Roaster": {
       "businessStatus": "OPERATIONAL",
@@ -1224,6 +1262,10 @@
         ],
         "月": [
           {
+            "open": "11:30",
+            "close": "14:30"
+          },
+          {
             "open": "18:00",
             "close": "22:30"
           }
@@ -1270,8 +1312,8 @@
           }
         ]
       },
-      "weekdayText": "Monday: 6:00 – 10:30 PM | Tuesday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Wednesday: 11:30 AM – 2:30 PM, 6:00 – 9:30 PM | Thursday: Closed | Friday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Saturday: 11:30 AM – 2:30 PM, 5:00 – 10:30 PM | Sunday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
-      "lastChecked": "2026-06-15T22:56:53.336Z"
+      "weekdayText": "Monday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Tuesday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Wednesday: 11:30 AM – 2:30 PM, 6:00 – 9:30 PM | Thursday: Closed | Friday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Saturday: 11:30 AM – 2:30 PM, 5:00 – 10:30 PM | Sunday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+      "lastChecked": "2026-07-07T22:04:55.935Z"
     },
     "Bistro+le+jiu+%E6%85%88%E9%9B%A8": {
       "businessStatus": "OPERATIONAL",
@@ -1405,7 +1447,7 @@
           },
           {
             "open": "18:00",
-            "close": "21:00"
+            "close": "00:00"
           }
         ],
         "火": [
@@ -1459,8 +1501,8 @@
           }
         ]
       },
-      "weekdayText": "Monday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM | Tuesday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM | Wednesday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM | Thursday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM | Friday: 11:00 AM – 2:00 PM, 6:00 – 10:00 PM | Saturday: 11:00 AM – 2:00 PM, 6:00 – 10:00 PM | Sunday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM",
-      "lastChecked": "2026-05-12T22:04:21.629Z"
+      "weekdayText": "Monday: 11:00 AM – 2:00 PM, 6:00 PM – 12:00 AM | Tuesday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM | Wednesday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM | Thursday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM | Friday: 11:00 AM – 2:00 PM, 6:00 – 10:00 PM | Saturday: 11:00 AM – 2:00 PM, 6:00 – 10:00 PM | Sunday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM",
+      "lastChecked": "2026-07-07T22:04:56.426Z"
     },
     "%E3%83%91%E3%82%AD%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%AB%E3%83%AC%E3%83%BC": {
       "businessStatus": "OPERATIONAL",
