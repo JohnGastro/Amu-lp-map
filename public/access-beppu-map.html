@@ -3008,12 +3008,10 @@
       renderModalLiveStatus(modalPlaceId);
     }
 
-    // ?shop=slug のディープリンクで直接店舗を開く
-    function applyDeepLinkShop() {
+    // slug/名前から店舗を開く（ディープリンクとチャット「ゆげ」の両方から使う）
+    function openShopBySlug(shopSlug) {
       try {
-        var sp = new URLSearchParams(window.location.search);
-        var shopSlug = sp.get('shop');
-        if (!shopSlug) return;
+        if (!shopSlug) return false;
         var target = null;
         places.forEach(function (p) {
           if (target) return;
@@ -3023,12 +3021,22 @@
             target = p;
           }
         });
-        if (!target) return;
+        if (!target) return false;
         if (mapModule && typeof mapModule.selectPlace === 'function') {
           mapModule.selectPlace(target.id);
         } else {
           openShopModal(target.id);
         }
+        return true;
+      } catch (e) { return false; }
+    }
+    window.AmuOpenShop = openShopBySlug;
+
+    // ?shop=slug のディープリンクで直接店舗を開く
+    function applyDeepLinkShop() {
+      try {
+        var sp = new URLSearchParams(window.location.search);
+        openShopBySlug(sp.get('shop'));
       } catch (e) { /* noop */ }
     }
 
@@ -4324,6 +4332,23 @@
       if (!text || sending) return;
       input.value = '';
       send(text);
+    });
+
+    // マップ内店舗リンクはページ遷移せず、その場でモーダルを開く
+    log.addEventListener('click', function (ev) {
+      var a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (href.indexOf('access-beppu-map.html') === -1 || href.indexOf('shop=') === -1) return;
+      var slug = null;
+      try { slug = new URL(href, window.location.href).searchParams.get('shop'); } catch (e) { return; }
+      if (!slug) return;
+      if (typeof window.AmuOpenShop === 'function' && window.AmuOpenShop(slug)) {
+        ev.preventDefault();
+        panel.classList.remove('is-open');
+        fab.classList.remove('is-hidden');
+      }
+      // AmuOpenShopで開けなかった場合は通常のリンク遷移にフォールバック
     });
 
     applyLabels();
