@@ -25,7 +25,7 @@ async function shopContext(): Promise<string> {
   if (shopCache.text && Date.now() - shopCache.at < 10 * 60 * 1000) return shopCache.text;
   const { data, error } = await supabase
     .from("amu_beppu_shops")
-    .select("slug,name,category,tags,hours_text,rating,rating_count,caption_auto,caption_override")
+    .select("slug,name,category,tags,keywords,hours_text,rating,rating_count,caption_auto,caption_override")
     .not("hidden", "is", true)
     .order("sort_order", { ascending: true })
     .order("slug", { ascending: true });
@@ -34,7 +34,8 @@ async function shopContext(): Promise<string> {
     const caption = (s.caption_override || s.caption_auto || "").replace(/\s+/g, " ").trim();
     const rating = s.rating ? `評価${s.rating}(${s.rating_count}件)` : "評価なし";
     const tags = Array.isArray(s.tags) ? s.tags.join("・") : "";
-    return `### ${s.name}\nslug: ${s.slug}\nカテゴリ: ${s.category}${tags ? ` / ${tags}` : ""} / ${rating}\n営業時間: ${s.hours_text || "不明"}\n紹介: ${caption}`;
+    const kw = Array.isArray(s.keywords) && s.keywords.length ? s.keywords.join("・") : "";
+    return `### ${s.name}\nslug: ${s.slug}\nカテゴリ: ${s.category}${tags ? ` / ${tags}` : ""} / ${rating}${kw ? `\n検索語: ${kw}` : ""}\n営業時間: ${s.hours_text || "不明"}\n紹介: ${caption}`;
   });
   shopCache = { at: Date.now(), text: lines.join("\n\n") };
   return shopCache.text;
@@ -58,7 +59,7 @@ function buildSystem(shops: string): string {
 
 ## 店の紹介ルール
 - 店舗データにある店を薦めるときは必ずリンクにする: [店名](${MAP_URL}?shop=SLUG)（SLUGはデータのslugをそのまま使う）
-- 料理や食べ物を聞かれたら、カテゴリだけでなく各店の「紹介」文に含まれる料理名・名物まで必ず探す（例: そば→紹介文に「地獄そば」を持つ店も該当）。「ない」と答えるのは、データ全体を見直しても本当に該当がない時だけ。
+- 何かを探されたら、各店の「検索語」とカテゴリを全店分照合してから答える。「ない」と答えるのは、照合しても本当に該当がない時だけ。
 - 条件に合う店が徒歩圏外・営業時間外でも、黙って除外せず候補として挙げ、その注意（車で〇分、今日は〇時までなど）を添えてユーザーに選ばせる。
 - データにない場所（温泉・観光地・データ外の店）は普通にテキストで語ってよいが、店の場合は「マップには載ってないけど」と断る。
 - 営業判定は、会話の最後に渡される現在時刻とデータの営業時間で行う。深夜営業（〜翌4時など）の日またぎに注意。
