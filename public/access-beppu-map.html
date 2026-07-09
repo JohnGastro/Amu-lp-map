@@ -1935,6 +1935,179 @@
     }
 
   }
+
+  /* ===== チャットボット「ゆげ」 ===== */
+  .yg-fab {
+    position: fixed;
+    right: 16px;
+    bottom: 18px;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 11px 17px;
+    border: none;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.78);
+    color: #f4f1ea;
+    font-family: inherit;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+  }
+
+  .yg-fab .material-symbols-rounded {
+    font-size: 19px;
+  }
+
+  .yg-panel {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 61;
+    width: min(400px, calc(100vw - 32px));
+    height: min(560px, calc(100svh - 90px));
+    display: none;
+    flex-direction: column;
+    background: #efece6;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    font-family: inherit;
+  }
+
+  .yg-panel.is-open {
+    display: flex;
+  }
+
+  .yg-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.78);
+    color: #f4f1ea;
+  }
+
+  .yg-head-title {
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
+
+  .yg-head-sub {
+    font-size: 11px;
+    opacity: 0.7;
+    margin-top: 2px;
+  }
+
+  .yg-close {
+    background: none;
+    border: none;
+    color: #f4f1ea;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+  }
+
+  .yg-log {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .yg-msg {
+    max-width: 85%;
+    padding: 9px 13px;
+    border-radius: 14px;
+    font-size: 13.5px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .yg-msg--user {
+    align-self: flex-end;
+    background: rgba(0, 0, 0, 0.78);
+    color: #f4f1ea;
+    border-bottom-right-radius: 4px;
+  }
+
+  .yg-msg--bot {
+    align-self: flex-start;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+
+  .yg-msg--bot a {
+    color: #7a5c2e;
+    font-weight: 600;
+  }
+
+  .yg-typing {
+    align-self: flex-start;
+    opacity: 0.55;
+    font-size: 12px;
+    padding: 2px 13px;
+  }
+
+  .yg-form {
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: #e6e2da;
+  }
+
+  .yg-input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 999px;
+    padding: 10px 14px;
+    font-size: 16px; /* 16px未満だとiOSでフォーカス時にズームされる */
+    font-family: inherit;
+    background: #fff;
+    outline: none;
+  }
+
+  .yg-send {
+    border: none;
+    border-radius: 999px;
+    width: 42px;
+    height: 42px;
+    background: rgba(0, 0, 0, 0.78);
+    color: #f4f1ea;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .yg-send:disabled {
+    opacity: 0.4;
+  }
+
+  @media (max-width: 980px) {
+    .yg-fab {
+      right: 12px;
+      bottom: 14px;
+    }
+
+    .yg-panel {
+      right: 8px;
+      left: 8px;
+      bottom: 8px;
+      width: auto;
+      height: min(72svh, 560px);
+    }
+  }
 </style>
 
 <div id="access-beppu-app">
@@ -2034,6 +2207,30 @@
     </div>
   </div>
 </div>
+
+<button class="yg-fab" id="yg-fab" type="button" hidden>
+  <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+  <span id="yg-fab-label">ゆげに聞く</span>
+</button>
+
+<section class="yg-panel" id="yg-panel" role="dialog" aria-modal="false" aria-label="チャット">
+  <div class="yg-head">
+    <div>
+      <div class="yg-head-title">ゆげ</div>
+      <div class="yg-head-sub" id="yg-sub">別府の飲み友達AI</div>
+    </div>
+    <button class="yg-close" id="yg-close" type="button" aria-label="閉じる">
+      <span class="material-symbols-rounded" aria-hidden="true">close</span>
+    </button>
+  </div>
+  <div class="yg-log" id="yg-log"></div>
+  <form class="yg-form" id="yg-form">
+    <input class="yg-input" id="yg-input" type="text" autocomplete="off" enterkeyhint="send" maxlength="1000" placeholder="今開いてる店ある？">
+    <button class="yg-send" id="yg-send" type="submit" aria-label="送信">
+      <span class="material-symbols-rounded" aria-hidden="true">arrow_upward</span>
+    </button>
+  </form>
+</section>
 
   <script>
     window.BEPPU_TZ_OFFSET_MINUTES = 540;
@@ -3706,5 +3903,187 @@
     }
 
     if (app) initialize();
+  })();
+</script>
+
+<script>
+  // ===== チャットボット「ゆげ」 =====
+  (function () {
+    var FN_URL = 'https://aoehwevqlkpgvzdyfuja.supabase.co/functions/v1/amu-chat';
+    var ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvZWh3ZXZxbGtwZ3Z6ZHlmdWphIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3NTI0MTYsImV4cCI6MjA5MjMyODQxNn0.D4Vr26xPO5p5mv903Qup0XsHNvNIuAL_dwVY7M7j78Y';
+    var LS_KEY = 'amuYugeChat.v1';
+    var MAX_HISTORY = 24; // 保存・送信する発言数の上限
+
+    var T = {
+      ja: { fab: 'ゆげに聞く', sub: '別府の飲み友達AI', ph: '今開いてる店ある？', hi: 'やあ、ゆげだよ。別府のこと、店のこと、旅のこと、なんでも聞いて。', err: 'ごめん、うまく繋がらなかった。少し待ってもう一回試してみて。' },
+      en: { fab: 'Ask Yuge', sub: 'Your local friend in Beppu (AI)', ph: 'Any places open now?', hi: "Hey, I'm Yuge. Ask me anything about Beppu — food, onsen, or your trip.", err: 'Sorry, the connection failed. Please try again in a moment.' },
+      zh_cn: { fab: '问问汤气', sub: '别府本地朋友（AI）', ph: '现在有开门的店吗？', hi: '嗨，我是汤气。别府的美食、温泉、行程，什么都可以问我。', err: '抱歉，连接失败了。请稍后再试一次。' },
+      zh_tw: { fab: '問問湯氣', sub: '別府在地朋友（AI）', ph: '現在有開的店嗎？', hi: '嗨，我是湯氣。別府的美食、溫泉、行程，什麼都可以問我。', err: '抱歉，連線失敗了。請稍後再試一次。' },
+      ko: { fab: '유게에게 묻기', sub: '벳푸 현지 친구 (AI)', ph: '지금 열려 있는 가게 있어?', hi: '안녕, 유게야. 벳푸의 맛집, 온천, 여행 계획, 뭐든 물어봐.', err: '미안, 연결이 잘 안 됐어. 잠시 후 다시 시도해 줘.' }
+    };
+
+    function lang() {
+      try { return (window.BeppuI18n && window.BeppuI18n.getLang && window.BeppuI18n.getLang()) || 'ja'; } catch (e) { return 'ja'; }
+    }
+    function t(key) { var d = T[lang()] || T.ja; return d[key] || T.ja[key]; }
+
+    var fab = document.getElementById('yg-fab');
+    var panel = document.getElementById('yg-panel');
+    var log = document.getElementById('yg-log');
+    var form = document.getElementById('yg-form');
+    var input = document.getElementById('yg-input');
+    var sendBtn = document.getElementById('yg-send');
+    var closeBtn = document.getElementById('yg-close');
+    if (!fab || !panel || !log || !form || !input) return;
+
+    // 埋め込みモード（?embed=1）ではマガジン誌面の邪魔になるので出さない
+    try {
+      if (new URLSearchParams(window.location.search).get('embed') === '1') return;
+    } catch (e) { /* noop */ }
+
+    var history = [];
+    try { history = JSON.parse(localStorage.getItem(LS_KEY) || '[]') || []; } catch (e) { history = []; }
+    if (!Array.isArray(history)) history = [];
+
+    var sending = false;
+
+    function saveHistory() {
+      try { localStorage.setItem(LS_KEY, JSON.stringify(history.slice(-MAX_HISTORY))); } catch (e) { /* noop */ }
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // マークダウンリンク [text](https://...) だけをaタグ化。それ以外は素のテキスト。
+    function renderText(el, text) {
+      var esc = escapeHtml(text);
+      esc = esc.replace(/\[([^\]]+)\]\((https:\/\/[^\s)]+)\)/g, function (m, label, url) {
+        var sameApp = url.indexOf('johngastro.github.io/Amu-lp-map') !== -1;
+        return '<a href="' + url + '"' + (sameApp ? '' : ' target="_blank" rel="noopener noreferrer"') + '>' + label + '</a>';
+      });
+      el.innerHTML = esc;
+    }
+
+    function addMsg(role, text) {
+      var div = document.createElement('div');
+      div.className = 'yg-msg ' + (role === 'user' ? 'yg-msg--user' : 'yg-msg--bot');
+      renderText(div, text);
+      log.appendChild(div);
+      log.scrollTop = log.scrollHeight;
+      return div;
+    }
+
+    function applyLabels() {
+      document.getElementById('yg-fab-label').textContent = t('fab');
+      document.getElementById('yg-sub').textContent = t('sub');
+      input.placeholder = t('ph');
+    }
+
+    function renderAll() {
+      log.innerHTML = '';
+      if (history.length === 0) {
+        addMsg('assistant', t('hi'));
+      } else {
+        history.forEach(function (m) { addMsg(m.role, m.content); });
+      }
+    }
+
+    async function send(text) {
+      if (sending) return;
+      sending = true;
+      sendBtn.disabled = true;
+
+      history.push({ role: 'user', content: text });
+      saveHistory();
+      addMsg('user', text);
+
+      var typing = document.createElement('div');
+      typing.className = 'yg-typing';
+      typing.textContent = '…';
+      log.appendChild(typing);
+      log.scrollTop = log.scrollHeight;
+
+      var botEl = null;
+      var botText = '';
+
+      try {
+        var res = await fetch(FN_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': ANON_KEY,
+            'Authorization': 'Bearer ' + ANON_KEY
+          },
+          body: JSON.stringify({ messages: history.slice(-MAX_HISTORY) })
+        });
+        if (!res.ok || !res.body) throw new Error('http ' + res.status);
+
+        var reader = res.body.getReader();
+        var decoder = new TextDecoder();
+        var buf = '';
+        while (true) {
+          var chunk = await reader.read();
+          if (chunk.done) break;
+          buf += decoder.decode(chunk.value, { stream: true });
+          var lines = buf.split('\n\n');
+          buf = lines.pop();
+          for (var i = 0; i < lines.length; i++) {
+            var line = lines[i];
+            if (line.indexOf('data: ') !== 0) continue;
+            var payload = line.slice(6);
+            if (payload === '[DONE]') continue;
+            var data;
+            try { data = JSON.parse(payload); } catch (e) { continue; }
+            if (data.error) throw new Error(data.error);
+            if (typeof data.t === 'string') {
+              if (!botEl) {
+                typing.remove();
+                botEl = addMsg('assistant', '');
+              }
+              botText += data.t;
+              renderText(botEl, botText);
+              log.scrollTop = log.scrollHeight;
+            }
+          }
+        }
+        if (!botText) throw new Error('empty response');
+        history.push({ role: 'assistant', content: botText });
+        saveHistory();
+      } catch (e) {
+        typing.remove();
+        if (botEl) botEl.remove();
+        history.pop(); // 失敗したuser発言は履歴から戻す
+        saveHistory();
+        addMsg('assistant', t('err'));
+      } finally {
+        sending = false;
+        sendBtn.disabled = false;
+      }
+    }
+
+    fab.addEventListener('click', function () {
+      applyLabels();
+      renderAll();
+      panel.classList.add('is-open');
+      fab.hidden = true;
+      log.scrollTop = log.scrollHeight;
+    });
+
+    closeBtn.addEventListener('click', function () {
+      panel.classList.remove('is-open');
+      fab.hidden = false;
+    });
+
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var text = input.value.trim();
+      if (!text || sending) return;
+      input.value = '';
+      send(text);
+    });
+
+    applyLabels();
+    fab.hidden = false;
   })();
 </script>
