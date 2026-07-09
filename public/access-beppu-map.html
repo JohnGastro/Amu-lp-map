@@ -2068,6 +2068,12 @@
     text-overflow: ellipsis;
   }
 
+  .yg-head-actions {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
   .yg-close {
     background: none;
     border: none;
@@ -2077,6 +2083,11 @@
     display: flex;
     border-radius: 50%;
     transition: background 0.18s ease;
+  }
+
+  #yg-reset .material-symbols-rounded {
+    font-size: 20px;
+    opacity: 0.75;
   }
 
   .yg-close:hover {
@@ -2414,9 +2425,14 @@
         <div class="yg-head-sub" id="yg-sub">別府の飲み友達AI</div>
       </div>
     </div>
-    <button class="yg-close" id="yg-close" type="button" aria-label="閉じる">
-      <span class="material-symbols-rounded" aria-hidden="true">close</span>
-    </button>
+    <div class="yg-head-actions">
+      <button class="yg-close" id="yg-reset" type="button" aria-label="会話をリセット" title="会話をリセット">
+        <span class="material-symbols-rounded" aria-hidden="true">restart_alt</span>
+      </button>
+      <button class="yg-close" id="yg-close" type="button" aria-label="閉じる">
+        <span class="material-symbols-rounded" aria-hidden="true">close</span>
+      </button>
+    </div>
   </div>
   <div class="yg-log" id="yg-log"></div>
   <form class="yg-form" id="yg-form">
@@ -4340,6 +4356,16 @@
       fab.classList.remove('is-hidden');
     });
 
+    var resetBtn = document.getElementById('yg-reset');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () {
+        if (sending) return;
+        history = [];
+        saveHistory();
+        renderAll();
+      });
+    }
+
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();
       var text = input.value.trim();
@@ -4367,5 +4393,173 @@
 
     applyLabels();
     fab.hidden = false;
+  })();
+</script>
+
+<script>
+  // ===== 行動アナリティクス（amu_map_events） =====
+  // page_view / page_leave(滞在) / shop_open / shop_close(滞在) / card_impression /
+  // filter_click / gmap_click / share_click / chat_open / lang_change を記録する。
+  (function () {
+    var REST_URL = 'https://aoehwevqlkpgvzdyfuja.supabase.co/rest/v1/amu_map_events';
+    var ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvZWh3ZXZxbGtwZ3Z6ZHlmdWphIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3NTI0MTYsImV4cCI6MjA5MjMyODQxNn0.D4Vr26xPO5p5mv903Qup0XsHNvNIuAL_dwVY7M7j78Y';
+    var SID_KEY = 'amuYugeChat.sid'; // チャットと同じ端末IDを共有
+
+    function sid() {
+      try {
+        var v = localStorage.getItem(SID_KEY);
+        if (!v) {
+          v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID()
+            : 'sid-' + Date.now() + '-' + Math.random().toString(36).slice(2, 10);
+          localStorage.setItem(SID_KEY, v);
+        }
+        return v;
+      } catch (e) { return ''; }
+    }
+    function curLang() {
+      try { return (window.BeppuI18n && window.BeppuI18n.getLang && window.BeppuI18n.getLang()) || 'ja'; } catch (e) { return 'ja'; }
+    }
+
+    var queue = [];
+    function track(event, target, dwellMs, meta) {
+      queue.push({
+        session_id: sid(), lang: curLang(), event: event,
+        target: target ? String(target).slice(0, 200) : null,
+        dwell_ms: (typeof dwellMs === 'number') ? Math.round(dwellMs) : null,
+        meta: meta || null
+      });
+      if (queue.length >= 20) flush(false);
+    }
+
+    function flush(useBeacon) {
+      if (!queue.length) return;
+      var body = JSON.stringify(queue.splice(0, queue.length));
+      if (useBeacon && navigator.sendBeacon) {
+        // 離脱時はヘッダーを付けられないので apikey をクエリで渡す
+        navigator.sendBeacon(REST_URL + '?apikey=' + ANON_KEY, new Blob([body], { type: 'application/json' }));
+        return;
+      }
+      try {
+        fetch(REST_URL, {
+          method: 'POST', keepalive: true,
+          headers: {
+            'apikey': ANON_KEY, 'Authorization': 'Bearer ' + ANON_KEY,
+            'Content-Type': 'application/json', 'Prefer': 'return=minimal'
+          },
+          body: body
+        });
+      } catch (e) { /* noop */ }
+    }
+    setInterval(function () { flush(false); }, 10000);
+
+    // ---- ページ表示・滞在 ----
+    var pageStart = Date.now();
+    var leaveSent = false;
+    track('page_view', null, null, {
+      ref: document.referrer || null,
+      w: window.innerWidth, h: window.innerHeight,
+      mobile: window.innerWidth <= 980,
+      embed: window.location.search.indexOf('embed=1') !== -1,
+      shop_param: (function () { try { return new URLSearchParams(location.search).get('shop'); } catch (e) { return null; } })()
+    });
+
+    function onLeave() {
+      if (leaveSent) return;
+      leaveSent = true;
+      if (modalOpenAt) track('shop_close', modalShop, Date.now() - modalOpenAt, { leave: true });
+      track('page_leave', null, Date.now() - pageStart, null);
+      flush(true);
+    }
+    window.addEventListener('pagehide', onLeave);
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'hidden') {
+        onLeave();
+      } else {
+        leaveSent = false;
+        pageStart = Date.now();
+        if (modalOpenAt) modalOpenAt = Date.now();
+      }
+    });
+
+    // ---- 店舗モーダルの開閉と滞在秒数 ----
+    var overlay = document.getElementById('ab-shop-modal-overlay');
+    var titleEl = document.getElementById('ab-shop-modal-title');
+    var modalOpenAt = 0;
+    var modalShop = '';
+    if (overlay && window.MutationObserver) {
+      new MutationObserver(function () {
+        var isOpen = overlay.classList.contains('is-open');
+        if (isOpen && !modalOpenAt) {
+          modalOpenAt = Date.now();
+          modalShop = titleEl ? titleEl.textContent.trim() : '';
+          track('shop_open', modalShop, null, null);
+        } else if (!isOpen && modalOpenAt) {
+          track('shop_close', modalShop, Date.now() - modalOpenAt, null);
+          modalOpenAt = 0;
+          modalShop = '';
+        }
+      }).observe(overlay, { attributes: true, attributeFilter: ['class'] });
+    }
+
+    // ---- カードのインプレッション（50%表示で1回だけ）----
+    var seenCards = {};
+    var io = ('IntersectionObserver' in window) ? new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var nameEl = en.target.querySelector('.spot-name');
+        var name = nameEl ? nameEl.textContent.trim() : '';
+        io.unobserve(en.target);
+        if (!name || seenCards[name]) return;
+        seenCards[name] = true;
+        track('card_impression', name, null, null);
+      });
+    }, { threshold: 0.5 }) : null;
+
+    var observed = ('WeakSet' in window) ? new WeakSet() : null;
+    function observeCards() {
+      if (!io) return;
+      document.querySelectorAll('article.spot-item').forEach(function (el) {
+        if (observed) {
+          if (observed.has(el)) return;
+          observed.add(el);
+        }
+        io.observe(el);
+      });
+    }
+    observeCards();
+    // カードは非同期描画されるので、DOM変化を1秒デバウンスで再スキャン
+    if (window.MutationObserver) {
+      var scanTimer = null;
+      new MutationObserver(function () {
+        if (scanTimer) return;
+        scanTimer = setTimeout(function () { scanTimer = null; observeCards(); }, 1000);
+      }).observe(document.body, { childList: true, subtree: true });
+    }
+
+    // ---- クリック系（フィルタ・Google Map・共有・チャット起動）----
+    document.addEventListener('click', function (ev) {
+      var t = ev.target;
+      if (!t || !t.closest) return;
+      var chip = t.closest('.ab-chip');
+      if (chip) { track('filter_click', chip.textContent.trim(), null, null); return; }
+      if (t.closest('#ab-shop-modal-gmap-btn')) {
+        track('gmap_click', modalShop || (titleEl ? titleEl.textContent.trim() : ''), null, null);
+        return;
+      }
+      if (t.closest('#ab-shop-modal-share-btn')) {
+        track('share_click', modalShop || (titleEl ? titleEl.textContent.trim() : ''), null, null);
+        return;
+      }
+      if (t.closest('#yg-fab')) { track('chat_open', null, null, null); return; }
+    }, true);
+
+    // ---- 言語切替 ----
+    var langSel = document.getElementById('beppu-lang-select');
+    if (langSel) {
+      langSel.addEventListener('change', function () {
+        track('lang_change', langSel.value, null, null);
+        flush(false); // 言語切替はページ再読込になるので即送信
+      });
+    }
   })();
 </script>
