@@ -122,8 +122,13 @@ Deno.serve(async (req: Request) => {
   }
 
   let messages: Msg[] | null = null;
+  let sessionId = "";
+  let lang = "";
   try {
-    messages = validate(await req.json());
+    const body = await req.json();
+    messages = validate(body);
+    if (typeof body.session === "string") sessionId = body.session.slice(0, 64);
+    if (typeof body.lang === "string") lang = body.lang.slice(0, 8);
   } catch {
     messages = null;
   }
@@ -151,20 +156,48 @@ Deno.serve(async (req: Request) => {
     ],
   });
 
+  const startedAt = Date.now();
+  const lastUserMessage = messages[messages.length - 1].content;
+  const historyLength = messages.length;
+
+  // データ改善用の会話ログ（service roleで書き込み。失敗しても応答は止めない）
+  async function logExchange(reply: string, errText: string | null) {
+    try {
+      await supabase.from("amu_chat_logs").insert({
+        session_id: sessionId || null,
+        lang: lang || null,
+        user_message: lastUserMessage,
+        assistant_reply: reply || null,
+        model: MODEL,
+        history_length: historyLength,
+        duration_ms: Date.now() - startedAt,
+        error: errText,
+      });
+    } catch (e) {
+      console.error("chat log insert failed:", e);
+    }
+  }
+
   const encoder = new TextEncoder();
   const body = new ReadableStream({
     async start(controller) {
+      let reply = "";
       try {
         for await (const event of stream) {
           if (event.type === "content_block_delta" && event.delta.type === "text_delta") {
+            reply += event.delta.text;
             controller.enqueue(encoder.encode(`data: ${JSON.stringify({ t: event.delta.text })}\n\n`));
           }
         }
         controller.enqueue(encoder.encode("data: [DONE]\n\n"));
-      } catch (e) {
-        controller.enqueue(encoder.encode(`data: ${JSON.stringify({ error: String(e) })}\n\n`));
-      } finally {
         controller.close();
+        await logExchange(reply, null);
+      } catch (e) {
+        try {
+          controller.enqueue(encoder.encode(`data: ${JSON.stringify({ error: String(e) })}\n\n`));
+          controller.close();
+        } catch (e2) { /* already closed */ }
+        await logExchange(reply, String(e));
       }
     },
   });

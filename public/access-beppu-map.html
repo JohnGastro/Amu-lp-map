@@ -4115,7 +4115,21 @@
     var FN_URL = 'https://aoehwevqlkpgvzdyfuja.supabase.co/functions/v1/amu-chat';
     var ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvZWh3ZXZxbGtwZ3Z6ZHlmdWphIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3NTI0MTYsImV4cCI6MjA5MjMyODQxNn0.D4Vr26xPO5p5mv903Qup0XsHNvNIuAL_dwVY7M7j78Y';
     var LS_KEY = 'amuYugeChat.v1';
+    var SID_KEY = 'amuYugeChat.sid';
     var MAX_HISTORY = 24; // 保存・送信する発言数の上限
+
+    // 会話ログを紐づけるための匿名ID（端末単位・個人情報なし）
+    function sessionId() {
+      try {
+        var sid = localStorage.getItem(SID_KEY);
+        if (!sid) {
+          sid = (window.crypto && crypto.randomUUID) ? crypto.randomUUID()
+            : 'sid-' + Date.now() + '-' + Math.random().toString(36).slice(2, 10);
+          localStorage.setItem(SID_KEY, sid);
+        }
+        return sid;
+      } catch (e) { return ''; }
+    }
 
     var T = {
       ja: { fab: 'ゆげに聞く', sub: '別府の飲み友達AI', ph: '今開いてる店ある？', hi: 'やあ、ゆげだよ。別府のこと、店のこと、旅のこと、なんでも聞いて。', err: 'ごめん、うまく繋がらなかった。少し待ってもう一回試してみて。', chips: ['今開いてる店は？', '朝ごはんのおすすめ', '温泉に入りたい', '変な豆知識ちょうだい'] },
@@ -4245,7 +4259,7 @@
             'apikey': ANON_KEY,
             'Authorization': 'Bearer ' + ANON_KEY
           },
-          body: JSON.stringify({ messages: history.slice(-MAX_HISTORY) })
+          body: JSON.stringify({ messages: history.slice(-MAX_HISTORY), session: sessionId(), lang: lang() })
         });
         if (!res.ok) throw new Error('http ' + res.status);
 
