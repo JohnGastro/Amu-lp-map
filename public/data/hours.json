@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-10T21:52:03.860Z",
+  "generated": "2026-07-11T21:40:16.456Z",
   "shops": {
     "%E5%A4%A7%E7%94%B0%E5%92%96%E5%96%B1%EF%BC%88%E3%81%8A%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%8A%E3%83%BC%EF%BC%89": {
       "businessStatus": "OPERATIONAL",
@@ -902,7 +902,7 @@
           }
         ]
       },
-      "weekdayText": "Monday: 3:00 PM – 12:00 AM | Tuesday: 3:00 PM – 12:00 AM | Wednesday: 3:00 PM��– 12:00 AM | Thursday: 3:00 PM – 12:00 AM | Friday: 12:00 AM – 10:00 PM | Saturday: 3:00 PM – 12:00 AM | Sunday: 3:00 PM – 12:00 AM",
+      "weekdayText": "Monday: 3:00 PM – 12:00 AM | Tuesday: 3:00 PM – 12:00 AM | Wednesday: 3:00 PM – 12:00 AM | Thursday: 3:00 PM – 12:00 AM | Friday: 12:00 AM – 10:00 PM | Saturday: 3:00 PM – 12:00 AM | Sunday: 3:00 PM – 12:00 AM",
       "lastChecked": "2026-07-09T22:13:43.076Z"
     },
     "%E3%82%BF%E3%82%AD%E3%83%BC%E3%83%88": {
@@ -1187,7 +1187,12 @@
     "TUMUGU+COFFEE+STAND": {
       "businessStatus": "OPERATIONAL",
       "hoursMap": {
-        "日": [],
+        "日": [
+          {
+            "open": "07:00",
+            "close": "16:00"
+          }
+        ],
         "月": [],
         "火": [],
         "水": [
@@ -1205,8 +1210,8 @@
           }
         ]
       },
-      "weekdayText": "Monday: Closed | Tuesday: Closed | Wednesday: 7:00 AM – 4:00 PM | Thursday: Closed | Friday: Closed | Saturday: 7:00 AM – 4:00 PM | Sunday: Closed",
-      "lastChecked": "2026-07-07T22:04:55.597Z"
+      "weekdayText": "Monday: Closed | Tuesday: Closed | Wednesday: 7:00 AM – 4:00 PM | Thursday: Closed | Friday: Closed | Saturday: 7:00 AM – 4:00 PM | Sunday: 7:00 AM – 4:00 PM",
+      "lastChecked": "2026-07-11T21:40:14.872Z"
     },
     "Othello+Specialty+Coffee+Roaster": {
       "businessStatus": "OPERATIONAL",
