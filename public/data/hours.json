@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T21:44:07.439Z",
+  "generated": "2026-07-26T21:50:42.078Z",
   "shops": {
     "%E5%A4%A7%E7%94%B0%E5%92%96%E5%96%B1%EF%BC%88%E3%81%8A%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%8A%E3%83%BC%EF%BC%89": {
       "businessStatus": "OPERATIONAL",
@@ -1262,8 +1262,12 @@
       "hoursMap": {
         "日": [
           {
-            "open": "00:00",
-            "close": "00:00"
+            "open": "10:30",
+            "close": "14:30"
+          },
+          {
+            "open": "17:00",
+            "close": "21:30"
           }
         ],
         "月": [
@@ -1318,8 +1322,8 @@
           }
         ]
       },
-      "weekdayText": "Monday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Tuesday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Wednesday: 11:30 AM – 2:30 PM, 6:00 – 9:30 PM | Thursday: Closed | Friday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Saturday: 11:30 AM – 2:30 PM, 5:00 – 10:30 PM | Sunday: Open 24 hours",
-      "lastChecked": "2026-07-19T21:41:40.130Z"
+      "weekdayText": "Monday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Tuesday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Wednesday: 11:30 AM – 2:30 PM, 6:00 – 9:30 PM | Thursday: Closed | Friday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Saturday: 11:30 AM – 2:30 PM, 5:00 – 10:30 PM | Sunday: 10:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+      "lastChecked": "2026-07-26T21:50:40.958Z"
     },
     "Bistro+le+jiu+%E6%85%88%E9%9B%A8": {
       "businessStatus": "OPERATIONAL",
