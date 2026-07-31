@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-30T21:59:21.425Z",
+  "generated": "2026-07-31T21:57:15.766Z",
   "shops": {
     "%E5%A4%A7%E7%94%B0%E5%92%96%E5%96%B1%EF%BC%88%E3%81%8A%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%8A%E3%83%BC%EF%BC%89": {
       "businessStatus": "OPERATIONAL",
@@ -1190,33 +1190,10 @@
       "lastChecked": "2026-05-12T22:04:20.585Z"
     },
     "TUMUGU+COFFEE+STAND": {
-      "businessStatus": "OPERATIONAL",
-      "hoursMap": {
-        "日": [
-          {
-            "open": "07:00",
-            "close": "16:00"
-          }
-        ],
-        "月": [],
-        "火": [],
-        "水": [
-          {
-            "open": "07:00",
-            "close": "16:00"
-          }
-        ],
-        "木": [],
-        "金": [],
-        "土": [
-          {
-            "open": "07:00",
-            "close": "16:00"
-          }
-        ]
-      },
-      "weekdayText": "Monday: Closed | Tuesday: Closed | Wednesday: 7:00 AM – 4:00 PM | Thursday: Closed | Friday: Closed | Saturday: 7:00 AM – 4:00 PM | Sunday: 7:00 AM – 4:00 PM",
-      "lastChecked": "2026-07-11T21:40:14.872Z"
+      "businessStatus": "CLOSED_TEMPORARILY",
+      "hoursMap": null,
+      "weekdayText": null,
+      "lastChecked": "2026-07-31T21:57:14.466Z"
     },
     "Othello+Specialty+Coffee+Roaster": {
       "businessStatus": "OPERATIONAL",
