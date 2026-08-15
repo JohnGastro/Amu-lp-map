@@ -2554,6 +2554,7 @@
 
     // ----- URL parameter handling -----
     // ?category=駐車場   → preselect that filter (main or sub)
+    // ?open_now=1        → 開いた時点で営業中の店だけに絞る（ご利用ガイドの「夜のこと」から来る導線）
     // ?embed=1           → hide aspirational header/chips for compact iframe embedding
     (function applyUrlParams() {
       try {
@@ -2567,6 +2568,9 @@
           } else if (subKeys.indexOf(paramCategory) >= 0) {
             state.activeSubcategory = paramCategory;
           }
+        }
+        if (sp.get('open_now') === '1') {
+          state.openNowOnly = true;
         }
         if (sp.get('embed') === '1') {
           document.documentElement.classList.add('ab-embed');
