@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T23:27:22.362Z",
+  "generated": "2026-10-04T23:43:00.056Z",
   "shops": {
     "%E5%A4%A7%E7%94%B0%E5%92%96%E5%96%B1%EF%BC%88%E3%81%8A%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%8A%E3%83%BC%EF%BC%89": {
       "businessStatus": "OPERATIONAL",
@@ -1213,7 +1213,12 @@
         ],
         "月": [],
         "火": [],
-        "水": [],
+        "水": [
+          {
+            "open": "07:00",
+            "close": "12:00"
+          }
+        ],
         "木": [],
         "金": [],
         "土": [
@@ -1223,8 +1228,8 @@
           }
         ]
       },
-      "weekdayText": "Monday: Closed | Tuesday: Closed | Wednesday: Closed | Thursday: Closed | Friday: Closed | Saturday: 7:00 AM – 4:00 PM | Sunday: 7:00 AM – 4:00 PM",
-      "lastChecked": "2026-08-27T00:20:58.183Z"
+      "weekdayText": "Monday: Closed | Tuesday: Closed | Wednesday: 7:00 AM – 12:00 PM | Thursday: Closed | Friday: Closed | Saturday: 7:00 AM – 4:00 PM | Sunday: 7:00 AM – 4:00 PM",
+      "lastChecked": "2026-10-04T23:42:58.518Z"
     },
     "Othello+Specialty+Coffee+Roaster": {
       "businessStatus": "OPERATIONAL",
@@ -1265,7 +1270,7 @@
       "hoursMap": {
         "日": [
           {
-            "open": "17:00",
+            "open": "18:00",
             "close": "21:30"
           }
         ],
@@ -1321,8 +1326,8 @@
           }
         ]
       },
-      "weekdayText": "Monday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Tuesday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Wednesday: 11:30 AM – 2:30 PM, 6:00 – 9:30 PM | Thursday: Closed | Friday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Saturday: 11:30 AM – 2:30 PM, 5:00 – 10:30 PM | Sunday: 5:00 – 9:30 PM",
-      "lastChecked": "2026-09-30T00:00:01.258Z"
+      "weekdayText": "Monday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Tuesday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Wednesday: 11:30 AM – 2:30 PM, 6:00 – 9:30 PM | Thursday: Closed | Friday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Saturday: 11:30 AM – 2:30 PM, 5:00 – 10:30 PM | Sunday: 6:00 – 9:30 PM",
+      "lastChecked": "2026-10-04T23:42:58.860Z"
     },
     "Bistro+le+jiu+%E6%85%88%E9%9B%A8": {
       "businessStatus": "OPERATIONAL",
@@ -1709,7 +1714,7 @@
           }
         ]
       },
-      "weekdayText": "Monday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Tuesday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Wednesday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Thursday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Friday: 8:30 AM – 2:00 PM, 7:00 PM – 12:00 AM | Saturday: 8:30 AM – 2:00 PM, 6:00 PM – 12:00 AM | Sunday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM",
+      "weekdayText": "Monday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Tuesday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Wednesday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Thursday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Friday: 8:30 AM – 2:00 PM, 7:00 PM – 12:00 AM | Saturday: 8:30��AM – 2:00 PM, 6:00 PM – 12:00 AM | Sunday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM",
       "lastChecked": "2026-07-27T21:56:36.894Z"
     },
     "Beppu+Spirits+Bar+LAMP": {
