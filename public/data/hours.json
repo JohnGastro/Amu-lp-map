@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-09T00:50:24.741Z",
+  "generated": "2026-10-10T00:23:27.055Z",
   "shops": {
     "%E5%A4%A7%E7%94%B0%E5%92%96%E5%96%B1%EF%BC%88%E3%81%8A%E3%81%8A%E3%81%9F%E3%81%8B%E3%82%8A%E3%83%BC%EF%BC%89": {
       "businessStatus": "OPERATIONAL",
@@ -26,10 +26,6 @@
           {
             "open": "11:00",
             "close": "14:30"
-          },
-          {
-            "open": "17:00",
-            "close": "20:30"
           }
         ],
         "木": [
@@ -42,6 +38,10 @@
           {
             "open": "11:00",
             "close": "14:30"
+          },
+          {
+            "open": "17:00",
+            "close": "20:30"
           }
         ],
         "土": [
@@ -55,8 +55,8 @@
           }
         ]
       },
-      "weekdayText": "Monday: 11:00 AM – 2:30 PM | Tuesday: 11:00 AM – 2:30 PM | Wednesday: 11:00 AM – 2:30 PM, 5:00 – 8:30 PM | Thursday: 11:00 AM – 2:30 PM | Friday: 11:00 AM – 2:30 PM | Saturday: 11:00 AM – 2:30 PM, 5:00 – 8:30 PM | Sunday: 11:00 AM – 2:30 PM",
-      "lastChecked": "2026-09-01T22:54:15.126Z"
+      "weekdayText": "Monday: 11:00 AM – 2:30 PM | Tuesday: 11:00 AM – 2:30 PM | Wednesday: 11:00 AM – 2:30 PM | Thursday: 11:00 AM – 2:30 PM | Friday: 11:00 AM – 2:30 PM, 5:00 – 8:30 PM | Saturday: 11:00 AM – 2:30 PM, 5:00 – 8:30 PM | Sunday: 11:00 AM – 2:30 PM",
+      "lastChecked": "2026-10-10T00:23:20.387Z"
     },
     "EEL.BISTRO": {
       "businessStatus": "OPERATIONAL",
@@ -1270,6 +1270,10 @@
       "hoursMap": {
         "日": [
           {
+            "open": "11:30",
+            "close": "14:30"
+          },
+          {
             "open": "18:00",
             "close": "21:30"
           }
@@ -1326,8 +1330,8 @@
           }
         ]
       },
-      "weekdayText": "Monday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Tuesday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Wednesday: 11:30 AM – 2:30 PM, 6:00 – 9:30 PM | Thursday: Closed | Friday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Saturday: 11:30 AM – 2:30 PM, 5:00 – 10:30 PM | Sunday: 6:00 – 9:30 PM",
-      "lastChecked": "2026-10-04T23:42:58.860Z"
+      "weekdayText": "Monday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Tuesday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Wednesday: 11:30 AM – 2:30 PM, 6:00 – 9:30 PM | Thursday: Closed | Friday: 11:30 AM – 2:30 PM, 6:00 – 10:30 PM | Saturday: 11:30 AM – 2:30 PM, 5:00 – 10:30 PM | Sunday: 11:30 AM – 2:30 PM, 6:00 – 9:30 PM",
+      "lastChecked": "2026-10-10T00:23:25.858Z"
     },
     "Bistro+le+jiu+%E6%85%88%E9%9B%A8": {
       "businessStatus": "OPERATIONAL",
@@ -1515,7 +1519,7 @@
           }
         ]
       },
-      "weekdayText": "Monday: 11:00 AM – 2:00 PM, 6:00 – 11:00 PM | Tuesday: 11:00 AM – 2:00 PM, 6:00 – 11:00 PM | Wednesday: 11:00 AM – 2:00 PM, 6:00 – 11:00 PM | Thursday: 11:00 AM – 2:00 PM, 6:00 – 11:00 PM | Friday: 11:00 AM – 2:00 PM, 6:00 – 11:00 PM | Saturday: 11:00��AM – 2:00 PM, 6:00 – 11:00 PM | Sunday: 11:00 AM – 2:00 PM, 6:00 – 11:00 PM",
+      "weekdayText": "Monday: 11:00 AM – 2:00 PM, 6:00 – 11:00 PM | Tuesday: 11:00 AM – 2:00 PM, 6:00 – 11:00 PM | Wednesday: 11:00 AM – 2:00 PM, 6:00 – 11:00 PM | Thursday: 11:00 AM – 2:00 PM, 6:00 – 11:00 PM | Friday: 11:00 AM – 2:00 PM, 6:00 – 11:00 PM | Saturday: 11:00 AM – 2:00 PM, 6:00 – 11:00 PM | Sunday: 11:00 AM – 2:00 PM, 6:00 – 11:00 PM",
       "lastChecked": "2026-08-07T00:59:10.672Z"
     },
     "%E3%83%91%E3%82%AD%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%AB%E3%83%AC%E3%83%BC": {
@@ -1714,7 +1718,7 @@
           }
         ]
       },
-      "weekdayText": "Monday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Tuesday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Wednesday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Thursday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Friday: 8:30 AM – 2:00 PM, 7:00 PM – 12:00 AM | Saturday: 8:30���AM – 2:00 PM, 6:00 PM – 12:00 AM | Sunday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM",
+      "weekdayText": "Monday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Tuesday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Wednesday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Thursday: 8:30 AM – 2:00 PM, 7:00 – 11:00 PM | Friday: 8:30 AM – 2:00 PM, 7:00 PM – 12:00 AM | Saturday: 8:30 AM – 2:00 PM, 6:00 PM – 12:00 AM | Sunday: 8:30 AM – 2:00 PM, 6:00 – 11:30 PM",
       "lastChecked": "2026-07-27T21:56:36.894Z"
     },
     "Beppu+Spirits+Bar+LAMP": {
